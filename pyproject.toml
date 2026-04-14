@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "course-extraction-pipeline"
+version = "0.1.0"
+description = "PostgreSQL-first course extraction pipeline for Class Central course YAML dumps"
+requires-python = ">=3.12"
+dependencies = [
+  "psycopg[binary]==3.2.9",
+  "pydantic==2.11.9",
+  "pyyaml==6.0.3",
+  "python-dotenv==1.1.1",
+  "sqlalchemy==2.0.43",
+  "typer==0.16.1",
+]
+
+[project.scripts]
+course-pipeline = "course_pipeline.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

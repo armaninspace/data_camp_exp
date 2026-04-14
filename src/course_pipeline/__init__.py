@@ -1,0 +1,2 @@
+"""Course extraction pipeline package."""
+

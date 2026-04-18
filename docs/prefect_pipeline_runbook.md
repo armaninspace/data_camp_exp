@@ -9,6 +9,7 @@ python scripts/run_prefect_pipeline.py \
   --output-root data/pipeline_runs \
   --run-mode prod \
   --strict-mode true \
+  --offset 0 \
   --max-courses 1 \
   --course-id 24491
 ```
@@ -32,6 +33,8 @@ Promotion behavior:
 - `prod` runs update `data/ref/current/`
 - `dev` and `test` runs do not update reference data
 - partial runs replace only touched `course_id`s and rebuild aggregates
+- `--offset` and `--max-courses` let you process deterministic sequential slices
+- `--skip-existing-ref-courses` removes any `course_id` already present in `data/ref/current/by_course/` before slicing
 
 Current reference layout:
 
@@ -43,6 +46,7 @@ Current reference layout:
 ## Notes
 
 - the flow writes an immutable run manifest to `run_manifest.json`
+- the manifest records `selected_course_ids`, `skipped_existing_course_ids`, and `selection_counts`
 - the flow writes a promotion manifest for promoted prod runs
 - aggregate reference artifacts are rebuilt from per-course reference state
 - live review-answer stages write `llm_metering.jsonl` at the run root

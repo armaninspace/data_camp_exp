@@ -4,6 +4,7 @@ import json
 import os
 from pathlib import Path
 
+from course_pipeline.normalize import iter_courses
 from course_pipeline.prefect_pipeline.artifacts import build_artifact_index_entries
 from course_pipeline.prefect_pipeline.flows import question_generation_pipeline_flow
 from course_pipeline.prefect_pipeline.models.run_config import RunConfig
@@ -19,6 +20,11 @@ def _read_jsonl(path: Path) -> list[dict]:
         for line in path.read_text(encoding="utf-8").splitlines()
         if line.strip()
     ]
+
+
+def _ordered_course_ids() -> list[str]:
+    courses, _ = iter_courses(INPUT_ROOT)
+    return [course.course_id for course in courses]
 
 
 def test_artifact_index_entries_are_relative(tmp_path: Path) -> None:
@@ -148,3 +154,49 @@ def test_prefect_flow_strict_mode_failure_records_manifest(tmp_path: Path, monke
     manifest = json.loads((run_root / "run_manifest.json").read_text(encoding="utf-8"))
     assert manifest["status"] == "failed"
     assert manifest["blocking_failure"] == "forced strict coverage failure"
+
+
+def test_prefect_flow_offset_records_selected_course_ids_in_manifest(tmp_path: Path) -> None:
+    os.environ.setdefault("PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS", "120")
+    ordered_course_ids = _ordered_course_ids()
+    config = RunConfig(
+        input_root=INPUT_ROOT,
+        output_root=tmp_path,
+        strict_mode=False,
+        offset=1,
+        max_courses=2,
+    )
+    result = question_generation_pipeline_flow(config)
+    run_root = tmp_path / result.run_id
+    manifest = json.loads((run_root / "run_manifest.json").read_text(encoding="utf-8"))
+    assert result.status == "completed"
+    assert manifest["selected_course_ids"] == ordered_course_ids[1:3]
+    assert manifest["skipped_existing_course_ids"] == []
+    assert manifest["selection_counts"]["available_courses"] == len(ordered_course_ids)
+    assert manifest["selection_counts"]["offset"] == 1
+    assert manifest["selection_counts"]["selected_courses"] == 2
+
+
+def test_prefect_flow_skip_existing_ref_courses_filters_before_slice(tmp_path: Path) -> None:
+    os.environ.setdefault("PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS", "120")
+    ordered_course_ids = _ordered_course_ids()
+    ref_root = tmp_path / "ref"
+    existing_course_id = ordered_course_ids[0]
+    (ref_root / "current" / "by_course" / existing_course_id).mkdir(parents=True)
+
+    config = RunConfig(
+        input_root=INPUT_ROOT,
+        output_root=tmp_path / "runs",
+        ref_root=ref_root,
+        strict_mode=False,
+        skip_existing_ref_courses=True,
+        max_courses=2,
+    )
+    result = question_generation_pipeline_flow(config)
+    run_root = tmp_path / "runs" / result.run_id
+    manifest = json.loads((run_root / "run_manifest.json").read_text(encoding="utf-8"))
+    assert result.status == "completed"
+    assert manifest["skipped_existing_course_ids"] == [existing_course_id]
+    assert manifest["selected_course_ids"] == ordered_course_ids[1:3]
+    assert manifest["selection_counts"]["skipped_existing_ref_courses"] == 1
+    assert manifest["selection_counts"]["selected_courses"] == 2

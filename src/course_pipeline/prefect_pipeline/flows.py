@@ -213,4 +213,9 @@ def question_generation_pipeline_flow(config: RunConfig):
         status=status,
         blocking_failure=blocking_failure,
         promoted_ref=promoted_ref,
+        selection_metadata={
+            "selected_course_ids": standardized_result.get("selected_course_ids", []) if "standardized_result" in locals() else [],
+            "skipped_existing_course_ids": standardized_result.get("skipped_existing_course_ids", []) if "standardized_result" in locals() else [],
+            "selection_counts": standardized_result.get("selection_counts", {}) if "standardized_result" in locals() else {},
+        },
     )

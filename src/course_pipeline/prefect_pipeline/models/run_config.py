@@ -20,8 +20,10 @@ class RunConfig(BaseModel):
     ledger_output_subdir: str = "ledger"
     bundle_output_subdir: str = "inspection_bundle"
     strict_mode: bool = True
+    offset: int = 0
     max_courses: int | None = None
     course_ids: list[str] | None = None
+    skip_existing_ref_courses: bool = False
     overwrite_existing: bool = False
     persist_to_db: bool = False
     publish_prefect_artifacts: bool = True

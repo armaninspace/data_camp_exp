@@ -23,6 +23,7 @@ def finalize_run_manifest(
     status: str,
     blocking_failure: str | None = None,
     promoted_ref: bool = False,
+    selection_metadata: dict | None = None,
 ):
     return build_run_result(
         context,
@@ -31,4 +32,5 @@ def finalize_run_manifest(
         status=status,
         blocking_failure=blocking_failure,
         promoted_ref=promoted_ref,
+        selection_metadata=selection_metadata,
     )

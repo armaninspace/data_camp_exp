@@ -27,6 +27,7 @@ def write_manifest(
     status: str,
     blocking_failure: str | None = None,
     promoted_ref: bool = False,
+    selection_metadata: dict | None = None,
 ) -> None:
     warning_count = sum(len(stage.warnings) for stage in stage_summaries)
     payload = {
@@ -47,6 +48,9 @@ def write_manifest(
         "blocking_failure": blocking_failure,
         "git_commit": current_git_commit(),
         "model_profile": context.model_profile,
+        "selected_course_ids": (selection_metadata or {}).get("selected_course_ids", []),
+        "skipped_existing_course_ids": (selection_metadata or {}).get("skipped_existing_course_ids", []),
+        "selection_counts": (selection_metadata or {}).get("selection_counts", {}),
     }
     context.manifest_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -58,6 +62,7 @@ def build_run_result(
     status: str,
     blocking_failure: str | None = None,
     promoted_ref: bool = False,
+    selection_metadata: dict | None = None,
 ) -> RunResult:
     write_manifest(
         context,
@@ -66,6 +71,7 @@ def build_run_result(
         status=status,
         blocking_failure=blocking_failure,
         promoted_ref=promoted_ref,
+        selection_metadata=selection_metadata,
     )
     warning_count = sum(len(stage.warnings) for stage in stage_summaries)
     artifact_paths = [item["relative_path"] for item in artifact_index]

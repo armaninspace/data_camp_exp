@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import yaml
 
 from course_pipeline.normalize import iter_courses
@@ -16,13 +18,32 @@ except Exception:  # noqa: BLE001
         return decorator
 
 
+def _existing_ref_course_ids(ref_root: Path) -> set[str]:
+    by_course_root = ref_root / "current" / "by_course"
+    if not by_course_root.exists():
+        return set()
+    return {path.name for path in by_course_root.iterdir() if path.is_dir()}
+
+
 @task
 def run_standardization(context, config):
     courses, errors = iter_courses(config.input_root)
     selected = courses
+    skipped_existing_course_ids: list[str] = []
+    selected_after_course_id_filter = len(selected)
     if config.course_ids:
         allowed = {course_id.strip() for course_id in config.course_ids if course_id.strip()}
         selected = [course for course in selected if course.course_id in allowed]
+        selected_after_course_id_filter = len(selected)
+    if config.skip_existing_ref_courses:
+        existing_course_ids = _existing_ref_course_ids(context.ref_root)
+        skipped_existing_course_ids = sorted(
+            [course.course_id for course in selected if course.course_id in existing_course_ids]
+        )
+        selected = [course for course in selected if course.course_id not in existing_course_ids]
+    offset = max(config.offset, 0)
+    if offset:
+        selected = selected[offset:]
     if config.max_courses:
         selected = selected[: config.max_courses]
 
@@ -62,6 +83,15 @@ def run_standardization(context, config):
     write_jsonl(outputs["errors"], errors)
     return {
         "courses": selected,
+        "selected_course_ids": [course.course_id for course in selected],
+        "skipped_existing_course_ids": skipped_existing_course_ids,
+        "selection_counts": {
+            "available_courses": len(courses),
+            "after_course_id_filter": selected_after_course_id_filter,
+            "skipped_existing_ref_courses": len(skipped_existing_course_ids),
+            "offset": offset,
+            "selected_courses": len(selected),
+        },
         "errors": errors,
         "course_rows": course_rows,
         "chapter_rows": chapter_rows,

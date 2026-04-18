@@ -14,6 +14,8 @@ def test_run_config_defaults(tmp_path: Path) -> None:
     assert config.run_mode == "dev"
     assert config.promote_ref is True
     assert config.standardized_output_subdir == "standardized"
+    assert config.offset == 0
+    assert config.skip_existing_ref_courses is False
 
 
 def test_create_run_context_creates_stage_directories(tmp_path: Path) -> None:

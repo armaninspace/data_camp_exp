@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 import json
-import urllib.error
-import urllib.request
 from pathlib import Path
 
 from course_pipeline.config import Settings
+from course_pipeline.llm_metering import MeteredLLMJsonClient
 from course_pipeline.questions.candidates.config import load_default_config
 from course_pipeline.questions.candidates.dedupe import dedupe_candidates
 from course_pipeline.questions.candidates.extract_edges import extract_edges
@@ -43,40 +42,6 @@ class ReviewAnswerParser:
                 }
             )
         return [ReviewAnswer(**item) for item in normalized if item.get("candidate_id")]
-
-
-class LLMJsonClient:
-    def __init__(self, settings: Settings) -> None:
-        if not settings.openai_api_key:
-            raise RuntimeError("OPENAI_API_KEY is required for V3 review answers")
-        self.settings = settings
-
-    def invoke_json(self, system_prompt: str, user_prompt: str) -> str:
-        body = {
-            "model": self.settings.openai_model,
-            "temperature": 0,
-            "response_format": {"type": "json_object"},
-            "messages": [
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-        }
-        request = urllib.request.Request(
-            "https://api.openai.com/v1/chat/completions",
-            data=json.dumps(body).encode("utf-8"),
-            headers={
-                "Authorization": f"Bearer {self.settings.openai_api_key}",
-                "Content-Type": "application/json",
-            },
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=self.settings.openai_timeout) as response:
-                payload = json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            error_body = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"OpenAI request failed: {exc.code} {error_body}") from exc
-        return payload["choices"][0]["message"]["content"]
 
 
 ANSWER_SYSTEM_PROMPT = """You write short grounded answers for selected course questions.
@@ -165,8 +130,19 @@ def write_run_report(run_dir: Path, per_course: dict[str, dict]) -> Path:
     return report_path
 
 
-def answer_selected_questions(settings: Settings, course: NormalizedCourse, selected: list[ScoredCandidate]) -> dict[str, str]:
-    client = LLMJsonClient(settings)
+def answer_selected_questions(
+    settings: Settings,
+    run_dir: Path,
+    course: NormalizedCourse,
+    selected: list[ScoredCandidate],
+) -> dict[str, str]:
+    client = MeteredLLMJsonClient(
+        settings,
+        run_id=run_dir.name,
+        run_dir=run_dir,
+        stage="candidate_review_answers",
+        prompt_version="candidate_review_answers_v1",
+    )
     payload = {
         "course": {
             "course_id": course.course_id,
@@ -186,7 +162,12 @@ def answer_selected_questions(settings: Settings, course: NormalizedCourse, sele
             for item in selected
         ],
     }
-    content = client.invoke_json(ANSWER_SYSTEM_PROMPT, json.dumps(payload, ensure_ascii=False, indent=2))
+    content = client.invoke_json(
+        ANSWER_SYSTEM_PROMPT,
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        course_id=course.course_id,
+        entity_ids=[item.candidate.candidate_id for item in selected],
+    )
     answers = ReviewAnswerParser.parse(content)
     return {item.candidate_id: item.answer_markdown.strip() for item in answers}
 
@@ -199,7 +180,7 @@ def build_review_bundle(run_dir: Path, settings: Settings, courses: list[Normali
         if not result:
             continue
         selected: list[ScoredCandidate] = result["final_selected"]
-        answers = answer_selected_questions(settings, course, selected)
+        answers = answer_selected_questions(settings, run_dir, course, selected)
         lines = [f"# {course.title} (`{course.course_id}`)", "", "## Selected Q/A Pairs", ""]
         for item in selected:
             q = item.candidate.question_text

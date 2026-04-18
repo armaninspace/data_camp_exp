@@ -1,31 +1,27 @@
 # Inspection Bundle 7
 
-This bundle captures the strict foundational-entry fix validation pass for
-`Forecasting in R` (`24491`).
+This bundle is the Prefect smoke-test publication for the canonical question
+pipeline on course `24491` using run:
 
-## Scope
+- `20260418T140021Z`
 
-This is a scoped rerun, not a full three-course bundle.
+It was produced by the new Prefect flow and preserves the current domain path:
 
-It validates that beginner plain-definition questions are now:
+`raw YAML -> normalized course -> V3 generation -> V4.1 policy -> V6 ledger -> inspection bundle`
 
-- generated
-- preserved through V3 filtering
-- promoted to visible canonical questions in V6
-- enforced by strict anchor coverage
-- annotated with `tracked_topics` in the ledger and inspection docs
+Included files:
 
-## Included files
+- `24491_forecasting-in-r.md`
+- `inspection_report.md`
+- `question_ledger_v6_report.md`
+- `run_manifest.json`
+- `final_deliverables/all_questions.jsonl`
 
-- [24491_forecasting-in-r.md](/code/docs/inspection_bundle_7/24491_forecasting-in-r.md)
-- [inspection_report.md](/code/docs/inspection_bundle_7/inspection_report.md)
-- [question_ledger_v6_report.md](/code/docs/inspection_bundle_7/question_ledger_v6_report.md)
-- [entry_definition_fix_note.md](/code/docs/inspection_bundle_7/entry_definition_fix_note.md)
+Convention going forward:
 
-## Source runs
+- each inspection bundle should include `final_deliverables/`
+- the authoritative final ledger export `all_questions.jsonl` should be copied there
 
-- V3 source run: `20260418T015324Z`
-- V6 ledger run: `20260418T132851Z`
+The source run lives under:
 
-Full artifacts live under
-[20260418T132851Z](/code/data/pipeline_runs/20260418T132851Z).
+- `data/pipeline_runs/20260418T140021Z`

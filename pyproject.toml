@@ -8,6 +8,7 @@ version = "0.1.0"
 description = "PostgreSQL-first course extraction pipeline for Class Central course YAML dumps"
 requires-python = ">=3.12"
 dependencies = [
+  "prefect>=3.0.0,<4.0.0",
   "psycopg[binary]==3.2.9",
   "pydantic==2.11.9",
   "pyyaml==6.0.3",

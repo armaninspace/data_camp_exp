@@ -43,3 +43,12 @@ def test_orchestration_layers_use_stable_questions_package_imports() -> None:
         text = target.read_text(encoding="utf-8")
         for fragment in banned_import_fragments:
             assert fragment not in text, f"{target} still imports legacy module {fragment}"
+
+
+def test_candidate_stage_package_no_longer_imports_question_gen_v3() -> None:
+    package_root = Path("/code/src/course_pipeline/questions/candidates")
+    banned_fragment = "course_pipeline.question_gen_v3"
+
+    for target in sorted(package_root.glob("*.py")):
+        text = target.read_text(encoding="utf-8")
+        assert banned_fragment not in text, f"{target} still imports {banned_fragment}"

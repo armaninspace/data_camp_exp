@@ -21,6 +21,8 @@ class Settings:
     openai_api_key: str | None
     openai_model: str
     openai_timeout: int
+    openai_input_cost_per_million_tokens: float
+    openai_output_cost_per_million_tokens: float
     database_url: str
     output_root: Path
 
@@ -31,6 +33,8 @@ def get_settings() -> Settings:
         openai_api_key=os.getenv("OPENAI_API_KEY"),
         openai_model=os.getenv("OPENAI_MODEL", "gpt-4.1"),
         openai_timeout=int(os.getenv("OPENAI_TIMEOUT", "180")),
+        openai_input_cost_per_million_tokens=float(os.getenv("OPENAI_INPUT_COST_PER_MILLION_TOKENS", "0")),
+        openai_output_cost_per_million_tokens=float(os.getenv("OPENAI_OUTPUT_COST_PER_MILLION_TOKENS", "0")),
         database_url=os.getenv(
             "DATABASE_URL",
             "postgresql+psycopg://agent@127.0.0.1:55432/course_pipeline",

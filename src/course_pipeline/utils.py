@@ -27,6 +27,12 @@ def write_jsonl(path: Path, rows: Iterable[dict]) -> None:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def append_jsonl(path: Path, row: dict) -> None:
+    ensure_dir(path.parent)
+    with path.open("a", encoding="utf-8") as handle:
+        handle.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
 def write_yaml(path: Path, payload: dict, width: int = 80) -> None:
     ensure_dir(path.parent)
     path.write_text(

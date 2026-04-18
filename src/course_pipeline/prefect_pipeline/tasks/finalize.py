@@ -22,5 +22,13 @@ def finalize_run_manifest(
     artifact_index: list[dict[str, str | int | None]],
     status: str,
     blocking_failure: str | None = None,
+    promoted_ref: bool = False,
 ):
-    return build_run_result(context, stage_summaries, artifact_index, status=status, blocking_failure=blocking_failure)
+    return build_run_result(
+        context,
+        stage_summaries,
+        artifact_index,
+        status=status,
+        blocking_failure=blocking_failure,
+        promoted_ref=promoted_ref,
+    )

@@ -26,6 +26,7 @@ def write_manifest(
     artifact_index: list[dict[str, str | int | None]],
     status: str,
     blocking_failure: str | None = None,
+    promoted_ref: bool = False,
 ) -> None:
     warning_count = sum(len(stage.warnings) for stage in stage_summaries)
     payload = {
@@ -33,9 +34,13 @@ def write_manifest(
         "status": status,
         "started_at": context.started_at.isoformat(),
         "finished_at": datetime.now(UTC).isoformat(),
+        "run_mode": context.run_mode,
         "strict_mode": context.strict_mode,
         "input_root": str(context.input_root),
         "output_root": str(context.output_root),
+        "ref_root": str(context.ref_root),
+        "promote_ref": context.promote_ref,
+        "promoted_ref": promoted_ref,
         "stage_summaries": [stage.model_dump(mode="json") for stage in stage_summaries],
         "artifact_index": artifact_index,
         "warning_count": warning_count,
@@ -52,8 +57,16 @@ def build_run_result(
     artifact_index: list[dict[str, str | int | None]],
     status: str,
     blocking_failure: str | None = None,
+    promoted_ref: bool = False,
 ) -> RunResult:
-    write_manifest(context, stage_summaries, artifact_index, status=status, blocking_failure=blocking_failure)
+    write_manifest(
+        context,
+        stage_summaries,
+        artifact_index,
+        status=status,
+        blocking_failure=blocking_failure,
+        promoted_ref=promoted_ref,
+    )
     warning_count = sum(len(stage.warnings) for stage in stage_summaries)
     artifact_paths = [item["relative_path"] for item in artifact_index]
     return RunResult(
@@ -63,5 +76,6 @@ def build_run_result(
         stage_summaries=stage_summaries,
         artifact_paths=[str(path) for path in artifact_paths],
         warning_count=warning_count,
+        promoted_ref=promoted_ref,
         blocking_failure=blocking_failure,
     )

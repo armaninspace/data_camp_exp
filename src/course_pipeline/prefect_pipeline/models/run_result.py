@@ -15,4 +15,5 @@ class RunResult(BaseModel):
     stage_summaries: list[StageSummary]
     artifact_paths: list[str]
     warning_count: int
+    promoted_ref: bool = False
     blocking_failure: str | None = None

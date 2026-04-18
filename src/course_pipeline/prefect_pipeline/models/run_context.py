@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from pathlib import Path
+from typing import Literal
 
 from pydantic import BaseModel
 
@@ -11,6 +12,7 @@ class RunContext(BaseModel):
     started_at: datetime
     input_root: Path
     output_root: Path
+    ref_root: Path
     run_root: Path
     standardized_dir: Path
     semantics_dir: Path
@@ -20,6 +22,8 @@ class RunContext(BaseModel):
     bundle_dir: Path
     logs_dir: Path
     manifest_path: Path
+    run_mode: Literal["dev", "test", "prod"]
+    promote_ref: bool
     strict_mode: bool
     persist_to_db: bool
     model_profile: str

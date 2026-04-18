@@ -1,17 +1,16 @@
 # Pipeline Memo
 
+This memo is now a short companion to the canonical specs:
+
+- [project_spec.md](/code/docs/project_spec.md)
+- [question_generation_algorithm_spec.md](/code/docs/question_generation_algorithm_spec.md)
+
+Use those two docs as the primary current references.
+
 ## Purpose
 
-This memo describes the pipeline as it currently exists in the repository.
-
-It is meant to answer:
-
-1. what the pipeline does
-2. what stages exist
-3. what each stage consumes and produces
-4. what is persisted
-5. what is safe to treat as operational
-6. what remains bounded, experimental, or incomplete
+This memo remains useful as a compact summary of pipeline layers and their
+responsibilities.
 
 ## Current Shape
 
@@ -258,6 +257,18 @@ The question-cache layer persists:
 - `question_group_variations`
 - `canonical_answers`
 - `question_cache_match_logs`
+
+## Current Canonical Question Path
+
+The currently preferred question path is no longer the older claim-to-cache
+path alone.
+
+The operational question pipeline in this repo is:
+
+`normalized course -> V3 generation -> V4.1 policy -> V6 ledger -> inspection bundle`
+
+For the full current logic, including foundational beginner-definition rules,
+see [question_generation_algorithm_spec.md](/code/docs/question_generation_algorithm_spec.md).
 - `question_cache_fallback_logs`
 - `question_cache_validation_logs`
 - `claim_coverage_audit`

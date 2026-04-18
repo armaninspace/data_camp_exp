@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 from difflib import SequenceMatcher
 
+from course_pipeline.foundational_entry_questions import plain_definition_question
 from course_pipeline.question_gen_v3.models import QuestionCandidate, RejectedCandidate, TopicNode
 
 
@@ -31,11 +32,17 @@ def filter_candidates(
             label = topic.label.lower().strip()
             if label in GENERIC_TERMS:
                 reasons.append("broad_heading_paraphrase")
-            if candidate.question_type == "definition" and topic.topic_type in {"decision_point", "comparison_axis"}:
+            if (
+                candidate.question_type == "definition"
+                and topic.topic_type in {"decision_point", "comparison_axis"}
+                and candidate.question_text != plain_definition_question(topic.label)
+            ):
                 reasons.append("thin_answer")
             if candidate.mastery_band == "proficient" and candidate.question_type in {"definition", "orientation", "purpose"}:
                 reasons.append("mastery_misaligned")
-            if len(candidate.question_text.split()) < 4:
+            if candidate.question_type == "definition" and len(candidate.question_text.split()) < 3:
+                reasons.append("malformed")
+            elif candidate.question_type != "definition" and len(candidate.question_text.split()) < 4:
                 reasons.append("malformed")
             if not candidate.source_support:
                 reasons.append("unsupported")

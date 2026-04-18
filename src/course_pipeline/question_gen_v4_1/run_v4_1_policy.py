@@ -5,6 +5,7 @@ from collections import Counter
 from pathlib import Path
 
 from course_pipeline.config import Settings
+from course_pipeline.foundational_entry_questions import is_plain_definition_question
 from course_pipeline.question_gen_v3.models import FrictionPoint, QuestionCandidate, ScoredCandidate, TopicNode
 from course_pipeline.question_gen_v4.assign_policy_bucket import assign_policy_decisions
 from course_pipeline.question_gen_v4.build_cache_entries import build_cache_entries
@@ -111,12 +112,72 @@ def _record_from_candidate(
         scores=scores,
         source_refs=candidate.source_support,
         is_foundational_anchor=is_anchor,
-        is_required_entry_candidate=is_required_entry_candidate(candidate.topic_id, candidate.question_type, anchors),
+        is_required_entry_candidate=is_required_entry_candidate(
+            candidate.topic_id,
+            candidate.question_type,
+            candidate.question_text,
+            anchors,
+        ),
         is_canonical=canonical_id == candidate.candidate_id,
         is_alias=canonical_id is not None and canonical_id != candidate.candidate_id,
         question_type=candidate.question_type,
         mastery_band=candidate.mastery_band,
     )
+
+
+def _is_protected_entry_candidate(candidate: QuestionCandidate, anchors: dict[str, TopicNode]) -> bool:
+    topic = anchors.get(candidate.topic_id)
+    if not topic or candidate.question_type != "definition":
+        return False
+    return is_plain_definition_question(topic.label, candidate.question_text)
+
+
+def _enforce_protected_entry_visibility(
+    decisions: list[PolicyDecision],
+    validated_scored: list[ScoredCandidate],
+    anchors: dict[str, TopicNode],
+) -> list[PolicyDecision]:
+    decision_by_candidate = {decision.candidate_id: decision for decision in decisions}
+    for scored in validated_scored:
+        candidate = scored.candidate
+        if not _is_protected_entry_candidate(candidate, anchors):
+            continue
+        decision = decision_by_candidate[candidate.candidate_id]
+        if decision.policy_bucket == "curated_core":
+            continue
+        reason_codes = [
+            reason
+            for reason in decision.reason_codes
+            if reason != "not_distinct_enough_for_curation"
+        ]
+        reason_codes.append("protected_required_entry_promoted")
+        decision_by_candidate[candidate.candidate_id] = PolicyDecision(
+            candidate_id=decision.candidate_id,
+            canonical_id=decision.canonical_id,
+            family_tags=decision.family_tags,
+            policy_bucket="curated_core",
+            servable=True,
+            scores=decision.scores,
+            reason_codes=reason_codes,
+        )
+    return sorted(decision_by_candidate.values(), key=lambda row: row.candidate_id)
+
+
+def _enforce_strict_anchor_coverage(cfg: dict, coverage_warnings) -> None:
+    audit_cfg = cfg.get("coverage_audit", {})
+    if not audit_cfg.get("strict_mode", True):
+        return
+    blocking_types = set(audit_cfg.get("strict_blocking_warning_types", [])) or {
+        "missing_visible_canonical_entry",
+        "only_hidden_correct_entry_exists",
+        "only_alias_entry_exists",
+        "definition_generation_failed",
+    }
+    blocking = [warning for warning in coverage_warnings if warning.warning_type in blocking_types]
+    if not blocking:
+        return
+    details = ", ".join(f"{warning.concept_label}:{warning.warning_type}" for warning in blocking)
+    raise RuntimeError(f"Strict foundational entry coverage failed: {details}")
 
 
 def run_question_gen_v4_1_policy(v3_result: dict, config: dict | None = None) -> dict:
@@ -184,6 +245,7 @@ def run_question_gen_v4_1_policy(v3_result: dict, config: dict | None = None) ->
                 "canonical_id": canonical_by_candidate[candidate.candidate_id],
                 "is_alias": canonical_by_candidate[candidate.candidate_id] != candidate.candidate_id,
                 "servable": servable,
+                "protected_entry": _is_protected_entry_candidate(candidate, anchors),
                 "reason_codes": serve_reasons,
             }
         )
@@ -205,7 +267,7 @@ def run_question_gen_v4_1_policy(v3_result: dict, config: dict | None = None) ->
             )
             continue
         adjusted_decisions.append(decision)
-    policy_decisions = adjusted_decisions
+    policy_decisions = _enforce_protected_entry_visibility(adjusted_decisions, validated_scored, anchors)
     decisions_by_candidate_id = {row.candidate_id: row for row in policy_decisions}
 
     validated_correct_all: list[CandidateRecord] = []
@@ -250,6 +312,7 @@ def run_question_gen_v4_1_policy(v3_result: dict, config: dict | None = None) ->
             is_required_entry_candidate=is_required_entry_candidate(
                 row["candidate"].topic_id,
                 row["candidate"].question_type,
+                row["candidate"].question_text,
                 anchors,
             ),
             is_canonical=False,
@@ -262,6 +325,7 @@ def run_question_gen_v4_1_policy(v3_result: dict, config: dict | None = None) ->
     ]
 
     coverage_warnings = audit_anchor_coverage(anchors, validated_correct_all)
+    _enforce_strict_anchor_coverage(cfg, coverage_warnings)
     policy_metrics = compute_policy_metrics(policy_decisions, canonical_groups)
     hard_reject_reason_counts = Counter(
         reason for record in hard_reject_records for reason in record.non_visible_reasons

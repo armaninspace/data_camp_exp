@@ -48,6 +48,12 @@ def _select_curated_candidate_ids(
     family_balance = config["family_balance"]
     max_curated = thresholds["max_curated_core_per_course"]
     selected_ids: list[str] = []
+    protected_ids = [
+        item["candidate"].candidate_id
+        for item in sorted(eligible_items, key=_priority_score, reverse=True)
+        if item.get("protected_entry")
+    ]
+    selected_ids.extend(protected_ids)
 
     def pick_best(predicate) -> None:
         for item in sorted(eligible_items, key=_priority_score, reverse=True):
@@ -66,19 +72,21 @@ def _select_curated_candidate_ids(
         candidate_id = item["candidate"].candidate_id
         if candidate_id in selected_ids:
             continue
-        if len(selected_ids) >= max_curated:
+        non_protected_selected = sum(1 for item_id in selected_ids if item_id not in protected_ids)
+        if non_protected_selected >= max_curated:
             break
         prospective_ids = selected_ids + [candidate_id]
-        prospective_total = len(prospective_ids)
+        prospective_non_protected = [item_id for item_id in prospective_ids if item_id not in protected_ids]
+        prospective_total = len(prospective_non_protected)
         prospective_entry = sum(
             1
             for row in eligible_items
-            if row["candidate"].candidate_id in prospective_ids and "entry" in row["family_tags"].tags
+            if row["candidate"].candidate_id in prospective_non_protected and "entry" in row["family_tags"].tags
         )
         if prospective_total and prospective_entry / prospective_total > family_balance["max_entry_share"]:
             continue
         selected_ids.append(candidate_id)
-    return set(selected_ids[:max_curated])
+    return set(selected_ids)
 
 
 def assign_policy_decisions(
@@ -132,6 +140,8 @@ def assign_policy_decisions(
             and scores.groundedness >= curation_thresholds["min_groundedness_for_curation"]
             and scores.query_likelihood >= curation_thresholds["min_query_likelihood_for_curation"]
         )
+        if item.get("protected_entry"):
+            can_curate = True
         if not servable:
             quarantined_reasons[candidate.candidate_id] = reason_codes + ["quarantined_analysis_only"]
         elif not can_curate:

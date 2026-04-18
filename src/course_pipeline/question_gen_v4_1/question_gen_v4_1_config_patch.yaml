@@ -37,8 +37,14 @@ non_visible_reason_codes:
 
 coverage_audit:
   enabled: true
+  strict_mode: true
   required_for_foundational_anchors:
     - canonical_definition_visible
+  strict_blocking_warning_types:
+    - missing_visible_canonical_entry
+    - only_hidden_correct_entry_exists
+    - only_alias_entry_exists
+    - definition_generation_failed
   warning_types:
     - missing_visible_canonical_entry
     - only_hidden_correct_entry_exists

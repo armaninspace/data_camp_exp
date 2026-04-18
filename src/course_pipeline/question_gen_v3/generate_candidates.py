@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from course_pipeline.foundational_entry_questions import acronym_companion_question, plain_definition_question
 from course_pipeline.question_gen_v3.models import (
     CanonicalDocument,
     FrictionPoint,
@@ -9,6 +10,9 @@ from course_pipeline.question_gen_v3.models import (
     TopicNode,
 )
 from course_pipeline.utils import slugify
+
+
+FOUNDATIONAL_ENTRY_TYPES = {"concept", "tool", "metric", "diagnostic", "comparison_axis", "decision_point"}
 
 
 def _candidate(
@@ -35,6 +39,42 @@ def _candidate(
     )
 
 
+def _entry_definition_candidates(
+    topic: TopicNode,
+    source_support: list[str],
+    linked_friction_ids: list[str],
+) -> list[QuestionCandidate]:
+    if topic.topic_type not in FOUNDATIONAL_ENTRY_TYPES:
+        return []
+    candidates = [
+        _candidate(
+            topic,
+            "novice_definition",
+            "novice",
+            "definition",
+            plain_definition_question(topic.label),
+            "Plain beginner definition for a foundational anchor.",
+            source_support,
+            linked_friction_ids,
+        )
+    ]
+    companion = acronym_companion_question(topic.label)
+    if companion and companion != candidates[0].question_text:
+        candidates.append(
+            _candidate(
+                topic,
+                "novice_definition",
+                "novice",
+                "definition",
+                companion,
+                "Companion acronym-expansion question for the foundational anchor.",
+                source_support,
+                linked_friction_ids,
+            )
+        )
+    return candidates
+
+
 def generate_candidates(
     doc: CanonicalDocument,
     topics: list[TopicNode],
@@ -59,13 +99,14 @@ def generate_candidates(
         support = [topic.description]
         linked = [friction.friction_id for friction in frictions_by_topic.get(topic.topic_id, [])]
         profile = profiles.get(topic.topic_id)
+        entry_candidates = _entry_definition_candidates(topic, support, linked)
 
         custom_emitted = False
         if "benchmark methods" in lower:
             custom_emitted = True
             candidates.extend(
-                [
-                    _candidate(topic, "novice_definition", "novice", "definition", "What is a benchmark forecasting method?", "Definition question for a core forecasting baseline.", support, linked),
+                entry_candidates
+                + [
                     _candidate(topic, "developing_comparison", "developing", "comparison", "Why do we compare a forecasting model against benchmark methods?", "Comparison and evaluation question tied to model assessment.", support, linked),
                     _candidate(topic, "proficient_diagnostic", "proficient", "diagnostic", "How do I know when a benchmark method is no longer enough on its own?", "Diagnostic question about adequacy and escalation.", support, linked),
                 ]
@@ -73,8 +114,8 @@ def generate_candidates(
         elif "forecast accuracy" in lower:
             custom_emitted = True
             candidates.extend(
-                [
-                    _candidate(topic, "novice_definition", "novice", "definition", "What is forecast accuracy?", "Definition question for the evaluation concept.", support, linked),
+                entry_candidates
+                + [
                     _candidate(topic, "developing_procedural", "developing", "procedure", "How do I measure forecast accuracy?", "Procedural question tied to evaluation steps.", support, linked),
                     _candidate(topic, "proficient_diagnostic", "proficient", "diagnostic", "What does forecast accuracy tell me about whether I should trust a forecasting method?", "Diagnostic interpretation question.", support, linked),
                 ]
@@ -82,8 +123,8 @@ def generate_candidates(
         elif "exponential smoothing" in lower:
             custom_emitted = True
             candidates.extend(
-                [
-                    _candidate(topic, "novice_definition", "novice", "definition", "What is exponential smoothing?", "Core method definition.", support, linked),
+                entry_candidates
+                + [
                     _candidate(topic, "developing_misconception", "developing", "misconception", "Why do more recent observations get more weight in exponential smoothing?", "Conceptual misconception question around weighting.", support, linked),
                     _candidate(topic, "proficient_diagnostic", "proficient", "diagnostic", "When is exponential smoothing a poor fit for the data?", "Diagnostic adequacy question for method choice.", support, linked),
                 ]
@@ -91,8 +132,8 @@ def generate_candidates(
         elif "arima" in lower:
             custom_emitted = True
             candidates.extend(
-                [
-                    _candidate(topic, "novice_definition", "novice", "definition", "What does ARIMA stand for, and what is it trying to model?", "Definition with orientation to the model family.", support, linked),
+                entry_candidates
+                + [
                     _candidate(topic, "developing_comparison", "developing", "comparison", "How is ARIMA different from exponential smoothing?", "Comparison question tied to the explicit course contrast.", support, linked),
                     _candidate(topic, "proficient_diagnostic", "proficient", "diagnostic", "When would ARIMA be a better choice than exponential smoothing?", "Method choice diagnostic question.", support, linked),
                 ]
@@ -100,8 +141,8 @@ def generate_candidates(
         elif "ljung-box test" in lower or "white noise" in lower:
             custom_emitted = True
             candidates.extend(
-                [
-                    _candidate(topic, "novice_definition", "novice", "definition", f"What is {lower}?", "Definition of a diagnostic concept.", support, linked),
+                entry_candidates
+                + [
                     _candidate(topic, "developing_procedural", "developing", "procedure", f"How do I use {lower} to check whether a series looks random?", "Procedural diagnostic question.", support, linked),
                     _candidate(topic, "proficient_interpretation" if False else "proficient_diagnostic", "proficient", "diagnostic", f"What would {lower} tell me about whether I should keep using my current forecasting approach?", "Interpretive diagnostic question.", support, linked),
                 ]
@@ -109,8 +150,8 @@ def generate_candidates(
         elif "univariate time series" in lower:
             custom_emitted = True
             candidates.extend(
-                [
-                    _candidate(topic, "novice_definition", "novice", "definition", "What is a univariate time series?", "Definition of the single-series case.", support, linked),
+                entry_candidates
+                + [
                     _candidate(topic, "developing_procedural", "developing", "procedure", "What can a univariate time series plot tell me about distribution, central tendency, and spread?", "Interpretive procedure question grounded in the section summary.", support, linked),
                     _candidate(topic, "proficient_diagnostic", "proficient", "diagnostic", "How would I know when a univariate view is not enough for the question I want to answer?", "Diagnostic question about the limits of a single-series view.", support, linked),
                 ]
@@ -118,7 +159,8 @@ def generate_candidates(
         elif "multivariate time series" in lower:
             custom_emitted = True
             candidates.extend(
-                [
+                entry_candidates
+                + [
                     _candidate(topic, "developing_comparison", "developing", "comparison", "What is the difference between a univariate and a multivariate time series?", "Comparison question anchored in the section contrast.", support, linked),
                     _candidate(topic, "developing_procedural", "developing", "procedure", "What patterns should I look for when comparing multiple time series?", "Comparative procedure question.", support, linked),
                     _candidate(topic, "proficient_diagnostic", "proficient", "diagnostic", "How would I know that I am missing an important relationship by only looking at one series at a time?", "Diagnostic comparison question.", support, linked),
@@ -127,7 +169,8 @@ def generate_candidates(
         elif "portfolio" in lower:
             custom_emitted = True
             candidates.extend(
-                [
+                entry_candidates
+                + [
                     _candidate(topic, "developing_procedural", "developing", "procedure", "How do I decide whether a candidate stock improves my existing portfolio?", "Decision question grounded in the case study.", support, linked),
                     _candidate(topic, "developing_misconception", "developing", "misconception", "Why is looking at one stock by itself not enough in the portfolio case study?", "Misconception question about isolated analysis.", support, linked),
                     _candidate(topic, "proficient_transfer", "proficient", "transfer", "What would count as evidence that a stock complements my current portfolio rather than just looking strong on its own?", "Transfer question about applying the case-study reasoning to a decision.", support, linked),
@@ -136,8 +179,8 @@ def generate_candidates(
         elif lower == "xts" or lower == "zoo":
             custom_emitted = True
             candidates.extend(
-                [
-                    _candidate(topic, "novice_definition", "novice", "definition", f"What is {label} used for in this course?", "Tool-orientation question.", support, linked),
+                entry_candidates
+                + [
                     _candidate(topic, "developing_procedural", "developing", "procedure", f"When would I reach for {label} while working with these time series datasets?", "Procedural-use question.", support, linked),
                     _candidate(topic, "proficient_transfer", "proficient", "transfer", f"How would my use of {label} change with a different time series dataset?", "Transfer question for tool use across datasets.", support, linked),
                 ]
@@ -196,22 +239,18 @@ def generate_candidates(
         )
 
         # novice definition
-        if lower.isupper() and len(lower) <= 6:
-            q = f"What does {label} stand for?"
-        else:
-            q = f"What is {lower}?"
-        candidates.append(
+        candidates.extend(entry_candidates or [
             _candidate(
                 topic,
                 "novice_definition",
                 "novice",
                 "definition",
-                q,
+                plain_definition_question(topic.label),
                 "Definition question for initial orientation.",
                 support,
                 linked,
             )
-        )
+        ])
 
         # developing procedural
         if topic.topic_type in {"procedure", "tool", "diagnostic"}:

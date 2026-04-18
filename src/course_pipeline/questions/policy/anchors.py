@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from course_pipeline.foundational_entry_questions import anchor_entry_label, is_plain_definition_question
-from course_pipeline.question_gen_v3.models import TopicNode
+from course_pipeline.questions.candidates.models import TopicNode
 
 
 FOUNDATIONAL_TYPES = {"concept", "tool", "metric", "diagnostic", "comparison_axis", "decision_point"}

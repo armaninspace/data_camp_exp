@@ -71,16 +71,16 @@ It extracts:
 
 Primary code:
 
-- [question_gen_v3/extract_topics.py](/code/src/course_pipeline/question_gen_v3/extract_topics.py)
-- [question_gen_v3/extract_edges.py](/code/src/course_pipeline/question_gen_v3/extract_edges.py)
-- [question_gen_v3/extract_pedagogy.py](/code/src/course_pipeline/question_gen_v3/extract_pedagogy.py)
-- [question_gen_v3/mine_friction.py](/code/src/course_pipeline/question_gen_v3/mine_friction.py)
-- [question_gen_v3/generate_candidates.py](/code/src/course_pipeline/question_gen_v3/generate_candidates.py)
-- [question_gen_v3/filters.py](/code/src/course_pipeline/question_gen_v3/filters.py)
-- [question_gen_v3/score_candidates.py](/code/src/course_pipeline/question_gen_v3/score_candidates.py)
-- [question_gen_v3/dedupe.py](/code/src/course_pipeline/question_gen_v3/dedupe.py)
-- [question_gen_v3/select_final.py](/code/src/course_pipeline/question_gen_v3/select_final.py)
-- [questions/candidates.py](/code/src/course_pipeline/questions/candidates.py)
+- [questions/candidates/extract_topics.py](/code/src/course_pipeline/questions/candidates/extract_topics.py)
+- [questions/candidates/extract_edges.py](/code/src/course_pipeline/questions/candidates/extract_edges.py)
+- [questions/candidates/extract_pedagogy.py](/code/src/course_pipeline/questions/candidates/extract_pedagogy.py)
+- [questions/candidates/mine_friction.py](/code/src/course_pipeline/questions/candidates/mine_friction.py)
+- [questions/candidates/generate_candidates.py](/code/src/course_pipeline/questions/candidates/generate_candidates.py)
+- [questions/candidates/filters.py](/code/src/course_pipeline/questions/candidates/filters.py)
+- [questions/candidates/score_candidates.py](/code/src/course_pipeline/questions/candidates/score_candidates.py)
+- [questions/candidates/dedupe.py](/code/src/course_pipeline/questions/candidates/dedupe.py)
+- [questions/candidates/select_final.py](/code/src/course_pipeline/questions/candidates/select_final.py)
+- [questions/candidates/__init__.py](/code/src/course_pipeline/questions/candidates/__init__.py)
 
 Core flow:
 
@@ -101,15 +101,13 @@ Examples:
 - `What is exponential smoothing?`
 - `What is the Ljung-Box test?`
 
-The implementation still lives under the historical package name
-`question_gen_v3`, but architecturally this is the candidate stage of the live
-pipeline, not a separate supported product line. The stable wrapper surface for
-orchestration now lives at
-[questions/candidates.py](/code/src/course_pipeline/questions/candidates.py).
+This stage now lives directly under
+[questions/candidates](/code/src/course_pipeline/questions/candidates).
 
 ## 3. Policy And Coverage Enforcement
 
-After V3 generation, the repo applies policy classification in V4 / V4.1.
+After candidate generation, the repo applies policy classification and
+coverage enforcement.
 
 Responsibilities:
 
@@ -123,16 +121,11 @@ Responsibilities:
 
 Primary code:
 
-- [question_gen_v4](/code/src/course_pipeline/question_gen_v4)
-- [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
-- [questions/policy.py](/code/src/course_pipeline/questions/policy.py)
-
-Important logic areas:
-
-- [assign_policy_bucket.py](/code/src/course_pipeline/question_gen_v4/assign_policy_bucket.py)
-- [anchors.py](/code/src/course_pipeline/question_gen_v4_1/anchors.py)
-- [coverage.py](/code/src/course_pipeline/question_gen_v4_1/coverage.py)
-- [run_v4_1_policy.py](/code/src/course_pipeline/question_gen_v4_1/run_v4_1_policy.py)
+- [questions/policy/assign_policy_bucket.py](/code/src/course_pipeline/questions/policy/assign_policy_bucket.py)
+- [questions/policy/anchors.py](/code/src/course_pipeline/questions/policy/anchors.py)
+- [questions/policy/coverage.py](/code/src/course_pipeline/questions/policy/coverage.py)
+- [questions/policy/run_policy.py](/code/src/course_pipeline/questions/policy/run_policy.py)
+- [questions/policy/__init__.py](/code/src/course_pipeline/questions/policy/__init__.py)
 
 Key policy outputs:
 
@@ -142,10 +135,8 @@ Key policy outputs:
 - `analysis_only`
 - `hard_reject`
 
-The implementation still spans `question_gen_v4` and `question_gen_v4_1`, but
-architecturally this is one policy-and-coverage stage in the current system.
-The stable wrapper surface for orchestration now lives at
-[questions/policy.py](/code/src/course_pipeline/questions/policy.py).
+This stage now lives directly under
+[questions/policy](/code/src/course_pipeline/questions/policy).
 
 ## 4. Ledger Normalization
 
@@ -155,8 +146,10 @@ V6 converts terminal question states into one normalized row per question.
 
 Primary code:
 
+- [questions/ledger/build.py](/code/src/course_pipeline/questions/ledger/build.py)
+- [questions/ledger/normalize.py](/code/src/course_pipeline/questions/ledger/normalize.py)
+- [questions/ledger/run.py](/code/src/course_pipeline/questions/ledger/run.py)
 - [question_ledger_v6](/code/src/course_pipeline/question_ledger_v6)
-- [questions/ledger.py](/code/src/course_pipeline/questions/ledger.py)
 
 Responsibilities:
 
@@ -177,10 +170,10 @@ Derived artifacts:
 - `anchors_summary.json`
 - `inspection_report.md`
 
-The implementation currently lives under the historical package name
-`question_ledger_v6`, but this is the live ledger stage of the system. The
-stable wrapper surface for orchestration now lives at
-[questions/ledger.py](/code/src/course_pipeline/questions/ledger.py).
+The live ledger stage now runs through
+[questions/ledger](/code/src/course_pipeline/questions/ledger). The
+`question_ledger_v6` package remains as a compatibility path for the ledger
+implementation naming.
 
 ## 5. Inspection And Reporting
 

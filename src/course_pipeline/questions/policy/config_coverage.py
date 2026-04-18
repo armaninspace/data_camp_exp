@@ -4,7 +4,7 @@ from pathlib import Path
 
 import yaml
 
-from course_pipeline.question_gen_v4.config import load_default_config as load_v4_default_config
+from course_pipeline.questions.policy.config import load_default_config as load_v4_default_config
 
 
 def _deep_merge(base: dict, patch: dict) -> dict:
@@ -19,7 +19,7 @@ def _deep_merge(base: dict, patch: dict) -> dict:
 
 def load_default_config() -> dict:
     base = load_v4_default_config()
-    patch_path = Path(__file__).with_name("question_gen_v4_1_config_patch.yaml")
+    patch_path = Path(__file__).with_name("policy_config_patch.yaml")
     patch = yaml.safe_load(patch_path.read_text(encoding="utf-8")) or {}
     merged = _deep_merge(base, patch)
     thresholds = patch.get("thresholds", {})

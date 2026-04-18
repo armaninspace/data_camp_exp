@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v4.policy_models import PolicyDecision, RetentionRecord
+from course_pipeline.questions.policy.models import PolicyDecision, RetentionRecord
 
 
 def build_retention_records(decisions: list[PolicyDecision], config: dict) -> list[RetentionRecord]:

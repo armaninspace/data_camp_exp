@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v3.models import ScoredCandidate
-from course_pipeline.question_gen_v4.policy_models import CacheEntry, PolicyDecision
+from course_pipeline.questions.candidates.models import ScoredCandidate
+from course_pipeline.questions.policy.models import CacheEntry, PolicyDecision
 from course_pipeline.utils import slugify
 
 

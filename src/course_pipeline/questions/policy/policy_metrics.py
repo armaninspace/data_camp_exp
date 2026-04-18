@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-from course_pipeline.question_gen_v4.policy_models import CanonicalGroup, PolicyDecision
+from course_pipeline.questions.policy.models import CanonicalGroup, PolicyDecision
 
 
 def compute_policy_metrics(decisions: list[PolicyDecision], canonical_groups: list[CanonicalGroup]) -> dict:

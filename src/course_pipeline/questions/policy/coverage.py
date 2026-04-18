@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v4_1.policy_models import CandidateRecord, CoverageWarning
+from course_pipeline.questions.policy.models import CandidateRecord, CoverageWarning
 from course_pipeline.utils import slugify
 
 

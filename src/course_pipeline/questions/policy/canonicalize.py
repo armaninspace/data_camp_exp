@@ -3,8 +3,8 @@ from __future__ import annotations
 import re
 from difflib import SequenceMatcher
 
-from course_pipeline.question_gen_v3.models import ScoredCandidate
-from course_pipeline.question_gen_v4.policy_models import CanonicalGroup
+from course_pipeline.questions.candidates.models import ScoredCandidate
+from course_pipeline.questions.policy.models import CanonicalGroup
 from course_pipeline.utils import slugify
 
 

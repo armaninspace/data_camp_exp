@@ -6,8 +6,8 @@ from course_pipeline.foundational_entry_questions import (
     acronym_companion_question,
     plain_definition_question,
 )
-from course_pipeline.question_gen_v3.generate_candidates import generate_candidates
-from course_pipeline.question_gen_v3.models import (
+from course_pipeline.questions.candidates.generate_candidates import generate_candidates
+from course_pipeline.questions.candidates.models import (
     CandidateScore,
     CanonicalDocument,
     QuestionCandidate,
@@ -15,10 +15,10 @@ from course_pipeline.question_gen_v3.models import (
     Section,
     TopicNode,
 )
-from course_pipeline.question_gen_v3.filters import filter_candidates
-from course_pipeline.question_gen_v4_1.config import load_default_config
-from course_pipeline.question_gen_v4_1.anchors import detect_foundational_anchors
-from course_pipeline.question_gen_v4_1.run_v4_1_policy import run_question_gen_v4_1_policy
+from course_pipeline.questions.candidates.filters import filter_candidates
+from course_pipeline.questions.policy.anchors import detect_foundational_anchors
+from course_pipeline.questions.policy.config_coverage import load_default_config
+from course_pipeline.questions.policy.run_policy import run_question_gen_v4_1_policy
 
 
 def test_plain_definition_question_prefers_beginner_forms():

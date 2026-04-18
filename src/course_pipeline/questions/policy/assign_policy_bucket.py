@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v4.policy_models import PolicyDecision, PolicyScores
+from course_pipeline.questions.policy.models import PolicyDecision, PolicyScores
 
 
 def validity_gate(scores: PolicyScores, config: dict) -> tuple[bool, list[str]]:

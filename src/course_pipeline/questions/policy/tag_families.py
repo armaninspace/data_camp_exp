@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v3.models import FrictionPoint, ScoredCandidate
-from course_pipeline.question_gen_v4.policy_models import FamilyTagSet
+from course_pipeline.questions.candidates.models import FrictionPoint, ScoredCandidate
+from course_pipeline.questions.policy.models import FamilyTagSet
 
 
 def tag_families(candidate: ScoredCandidate, frictions_by_topic: dict[str, list[FrictionPoint]]) -> FamilyTagSet:

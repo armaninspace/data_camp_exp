@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from collections import defaultdict
 
-from course_pipeline.question_gen_v3.models import TopicNode
-from course_pipeline.question_gen_v4_1.policy_models import CandidateRecord
+from course_pipeline.questions.candidates.models import TopicNode
+from course_pipeline.questions.policy.models import CandidateRecord
 from course_pipeline.question_ledger_v6.models import AnchorSummary, LedgerRow, LedgerScores
 from course_pipeline.question_ledger_v6.normalize import (
     ledger_tags,

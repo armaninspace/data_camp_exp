@@ -6,5 +6,5 @@ import yaml
 
 
 def load_default_config() -> dict:
-    path = Path(__file__).with_name("question_gen_v4_policy_config.yaml")
+    path = Path(__file__).with_name("policy_config.yaml")
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}

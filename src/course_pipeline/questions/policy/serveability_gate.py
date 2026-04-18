@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v3.models import QuestionCandidate
-from course_pipeline.question_gen_v4.policy_models import PolicyScores
-from course_pipeline.question_gen_v4.question_signals import detect_question_signals
+from course_pipeline.questions.candidates.models import QuestionCandidate
+from course_pipeline.questions.policy.models import PolicyScores
+from course_pipeline.questions.policy.question_signals import detect_question_signals
 
 
 def serveability_gate(candidate: QuestionCandidate, scores: PolicyScores, config: dict) -> tuple[bool, list[str]]:

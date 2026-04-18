@@ -6,19 +6,19 @@ from pathlib import Path
 
 from course_pipeline.config import Settings
 from course_pipeline.foundational_entry_questions import is_plain_definition_question
-from course_pipeline.question_gen_v3.models import FrictionPoint, QuestionCandidate, ScoredCandidate, TopicNode
-from course_pipeline.question_gen_v4.assign_policy_bucket import assign_policy_decisions
-from course_pipeline.question_gen_v4.build_cache_entries import build_cache_entries
-from course_pipeline.question_gen_v4.canonicalize import canonicalize
-from course_pipeline.question_gen_v4.policy_metrics import compute_policy_metrics
-from course_pipeline.question_gen_v4.policy_models import PolicyDecision
-from course_pipeline.question_gen_v4.policy_score import compute_policy_scores
-from course_pipeline.question_gen_v4.serveability_gate import serveability_gate
-from course_pipeline.question_gen_v4.tag_families import tag_families
-from course_pipeline.question_gen_v4_1.anchors import detect_foundational_anchors, is_required_entry_candidate
-from course_pipeline.question_gen_v4_1.config import load_default_config
-from course_pipeline.question_gen_v4_1.coverage import audit_anchor_coverage
-from course_pipeline.question_gen_v4_1.policy_models import CandidateRecord
+from course_pipeline.questions.candidates.models import FrictionPoint, QuestionCandidate, ScoredCandidate, TopicNode
+from course_pipeline.questions.policy.assign_policy_bucket import assign_policy_decisions
+from course_pipeline.questions.policy.build_cache_entries import build_cache_entries
+from course_pipeline.questions.policy.canonicalize import canonicalize
+from course_pipeline.questions.policy.policy_metrics import compute_policy_metrics
+from course_pipeline.questions.policy.models import PolicyDecision
+from course_pipeline.questions.policy.policy_score import compute_policy_scores
+from course_pipeline.questions.policy.serveability_gate import serveability_gate
+from course_pipeline.questions.policy.tag_families import tag_families
+from course_pipeline.questions.policy.anchors import detect_foundational_anchors, is_required_entry_candidate
+from course_pipeline.questions.policy.config_coverage import load_default_config
+from course_pipeline.questions.policy.coverage import audit_anchor_coverage
+from course_pipeline.questions.policy.models import CandidateRecord
 from course_pipeline.schemas import NormalizedCourse
 from course_pipeline.utils import ensure_dir, slugify, write_jsonl
 

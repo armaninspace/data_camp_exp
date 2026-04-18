@@ -15,6 +15,12 @@ Included files:
 - `inspection_report.md`
 - `question_ledger_v6_report.md`
 - `run_manifest.json`
+- `final_deliverables/all_questions.jsonl`
+
+Convention going forward:
+
+- each inspection bundle should include `final_deliverables/`
+- the authoritative final ledger export `all_questions.jsonl` should be copied there
 
 The source run lives under:
 

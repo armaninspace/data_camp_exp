@@ -13,6 +13,7 @@ This is a companion to:
 - [project_spec.md](/code/docs/project_spec.md)
 - [question_generation_algorithm_spec.md](/code/docs/question_generation_algorithm_spec.md)
 - [pipeline_memo.md](/code/docs/pipeline_memo.md)
+- [refactor_naming_map.md](/code/docs/refactor_naming_map.md)
 
 ## Current Architecture
 
@@ -79,6 +80,7 @@ Primary code:
 - [question_gen_v3/score_candidates.py](/code/src/course_pipeline/question_gen_v3/score_candidates.py)
 - [question_gen_v3/dedupe.py](/code/src/course_pipeline/question_gen_v3/dedupe.py)
 - [question_gen_v3/select_final.py](/code/src/course_pipeline/question_gen_v3/select_final.py)
+- [questions/candidates.py](/code/src/course_pipeline/questions/candidates.py)
 
 Core flow:
 
@@ -101,7 +103,9 @@ Examples:
 
 The implementation still lives under the historical package name
 `question_gen_v3`, but architecturally this is the candidate stage of the live
-pipeline, not a separate supported product line.
+pipeline, not a separate supported product line. The stable wrapper surface for
+orchestration now lives at
+[questions/candidates.py](/code/src/course_pipeline/questions/candidates.py).
 
 ## 3. Policy And Coverage Enforcement
 
@@ -121,6 +125,7 @@ Primary code:
 
 - [question_gen_v4](/code/src/course_pipeline/question_gen_v4)
 - [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
+- [questions/policy.py](/code/src/course_pipeline/questions/policy.py)
 
 Important logic areas:
 
@@ -139,6 +144,8 @@ Key policy outputs:
 
 The implementation still spans `question_gen_v4` and `question_gen_v4_1`, but
 architecturally this is one policy-and-coverage stage in the current system.
+The stable wrapper surface for orchestration now lives at
+[questions/policy.py](/code/src/course_pipeline/questions/policy.py).
 
 ## 4. Ledger Normalization
 
@@ -149,6 +156,7 @@ V6 converts terminal question states into one normalized row per question.
 Primary code:
 
 - [question_ledger_v6](/code/src/course_pipeline/question_ledger_v6)
+- [questions/ledger.py](/code/src/course_pipeline/questions/ledger.py)
 
 Responsibilities:
 
@@ -170,7 +178,9 @@ Derived artifacts:
 - `inspection_report.md`
 
 The implementation currently lives under the historical package name
-`question_ledger_v6`, but this is the live ledger stage of the system.
+`question_ledger_v6`, but this is the live ledger stage of the system. The
+stable wrapper surface for orchestration now lives at
+[questions/ledger.py](/code/src/course_pipeline/questions/ledger.py).
 
 ## 5. Inspection And Reporting
 

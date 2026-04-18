@@ -2,8 +2,7 @@ from __future__ import annotations
 
 import json
 
-from course_pipeline.question_gen_v4.build_cache_entries import build_cache_entries
-from course_pipeline.question_gen_v4_1.run_v4_1_policy import run_question_gen_v4_1_policy
+from course_pipeline.questions.policy import build_cache_entries, run_policy_stage
 from course_pipeline.utils import ensure_dir, write_jsonl
 
 try:
@@ -31,7 +30,7 @@ def run_policy(context, standardized_result, candidate_result):
 
     for course in standardized_result["courses"]:
         v3_payload = candidate_result["per_course"][course.course_id]
-        result = run_question_gen_v4_1_policy(v3_payload)
+        result = run_policy_stage(v3_payload)
         scored_by_id = {row.candidate.candidate_id: row for row in v3_payload["scored_candidates"]}
         cache_entries = build_cache_entries(
             candidates_by_id=scored_by_id,

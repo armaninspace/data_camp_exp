@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 
-from course_pipeline.question_ledger_v6.run_v6 import write_v6_run_report
+from course_pipeline.questions.ledger import write_ledger_run_report
 from course_pipeline.utils import write_jsonl
 
 try:
@@ -39,7 +39,7 @@ def derive_views(context, ledger_result):
     write_jsonl(outputs["cache_servable"], cache_rows)
     write_jsonl(outputs["aliases"], alias_rows)
     outputs["anchors_summary"].write_text(json.dumps(anchor_summary_rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    write_v6_run_report(context.run_root, ledger_result["per_course"])
+    write_ledger_run_report(context.run_root, ledger_result["per_course"])
     return {
         "artifact_paths": list(outputs.values()),
         "visible_count": len(visible_rows),

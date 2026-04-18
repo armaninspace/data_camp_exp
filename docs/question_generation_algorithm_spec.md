@@ -27,7 +27,8 @@ Implementation note:
 The source tree still uses historical package names such as `question_gen_v3`,
 `question_gen_v4`, `question_gen_v4_1`, and `question_ledger_v6`. In this
 document those are treated as implementation locations, not architectural stage
-names.
+names. The stable orchestration surface now lives under
+`course_pipeline.questions.*`.
 
 ## High-Level Pipeline
 

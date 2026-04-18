@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import json
 
-from course_pipeline.question_gen_v3.models import TopicNode
-from course_pipeline.question_ledger_v6.build_ledger import (
+from course_pipeline.questions.candidates import TopicNode
+from course_pipeline.questions.ledger import (
     build_anchor_summaries,
     build_inspection_report,
     build_ledger_rows,

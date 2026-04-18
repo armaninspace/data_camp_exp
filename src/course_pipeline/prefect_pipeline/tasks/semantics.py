@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v3.pipeline import run_question_gen_v3_for_course
+from course_pipeline.questions.candidates import run_candidate_generation_for_course
 from course_pipeline.utils import ensure_dir, write_jsonl
 
 try:
@@ -23,7 +23,7 @@ def run_semantics(context, standardized_result):
     per_course: dict[str, dict] = {}
 
     for course in standardized_result["courses"]:
-        result = run_question_gen_v3_for_course(course)
+        result = run_candidate_generation_for_course(course)
         per_course[course.course_id] = result
         course_dir = ensure_dir(context.semantics_dir / "course_artifacts" / course.course_id)
         write_jsonl(course_dir / "topics.jsonl", [item.model_dump(mode="json") for item in result["topics"]])

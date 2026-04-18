@@ -99,6 +99,7 @@ architectural responsibility is:
 Relevant code:
 
 - [question_gen_v3](/code/src/course_pipeline/question_gen_v3)
+- [questions/candidates.py](/code/src/course_pipeline/questions/candidates.py)
 
 ### Layer 3: Policy And Coverage
 
@@ -109,6 +110,7 @@ Relevant code:
 
 - [question_gen_v4](/code/src/course_pipeline/question_gen_v4)
 - [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
+- [questions/policy.py](/code/src/course_pipeline/questions/policy.py)
 
 ### Layer 4: Ledger and Inspection
 
@@ -137,6 +139,7 @@ Main artifacts:
 Relevant code:
 
 - [question_ledger_v6](/code/src/course_pipeline/question_ledger_v6)
+- [questions/ledger.py](/code/src/course_pipeline/questions/ledger.py)
 
 ### Layer 5: Human Inspection and Evaluation
 
@@ -299,6 +302,7 @@ For current repo understanding, use these as the primary references:
 
 - [project_spec.md](/code/docs/project_spec.md)
 - [question_generation_algorithm_spec.md](/code/docs/question_generation_algorithm_spec.md)
+- [refactor_naming_map.md](/code/docs/refactor_naming_map.md)
 - [pipeline_memo.md](/code/docs/pipeline_memo.md)
 - [current_architecture_and_production_options.md](/code/docs/current_architecture_and_production_options.md)
 

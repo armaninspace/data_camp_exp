@@ -6,6 +6,7 @@ from pathlib import Path
 
 from course_pipeline.config import Settings
 from course_pipeline.foundational_entry_questions import is_plain_definition_question
+from course_pipeline.llm_metering import MeteredLLMJsonClient
 from course_pipeline.questions.candidates.models import FrictionPoint, QuestionCandidate, ScoredCandidate, TopicNode
 from course_pipeline.questions.policy.assign_policy_bucket import assign_policy_decisions
 from course_pipeline.questions.policy.build_cache_entries import build_cache_entries
@@ -361,45 +362,19 @@ def _parse_answers(content: str) -> dict[str, str]:
     return answers
 
 
-class LLMJsonClient:
-    def __init__(self, settings: Settings) -> None:
-        if not settings.openai_api_key:
-            raise RuntimeError("OPENAI_API_KEY is required for V4.1 review answers")
-        self.settings = settings
-
-    def invoke_json(self, system_prompt: str, user_prompt: str) -> str:
-        import urllib.error
-        import urllib.request
-
-        body = {
-            "model": self.settings.openai_model,
-            "temperature": 0,
-            "response_format": {"type": "json_object"},
-            "messages": [
-                {"role": "system", "content": "Return grounded short answers as JSON only."},
-                {"role": "user", "content": user_prompt},
-            ],
-        }
-        request = urllib.request.Request(
-            "https://api.openai.com/v1/chat/completions",
-            data=json.dumps(body).encode("utf-8"),
-            headers={
-                "Authorization": f"Bearer {self.settings.openai_api_key}",
-                "Content-Type": "application/json",
-            },
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=self.settings.openai_timeout) as response:
-                payload = json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            error_body = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"OpenAI request failed: {exc.code} {error_body}") from exc
-        return payload["choices"][0]["message"]["content"]
-
-
-def answer_policy_questions(settings: Settings, course: NormalizedCourse, candidate_rows: list[CandidateRecord]) -> dict[str, str]:
-    client = LLMJsonClient(settings)
+def answer_policy_questions(
+    settings: Settings,
+    run_dir: Path,
+    course: NormalizedCourse,
+    candidate_rows: list[CandidateRecord],
+) -> dict[str, str]:
+    client = MeteredLLMJsonClient(
+        settings,
+        run_id=run_dir.name,
+        run_dir=run_dir,
+        stage="policy_review_answers",
+        prompt_version="policy_review_answers_v1",
+    )
     payload = {
         "course": {
             "course_id": course.course_id,
@@ -419,7 +394,12 @@ def answer_policy_questions(settings: Settings, course: NormalizedCourse, candid
             for item in candidate_rows
         ],
     }
-    content = client.invoke_json("json", json.dumps(payload, ensure_ascii=False, indent=2))
+    content = client.invoke_json(
+        "Return grounded short answers as JSON only.",
+        json.dumps(payload, ensure_ascii=False, indent=2),
+        course_id=course.course_id,
+        entity_ids=[item.candidate_id for item in candidate_rows],
+    )
     return _parse_answers(content)
 
 
@@ -448,6 +428,7 @@ def build_v4_1_review_bundle(
     per_course: dict[str, dict],
 ) -> dict[str, Path]:
     bundle_dir = ensure_dir(run_dir / "review_bundle")
+    metering_path = run_dir / "llm_metering.jsonl"
     answer_rows: list[dict] = []
     for course in courses:
         result = per_course[course.course_id]
@@ -455,7 +436,7 @@ def build_v4_1_review_bundle(
         hidden_correct: list[CandidateRecord] = result["hidden_correct"]
         coverage_warnings = result["coverage_warnings"]
         cache_entries = result["cache_entries"]
-        answers = answer_policy_questions(settings, course, visible_curated) if visible_curated else {}
+        answers = answer_policy_questions(settings, run_dir, course, visible_curated) if visible_curated else {}
         lines = [f"# {course.title} (`{course.course_id}`)", "", "## Visible Curated Q/A Pairs", ""]
         for item in visible_curated:
             answer = answers.get(item.candidate_id, "")
@@ -502,4 +483,4 @@ def build_v4_1_review_bundle(
         (bundle_dir / f"{course.course_id}_{slugify(course.title)}.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     answers_path = run_dir / "review_answers.jsonl"
     write_jsonl(answers_path, answer_rows)
-    return {"review_bundle": bundle_dir, "review_answers": answers_path}
+    return {"review_bundle": bundle_dir, "review_answers": answers_path, "llm_metering": metering_path}

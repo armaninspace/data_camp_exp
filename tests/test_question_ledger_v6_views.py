@@ -1,12 +1,11 @@
-from course_pipeline.question_gen_v3.models import TopicNode
-from course_pipeline.question_gen_v4.policy_models import PolicyScores
-from course_pipeline.question_gen_v4_1.policy_models import CandidateRecord
-from course_pipeline.question_ledger_v6.build_ledger import (
+from course_pipeline.questions.candidates.models import TopicNode
+from course_pipeline.questions.ledger.build import (
     build_anchor_summaries,
     build_inspection_report,
     build_ledger_rows,
     derive_views,
 )
+from course_pipeline.questions.policy.models import CandidateRecord, PolicyScores
 
 
 def _scores(**overrides) -> PolicyScores:

@@ -1,5 +1,4 @@
-from course_pipeline.question_gen_v4.policy_models import PolicyScores
-from course_pipeline.question_gen_v4_1.policy_models import CandidateRecord
+from course_pipeline.questions.policy.models import CandidateRecord, PolicyScores
 from course_pipeline.question_ledger_v6.config import load_default_config
 from course_pipeline.question_ledger_v6.normalize import (
     ledger_tags,

@@ -11,10 +11,9 @@ def test_live_pipeline_modules_import_cleanly() -> None:
         "course_pipeline.questions.ledger",
         "course_pipeline.questions.inspection",
         "course_pipeline.prefect_pipeline.flows",
-        "course_pipeline.question_gen_v3.pipeline",
-        "course_pipeline.question_gen_v4.run_v4_policy",
-        "course_pipeline.question_gen_v4_1.run_v4_1_policy",
-        "course_pipeline.question_ledger_v6.run_v6",
+        "course_pipeline.questions.candidates.pipeline",
+        "course_pipeline.questions.policy.run_policy",
+        "course_pipeline.questions.ledger.build",
     ]
 
     for module_name in modules:

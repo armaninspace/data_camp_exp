@@ -52,13 +52,12 @@ Typical input fields:
 
 ## Core Output Model
 
-The project currently has two semantic tracks:
+The current product focus is one canonical question pipeline:
 
-1. learning-outcome extraction
-2. question generation and ledgering
+`raw course YAML -> normalized course -> candidate questions -> policy decisions -> ledger -> inspection`
 
-The question-generation track is the more active one and is the basis of the
-latest inspection bundles.
+Historical learning-outcome and question-cache experiments are no longer part
+of the active source tree or CLI surface.
 
 ## Canonical Architectural View
 
@@ -88,51 +87,33 @@ Relevant code:
 - [schemas.py](/code/src/course_pipeline/schemas.py)
 - [pipeline.py](/code/src/course_pipeline/pipeline.py)
 
-### Layer 2: Learning-Outcome Extraction
-
-This layer generates cited course-learning claims from normalized course data.
-
-Responsibilities:
-
-- infer likely learning outcomes
-- attach citations to source fields
-- persist per-course extraction outputs
-- support inspection of claim coverage
-
-Main artifacts:
-
-- `learning_outcomes.jsonl`
-- `learning_outcomes_yaml/<course_id>.yaml`
-
-Relevant code:
-
-- [learning.py](/code/src/course_pipeline/learning.py)
-- [inspect_learning.py](/code/src/course_pipeline/inspect_learning.py)
-
-### Layer 3: Question Generation
+### Layer 2: Candidate Extraction And Generation
 
 This layer generates learner-question candidates from course content.
 
-It currently exists in several generations:
+Implementation is still split across version-labeled packages, but the live
+architectural responsibility is:
 
-- `question_gen_v2`
-- `question_gen_v3`
-- `question_gen_v4`
-- `question_gen_v4_1`
-
-The currently meaningful path is:
-
-`normalized course -> V3 candidates -> V4/V4.1 policy -> V6 ledger`
+`normalized course -> topics / edges / pedagogy / frictions -> candidates`
 
 Relevant code:
 
 - [question_gen_v3](/code/src/course_pipeline/question_gen_v3)
+
+### Layer 3: Policy And Coverage
+
+This layer classifies validated candidates into terminal delivery states and
+enforces foundational-entry coverage.
+
+Relevant code:
+
 - [question_gen_v4](/code/src/course_pipeline/question_gen_v4)
 - [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
 
 ### Layer 4: Ledger and Inspection
 
-This layer consolidates all generated questions into one normalized ledger.
+This layer consolidates all generated questions into one normalized ledger and
+derives the inspection surfaces from that ledger.
 
 This is the current authoritative artifact layer.
 
@@ -171,8 +152,8 @@ It exists to help a human reviewer answer:
 
 Main artifacts:
 
-- `docs/review_bundle*`
-- `docs/inspection_bundle_*`
+- `docs/inspection_bundle_7`
+- `docs/data_pack`
 - implementation reports
 - backlog documents
 
@@ -181,12 +162,12 @@ Main artifacts:
 The current canonical path for question generation is:
 
 1. standardize raw course YAML
-2. extract V3 topics, edges, pedagogy, and frictions
-3. generate V3 raw question candidates
+2. extract topics, edges, pedagogy, and frictions
+3. generate raw question candidates
 4. filter and score candidates
-5. apply V4.1 policy classification
+5. apply policy classification and coverage enforcement
 6. enforce foundational-entry coverage
-7. build V6 ledger rows
+7. build ledger rows
 8. derive visible and inspection views
 9. publish inspection bundles
 
@@ -237,11 +218,11 @@ canonical plain definition question.
 The main persisted data products are:
 
 - standardized course exports
-- learning outcome runs
-- question generation V2/V3/V4/V4.1 runs
-- V6 ledger runs
-- review bundles
+- question-generation candidate runs
+- policy runs
+- ledger runs
 - inspection bundles
+- packaged final deliverables
 
 Run artifacts live under:
 
@@ -257,14 +238,11 @@ Important commands:
 - `init-db`
 - `ingest`
 - `export-standardized`
-- `run-learning-outcomes`
-- `build-question-cache`
-- `run-question-gen-v2`
 - `run-question-gen-v3`
 - `run-question-gen-v4-policy`
 - `run-question-gen-v4-1-policy`
 - `run-question-ledger-v6`
-- bundle-building commands for review and inspection
+- bundle-building commands for inspection
 
 ## Storage Model
 
@@ -322,7 +300,7 @@ For current repo understanding, use these as the primary references:
 - [project_spec.md](/code/docs/project_spec.md)
 - [question_generation_algorithm_spec.md](/code/docs/question_generation_algorithm_spec.md)
 - [pipeline_memo.md](/code/docs/pipeline_memo.md)
-- [question_ledger_v6_implementation_report.md](/code/docs/question_ledger_v6_implementation_report.md)
+- [current_architecture_and_production_options.md](/code/docs/current_architecture_and_production_options.md)
 
 ## Definition Of Done For This Project Phase
 

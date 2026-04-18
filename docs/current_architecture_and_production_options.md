@@ -19,15 +19,14 @@ This is a companion to:
 The system is currently a file-artifact-heavy pipeline with optional database
 persistence and a CLI-first operating model.
 
-The architecture is best understood as seven components:
+The architecture is best understood as six components:
 
 1. input and normalization
-2. semantic extraction
-3. question generation
-4. policy and coverage enforcement
-5. ledger normalization
-6. inspection and reporting
-7. storage and execution surface
+2. candidate extraction and generation
+3. policy and coverage enforcement
+4. ledger normalization
+5. inspection and reporting
+6. storage and execution surface
 
 ## 1. Input And Normalization
 
@@ -57,27 +56,10 @@ Primary artifacts:
 - `chapters.jsonl`
 - standardized course YAML files
 
-## 2. Semantic Extraction
+## 2. Candidate Extraction And Generation
 
-There are two semantic extraction tracks in the repo.
-
-### Learning-outcome extraction
-
-This generates cited learning claims from normalized courses.
-
-Primary code:
-
-- [learning.py](/code/src/course_pipeline/learning.py)
-- [inspect_learning.py](/code/src/course_pipeline/inspect_learning.py)
-
-Primary artifacts:
-
-- `learning_outcomes.jsonl`
-- `learning_outcomes_yaml/`
-
-### Topic and friction extraction
-
-This is the current substrate for the active question-generation pipeline.
+The current active substrate for question generation is topic, edge,
+pedagogy, and friction extraction followed by bounded candidate generation.
 
 It extracts:
 
@@ -92,10 +74,11 @@ Primary code:
 - [question_gen_v3/extract_edges.py](/code/src/course_pipeline/question_gen_v3/extract_edges.py)
 - [question_gen_v3/extract_pedagogy.py](/code/src/course_pipeline/question_gen_v3/extract_pedagogy.py)
 - [question_gen_v3/mine_friction.py](/code/src/course_pipeline/question_gen_v3/mine_friction.py)
-
-## 3. Question Generation
-
-The active architecture uses a staged question-generation flow centered on V3.
+- [question_gen_v3/generate_candidates.py](/code/src/course_pipeline/question_gen_v3/generate_candidates.py)
+- [question_gen_v3/filters.py](/code/src/course_pipeline/question_gen_v3/filters.py)
+- [question_gen_v3/score_candidates.py](/code/src/course_pipeline/question_gen_v3/score_candidates.py)
+- [question_gen_v3/dedupe.py](/code/src/course_pipeline/question_gen_v3/dedupe.py)
+- [question_gen_v3/select_final.py](/code/src/course_pipeline/question_gen_v3/select_final.py)
 
 Core flow:
 
@@ -104,14 +87,6 @@ Core flow:
 3. score candidates
 4. dedupe candidates
 5. pass surviving candidates to policy classification
-
-Primary code:
-
-- [question_gen_v3/generate_candidates.py](/code/src/course_pipeline/question_gen_v3/generate_candidates.py)
-- [question_gen_v3/filters.py](/code/src/course_pipeline/question_gen_v3/filters.py)
-- [question_gen_v3/score_candidates.py](/code/src/course_pipeline/question_gen_v3/score_candidates.py)
-- [question_gen_v3/dedupe.py](/code/src/course_pipeline/question_gen_v3/dedupe.py)
-- [question_gen_v3/pipeline.py](/code/src/course_pipeline/question_gen_v3/pipeline.py)
 
 Important current rule:
 
@@ -124,7 +99,11 @@ Examples:
 - `What is exponential smoothing?`
 - `What is the Ljung-Box test?`
 
-## 4. Policy And Coverage Enforcement
+The implementation still lives under the historical package name
+`question_gen_v3`, but architecturally this is the candidate stage of the live
+pipeline, not a separate supported product line.
+
+## 3. Policy And Coverage Enforcement
 
 After V3 generation, the repo applies policy classification in V4 / V4.1.
 
@@ -158,7 +137,10 @@ Key policy outputs:
 - `analysis_only`
 - `hard_reject`
 
-## 5. Ledger Normalization
+The implementation still spans `question_gen_v4` and `question_gen_v4_1`, but
+architecturally this is one policy-and-coverage stage in the current system.
+
+## 4. Ledger Normalization
 
 The current authoritative architecture is ledger-first.
 
@@ -187,7 +169,10 @@ Derived artifacts:
 - `anchors_summary.json`
 - `inspection_report.md`
 
-## 6. Inspection And Reporting
+The implementation currently lives under the historical package name
+`question_ledger_v6`, but this is the live ledger stage of the system.
+
+## 5. Inspection And Reporting
 
 The project is highly document-driven.
 
@@ -195,7 +180,6 @@ Inspection is not incidental. It is a first-class architectural output.
 
 Current inspection surfaces:
 
-- review bundles
 - inspection bundles
 - per-run reports
 - implementation reports
@@ -203,12 +187,10 @@ Current inspection surfaces:
 
 Representative directories:
 
-- [docs/review_bundle](/code/docs/review_bundle)
-- [docs/review_bundle_v2](/code/docs/review_bundle_v2)
-- [docs/inspection_bundle_6](/code/docs/inspection_bundle_6)
 - [docs/inspection_bundle_7](/code/docs/inspection_bundle_7)
+- [docs/data_pack](/code/docs/data_pack)
 
-## 7. Storage And Execution Surface
+## 6. Storage And Execution Surface
 
 The project currently uses a hybrid storage model.
 
@@ -233,8 +215,7 @@ The DB is useful for:
 
 - run tracking
 - normalized course storage
-- learning outcome persistence
-- question-cache persistence
+- operational persistence for run metadata
 
 ### CLI surface
 
@@ -286,12 +267,13 @@ The architecture is still not production-grade in several important ways.
 The current filesystem-centric model is good for analysis but weak for
 low-latency application serving.
 
-### Multiple legacy paths remain in repo
+### Historical package naming still leaks into the codebase
 
-The repository still contains several generations of question pipelines.
+The live pipeline is still split across packages named by implementation
+generation rather than by responsibility.
 
-That is useful historically, but it raises complexity and increases the chance
-of confusion about which path is canonical.
+That increases the cognitive load for anyone trying to understand the current
+system.
 
 ### Heuristic-heavy semantics
 
@@ -313,7 +295,7 @@ service architecture.
 
 For the question-generation side, the current canonical path is:
 
-`raw YAML -> normalized course -> V3 generation -> V4.1 policy -> V6 ledger -> inspection bundle`
+`raw YAML -> normalized course -> candidate generation -> policy and coverage -> ledger -> inspection bundle`
 
 This is the path that should be treated as architecturally current.
 
@@ -383,7 +365,8 @@ filesystem coupling.
 ### Current state
 
 - CLI-first
-- minimal web app
+- no active application-serving surface
+- Prefect-backed orchestration work has started for pipeline execution
 
 ### Production options
 

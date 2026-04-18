@@ -3,11 +3,11 @@
 ## Scope
 
 This document specifies the current question-generation algorithm as it exists
-across:
+across the live pipeline stages:
 
-- V3 generation
-- V4 / V4.1 policy classification
-- V6 ledger normalization
+- candidate generation
+- policy and coverage classification
+- ledger normalization
 
 It describes the actual algorithmic flow that the project should optimize and
 audit.
@@ -21,6 +21,13 @@ Generate learner-question artifacts from course descriptions in a way that is:
 - non-destructive
 - coverage-aware
 - biased toward realistic beginner questions for foundational concepts
+
+Implementation note:
+
+The source tree still uses historical package names such as `question_gen_v3`,
+`question_gen_v4`, `question_gen_v4_1`, and `question_ledger_v6`. In this
+document those are treated as implementation locations, not architectural stage
+names.
 
 ## High-Level Pipeline
 
@@ -306,7 +313,7 @@ Representative V3 score inputs:
 - novelty
 - groundedness
 
-Representative V4 policy score fields:
+Representative policy score fields:
 
 - correctness
 - groundedness
@@ -336,7 +343,8 @@ Known limitation:
 
 ## Stage 10: Foundational Anchor Detection
 
-V4.1 identifies foundational anchors from topics using:
+The policy-and-coverage stage identifies foundational anchors from topics
+using:
 
 - topic type
 - confidence
@@ -424,8 +432,8 @@ This blocks inspection bundles that would otherwise hide a structural failure.
 
 ## Stage 14: Ledger Normalization
 
-V6 converts terminal policy records into one authoritative ledger row per
-question.
+The ledger stage converts terminal policy records into one authoritative ledger
+row per question.
 
 Each row includes:
 
@@ -442,6 +450,7 @@ Each row includes:
 - reject reasons
 - score summary
 - source refs
+- tracked topics
 
 The ledger is persisted as:
 

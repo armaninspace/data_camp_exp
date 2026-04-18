@@ -1,0 +1,67 @@
+course_id: '24426'
+course_title: Intermediate Data Visualization with Seaborn
+learning_outcomes:
+- id: LO1
+  claim: Recognize and recall intermediate features of Seaborn for data visualization.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The course is titled 'Intermediate Data Visualization with Seaborn' and
+    the summary mentions using Seaborn's sophisticated visualization tools. However,
+    without a syllabus or detailed description, we can only infer that students will
+    be exposed to intermediate-level features and tools in Seaborn.
+  citations:
+  - field: title
+    evidence: Intermediate Data Visualization with Seaborn
+  - field: summary
+    evidence: Use Seaborn's sophisticated visualization tools to make beautiful, informative
+      visualizations with ease.
+  - field: details.level
+    evidence: intermediate
+- id: LO2
+  claim: Understand how to use Seaborn to create informative and visually appealing
+    data visualizations.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The summary emphasizes making 'beautiful, informative visualizations
+    with ease' using Seaborn, suggesting that students will gain conceptual understanding
+    of how to use Seaborn for effective data visualization. However, the lack of a
+    syllabus limits the specificity of this claim.
+  citations:
+  - field: summary
+    evidence: Use Seaborn's sophisticated visualization tools to make beautiful, informative
+      visualizations with ease.
+  - field: subjects
+    evidence: Data Visualization, Seaborn
+- id: LO3
+  claim: Apply Seaborn tools to create intermediate-level data visualizations in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The course is described as 'intermediate' and focused on Seaborn, a Python
+    data visualization library. This suggests students will practice applying Seaborn's
+    tools to create visualizations, but without a syllabus, the range and depth of
+    application is unclear.
+  citations:
+  - field: title
+    evidence: Intermediate Data Visualization with Seaborn
+  - field: subjects
+    evidence: Python, Data Visualization, Seaborn
+  - field: details.level
+    evidence: intermediate
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific topics, skills, or
+    assessment types are unknown.
+  - Cannot determine the breadth or depth of intermediate Seaborn features covered.
+  - No explicit mention of data types, visualization types, or real-world application
+    contexts.

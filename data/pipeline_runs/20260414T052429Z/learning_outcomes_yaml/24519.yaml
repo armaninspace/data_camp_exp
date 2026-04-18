@@ -1,0 +1,51 @@
+course_id: '24519'
+course_title: Connecting Data in Tableau
+learning_outcomes:
+- id: lo1
+  claim: Recall the basic process of connecting Tableau to different data sources.
+  knowledge_type: procedural
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that the course covers connecting Tableau
+    to different data sources. However, without a syllabus or detailed description,
+    we cannot infer depth beyond basic recall of the process.
+  citations:
+  - field: summary
+    evidence: Learn to connect Tableau to different data sources and prepare the data
+      for a smooth analysis.
+- id: lo2
+  claim: Understand the concept of preparing data for analysis in Tableau.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary mentions preparing data for analysis, suggesting students
+    will gain a conceptual understanding, but the lack of detail limits the claim
+    to basic comprehension.
+  citations:
+  - field: summary
+    evidence: Learn to connect Tableau to different data sources and prepare the data
+      for a smooth analysis.
+- id: lo3
+  claim: Identify the role of unions in data management within Tableau.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subject list includes 'Unions', implying some exposure to the concept,
+    but without further detail, we cannot infer more than basic recognition.
+  citations:
+  - field: subjects
+    evidence: Unions
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, limiting inference to high-level
+    claims.
+  - No explicit procedural steps, examples, or assessments are described.
+  - No information on the depth or complexity of data preparation or union operations.

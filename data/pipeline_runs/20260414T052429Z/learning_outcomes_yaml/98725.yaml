@@ -1,0 +1,121 @@
+course_id: '98725'
+course_title: Calculations in Tableau
+learning_outcomes:
+- id: '1'
+  claim: Understand and apply calculated fields, including row-level and aggregation
+    calculations, in Tableau.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will revisit the foundations
+    of calculated fields, row-level, and aggregation calculations, and learn to troubleshoot
+    calculation errors. This supports procedural knowledge and application.
+  citations:
+  - field: syllabus[0].title
+    evidence: Start to Calculate!
+  - field: syllabus[0].summary
+    evidence: concept of calculated fields and we will revisit the foundations of
+      various types of calculations, such as row-level and aggregations. We will also
+      learn how to troubleshoot typical calculations errors
+- id: '2'
+  claim: Use String and Logical functions in Tableau calculations for data analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions studying useful String and Logical functions, which
+    are indispensable in data analysis, indicating students will learn to use these
+    functions in practice.
+  citations:
+  - field: syllabus[0].summary
+    evidence: study useful String and Logical functions which are indispensable in
+      any data analysis
+- id: '3'
+  claim: Understand and apply Level of Detail (LOD) expressions to perform calculations
+    at different data granularities in Tableau.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes learning to navigate between various levels of
+    data granularity and perform calculations independent of dimensions using LOD
+    expressions.
+  citations:
+  - field: syllabus[1].title
+    evidence: Level of Detail Expressions
+  - field: syllabus[1].summary
+    evidence: explore the navigation between various levels of data granularity. With
+      LOD expressions we will learn how to perform calculations independent of the
+      dimensions in the view
+- id: '4'
+  claim: Apply table calculations such as running totals, percentages, and ranking
+    in Tableau.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies learning to calculate running totals, percentages
+    of category, and ranking using table calculations.
+  citations:
+  - field: syllabus[2].title
+    evidence: Table Calculations and Parameters
+  - field: syllabus[2].summary
+    evidence: learn how to calculate running totals, percentages of category, and
+      ranking and discover ins and outs of underlying functions
+- id: '5'
+  claim: Use parameters in Tableau calculations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions uncovering parameters and learning how to use them
+    in calculations, indicating basic procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: uncover the parameters and learn how to use them in calculations
+- id: '6'
+  claim: Understand and apply date and time data types and key date functions for
+    time series analysis in Tableau.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will focus on date and time data types
+    and learn key date functions as critical components for time series calculations.
+  citations:
+  - field: syllabus[3].title
+    evidence: Time Series Analysis
+  - field: syllabus[3].summary
+    evidence: focus on date and time data types as the critical components of all
+      relevant time series calculations. Learning the key date functions
+- id: '7'
+  claim: Perform time series analyses such as CAGR, year-over-year calculations, seasonality
+    trends, and indexed growths in Tableau.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus lists specific time series analyses (CAGR, year-over-year,
+    seasonality, indexed growths) as learning targets, indicating students will be
+    able to perform these analyses.
+  citations:
+  - field: syllabus[3].summary
+    evidence: progress towards more complex analysis such as computing CAGR, Year
+      over year calculations, and exploring seasonality trends or indexed growths
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level summaries but does not specify assessment
+    types or depth of mastery beyond application.
+  - No explicit mention of metacognitive or evaluative skills (e.g., critiquing calculation
+    choices or designing novel solutions).
+  - No details on integration of skills across chapters or on project-based learning.

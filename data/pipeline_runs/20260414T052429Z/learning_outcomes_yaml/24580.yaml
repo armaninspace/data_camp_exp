@@ -1,0 +1,86 @@
+course_id: '24580'
+course_title: Working with Web Data in R
+learning_outcomes:
+- id: '1'
+  claim: Recall and identify methods for importing web data into R, including downloading
+    static files and using API clients.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview and summary explicitly mention learning how to import data
+    from the web into R, including downloading files and using API clients. This supports
+    factual recall of methods.
+  citations:
+  - field: summary
+    evidence: Learn how to efficiently import data from the web into R.
+  - field: overview
+    evidence: This chapter will explore how to download and read in static files,
+      and how to use APIs when pre-existing clients are available.
+- id: '2'
+  claim: Understand and apply the use of the httr package to interact directly with
+    web APIs in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes learning to make web requests from R using httr,
+    examining responses, and following best practices, indicating procedural application.
+  citations:
+  - field: overview
+    evidence: In this chapter you'll learn how to make web requests from R, how to
+      examine the responses you get back and some best practices for doing this in
+      a responsible way.
+- id: '3'
+  claim: Parse and extract data from JSON and XML formats in R using appropriate packages.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview details learning what JSON and XML are, converting them
+    into R-like objects, and extracting data, which is procedural application.
+  citations:
+  - field: overview
+    evidence: This chapter walks you through what JSON and XML are, how to convert
+      them into R-like objects, and how to extract data from them.
+- id: '4'
+  claim: Apply web scraping techniques in R using XPATHs and the rvest package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview mentions introducing web scraping with XPATHs and the rvest
+    package, indicating procedural application.
+  citations:
+  - field: overview
+    evidence: This chapter will introduce you to the rvest web-scraping package, and
+      build on your previous knowledge of XML manipulation and XPATHs.
+- id: '5'
+  claim: Use CSS selectors for web scraping in R and synthesize multiple techniques
+    in a final case study.
+  knowledge_type: procedural
+  process_level: create
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The overview describes learning CSS-based web scraping and completing
+    a final case study that combines all previous techniques, indicating synthesis
+    and creation.
+  citations:
+  - field: overview
+    evidence: You'll start this chapter by learning about CSS, and how to leverage
+      it for web scraping. Then, you'll work through a final case study that combines
+      everything you've learnt so far to write a function that queries an API, parses
+      the response and returns data in a nice form.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided; all inferences are based on the overview and
+    summary.
+  - No explicit mention of assessment types or depth of practice.
+  - No information on metacognitive or evaluative skills development.

@@ -1,0 +1,98 @@
+course_id: '24468'
+course_title: Introduction to R for Finance
+learning_outcomes:
+- id: LO1
+  claim: Recall and use basic R syntax, including variables and base data types (numerics
+    and characters).
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will get comfortable with
+    the basics of R, use it as a calculator, and create variables, focusing on numerics
+    and characters.
+  citations:
+  - field: syllabus[0].title
+    evidence: The Basics
+  - field: syllabus[0].summary
+    evidence: Get comfortable with the very basics of R and learn how to use it as
+      a calculator. Also, create your first variables in R and explore some of the
+      base data types such as numerics and characters.
+- id: LO2
+  claim: Understand and apply the creation, naming, manipulation, and selection of
+    vectors and matrices in R, using financial data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus describes learning about vectors and matrices, including
+    creating, naming, manipulating, and selecting from them, with application to historical
+    stock prices.
+  citations:
+  - field: syllabus[1].title
+    evidence: Vectors and Matrices
+  - field: syllabus[1].summary
+    evidence: learn all about vectors and matrices using historical stock prices for
+      companies like Apple and IBM. You will then be able to feel confident creating,
+      naming, manipulating, and selecting from vectors and matrices.
+- id: LO3
+  claim: Understand the structure and use of data frames in R, including their ability
+    to hold different data types in columns.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus highlights the importance of data frames, their structure,
+    and their flexibility in holding different types of data.
+  citations:
+  - field: syllabus[2].title
+    evidence: Data Frames
+  - field: syllabus[2].summary
+    evidence: the data frame is what most of your data will take the form of. It combines
+      the structure of a matrix with the flexibility of having different types of
+      data in each column.
+- id: LO4
+  claim: Create, order, and subset factor variables in R, with application to categorical
+    financial data such as bond credit ratings.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies learning to create, order, and subset factors,
+    using bond credit ratings as an example.
+  citations:
+  - field: syllabus[3].title
+    evidence: Factors
+  - field: syllabus[3].summary
+    evidence: learn all about creating, ordering, and subsetting factors.
+- id: LO5
+  claim: Understand and use lists in R to organize related data structures, exemplified
+    by building a small stock portfolio.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes exploring lists and their features by building
+    a small portfolio of stocks, indicating practical application.
+  citations:
+  - field: syllabus[4].title
+    evidence: Lists
+  - field: syllabus[4].summary
+    evidence: explore lists and many of their interesting features by building a small
+      portfolio of stocks.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on foundational R data structures and their application
+    to basic financial data, but does not cover advanced R programming, statistical
+    analysis, or complex financial modeling.
+  - There is no explicit mention of assessment types, depth of financial analysis,
+    or integration of multiple data structures in complex tasks.
+  - Metacognitive skills and higher-order analytical or creative tasks are not evidenced
+    in the syllabus.

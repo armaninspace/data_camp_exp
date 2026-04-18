@@ -1,0 +1,59 @@
+course_id: '260175'
+course_title: Time Series Analysis in Power BI
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply common time series analysis techniques in Power BI.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview and summary state that students will practice common techniques
+    for analyzing data over time using Power BI, including window, period-to-date,
+    and period-over-period functions. This suggests procedural knowledge and the ability
+    to apply these techniques, but does not provide evidence of deeper analysis or
+    creation.
+  citations:
+  - field: overview
+    evidence: You will start by analyzing Superstoredata for Point of Sale (PoS) data
+      across various locations and times, where you will calculate changes with different
+      kinds of window, period-to-date, and period-over-period functions.
+  - field: summary
+    evidence: Work with real datasets & practice common techniques.
+- id: LO2
+  claim: Use built-in and DAX algorithms in Power BI to forecast time series data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview specifies that students will use both built-in and DAX algorithms
+    to forecast data, indicating procedural knowledge and application, but not necessarily
+    deeper understanding or evaluation.
+  citations:
+  - field: overview
+    evidence: See how we can forecast data into the future, using both built-in and
+      DAX algorithms to do so.
+- id: LO3
+  claim: Recognize the importance of time as a dimension in data analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The overview emphasizes the role of time as a universal dimension in
+    data analysis, suggesting students will understand this concept, but there is
+    no evidence of deeper engagement.
+  citations:
+  - field: overview
+    evidence: There is one dimension that every analysis shares in common? That's
+      right; it's time! Have you ever thought about how your data varies over time
+      as well?
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail on specific techniques,
+    depth, or assessment.
+  - No explicit mention of evaluation, analysis, or creation-level tasks.
+  - No information on metacognitive outcomes or reflective practice.

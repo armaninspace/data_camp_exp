@@ -1,0 +1,105 @@
+course_id: '24372'
+course_title: Intermediate Python
+learning_outcomes:
+- id: '1'
+  claim: Create and customize a variety of data visualizations using Matplotlib.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn to build and
+    customize various types of plots using Matplotlib, which involves applying procedures
+    to create visualizations.
+  citations:
+  - field: syllabus[0].title
+    evidence: Matplotlib
+  - field: syllabus[0].summary
+    evidence: learn how to build various types of plots, and customize them to be
+      more visually appealing and interpretable
+- id: '2'
+  claim: Create and manipulate datasets using Python dictionaries and pandas DataFrames.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes hands-on practice with creating and manipulating
+    datasets using dictionaries and pandas DataFrames, indicating procedural knowledge
+    and application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Dictionaries & Pandas
+  - field: syllabus[1].summary
+    evidence: hands-on practice with creating and manipulating datasets
+- id: '3'
+  claim: Access and filter information from Python dictionaries and pandas DataFrames.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions learning how to access information from data structures
+    and filter data in pandas DataFrames, which are procedural skills.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn how to access the information you need from these data structures
+  - field: syllabus[2].summary
+    evidence: learn to filter data in pandas DataFrames using logic
+- id: '4'
+  claim: Use Boolean logic, comparison operators, and control flow structures in Python
+    programs.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus covers Boolean logic, comparison operators, and their use
+    in control structures, indicating conceptual understanding and application.
+  citations:
+  - field: syllabus[2].title
+    evidence: Logic, Control Flow and Filtering
+  - field: syllabus[2].summary
+    evidence: Learn about different comparison operators, how to combine them with
+      Boolean operators, and how to use the Boolean outcomes in control structures.
+- id: '5'
+  claim: Implement loops (for and while) to automate repetitive tasks in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus describes learning about for and while loops and their use
+    in executing code repeatedly, which is procedural application.
+  citations:
+  - field: syllabus[3].title
+    evidence: Loops
+  - field: syllabus[3].summary
+    evidence: Learn all about them in this chapter.
+- id: '6'
+  claim: Apply Python programming concepts to solve a practical problem using hacker
+    statistics.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The final chapter involves applying all learned concepts (random number
+    generators, loops, Matplotlib) to a case study, indicating integration of multiple
+    skills in a practical context.
+  citations:
+  - field: syllabus[4].title
+    evidence: 'Case Study: Hacker Statistics'
+  - field: syllabus[4].summary
+    evidence: apply all the concepts you've learned in this course. You will use hacker
+      statistics to calculate your chances of winning a bet.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of statistical concepts covered in the case
+    study.
+  - There is no explicit mention of error handling, debugging, or advanced data science
+    techniques.
+  - Metacognitive skills (e.g., reflecting on one's own learning or programming strategies)
+    are not addressed.

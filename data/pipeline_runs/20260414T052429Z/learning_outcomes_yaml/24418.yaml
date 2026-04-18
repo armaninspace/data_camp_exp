@@ -1,0 +1,111 @@
+course_id: '24418'
+course_title: Machine Learning with Tree-Based Models in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand and explain the principles of Classification and Regression Trees
+    (CART) for supervised learning tasks.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter introduces the CART algorithm and its use in classification
+    and regression, indicating students will gain conceptual understanding of how
+    these models work.
+  citations:
+  - field: syllabus[0].title
+    evidence: Classification and Regression Trees
+  - field: syllabus[0].summary
+    evidence: In this chapter, you'll be introduced to the CART algorithm.
+- id: LO2
+  claim: Diagnose overfitting and underfitting in tree-based models and explain the
+    bias-variance tradeoff.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on understanding the bias-variance tradeoff
+    and diagnosing overfitting/underfitting, which are key conceptual skills.
+  citations:
+  - field: syllabus[1].title
+    evidence: The Bias-Variance Tradeoff
+  - field: syllabus[1].summary
+    evidence: You'll understand how to diagnose the problems of overfitting and underfitting.
+- id: LO3
+  claim: Describe and apply ensemble methods such as bagging and random forests to
+    improve model robustness.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter covers bagging and random forests, including their
+    application to create ensembles, suggesting students will be able to describe
+    and use these methods.
+  citations:
+  - field: syllabus[2].title
+    evidence: Bagging and Random Forests
+  - field: syllabus[2].summary
+    evidence: You'll understand how bagging can be used to create a tree ensemble.
+      You'll also learn how the random forests algorithm can lead to further ensemble
+      diversity.
+- id: LO4
+  claim: Explain the principles of boosting and distinguish between AdaBoost and Gradient
+    Boosting methods.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter introduces boosting and two specific algorithms, indicating
+    students will be able to explain and distinguish these methods.
+  citations:
+  - field: syllabus[3].title
+    evidence: Boosting
+  - field: syllabus[3].summary
+    evidence: You'll be introduced to the two boosting methods of AdaBoost and Gradient
+      Boosting.
+- id: LO5
+  claim: Tune hyperparameters of tree-based models using grid search cross validation.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The final chapter explicitly states students will learn to tune hyperparameters
+    using grid search cross validation, a procedural skill.
+  citations:
+  - field: syllabus[4].title
+    evidence: Model Tuning
+  - field: syllabus[4].summary
+    evidence: You'll learn how to tune the hyperparameters of a tree-based model using
+      grid search cross validation.
+- id: LO6
+  claim: Use scikit-learn in Python to implement tree-based models and ensembles for
+    regression and classification tasks.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary emphasize practical use of scikit-learn for
+    implementing these models, though the syllabus does not detail specific coding
+    tasks.
+  citations:
+  - field: overview
+    evidence: you'll learn how to use Python to train decision trees and tree-based
+      models with the user-friendly scikit-learn machine learning library
+  - field: summary
+    evidence: you'll learn how to use tree-based models and ensembles for regression
+      and classification using scikit-learn
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus does not specify the depth of coding exercises or the complexity
+    of datasets used.
+  - There is no explicit mention of model evaluation metrics or interpretation of
+    model outputs.
+  - No metacognitive or extended abstract learning outcomes are supported by the provided
+    content.

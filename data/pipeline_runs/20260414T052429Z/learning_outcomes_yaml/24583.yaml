@@ -1,0 +1,106 @@
+course_id: '24583'
+course_title: Introduction to Bioconductor in R
+learning_outcomes:
+- id: '1'
+  claim: Install and use Bioconductor packages in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn how to install
+    and use Bioconductor packages, which is a procedural skill requiring application
+    of knowledge.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You will learn how to install and use bioconductor packages.
+- id: '2'
+  claim: Describe the purpose and structure of S4 objects and functions in Bioconductor.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The course introduces S4 objects and functions, focusing on understanding
+    their role in Bioconductor.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You'll be introduced to S4 objects and functions, because most packages
+      within Bioconductor inherit from S4.
+- id: '3'
+  claim: Use the BSgenome package to explore genomic datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: Students will use a real genomic dataset of a fungus to explore the BSgenome
+    package, indicating hands-on procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you will use a real genomic dataset of a fungus to explore the BSgenome
+      package.
+- id: '4'
+  claim: Manipulate biological sequences using Biostrings, including sequence matching
+    and alphabet handling.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The course covers using Biostrings for manipulation of large biological
+    sequences, including matching algorithms and alphabets.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Biostring has matching algorithms, and other utilities, for fast manipulation
+      of large biological sequences or sets of sequences. ... You will learn about
+      alphabets, and sequence manipulation by using the tiny genome of a virus.
+- id: '5'
+  claim: Store and manipulate genomic intervals using IRanges and GenomicRanges packages.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Students will learn to use IRanges and GenomicRanges for storing and
+    manipulating genomic intervals and associated metadata.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You will learn how to use these containers and their associated metadata,
+      for manipulation of your sequences.
+- id: '6'
+  claim: Input, manipulate, and assess quality of fasta and fastq files using ShortRead.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The course covers using ShortRead for input, manipulation, and quality
+    assessment of sequence files, including subsetting, trimming, filtering, and reporting.
+  citations:
+  - field: syllabus[3].summary
+    evidence: ShortRead is the package for input, manipulation and assessment of fasta
+      and fastq files. You can subset, trim and filter the sequences of interest,
+      and even do a report of quality.
+- id: '7'
+  claim: Perform parallel quality assessment of sequence data using Rqc.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The course mentions an 'extra bonus' on parallel quality assessment with
+    Rqc, but details are limited, so confidence is lower.
+  citations:
+  - field: syllabus[3].summary
+    evidence: An extra bonus towards the last exercises will give you the tools for
+      parallel quality assessment, wink, wink Rqc.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not provide detail on the depth of conceptual understanding or
+    metacognitive strategies.
+  - No explicit mention of troubleshooting, advanced analysis, or integration of multiple
+    packages in complex workflows.
+  - Assessment methods and expected proficiency levels are not described.

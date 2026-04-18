@@ -1,0 +1,104 @@
+course_id: '24401'
+course_title: Unsupervised Learning in Python
+learning_outcomes:
+- id: LO1
+  claim: Identify and apply clustering techniques to explore and group unlabeled datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly covers discovering clusters in datasets
+    and applying clustering to real-world data such as stock prices and species measurements.
+  citations:
+  - field: syllabus[0].title
+    evidence: Clustering for Dataset Exploration
+  - field: syllabus[0].summary
+    evidence: Learn how to discover the underlying groups (or "clusters") in a dataset.
+      By the end of this chapter, you'll be clustering companies using their stock
+      market prices, and distinguishing different species by clustering their measurements.
+- id: LO2
+  claim: Visualize high-dimensional data using hierarchical clustering and t-SNE techniques.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on using hierarchical clustering and t-SNE
+    for data visualization, including understanding how these methods represent data
+    structure visually.
+  citations:
+  - field: syllabus[1].title
+    evidence: Visualization with Hierarchical Clustering and t-SNE
+  - field: syllabus[1].summary
+    evidence: In this chapter, you'll learn about two unsupervised learning techniques
+      for data visualization, hierarchical clustering and t-SNE. Hierarchical clustering
+      merges the data samples into ever-coarser clusters, yielding a tree visualization
+      of the resulting cluster hierarchy. t-SNE maps the data samples into 2d space
+      so that the proximity of the samples to one another can be visualized.
+- id: LO3
+  claim: Apply Principal Component Analysis (PCA) for dimension reduction and data
+    decorrelation.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter covers PCA as a fundamental dimension reduction technique,
+    including its use for summarizing datasets and improving model performance.
+  citations:
+  - field: syllabus[2].title
+    evidence: Decorrelating Your Data and Dimension Reduction
+  - field: syllabus[2].summary
+    evidence: In this chapter, you'll learn about the most fundamental of dimension
+      reduction techniques, "Principal Component Analysis" ("PCA"). PCA is often used
+      before supervised learning to improve model performance and generalization.
+      It can also be useful for unsupervised learning. For example, you'll employ
+      a variant of PCA will allow you to cluster Wikipedia articles by their content!
+- id: LO4
+  claim: Use Non-negative Matrix Factorization (NMF) to extract interpretable features
+    and build simple recommender systems.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter introduces NMF for extracting interpretable features
+    and describes its application in building recommender systems for articles and
+    music.
+  citations:
+  - field: syllabus[3].title
+    evidence: Discovering Interpretable Features
+  - field: syllabus[3].summary
+    evidence: In this chapter, you'll learn about a dimension reduction technique
+      called "Non-negative matrix factorization" ("NMF") that expresses samples as
+      combinations of interpretable parts. ... You'll also learn to use NMF to build
+      recommender systems that can find you similar articles to read, or musical artists
+      that match your listening history!
+- id: LO5
+  claim: Understand the fundamental concepts and applications of unsupervised learning
+    techniques in Python using scikit-learn and SciPy.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and summary emphasize learning the fundamentals of
+    unsupervised learning and implementing algorithms with scikit-learn and SciPy.
+  citations:
+  - field: overview
+    evidence: In this course, you'll learn the fundamentals of unsupervised learning
+      and implement the essential algorithms using scikit-learn and SciPy.
+  - field: summary
+    evidence: Learn how to cluster, transform, visualize, and extract insights from
+      unlabeled datasets using scikit-learn and scipy.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced evaluation or creation-level tasks
+    (e.g., designing new algorithms or critically evaluating models).
+  - There is no explicit mention of metacognitive skills or reflective practice.
+  - The depth of mathematical understanding required is not specified.
+  - The course appears to focus on application and understanding, with limited evidence
+    for higher-order synthesis or analysis.

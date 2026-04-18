@@ -1,0 +1,123 @@
+course_id: '24440'
+course_title: Database Design
+learning_outcomes:
+- id: LO1
+  claim: Describe the differences between OLTP and OLAP approaches to data processing.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first syllabus chapter explicitly states that students will learn
+    about the two approaches to data processing, OLTP and OLAP, which supports understanding
+    and describing their differences.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Start your journey into database design by learning about the two approaches
+      to data processing, OLTP and OLAP.
+- id: LO2
+  claim: Explain basic data modeling concepts and the different forms data can be
+    stored in.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter summary mentions learning the basics of data modeling
+    and the different forms data can be stored in, supporting an understanding-level
+    outcome.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you'll also get familiar with the different forms data can be stored
+      in and learn the basics of data modeling.
+- id: LO3
+  claim: Implement star and snowflake schemas in database design.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter states students will learn to implement star and snowflake
+    schemas, which is a procedural and application-level skill.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You'll learn to implement star and snowflake schemas
+- id: LO4
+  claim: Explain the importance of normalization and normalize databases to different
+    extents.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter covers recognizing the importance of normalization
+    and normalizing databases, supporting understanding and some application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: recognize the importance of normalization and see how to normalize databases
+      to different extents.
+- id: LO5
+  claim: Create and query database views, and distinguish between materialized and
+    non-materialized views.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter explicitly states students will learn to create and
+    query views, manage them, and identify differences between materialized and non-materialized
+    views.
+  citations:
+  - field: syllabus[2].summary
+    evidence: you will learn how to create and query views... identifying the difference
+      between materialized and non-materialized views.
+- id: LO6
+  claim: Grant database access based on user roles.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The fourth chapter mentions learning how to grant database access based
+    on user roles, which is a procedural skill.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You will learn how to grant database access based on user roles
+- id: LO7
+  claim: Partition database tables into smaller pieces.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The fourth chapter includes partitioning tables, which is a procedural
+    application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: how to partition tables into smaller pieces
+- id: LO8
+  claim: Identify considerations for integrating data and selecting an appropriate
+    DBMS for business needs.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter mentions what to keep in mind when integrating data
+    and choosing a DBMS, supporting understanding of these considerations.
+  citations:
+  - field: syllabus[3].summary
+    evidence: what to keep in mind when integrating data, and which DBMS fits your
+      business needs best.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course is described as beginner level, so depth of mastery is likely limited
+    to foundational concepts and basic procedural skills.
+  - No explicit mention of advanced database design topics (e.g., indexing, transaction
+    management, performance tuning).
+  - No direct evidence of metacognitive or higher-order creative skills (e.g., designing
+    novel database architectures).
+  - Assessment details are not provided, so the extent of practical application is
+    inferred from chapter summaries.

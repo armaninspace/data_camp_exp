@@ -1,0 +1,76 @@
+course_id: '24675'
+course_title: Natural Language Generation in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand how to represent sequential text data and apply recurrent neural
+    networks (RNNs) to generate new text in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes learning to represent data sequentially and using
+    neural network architectures (specifically RNNs) to model and generate text, including
+    a project to build a baby name generator using Keras.
+  citations:
+  - field: overview
+    evidence: Introduction to Sequential Data... you'll learn how to represent your
+      data sequentially and use neural network architecture to model your text data.
+      You'll learn how to create and train a recurrent network to generate new text,
+      character by character. You'll also use the names dataset to build your own
+      baby name generator, using a very simple recurrent neural network and the Keras
+      package.
+- id: LO2
+  claim: Understand and apply LSTM networks to generate text in the style of Shakespeare,
+    addressing long-term dependencies in sequential data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview details learning about LSTM networks to overcome RNN limitations
+    and building a model to generate Shakespearean text.
+  citations:
+  - field: overview
+    evidence: Write Like Shakespeare... you'll be introduced to long short term memory
+      (LSTM) networks... you'll build and train a simple LSTM model using selected
+      literary works of Shakespeare to generate new text in the unique writing style
+      of Shakespeare.
+- id: LO3
+  claim: Understand and implement encoder-decoder architectures for neural machine
+    translation, specifically translating English sentences into French.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes learning about encoder-decoder architectures and
+    applying them to build a neural machine translation model.
+  citations:
+  - field: overview
+    evidence: Translate Words into a Different Language... you'll learn about the
+      encoder-decoder architecture... You'll use this knowledge to build a model for
+      neural machine translation, training your model to translate English sentences
+      into French.
+- id: LO4
+  claim: Apply seq2seq models to autocomplete sentences using real-world datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview mentions building a seq2seq model to predict sentence endings
+    using the Enron email dataset.
+  citations:
+  - field: overview
+    evidence: Autocomplete Your Sentences... you'll build your very own machine learning
+      seq2seq model... you'll predict the correct ending for an incomplete input sentence.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided; all inferences are based on the overview and
+    summary.
+  - No explicit mention of assessment or depth of conceptual understanding beyond
+    procedural application.
+  - Limited information on metacognitive or evaluative skills development.

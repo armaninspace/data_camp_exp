@@ -1,0 +1,81 @@
+course_id: '24607'
+course_title: Cleaning Data in SQL Server Databases
+learning_outcomes:
+- id: LO1
+  claim: Explain the importance of data cleaning in SQL Server databases.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly states that students will learn why cleaning
+    data is important, indicating a conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you will learn why cleaning data is important
+- id: LO2
+  claim: Identify and resolve simple data quality issues such as leading/trailing
+    spaces, inconsistent formats, and string concatenation in SQL Server.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter summary lists specific tasks (solving leading/trailing
+    spaces, unifying formats, combining strings), indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: solve simple problems such as leading and trailing spaces in strings,
+      unifying formats for flight registrations, combining strings and more
+- id: LO3
+  claim: Handle missing data, remove duplicates, and standardize date formats in SQL
+    Server datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter focuses on dealing with missing data, avoiding duplicates,
+    and working with date formats, all of which are procedural skills.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn how to deal with missing data, avoid duplicate data in your datasets,
+      and work with different formats of dates
+- id: LO4
+  claim: Detect and correct out-of-range and inaccurate values, convert between data
+    types, and use pattern matching to identify outliers in SQL Server.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The third chapter summary lists these specific procedural tasks, indicating
+    students will practice these skills.
+  citations:
+  - field: syllabus[2].summary
+    evidence: deal with out of range values and inaccurate data... practice converting
+      data with different types... work on matching patterns to your data to find
+      outliers
+- id: LO5
+  claim: Combine, split, aggregate, and transform data structures (columns and rows)
+    in SQL Server databases.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The final chapter summary describes combining, aggregating, splitting,
+    and transforming data, which are procedural applications.
+  citations:
+  - field: syllabus[3].summary
+    evidence: combine and aggregate data of some columns into one, split data of one
+      column into more columns, and transform rows into columns and vice versa
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment types or depth of SQL syntax knowledge required.
+  - No evidence of higher-order skills such as analyzing, evaluating, or creating
+    beyond procedural application.
+  - No explicit coverage of metacognitive strategies or error diagnosis beyond listed
+    procedural tasks.

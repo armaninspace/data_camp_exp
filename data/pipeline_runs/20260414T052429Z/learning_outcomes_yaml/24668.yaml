@@ -1,0 +1,75 @@
+course_id: '24668'
+course_title: Topic Modeling in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the workflow for topic modeling in R, including document-term
+    matrix preparation, model fitting, and result visualization with ggplot2.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview explicitly lists the steps in the topic modeling workflow,
+    indicating that students will learn the conceptual process and sequence.
+  citations:
+  - field: overview
+    evidence: 'This chapter introduces the workflow used in topic modeling: preparation
+      of a document-term matrix, model fitting, and visualization of results with
+      ggplot2.'
+- id: LO2
+  claim: Apply join functions to manipulate document-term matrices, including removing
+    or keeping words, and create wordcloud visualizations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview describes using join functions for word filtering and making
+    wordcloud charts, suggesting students will practice these procedures.
+  citations:
+  - field: overview
+    evidence: This chapter explains how to use join functions to remove or keep words
+      in the document-term matrix, how to make wordcloud charts, and how to use some
+      of the many control arguments.
+- id: LO3
+  claim: Explain how LDA topic models can be used for unsupervised classification,
+    including the role of the Dirichlet shape parameter alpha and construction of
+    word contexts for named entities.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions detailed coverage of LDA as a classifier, the alpha
+    parameter, and word context construction, indicating conceptual understanding.
+  citations:
+  - field: overview
+    evidence: This chapter goes into detail on how LDA topic models can be used as
+      classifiers. It covers the importance of the Dirichlet shape parameter alpha,
+      construction of word contexts for named entities using regex, and technical
+      issues like corpus alignment and held-out data.
+- id: LO4
+  claim: Describe basic methods for determining the optimal number of topics in a
+    topic model and how to use seed words to control topic numbering.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview states that the course explains methods for searching for
+    the optimal number of topics and using seed words, indicating conceptual knowledge.
+  citations:
+  - field: overview
+    evidence: This chapter explains the basic methods used in the search for the optimal
+      number of topics. It also covers how to use a single document as a source of
+      data, and how topic numbering can be controlled using seed words.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so learning outcomes are inferred from the overview,
+    which may omit specific skills or depth of coverage.
+  - Procedural and applied skills are mentioned but not described in detail, limiting
+    confidence in mastery beyond basic application.
+  - No explicit mention of assessment or opportunities for higher-order skills (e.g.,
+    analysis, evaluation, or creation).

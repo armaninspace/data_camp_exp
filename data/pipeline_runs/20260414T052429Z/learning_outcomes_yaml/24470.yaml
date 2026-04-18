@@ -1,0 +1,96 @@
+course_id: '24470'
+course_title: Data Manipulation with data.table in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply the use of data.table as a replacement for data.frame,
+    including filtering rows using the i argument.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn to use data.table
+    as a drop-in replacement for data.frame and filter rows using the i argument.
+    This requires understanding and applying new syntax and procedures.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to data.table
+  - field: syllabus[0].summary
+    evidence: introduces data.tables as a drop-in replacement for data.frames and
+      shows how to use data.table's i argument to filter rows.
+- id: LO2
+  claim: Select columns and perform computations on them using the j argument in data.table.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes learning to select columns and perform computations
+    using the j argument, which involves applying specific syntax and operations.
+  citations:
+  - field: syllabus[1].title
+    evidence: Selecting and Computing on Columns
+  - field: syllabus[1].summary
+    evidence: lets you select columns and also perform computations. The syntax is
+      far more convenient and flexible when compared to data.frames.
+- id: LO3
+  claim: Perform groupwise operations using the by argument and master the DT[i, j,
+    by] syntax.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will learn to perform computations
+    by groups using the by argument and master the DT[i, j, by] syntax, which is procedural
+    application.
+  citations:
+  - field: syllabus[2].title
+    evidence: Groupwise Operations
+  - field: syllabus[2].summary
+    evidence: introduces data.table's by argument that lets you perform computations
+      by groups. By the end of this chapter, you will master the concise DT[i, j,
+      by] syntax of data.table.
+- id: LO4
+  claim: Modify data.tables in place using reference semantics for efficient data
+    manipulation.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus highlights learning about modifying data.tables in place
+    using reference semantics, which is a procedural skill.
+  citations:
+  - field: syllabus[3].title
+    evidence: Reference Semantics
+  - field: syllabus[3].summary
+    evidence: modifying existing data.tables in place. Modifying data.tables in place
+      makes your operations incredibly fast and is easy to learn.
+- id: LO5
+  claim: Import and export flat files efficiently using data.table's fread() and fwrite()
+    functions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus specifies that students will learn to use fread() and fwrite()
+    for fast data import/export, which is a procedural application.
+  citations:
+  - field: syllabus[4].title
+    evidence: Importing and Exporting Data
+  - field: syllabus[4].summary
+    evidence: focuses on data.table's fread() and fwrite() functions which let you
+      import and export flat files quickly and easily!
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course focuses on procedural knowledge and application of data.table functions,
+    but does not explicitly address higher-order skills such as analysis, evaluation,
+    or creation.
+  - There is no explicit mention of metacognitive strategies or conceptual understanding
+    beyond syntax and usage.
+  - No assessment or project details are provided to infer mastery beyond procedural
+    application.

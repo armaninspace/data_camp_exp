@@ -1,0 +1,56 @@
+{
+  "source_manifest": "/code/docs/bundle_data_products/manifest.json",
+  "runs": {
+    "legacy_semantic_run_20260413T215831Z": {
+      "run_type": "bounded_sample_legacy_semantic",
+      "course_rows": 10,
+      "chapter_rows": 20,
+      "topic_rows": 92,
+      "edge_rows": 103,
+      "pedagogical_profile_rows": 20,
+      "predicted_question_rows": 202,
+      "error_rows": 0
+    },
+    "learning_outcomes_sample_run_20260414T025608Z": {
+      "run_type": "bounded_sample_learning_outcomes",
+      "course_rows": 3,
+      "chapter_rows": 25,
+      "error_rows": 0,
+      "payload_rows": 3,
+      "nested_learning_outcomes": 23,
+      "nested_min": 3,
+      "nested_median": 8,
+      "nested_mean": 7.67,
+      "nested_max": 12,
+      "nested_zero_count": 0,
+      "nested_gt10_count": 1
+    },
+    "question_cache_sample_run_20260414T044551Z": {
+      "run_type": "bounded_sample_question_cache",
+      "error_rows": 0,
+      "question_groups": 21,
+      "validated_groups": 5,
+      "variations": 21,
+      "accepted_variations": 5,
+      "canonical_answers": 21,
+      "accepted_answers": 5,
+      "validation_logs": 50,
+      "coverage_audits": 8,
+      "claims_with_groups": 8
+    },
+    "learning_outcomes_full_corpus_run_20260414T052429Z": {
+      "run_type": "full_corpus_learning_outcomes",
+      "course_rows": 537,
+      "chapter_rows": 1501,
+      "error_rows": 1,
+      "payload_rows": 536,
+      "nested_learning_outcomes": 2218,
+      "nested_min": 0,
+      "nested_median": 4.0,
+      "nested_mean": 4.14,
+      "nested_max": 12,
+      "nested_zero_count": 70,
+      "nested_gt10_count": 2
+    }
+  }
+}

@@ -1,0 +1,76 @@
+course_id: '91592'
+course_title: AWS Cloud Concepts
+learning_outcomes:
+- id: '1'
+  claim: Recall the fundamental concepts of cloud computing and AWS.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The summary and overview emphasize learning the fundamentals of cloud
+    computing and AWS, indicating that students will be able to recall basic facts
+    and concepts.
+  citations:
+  - field: summary
+    evidence: Learn the fundamentals of cloud computing with AWS.
+  - field: overview
+    evidence: Introduction to AWS... you will expand your knowledge regarding the
+      cloud provider, its history, and key figures demonstrating the platform's success.
+- id: '2'
+  claim: Understand the AWS value proposition and its economic framework.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes a 'deep dive into the AWS value proposition and
+    economics' and mentions the AWS cloud value framework, suggesting students will
+    comprehend these concepts and their components.
+  citations:
+  - field: overview
+    evidence: This chapter will walk you through a deep dive into the AWS value proposition
+      and economics. AWS has designed a dedicated framework called the AWS cloud value
+      framework, articulated around four pillars, to make it easier to convey and
+      grasp its value proposition.
+- id: '3'
+  claim: Identify and describe core AWS services, including compute, storage, database,
+    networking, content delivery, management, security, and identity.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview states that students will get a broad overview of AWS services
+    and focus on core services, indicating the ability to identify and describe these
+    services.
+  citations:
+  - field: overview
+    evidence: First, you will get a broad overview of AWS services, then you will
+      focus on some of the core services covering compute, storage, database, networking,
+      content delivery, management, security, and identity.
+- id: '4'
+  claim: Understand the pillars and best practices of the AWS Well-Architected Framework.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview explains that the course covers the five pillars of the
+    AWS Well-Architected Framework and their underlying best practices, indicating
+    conceptual understanding.
+  citations:
+  - field: overview
+    evidence: 'The AWS Well-Architected Framework provides a set of best practices
+      to maximize the value of AWS. It is composed of five pillars: operational excellence,
+      security, reliability, performance efficiency, and cost optimization. This chapter
+      will help you grasp the underlying best practices of each pillar.'
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so learning outcomes are inferred from summary,
+    overview, and subjects.
+  - No explicit mention of hands-on activities or assessments, so procedural and higher-order
+    skills cannot be confidently inferred.
+  - Level is stated as 'beginner', which limits the expected depth of learning.

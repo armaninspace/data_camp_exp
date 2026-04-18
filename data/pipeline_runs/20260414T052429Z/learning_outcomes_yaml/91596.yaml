@@ -1,0 +1,87 @@
+course_id: '91596'
+course_title: ETL in Python
+learning_outcomes:
+- id: lo1
+  claim: Understand the overall ETL (Extract, Transform, Load) pipeline process and
+    its phases.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes exposure to the whole ETL pipeline and deep-dives
+    into the extraction process, indicating conceptual understanding of ETL phases.
+  citations:
+  - field: overview
+    evidence: 'you’ll be introduced to your role as a data engineer in a private equity
+      fund. You''ll be exposed to the whole ETL pipeline before deep-diving into its
+      first phase: the extraction process.'
+- id: lo2
+  claim: Apply Python and SQL skills to create foundational components of an ETL pipeline,
+    including database communication.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions creating ETL foundations, setting up components
+    for database communication, and leveraging Python and SQL knowledge.
+  citations:
+  - field: overview
+    evidence: In this chapter you're going to create some important foundations for
+      our ETL pipeline. In particular, along with data transformation, you'll start
+      setting up the components needed to communicate with the database.
+  - field: summary
+    evidence: Leverage your Python and SQL knowledge to create an ETL pipeline to
+      ingest, transform, and load data into a database.
+- id: lo3
+  claim: Perform data transformation and loading using SQLAlchemy, including creating
+    unique keys and executing insert/delete statements.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview specifies moving transformed data to a clean table, creating
+    unique keys, and performing insert/delete statements using SQLAlchemy.
+  citations:
+  - field: overview
+    evidence: You'll explore how to create a unique key to perform insert and delete
+      statements on SQLAlchemy. At the end of this chapter you'll complete the load
+      process, the last step of the ETL pipeline.
+- id: lo4
+  claim: Use SQL to build more complex queries and generate insights from cleaned
+    data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview mentions exploring key SQL components to build more complex
+    queries and create insights for stakeholders.
+  citations:
+  - field: overview
+    evidence: You'll explore key SQL components to build more complex queries and
+      create these insights.
+- id: lo5
+  claim: Export query results into readable Excel files using relevant Python libraries.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The overview notes the use of libraries to translate raw SQL queries
+    into more readable Excel files, indicating practical application.
+  citations:
+  - field: overview
+    evidence: You'll also explore libraries that will translate raw SQL queries into
+      more readable Excel files.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so learning outcomes are inferred from the overview
+    and summary.
+  - No explicit mention of assessment or depth of mastery beyond application level.
+  - Limited information on the extent of data analysis or complexity of SQL queries
+    covered.

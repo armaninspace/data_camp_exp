@@ -1,0 +1,84 @@
+course_id: '24488'
+course_title: Foundations of Inference in R
+learning_outcomes:
+- id: LO1
+  claim: Understand how sample variability enables inference about populations.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter focuses on investigating how repeated samples from
+    a population can vary and how this variability underpins making claims about the
+    population. This supports conceptual understanding of sampling variability and
+    its role in inference.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to ideas of inference
+  - field: syllabus[0].summary
+    evidence: investigate how repeated samples taken from a population can vary...
+      allow you to make claims about the population of interest
+- id: LO2
+  claim: Apply randomization tests to conduct hypothesis testing using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter explicitly states that students will gain the tools
+    and knowledge to complete a full hypothesis test, including determining whether
+    to reject the null hypothesis. This indicates procedural application of randomization
+    tests.
+  citations:
+  - field: syllabus[1].title
+    evidence: 'Completing a randomization test: gender discrimination'
+  - field: syllabus[1].summary
+    evidence: gain the tools and knowledge to complete a full hypothesis test... know
+      whether or not is appropriate to reject the null hypothesis
+- id: LO3
+  claim: Understand and distinguish between type I and type II errors in hypothesis
+    testing, and how sample size and effect size affect error rates.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third chapter focuses on understanding different errors in hypothesis
+    testing, specifically type I and type II errors, and factors influencing them.
+    This supports conceptual understanding and the ability to distinguish between
+    error types.
+  citations:
+  - field: syllabus[2].title
+    evidence: 'Hypothesis testing errors: opportunity cost'
+  - field: syllabus[2].summary
+    evidence: focus will be on different errors (type I and type II), how they are
+      made, when one is worse than another, and how things like sample size and effect
+      size impact the error rates
+- id: LO4
+  claim: Construct and interpret confidence intervals for population parameters using
+    bootstrapping in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter describes using confidence intervals to estimate population
+    parameters and specifically mentions bootstrapping to estimate variability. This
+    supports procedural knowledge in constructing and interpreting confidence intervals.
+  citations:
+  - field: syllabus[3].title
+    evidence: Confidence intervals
+  - field: syllabus[3].summary
+    evidence: confidence intervals allow you to estimate a population parameter...
+      Bootstrapping is used to estimate the variability needed to form the confidence
+      interval
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level summaries, but does not specify the
+    depth of R programming skills required or developed.
+  - There is no explicit mention of assessment types or the extent of independent
+    data analysis expected.
+  - The course does not detail whether students will be able to design their own inference
+    procedures or only apply provided methods.

@@ -1,0 +1,163 @@
+{
+  "learning_outcomes_full_corpus_run_20260414T052429Z": {
+    "files": [
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/chapters.jsonl",
+        "bytes": 761965,
+        "records": 1501
+      },
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/courses.jsonl",
+        "bytes": 1734826,
+        "records": 537
+      },
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/learning_outcome_errors.jsonl",
+        "bytes": 644,
+        "records": 1
+      },
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/learning_outcomes.jsonl",
+        "bytes": 1742938,
+        "records": 536
+      },
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/learning_outcomes_yaml/121395.yaml",
+        "bytes": 2076,
+        "records": null
+      },
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/learning_outcomes_yaml/205171.yaml",
+        "bytes": 1613,
+        "records": null
+      },
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/learning_outcomes_yaml/275594.yaml",
+        "bytes": 4508,
+        "records": null
+      },
+      {
+        "path": "learning_outcomes_full_corpus_run_20260414T052429Z/learning_outcomes_yaml/7630.yaml",
+        "bytes": 4658,
+        "records": null
+      }
+    ]
+  },
+  "learning_outcomes_sample_run_20260414T025608Z": {
+    "files": [
+      {
+        "path": "learning_outcomes_sample_run_20260414T025608Z/chapters.jsonl",
+        "bytes": 8750,
+        "records": 25
+      },
+      {
+        "path": "learning_outcomes_sample_run_20260414T025608Z/courses.jsonl",
+        "bytes": 16307,
+        "records": 3
+      },
+      {
+        "path": "learning_outcomes_sample_run_20260414T025608Z/learning_outcome_errors.jsonl",
+        "bytes": 0,
+        "records": 0
+      },
+      {
+        "path": "learning_outcomes_sample_run_20260414T025608Z/learning_outcomes.jsonl",
+        "bytes": 15935,
+        "records": 3
+      },
+      {
+        "path": "learning_outcomes_sample_run_20260414T025608Z/learning_outcomes_yaml/24370.yaml",
+        "bytes": 8108,
+        "records": null
+      },
+      {
+        "path": "learning_outcomes_sample_run_20260414T025608Z/learning_outcomes_yaml/7630.yaml",
+        "bytes": 4561,
+        "records": null
+      },
+      {
+        "path": "learning_outcomes_sample_run_20260414T025608Z/learning_outcomes_yaml/7631.yaml",
+        "bytes": 2754,
+        "records": null
+      }
+    ]
+  },
+  "legacy_semantic_run_20260413T215831Z": {
+    "files": [
+      {
+        "path": "legacy_semantic_run_20260413T215831Z/chapters.jsonl",
+        "bytes": 9541,
+        "records": 20
+      },
+      {
+        "path": "legacy_semantic_run_20260413T215831Z/courses.jsonl",
+        "bytes": 45055,
+        "records": 10
+      },
+      {
+        "path": "legacy_semantic_run_20260413T215831Z/edges.jsonl",
+        "bytes": 29488,
+        "records": 103
+      },
+      {
+        "path": "legacy_semantic_run_20260413T215831Z/errors.jsonl",
+        "bytes": 0,
+        "records": 0
+      },
+      {
+        "path": "legacy_semantic_run_20260413T215831Z/pedagogical_profiles.jsonl",
+        "bytes": 14951,
+        "records": 20
+      },
+      {
+        "path": "legacy_semantic_run_20260413T215831Z/predicted_questions.jsonl",
+        "bytes": 70128,
+        "records": 202
+      },
+      {
+        "path": "legacy_semantic_run_20260413T215831Z/topics.jsonl",
+        "bytes": 27990,
+        "records": 92
+      }
+    ]
+  },
+  "question_cache_sample_run_20260414T044551Z": {
+    "files": [
+      {
+        "path": "question_cache_sample_run_20260414T044551Z/canonical_answers.jsonl",
+        "bytes": 14556,
+        "records": 21
+      },
+      {
+        "path": "question_cache_sample_run_20260414T044551Z/claim_coverage_audit.jsonl",
+        "bytes": 1320,
+        "records": 8
+      },
+      {
+        "path": "question_cache_sample_run_20260414T044551Z/claim_question_groups.jsonl",
+        "bytes": 14587,
+        "records": 21
+      },
+      {
+        "path": "question_cache_sample_run_20260414T044551Z/question_cache_errors.jsonl",
+        "bytes": 0,
+        "records": 0
+      },
+      {
+        "path": "question_cache_sample_run_20260414T044551Z/question_cache_validation_logs.jsonl",
+        "bytes": 9953,
+        "records": 50
+      },
+      {
+        "path": "question_cache_sample_run_20260414T044551Z/question_cache_yaml/7630.yaml",
+        "bytes": 41134,
+        "records": null
+      },
+      {
+        "path": "question_cache_sample_run_20260414T044551Z/question_group_variations.jsonl",
+        "bytes": 10672,
+        "records": 21
+      }
+    ]
+  }
+}

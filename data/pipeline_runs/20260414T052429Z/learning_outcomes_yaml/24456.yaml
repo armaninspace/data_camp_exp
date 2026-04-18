@@ -1,0 +1,100 @@
+course_id: '24456'
+course_title: Extreme Gradient Boosting with XGBoost
+learning_outcomes:
+- id: LO1
+  claim: Explain the fundamental concept of boosted learners and how XGBoost implements
+    them.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly states that students will be introduced
+    to the fundamental idea behind XGBoost—boosted learners, indicating conceptual
+    understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: This chapter will introduce you to the fundamental idea behind XGBoost—boosted
+      learners.
+- id: LO2
+  claim: Apply XGBoost to solve a classification problem, such as predicting customer
+    churn.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter summary states students will apply XGBoost to a real-world
+    classification problem, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: 'you''ll apply it to solve a common classification problem found in
+      industry: predicting whether a customer will stop being a customer at some point
+      in the future.'
+- id: LO3
+  claim: Apply XGBoost to regression tasks, including predicting house prices.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter summary specifies applying XGBoost to a regression
+    task, showing procedural knowledge.
+  citations:
+  - field: syllabus[1].summary
+    evidence: you'll apply XGBoost to the regression task of predicting house prices
+      in Ames, Iowa.
+- id: LO4
+  claim: Describe the two types of base learners used by XGBoost and evaluate regression
+    model quality.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The second chapter mentions learning about two kinds of base learners
+    and reviewing model evaluation, indicating conceptual understanding.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You'll learn about the two kinds of base learners that XGboost can use
+      as its weak learners, and review how to evaluate the quality of your regression
+      models.
+- id: LO5
+  claim: Tune XGBoost model parameters to improve performance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter focuses on adjusting parameters and tuning models efficiently,
+    indicating procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll learn about the variety of parameters that can be adjusted to
+      alter the behavior of XGBoost and how to tune them efficiently so that you can
+      supercharge the performance of your models.
+- id: LO6
+  claim: Integrate XGBoost models into end-to-end machine learning pipelines and apply
+    advanced preprocessing techniques.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter describes incorporating XGBoost into pipelines and
+    introduces advanced preprocessing, indicating procedural application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: incorporating your models into two end-to-end machine learning pipelines.
+      You'll learn how to tune the most important XGBoost hyperparameters efficiently
+      within a pipeline, and get an introduction to some more advanced preprocessing
+      techniques.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level outcomes, but does not specify the depth
+    of theoretical understanding or the range of datasets/problems covered beyond
+    the given examples.
+  - There is no explicit mention of assessment types or mastery criteria.
+  - Metacognitive skills (e.g., reflecting on model choices) are not explicitly addressed.

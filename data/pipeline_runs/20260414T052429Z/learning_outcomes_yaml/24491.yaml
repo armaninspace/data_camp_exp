@@ -1,0 +1,118 @@
+course_id: '24491'
+course_title: Forecasting in R
+learning_outcomes:
+- id: LO1
+  claim: Students will be able to visualize and identify key features in time series
+    data using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter focuses on plotting data and visualizing patterns,
+    unusual observations, and changes over time, which requires students to apply
+    R skills to real data.
+  citations:
+  - field: syllabus[0].title
+    evidence: Exploring and visualizing time series in R
+  - field: syllabus[0].summary
+    evidence: Graphs enable many features of the data to be visualized, including
+      patterns, unusual observations, and changes over time.
+- id: LO2
+  claim: Students will be able to implement and evaluate benchmark forecasting methods
+    and measure forecast accuracy.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter covers benchmark forecasting methods and tools for
+    measuring forecast accuracy, indicating students will apply these methods and
+    interpret their results.
+  citations:
+  - field: syllabus[1].title
+    evidence: Benchmark methods and forecast accuracy
+  - field: syllabus[1].summary
+    evidence: methods for benchmark forecasting, methods for checking whether a forecasting
+      method has adequately utilized the available information, and methods for measuring
+      forecast accuracy
+- id: LO3
+  claim: Students will be able to apply exponential smoothing methods to forecast
+    time series data in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter is dedicated to exponential smoothing, describing how
+    forecasts are produced and their practical advantages, implying students will
+    practice these methods.
+  citations:
+  - field: syllabus[2].title
+    evidence: Exponential smoothing
+  - field: syllabus[2].summary
+    evidence: Forecasts produced using exponential smoothing methods are weighted
+      averages of past observations...
+- id: LO4
+  claim: Students will be able to apply ARIMA models for time series forecasting in
+    R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter focuses on ARIMA models, indicating students will
+    learn to use this approach for forecasting.
+  citations:
+  - field: syllabus[3].title
+    evidence: Forecasting with ARIMA models
+  - field: syllabus[3].summary
+    evidence: ARIMA models provide another approach to time series forecasting.
+- id: LO5
+  claim: Students will be able to extend ARIMA models to incorporate additional information
+    such as holidays or external events.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The final chapter discusses extending ARIMA models to include external
+    variables and handle more complex seasonality, suggesting students will practice
+    these extensions.
+  citations:
+  - field: syllabus[4].title
+    evidence: Advanced methods
+  - field: syllabus[4].summary
+    evidence: extend ARIMA models in order to allow other information to be included
+      in them
+- id: LO6
+  claim: Students will understand the conceptual differences between exponential smoothing
+    and ARIMA models for time series forecasting.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview and syllabus compare exponential smoothing and ARIMA as
+    complementary approaches, indicating students will gain conceptual understanding
+    of their differences.
+  citations:
+  - field: overview
+    evidence: exponential smoothing and ARIMA models, which are two of the most widely-used
+      approaches to time series forecasting
+  - field: syllabus[3].summary
+    evidence: Exponential smoothing models are based on a description of the trend
+      and seasonality in the data, ARIMA models aim to describe the autocorrelations
+      in the data.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention advanced evaluation, creation, or metacognitive
+    skills such as designing new forecasting methods or critically evaluating model
+    assumptions.
+  - There is no explicit mention of real-world project work or integration of multiple
+    forecasting approaches in a complex scenario.
+  - The course appears to focus on application and understanding, with limited evidence
+    for higher-order skills (analyze, evaluate, create) or relational/extended abstract
+    SOLO levels.

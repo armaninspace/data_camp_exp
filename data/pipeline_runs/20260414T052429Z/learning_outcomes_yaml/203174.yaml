@@ -1,0 +1,108 @@
+course_id: '203174'
+course_title: Introduction to MLflow
+learning_outcomes:
+- id: lo1
+  claim: Describe the purpose and main components of MLflow in the machine learning
+    lifecycle.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and the first syllabus chapter emphasize understanding
+    what MLflow is and its four main components, as well as their roles in simplifying
+    the ML lifecycle.
+  citations:
+  - field: overview
+    evidence: You will learn what MLflow is and how it attempts to simplify the difficulties
+      of the Machine Learning lifecycle such as tracking, reproducibility, and deployment.
+  - field: syllabus[0].summary
+    evidence: You will be introduced to the four main concepts that make up MLflow
+      with a main focus on MLflow Tracking.
+- id: lo2
+  claim: Track experiments, metrics, parameters, and artifacts using MLflow Tracking,
+    and search for experiment runs programmatically.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter details hands-on skills in creating experiments
+    and runs, tracking various elements, and searching for runs programmatically.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You will learn to create experiments and runs as well as how to track
+      metrics, parameters, and artifacts. Finally, you will search MLflow programmatically
+      to find experiment runs that fit certain criteria.
+- id: lo3
+  claim: Package, save, log, load, and deploy machine learning models using MLflow
+    Models, including the use of model flavors and the command line tool.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second syllabus chapter covers practical skills in handling models
+    with MLflow, including packaging, saving, logging, loading, and deploying models,
+    as well as using flavors and the CLI.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You will learn how MLflow Models standardizes the packaging of ML models
+      as well as how to save, log and load them... finally use the MLflow command
+      line tool for model deployment.
+- id: lo4
+  claim: Create custom MLflow Models and evaluate model performance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second syllabus chapter mentions creating custom models and evaluating
+    performance, indicating practical application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You will learn how to create custom MLflow Models to provide more flexibility
+      to your use cases as well as how to evaluate model performance.
+- id: lo5
+  claim: Manage the lifecycle of ML models using the MLflow Model Registry, including
+    registering, searching, transitioning, and deploying models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third syllabus chapter describes practical tasks related to the Model
+    Registry, such as registering, searching, transitioning, and deploying models.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You will learn how to create and search for models in the Model Registry.
+      You then learn how to register models to the Model Registry and learn how to
+      transition models between predefined stages. Finally, you will also learn how
+      to deploy models from the Model Registry.
+- id: lo6
+  claim: Create and run MLflow Projects to enable reproducibility and reusability
+    of data science code, including parameterization and multi-step workflows.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth syllabus chapter covers creating MLflow Projects, running
+    them via CLI and module, using parameters, and managing multi-step workflows.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You'll gain valuable knowledge on how to streamline your data science
+      code for reusability and reproducibility using MLflow Projects... learn how
+      to run MLflow Projects through both the command-line and the MLflow Projects
+      module... manage steps of the machine learning lifecycle by creating a multi-step
+      workflow using MLflow Projects.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not provide detail on advanced model evaluation techniques or
+    integration with external systems.
+  - There is no explicit mention of troubleshooting, debugging, or advanced automation
+    beyond basic workflow creation.
+  - No assessment or project-based evidence is provided to support higher-order skills
+    such as analysis, evaluation, or creation.

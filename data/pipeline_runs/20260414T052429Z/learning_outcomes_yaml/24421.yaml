@@ -1,0 +1,42 @@
+course_id: '24421'
+course_title: Introduction to Data in R
+learning_outcomes:
+- id: '1'
+  claim: Recall basic concepts related to data types, sampling strategies, and experimental
+    design in the context of R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary mentions learning about data types, sampling strategies,
+    and experimental design, but without a syllabus or detailed description, only
+    basic recall-level outcomes can be confidently inferred.
+  citations:
+  - field: summary
+    evidence: Learn the language of data, study types, sampling strategies, and experimental
+      design.
+  - field: subjects
+    evidence: R Programming, Data Analysis, Statistical Inference, Experimental Design
+- id: '2'
+  claim: Identify and describe the purpose of R as a tool for data analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The course title and subjects suggest an introduction to R for data analysis,
+    but without further detail, only basic understanding can be inferred.
+  citations:
+  - field: title
+    evidence: Introduction to Data in R
+  - field: subjects
+    evidence: R Programming, Data Analysis
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, limiting inference to high-level,
+    recall/understand outcomes.
+  - No explicit mention of procedural or applied skills in R.
+  - No information about assessments, activities, or depth of coverage.

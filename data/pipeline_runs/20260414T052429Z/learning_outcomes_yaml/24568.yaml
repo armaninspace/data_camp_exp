@@ -1,0 +1,95 @@
+course_id: '24568'
+course_title: Dealing With Missing Data in R
+learning_outcomes:
+- id: LO1
+  claim: Identify and summarize missing data in R datasets, including detection, counting,
+    and visualization.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn to detect, count,
+    summarize, and visualize missing data in R, including across cases, variables,
+    and groups.
+  citations:
+  - field: syllabus[0].title
+    evidence: Why care about missing data?
+  - field: syllabus[0].summary
+    evidence: explaining what missing values are, their behavior in R, how to detect
+      them, and how to count them... introduce missing data summaries... discuss missing
+      data visualizations
+- id: LO2
+  claim: Clean and wrangle missing data by uncovering hidden and implicit missing
+    values and standardizing them in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus describes learning to uncover hidden missing values (e.g.,
+    'missing', 'N/A'), replace them with NA, and handle implicit missing values.
+  citations:
+  - field: syllabus[1].title
+    evidence: Wrangling and tidying up missing values
+  - field: syllabus[1].summary
+    evidence: learn how to uncover hidden missing values like 'missing' or 'N/A' and
+      replace them with `NA`. You will learn how to efficiently handle implicit missing
+      values
+- id: LO3
+  claim: Explain and distinguish between MCAR, MAR, and MNAR mechanisms and their
+    implications for data analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will cover missing data dependence,
+    including MCAR, MAR, and MNAR, and what they mean for analysis.
+  citations:
+  - field: syllabus[1].summary
+    evidence: discussing Missing Completely at Random (MCAR), Missing At Random (MAR),
+      Missing Not At Random (MNAR), and what they mean for your data analysis
+- id: LO4
+  claim: Use specialized data structures (shadow matrix, nabular data) and ggplot
+    to explore and visualize relationships involving missing data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes using shadow matrix and nabular data in workflows,
+    and using ggplot to visualize missingness and its relationships.
+  citations:
+  - field: syllabus[2].title
+    evidence: Testing missing relationships
+  - field: syllabus[2].summary
+    evidence: introduce special data structures, the shadow matrix, and nabular data...
+      use them in workflows for exploring missing data... use ggplot to explore and
+      visualize how values changes as other variables go missing
+- id: LO5
+  claim: Impute missing values in R, track imputations, and evaluate the quality and
+    impact of different imputation models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus details learning to impute, track, evaluate, and compare
+    imputation models, and to assess their impact on analysis.
+  citations:
+  - field: syllabus[3].title
+    evidence: Connecting the dots (Imputation)
+  - field: syllabus[3].summary
+    evidence: learn how to impute and track missing values... evaluate the imputed
+      data against the original values... use, evaluate, and compare different imputation
+      models
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify which imputation models are covered or the depth of
+    statistical theory.
+  - No explicit mention of advanced analysis or creation of new imputation methods.
+  - No assessment or project details to infer higher-order skills (e.g., create, evaluate
+    at DOK 3/4 or SOLO relational/extended abstract).

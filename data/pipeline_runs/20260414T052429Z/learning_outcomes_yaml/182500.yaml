@@ -1,0 +1,112 @@
+course_id: '182500'
+course_title: Forming Analytical Questions
+learning_outcomes:
+- id: LO1
+  claim: Distinguish between business questions and well-formed analytical questions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn the differences
+    between business questions and analytical questions, which is a conceptual understanding
+    task.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You will learn the workflow for delivering valuable analytical solutions,
+      the differences between a business question and a well-formed analytical question,
+      and the common challenges during the translation process.
+- id: LO2
+  claim: Describe the workflow for delivering valuable analytical solutions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The course covers the workflow for delivering analytical solutions, which
+    involves understanding and describing a process.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You will learn the workflow for delivering valuable analytical solutions...
+- id: LO3
+  claim: Identify common challenges in translating business questions to analytical
+    questions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions learning about common challenges during the translation
+    process, which is a conceptual understanding outcome.
+  citations:
+  - field: syllabus[0].summary
+    evidence: '...and the common challenges during the translation process.'
+- id: LO4
+  claim: Apply best practices and techniques to understand business problems and form
+    analytical questions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The course covers best practices and techniques for understanding business
+    problems and forming analytical questions, which requires procedural knowledge
+    and application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You will learn best practices and valuable techniques to understand
+      the business problem, form analytical questions and select the right analytical
+      solutions.
+- id: LO5
+  claim: Select appropriate analytical solutions for different types of analytical
+    questions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: Students are expected to match analytical techniques to question types,
+    which is a procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You will also discover the main analytical techniques and for which
+      type of questions they apply.
+- id: LO6
+  claim: Translate real-world business problems into well-formed analytical questions
+    and identify suitable analytical techniques to solve them.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The final chapter focuses on applying learned concepts to real-world
+    use cases, which involves procedural application and integration.
+  citations:
+  - field: syllabus[2].summary
+    evidence: 'You’ll apply all you’ve learned to real-world use cases: to translate
+      business problems into well-formed analytical questions and find the best techniques
+      to solve the problem and generate value for the business.'
+- id: LO7
+  claim: Recognize how analytical questions and solutions are applied across various
+    industries (e-commerce, automotive, healthcare, banking).
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The course mentions exposure to industry-specific examples, which supports
+    factual recall.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You’ll discover the different business problems companies face in industries
+      such as e-commerce, automotive, healthcare, and banking and how these problems
+      are translated into analytical problems and solutions.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not cover technical implementation of analytical solutions.
+  - There is no evidence of advanced evaluation or creation-level outcomes.
+  - Metacognitive skills are not explicitly addressed.
+  - Depth of industry-specific application is not clear beyond recognition and basic
+    application.

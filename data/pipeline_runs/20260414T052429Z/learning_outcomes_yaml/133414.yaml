@@ -1,0 +1,106 @@
+course_id: '133414'
+course_title: Introduction to Data
+learning_outcomes:
+- id: LO1
+  claim: Recall basic data types and data structures.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview and summary explicitly mention learning the basics of data
+    types and structures, which supports recall-level factual knowledge.
+  citations:
+  - field: summary
+    evidence: Learn the basics of data types and structures
+  - field: overview
+    evidence: exploring the basics of data, including data types and data structures
+- id: LO2
+  claim: Understand the DIKW (Data, Information, Knowledge, Wisdom) framework.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The DIKW framework is specifically mentioned as a topic, indicating students
+    will understand its conceptual structure.
+  citations:
+  - field: summary
+    evidence: Learn the basics of ... the DIKW framework
+  - field: overview
+    evidence: learn about the DIKW framework, which is a framework that describes
+      the relationship between data, information, knowledge, and wisdom
+- id: LO3
+  claim: Recognize the importance of data in decision-making.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The overview states that students will learn how valuable data can be
+    in decision-making, supporting an understanding-level outcome.
+  citations:
+  - field: overview
+    evidence: how valuable data can be in decision-making
+- id: LO4
+  claim: Identify basic concepts of data ethics and data privacy.
+  knowledge_type: conceptual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The overview mentions a discussion of data ethics and privacy, suggesting
+    students will be able to identify these concepts.
+  citations:
+  - field: overview
+    evidence: The last part of this course will cover some more advanced topics in
+      data. You'll begin with a discussion of data ethics, including data privacy.
+- id: LO5
+  claim: Recall the steps in the data life cycle framework.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The overview states students will learn about the data life cycle framework,
+    which describes the steps involved in working with data.
+  citations:
+  - field: overview
+    evidence: you'll learn about the data life cycle framework, which describes the
+      steps involved in working with data
+- id: LO6
+  claim: Recognize common data mistakes and ways to avoid them.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The overview mentions learning about common data mistakes and how to
+    avoid them, supporting recognition and basic understanding.
+  citations:
+  - field: overview
+    evidence: you'll learn about common data mistakes and how to avoid them
+- id: LO7
+  claim: Demonstrate basic practical skills in handling data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The course is described as hands-on with interactive exercises, suggesting
+    some application of basic data handling skills, though specifics are not provided.
+  citations:
+  - field: summary
+    evidence: hands-on course
+  - field: overview
+    evidence: hands-on, with a mix of videos and interactive exercises to help you
+      build practical skills
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level detail is missing.
+  - Descriptions of practical skills are vague; the extent of hands-on activities
+    is unclear.
+  - No explicit mention of assessment or depth of understanding required.
+  - No information on specific data tools, software, or real-world datasets.

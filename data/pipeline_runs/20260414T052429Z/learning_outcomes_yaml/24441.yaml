@@ -1,0 +1,81 @@
+course_id: '24441'
+course_title: Machine Learning for Time Series Data in Python
+learning_outcomes:
+- id: LO1
+  claim: Recall and explain the basics of machine learning and time series data, including
+    their intersection.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter introduces the basics of machine learning and time
+    series data, suggesting students will be able to recall and explain foundational
+    concepts.
+  citations:
+  - field: syllabus[0].title
+    evidence: Time Series and Machine Learning Primer
+  - field: syllabus[0].summary
+    evidence: This chapter is an introduction to the basics of machine learning, time
+      series data, and the intersection between the two.
+- id: LO2
+  claim: Identify and extract common features from time series data for use in machine
+    learning models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter covers how to use time series as features in a model
+    and discusses common feature extraction techniques, indicating students will be
+    able to perform basic feature engineering.
+  citations:
+  - field: syllabus[1].title
+    evidence: Time Series as Inputs to a Model
+  - field: syllabus[1].summary
+    evidence: This chapter covers common features that are extracted from time series
+      in order to do machine learning.
+- id: LO3
+  claim: Apply predictive modeling techniques to time series data, including data
+    exploration and model construction.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The third chapter discusses predictive modeling for time series, including
+    data exploration and best practices, suggesting students will be able to apply
+    these techniques.
+  citations:
+  - field: syllabus[2].title
+    evidence: Predicting Time Series Data
+  - field: syllabus[2].summary
+    evidence: This chapter covers how to gain insights into the data before fitting
+      your model, as well as best-practices in using predictive modeling for time
+      series data.
+- id: LO4
+  claim: Validate and inspect time series models by generating predictions and comparing
+    them to test data.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter covers model validation and inspection, indicating
+    students will be able to analyze model performance using test data.
+  citations:
+  - field: syllabus[3].title
+    evidence: Validating and Inspecting Time Series Models
+  - field: syllabus[3].summary
+    evidence: This chapter coves the basics of generating predictions with models
+      in order to validate them against "test" data.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides only high-level descriptions; specific algorithms, tools,
+    or advanced techniques are not detailed.
+  - No explicit mention of Python implementation details, though Python is listed
+    as a subject.
+  - No assessment or project information is provided, so higher-order skills (e.g.,
+    create, evaluate) cannot be inferred.

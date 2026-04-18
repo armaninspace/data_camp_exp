@@ -1,0 +1,92 @@
+course_id: '24698'
+course_title: Choice Modeling for Marketing in R
+learning_outcomes:
+- id: '1'
+  claim: Describe the overall process and purpose of choice modeling in marketing.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The Quickstart Guide chapter aims to provide a broad understanding of
+    the choice modeling process and its applications in marketing, focusing on how
+    product features influence customer choices.
+  citations:
+  - field: syllabus[0].title
+    evidence: Quickstart Guide
+  - field: syllabus[0].summary
+    evidence: get you through the entire choice modeling process as quickly as possible,
+      so that you get a broad understanding of what we can do with choice models and
+      how the choice modeling process works.
+- id: '2'
+  claim: Prepare and format choice data from various sources for modeling purposes.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The Managing and Summarizing Choice Data chapter covers taking data in
+    different formats and getting it into shape for choice modeling, indicating procedural
+    knowledge and application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Managing and Summarizing Choice Data
+  - field: syllabus[1].summary
+    evidence: take data that is provided in several alternative formats and learn
+      how to get it into shape for choice modeling.
+- id: '3'
+  claim: Design a survey to collect choice data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The course mentions discussing how to build a survey to collect choice
+    data, which is a procedural skill.
+  citations:
+  - field: syllabus[1].summary
+    evidence: We will also discuss how you can build a survey to collect your own
+      choice data.
+- id: '4'
+  claim: Explain how the multinomial logit model is used to predict customer choices
+    based on product features.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The Building Choice Models chapter focuses on understanding how the multinomial
+    logit model works and how it converts product features into predictions.
+  citations:
+  - field: syllabus[2].title
+    evidence: Building Choice Models
+  - field: syllabus[2].summary
+    evidence: focus on how the multinomial logit model converts the product features
+      into a prediction for what the decision maker will choose.
+- id: '5'
+  claim: Identify when and why to use hierarchical choice models to account for consumer
+    heterogeneity.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The Hierarchical Choice Models chapter covers the rationale for hierarchical
+    models and their importance in commercial applications, focusing on consumer preference
+    heterogeneity.
+  citations:
+  - field: syllabus[3].title
+    evidence: Hierarchical Choice Models
+  - field: syllabus[3].summary
+    evidence: This chapter covers choice models where we assume that different decision
+      makers have different preferences that influence their choices.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not provide explicit detail on advanced model evaluation, interpretation,
+    or reporting beyond basic understanding.
+  - There is no explicit mention of hands-on coding in R, though R is referenced in
+    the title and subjects.
+  - The depth of statistical or mathematical treatment of models is not specified.
+  - No explicit mention of real-world case studies or project-based assessment.

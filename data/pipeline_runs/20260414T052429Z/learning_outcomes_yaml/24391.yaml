@@ -1,0 +1,122 @@
+course_id: '24391'
+course_title: Analyzing Data in Tableau
+learning_outcomes:
+- id: '1'
+  claim: Organize data fields into dimensions and measures and configure date/time
+    fields for trend analysis in Tableau.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn best practices
+    for organizing fields and configuring date/time fields for trend analysis, which
+    involves applying procedural knowledge.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Learn best practices for organizing fields into dimensions and measures
+      and how to configure date and time fields for trend analysis.
+- id: '2'
+  claim: Use Calculated Fields, quick table calculations, and highlight actions to
+    enhance Tableau visualizations and uncover insights.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions using these Tableau features to elevate visualizations
+    and reveal insights, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll use Calculated Fields, quick table calculations, and highlight
+      actions to elevate your visualizations and reveal the hidden insights.
+- id: '3'
+  claim: Build bar charts, KPI charts, and histograms with variable bin width in Tableau.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies that students will build these types of charts,
+    which is a procedural skill.
+  citations:
+  - field: syllabus[1].summary
+    evidence: To do this, you’ll build bar charts, KPI charts, and histograms with
+      variable bin width.
+- id: '4'
+  claim: Apply filters to Tableau visualizations to generate additional insights.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions creating additional insights by adding filters,
+    which is a straightforward procedural task.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You’ll create additional insights by adding filters to your visualizations.
+- id: '5'
+  claim: Create and enhance map visualizations in Tableau using layers, density, and
+    customized tooltips.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes diving deeper into maps, using layers and density,
+    and customizing tooltips, all of which are procedural applications.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Dive deeper into maps and elevate geographic data with layers and density.
+      You'll customize Tooltips and learn how to embed them with more information.
+- id: '6'
+  claim: Apply Quick Table Calculations to Tableau visualizations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: Quick Table Calculations are mentioned as a skill to be learned and applied,
+    which is procedural.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll also learn more about Quick Table Calculations and apply them
+      to your visualizations.
+- id: '7'
+  claim: Create groups, sets, and parameters in Tableau, including using Lasso selection
+    and Calculated Fields.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus details creating groups (with Lasso selection and Calculated
+    Fields), sets, and parameters, which are procedural skills.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You'll create groups using Lasso selection and Calculated Fields. You'll
+      also use Parameters to enable users to dynamically input changes to your visualizations.
+      Finally, you'll create Sets...
+- id: '8'
+  claim: Compare Tableau findings to an external data source (e.g., weather data).
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The syllabus mentions comparing findings to an external weather data
+    source, which requires analysis and conceptual understanding.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Finally, you'll create Sets and compare your findings to an external
+      weather data source.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly address metacognitive skills or higher-order creative/evaluative
+    tasks.
+  - There is no explicit mention of assessment types or depth of mastery beyond procedural
+    application and some analysis.
+  - The course appears focused on practical Tableau skills rather than theoretical
+    or conceptual underpinnings of data visualization.

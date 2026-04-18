@@ -1,0 +1,30 @@
+course_id: '121406'
+course_title: Hướng dẫn cơ bản về R
+learning_outcomes:
+- id: LO1
+  claim: Recall and understand basic concepts of R programming, including factors,
+    lists, and data frames.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that the course covers basic knowledge
+    of R, specifically mentioning factors, lists, and data frames. However, without
+    a syllabus or further detail, we cannot infer deeper skills such as application
+    or analysis.
+  citations:
+  - field: summary
+    evidence: Trong loạt bài giảng này, bạn sẽ học được cách làm chủ những kiến thức
+      cơ bản của ngôn ngữ lập trình thông kê R, bao gồm factors, list và data frame.
+  - field: subjects
+    evidence: R Programming
+  - field: details.level
+    evidence: beginner
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail.
+  - No information about practical exercises, assessments, or depth of coverage.
+  - Cannot infer procedural or higher-order skills beyond basic understanding.

@@ -1,0 +1,82 @@
+course_id: '91612'
+course_title: Parallel Programming with Dask in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand the basics of Dask, including lazy evaluation and parallel computing
+    concepts.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first syllabus chapter explicitly states that students will learn
+    the basics of Dask and lazy evaluation, as well as the difference between parallel
+    processing and multi-threading.
+  citations:
+  - field: syllabus[0].title
+    evidence: Lazy Evaluation and Parallel Computing
+  - field: syllabus[0].summary
+    evidence: This chapter will teach you the basics of Dask and lazy evaluation.
+      At the end of this chapter, you'll be able to speed up almost any Python code
+      by using parallel processing or multi-threading. You'll learn the difference
+      between these two task scheduling methods and which one is better under which
+      circumstances.
+- id: LO2
+  claim: Apply Dask arrays and DataFrames to analyze large structured datasets that
+    do not fit in memory.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second syllabus chapter focuses on using Dask arrays and DataFrames
+    to analyze big structured data, leveraging existing knowledge of NumPy and pandas.
+  citations:
+  - field: syllabus[1].title
+    evidence: Parallel Processing of Big, Structured Data
+  - field: syllabus[1].summary
+    evidence: Here you’ll learn how to analyze big structured data using Dask arrays
+      and Dask DataFrames. You'll learn how everything you know about NumPy and pandas
+      can easily be applied to data that is too large to fit in memory.
+- id: LO3
+  claim: Process unstructured and semi-structured data using Dask bags.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The third syllabus chapter describes learning to process unstructured
+    text, semi-structured JSON, and audio data using Dask bags.
+  citations:
+  - field: syllabus[2].title
+    evidence: Dask Bags for Unstructured Data
+  - field: syllabus[2].summary
+    evidence: You'll learn how Dask bags can be used to efficiently process unstructured
+      text data, semi-structured JSON data, and even recorded audio.
+- id: LO4
+  claim: Train machine learning models on large datasets using Dask-ML and optimize
+    computation by splitting tasks across processes and threads.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The final syllabus chapter covers using Dask-ML to train machine learning
+    models on big data and splitting calculations for improved speed.
+  citations:
+  - field: syllabus[3].title
+    evidence: Dask Machine Learning and Final Pieces
+  - field: syllabus[3].summary
+    evidence: You'll learn how to train machine learning models on big data using
+      the Dask-ML package, and how to split Dask calculations across a mixture of
+      processes and threads for even greater computing speed.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level outcomes, but does not specify the depth
+    of mastery or assessment types.
+  - There is no explicit mention of troubleshooting, debugging, or advanced optimization
+    techniques.
+  - Metacognitive or evaluative skills (e.g., selecting between Dask and other parallel
+    computing tools) are not addressed.

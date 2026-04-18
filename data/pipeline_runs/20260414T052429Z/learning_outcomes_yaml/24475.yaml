@@ -1,0 +1,95 @@
+course_id: '24475'
+course_title: Machine Learning with caret in R
+learning_outcomes:
+- id: LO1
+  claim: Fit regression models using the train() function in R and evaluate their
+    performance with cross-validation and RMSE.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will fit regression models
+    with train() and evaluate them using cross-validation and RMSE, indicating hands-on
+    procedural application.
+  citations:
+  - field: syllabus[0].title
+    evidence: 'Regression Models: Fitting and Evaluating Their Performance'
+  - field: syllabus[0].summary
+    evidence: fit regression models with train() and evaluate their out-of-sample
+      performance using cross-validation and root-mean-square error (RMSE)
+- id: LO2
+  claim: Fit classification models using the train() function in R and evaluate their
+    performance with cross-validation and AUC.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus specifies fitting classification models and evaluating them
+    with cross-validation and AUC, which is a procedural skill.
+  citations:
+  - field: syllabus[1].title
+    evidence: 'Classification Models: Fitting and Evaluating Their Performance'
+  - field: syllabus[1].summary
+    evidence: fit classification models with train() and evaluate their out-of-sample
+      performance using cross-validation and area under the curve (AUC)
+- id: LO3
+  claim: Tune model parameters using cross-validation and grid search with the train()
+    function.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes using train() for parameter tuning via cross-validation
+    and grid search, which is a procedural application.
+  citations:
+  - field: syllabus[2].title
+    evidence: Tuning Model Parameters to Improve Performance
+  - field: syllabus[2].summary
+    evidence: use the train() function to tweak model parameters through cross-validation
+      and grid search
+- id: LO4
+  claim: Preprocess data using train() before fitting models to improve prediction
+    accuracy.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will practice data preprocessing with
+    train(), which is a procedural skill.
+  citations:
+  - field: syllabus[3].title
+    evidence: Preprocessing Data
+  - field: syllabus[3].summary
+    evidence: practice using train() to preprocess data before fitting models, improving
+      your ability to making accurate predictions
+- id: LO5
+  claim: Compare multiple models using resamples() and select or ensemble the best
+    model(s) in a case study context.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus describes using resamples() to compare and select or ensemble
+    models, which is a procedural application in a specific context.
+  citations:
+  - field: syllabus[4].title
+    evidence: 'Selecting Models: A Case Study in Churn Prediction'
+  - field: syllabus[4].summary
+    evidence: learn how to use resamples() to compare multiple models and select (or
+      ensemble) the best one(s)
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover conceptual or metacognitive knowledge, such
+    as underlying theory, model interpretation, or critical evaluation of modeling
+    choices.
+  - There is no explicit mention of advanced analysis, evaluation, or creation-level
+    tasks (e.g., designing new models or conducting original research).
+  - The course appears focused on procedural application using caret in R, with little
+    evidence of deeper relational or extended abstract learning outcomes.

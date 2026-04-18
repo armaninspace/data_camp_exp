@@ -1,0 +1,57 @@
+course_id: '91578'
+course_title: 'Case Study: Analyzing Job Market Data in Power BI'
+learning_outcomes:
+- id: '1'
+  claim: Identify the most in-demand data jobs using Power BI tools.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary states that students will use Power Query, DAX, and dashboards
+    to identify in-demand data jobs, indicating hands-on application of these tools
+    to a specific problem.
+  citations:
+  - field: summary
+    evidence: You’ll use Power Query, DAX, and dashboards to identify the most in-demand
+      data jobs!
+- id: '2'
+  claim: Demonstrate intermediate-level skills in Power Query and DAX within Power
+    BI.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The course is labeled as 'intermediate' and lists Power Query and DAX
+    as subjects, suggesting students will use these tools at an intermediate level.
+  citations:
+  - field: details.level
+    evidence: intermediate
+  - field: subjects
+    evidence: DAX (Data Analysis Expressions), Power Query
+- id: '3'
+  claim: Apply data visualization and analysis techniques in Power BI to a case study
+    scenario.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The summary and subjects indicate a focus on data visualization and analysis
+    in Power BI, applied to a fictional company scenario.
+  citations:
+  - field: summary
+    evidence: Help a fictional company in this interactive Power BI case study.
+  - field: subjects
+    evidence: Data Visualization, Data Analysis
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail about specific skills,
+    concepts, or assessment types.
+  - No explicit mention of metacognitive or conceptual knowledge development.
+  - No information about the depth or complexity of DAX, Power Query, or dashboard
+    tasks.
+  - No details about the structure or steps of the case study.

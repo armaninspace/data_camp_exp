@@ -1,0 +1,63 @@
+course_id: '91583'
+course_title: 'Case Study: Analyzing Customer Churn in Power BI'
+learning_outcomes:
+- id: '1'
+  claim: Identify and explore customer churn data using Power BI.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary states that students will investigate a dataset in Power
+    BI to figure out why customers are churning. This implies hands-on use of Power
+    BI for data exploration and identification of churn patterns, but does not specify
+    advanced analysis or synthesis.
+  citations:
+  - field: summary
+    evidence: You will investigate a dataset from a fictitious company called Databel
+      in Power BI, and need to figure out why customers are churning.
+  - field: subjects
+    evidence: Data Visualization, Exploratory Data Analysis
+- id: '2'
+  claim: Visualize customer churn data using Power BI tools.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The subject 'Data Visualization' and the context of using Power BI suggest
+    that students will create visual representations of churn data, but the depth
+    or complexity of visualization is not specified.
+  citations:
+  - field: subjects
+    evidence: Data Visualization
+  - field: summary
+    evidence: You will investigate a dataset from a fictitious company called Databel
+      in Power BI, and need to figure out why customers are churning.
+- id: '3'
+  claim: Perform exploratory data analysis to identify potential causes of customer
+    churn.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.6
+  reasoning: The summary mentions figuring out why customers are churning, which implies
+    some level of analysis beyond simple visualization. The subject 'Exploratory Data
+    Analysis' supports this, but without a syllabus, the depth of analysis is unclear.
+  citations:
+  - field: summary
+    evidence: You will investigate a dataset from a fictitious company called Databel
+      in Power BI, and need to figure out why customers are churning.
+  - field: subjects
+    evidence: Exploratory Data Analysis
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so the specific skills, techniques,
+    or depth of analysis are unclear.
+  - It is not specified whether students will develop metacognitive skills or create
+    new solutions, nor is the complexity of the case study detailed.
+  - The course level is 'intermediate', but without further detail, the baseline prerequisites
+    or expected prior knowledge are ambiguous.

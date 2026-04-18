@@ -1,0 +1,109 @@
+course_id: '133408'
+course_title: MLOps Concepts
+learning_outcomes:
+- id: lo1
+  claim: Identify and describe the core features and phases of MLOps and the roles
+    involved in MLOps processes.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will learn about the core
+    features of MLOps, the machine learning lifecycle, its phases, and the roles associated
+    with MLOps processes. This supports conceptual understanding and the ability to
+    describe and identify key elements.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to MLOps
+  - field: syllabus[0].summary
+    evidence: First, you’ll learn about the core features of MLOps. You’ll explore
+      the machine learning lifecycle, its phases, and the roles associated with MLOps
+      processes.
+- id: lo2
+  claim: Explain the design and development phase of the machine learning lifecycle,
+    including value estimation, data quality, feature stores, and experiment tracking.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus details that students will learn about the design and development
+    phase, specifically mentioning value estimation, data quality, feature stores,
+    and experiment tracking. This supports understanding and explanation of these
+    concepts.
+  citations:
+  - field: syllabus[1].title
+    evidence: Design and Development
+  - field: syllabus[1].summary
+    evidence: Next, you’ll learn about the design and development phase in the machine
+      learning lifecycle. You’ll explore added value estimation, data quality, feature
+      stores, and experiment tracking.
+- id: lo3
+  claim: Describe key concepts and tools for deploying machine learning models into
+    production, including runtime environments, containerization, CI/CD pipelines,
+    and deployment strategies.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus specifies that students will learn about deployment concepts
+    such as runtime environments, containerization, CI/CD pipelines, and deployment
+    strategies. This supports the ability to describe and explain these concepts.
+  citations:
+  - field: syllabus[2].title
+    evidence: Deploying Machine Learning into Production
+  - field: syllabus[2].summary
+    evidence: In this chapter, you’ll dive into the concepts relevant to deploying
+      machine learning into production, such as runtime environments, containerization,
+      CI/CD pipelines, and deployment strategies.
+- id: lo4
+  claim: Explain the processes and tools for maintaining machine learning models in
+    production, including monitoring, retraining, and understanding MLOps maturity
+    levels.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus indicates that students will learn about maintaining models
+    in production, including monitoring, retraining, MLOps maturity levels, and tools
+    for simplifying processes. This supports understanding and explanation.
+  citations:
+  - field: syllabus[3].title
+    evidence: Maintaining Machine Learning in Production
+  - field: syllabus[3].summary
+    evidence: Finally, you’ll learn about maintaining machine learning in production,
+      with concepts such as statistical and computational monitoring, retraining,
+      different levels of MLOps maturity, and tools that can be used within the machine
+      learning lifecycle to simplify processes.
+- id: lo5
+  claim: Recognize the importance of scaling and automating machine learning operations
+    to improve efficiency and reduce manual intervention.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview and summary emphasize the importance of scaling and automating
+    ML operations, but do not provide detailed procedural or applied learning outcomes.
+    This supports basic recognition and understanding.
+  citations:
+  - field: overview
+    evidence: How can we scale our machine learning projects using the minimum time
+      and resources? And how can we automate our processes to reduce the need for
+      manual intervention and improve model performance? These are fundamental Machine
+      Learning questions that MLOps provides the answers to.
+  - field: summary
+    evidence: Discover how MLOps can take machine learning models from local notebooks
+      to functioning models in production that generate real business value.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of hands-on or applied procedural skills; outcomes are limited
+    to conceptual understanding.
+  - No assessment or project details to support higher-order skills (e.g., analyze,
+    evaluate, create).
+  - No explicit coverage of metacognitive knowledge or reflective practices.

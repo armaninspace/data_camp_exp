@@ -1,0 +1,42 @@
+course_id: '207052'
+course_title: Introduction to dbt
+learning_outcomes:
+- id: lo1
+  claim: Recall the basic purposes and functions of dbt, including its use in data
+    modeling, transformations, testing, and documentation.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that the course introduces dbt for data
+    modeling, transformations, testing, and building documentation. However, without
+    a syllabus or detailed description, we cannot infer deeper understanding or application.
+  citations:
+  - field: summary
+    evidence: This course introduces dbt for data modeling, transformations, testing,
+      and building documentation.
+- id: lo2
+  claim: Identify key concepts related to dbt, SQL, data transformation, data modeling,
+    and data validation.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The subjects list includes dbt, SQL, data transformation, data modeling,
+    and data validation, suggesting students will be introduced to these concepts
+    at a basic level.
+  citations:
+  - field: subjects
+    evidence: '["dbt (Data build tool)", "SQL", "Data Transformation", "Data Modeling",
+      "Data Validation"]'
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so learning outcomes cannot be
+    inferred beyond basic recall and identification.
+  - No evidence of procedural, conceptual, or metacognitive knowledge development.
+  - No evidence of higher-order cognitive processes (understand, apply, analyze, evaluate,
+    create).

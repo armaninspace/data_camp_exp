@@ -1,0 +1,56 @@
+course_id: '24601'
+course_title: Building Dashboards with flexdashboard
+learning_outcomes:
+- id: LO1
+  claim: Recall the purpose and basic use of flexdashboard and shiny for creating
+    dashboards in R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary states that the course covers creating static and interactive
+    dashboards using flexdashboard and shiny, but without a syllabus, only basic recall-level
+    outcomes can be confidently inferred.
+  citations:
+  - field: summary
+    evidence: In this course you'll learn how to create static and interactive dashboards
+      using flexdashboard and shiny.
+  - field: subjects
+    evidence: R Programming, Data Visualization, Shiny
+- id: LO2
+  claim: Understand the distinction between static and interactive dashboards in the
+    context of R programming.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary mentions both static and interactive dashboards, suggesting
+    students will learn the conceptual difference, but without further detail, depth
+    of understanding is uncertain.
+  citations:
+  - field: summary
+    evidence: create static and interactive dashboards using flexdashboard and shiny
+- id: LO3
+  claim: Apply flexdashboard and shiny to build basic dashboards in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary implies hands-on creation of dashboards, indicating procedural
+    application, but lack of syllabus limits certainty about complexity or depth.
+  citations:
+  - field: summary
+    evidence: you'll learn how to create static and interactive dashboards using flexdashboard
+      and shiny
+  - field: subjects
+    evidence: R Programming, Data Visualization, Shiny
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus provided, so specific topics, skills, or assessment types are unknown.
+  - No details on the complexity of dashboards or integration with data sources.
+  - No explicit mention of evaluation, analysis, or creation beyond basic application.

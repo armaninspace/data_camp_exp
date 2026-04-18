@@ -1,0 +1,86 @@
+course_id: '275591'
+course_title: 'Case Study: Ecommerce Analysis in Power BI'
+learning_outcomes:
+- id: LO1
+  claim: Identify and describe key customer segments and purchasing patterns in an
+    ecommerce dataset using Power BI.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview states that students will analyze a sales dataset to inform
+    the company about who their customers are and what purchases they make. This suggests
+    learners will be able to identify and describe customer segments and purchasing
+    patterns, but does not indicate deeper synthesis or evaluation.
+  citations:
+  - field: overview
+    evidence: First, you’ll analyze the sales dataset to inform the company of who
+      their customers are and what purchases they make.
+- id: LO2
+  claim: Apply market basket analysis to identify products frequently bought together
+    in an ecommerce context.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview explicitly mentions using market basket analysis to identify
+    product associations. This is a procedural skill at the application level.
+  citations:
+  - field: overview
+    evidence: You will then use market basket analysis to help identify which products
+      are frequently bought together.
+- id: LO3
+  claim: Propose strategies to reduce shipping costs based on data analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview mentions working on strategies such as shipping more of
+    the same product to reduce per-unit costs, but does not specify that students
+    will evaluate or implement these strategies, only that they will address the issue.
+  citations:
+  - field: overview
+    evidence: You’ll work on strategies such as shipping more of the same product
+      to reduce per-unit costs.
+- id: LO4
+  claim: Create and use Power BI visualizations (combination graphs, treemaps, maps)
+    to communicate data insights.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview states that students will create various visualizations
+    in Power BI, including specific types. This is a clear procedural application.
+  citations:
+  - field: overview
+    evidence: You’ll create new measures and various visualizations in Power BI, such
+      as combination graphs, treemaps, and maps.
+- id: LO5
+  claim: Use filters and parameters to make Power BI dashboards dynamic and interactive.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions using filters and parameters to make graphs dynamic
+    and creating dashboard-style pages, indicating procedural knowledge at the application
+    level.
+  citations:
+  - field: overview
+    evidence: You'll use filters and parameters to make your graphs dynamic and create
+      dashboard-style pages to share your insights.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so learning outcomes are inferred from the overview,
+    summary, and subjects.
+  - There is no explicit mention of assessment, depth of analysis, or whether students
+    are expected to evaluate or create new solutions.
+  - The course level is 'intermediate', but the specific prerequisites or assumed
+    prior knowledge are not detailed.
+  - The description field is null, limiting further detail.

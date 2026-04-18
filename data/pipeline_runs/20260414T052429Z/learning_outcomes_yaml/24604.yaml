@@ -1,0 +1,79 @@
+course_id: '24604'
+course_title: Creating PostgreSQL Databases
+learning_outcomes:
+- id: LO1
+  claim: Learners can create basic PostgreSQL databases, tables, and schemas, and
+    understand their hierarchical relationships.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that learners will know how to issue commands
+    to create databases, tables, and schemas, and understand their place in the PostgreSQL
+    object hierarchy.
+  citations:
+  - field: syllabus[0].title
+    evidence: Structure of PostgreSQL Databases
+  - field: syllabus[0].summary
+    evidence: you will know how to issue commands to create all three types of objects,
+      and understand how each fits into the hierarchy of PostgreSQL objects.
+- id: LO2
+  claim: Learners can identify and assign appropriate PostgreSQL data types (text,
+    numeric, temporal, boolean) to table columns.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states learners will be able to define appropriate data
+    types for table columns based on the data values to be stored.
+  citations:
+  - field: syllabus[1].title
+    evidence: PostgreSQL Data Types
+  - field: syllabus[1].summary
+    evidence: you will be able to define the appropriate data types for table columns
+      based on the data values to be stored.
+- id: LO3
+  claim: Learners can explain and apply the concepts of 1st, 2nd, and 3rd Normal Form
+    to normalize a database, reducing data duplication and maintaining data integrity.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus introduces normalization, defines 1st, 2nd, and 3rd Normal
+    Form, and provides examples, indicating learners can explain and apply these concepts.
+  citations:
+  - field: syllabus[2].title
+    evidence: Database Normalization
+  - field: syllabus[2].summary
+    evidence: 1st, 2nd, and 3rd Normal Form are defined as steps in the process of
+      normalizing a database. Examples to clarify concepts are provided throughout
+      the chapter.
+- id: LO4
+  claim: Learners can grant and revoke privileges to users and groups on PostgreSQL
+    database objects to control access.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus states that access control is presented as granting and
+    revoking privileges to users and groups on database objects.
+  citations:
+  - field: syllabus[3].title
+    evidence: Access Control in PostgreSQL
+  - field: syllabus[3].summary
+    evidence: Access control is presented as granting and revoking privileges to users
+      and groups on database objects.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on foundational and procedural skills; there is no
+    evidence of advanced database design, performance optimization, or complex querying.
+  - There is no explicit mention of assessment types or depth of practical application
+    beyond basic creation and configuration tasks.
+  - No evidence of metacognitive or creative tasks (e.g., designing novel database
+    architectures or evaluating trade-offs between normalization forms).

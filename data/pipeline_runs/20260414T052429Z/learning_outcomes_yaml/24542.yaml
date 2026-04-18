@@ -1,0 +1,114 @@
+course_id: '24542'
+course_title: Machine Learning for Finance in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply data preparation techniques for financial machine learning
+    tasks.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly covers exploring stock data and preparing
+    it for machine learning algorithms, which involves applying standard data preparation
+    techniques.
+  citations:
+  - field: syllabus[0].summary
+    evidence: explore some stock data, and prepare it for machine learning algorithms
+  - field: overview
+    evidence: calculate technical indicators from historical stock data and create
+      features and targets
+- id: LO2
+  claim: Fit and use linear models to predict future stock price changes.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter summary states that students will fit a linear model
+    to predict future price changes of stocks.
+  citations:
+  - field: syllabus[0].summary
+    evidence: fit our first machine learning model -- a linear model, in order to
+      predict future price changes of stocks
+- id: LO3
+  claim: Apply tree-based and forest-based machine learning models for stock price
+    prediction and feature selection.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter covers using tree-based and forest-based models for
+    regression and feature selection.
+  citations:
+  - field: syllabus[1].summary
+    evidence: use tree-based machine learning models to predict future values of a
+      stock's price, as well as how to use forest-based machine learning methods for
+      regression and feature selection
+- id: LO4
+  claim: Normalize and scale data for use in KNN and neural network models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter summary states students will learn to normalize and
+    scale data for KNN and neural network methods.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learn how to normalize and scale data for use in KNN and neural network
+      methods
+- id: LO5
+  claim: Use KNN and neural network regression to predict future stock prices.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter summary covers using KNN and neural network regression
+    for stock price prediction.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learn how to use KNN and neural network regression to predict the future
+      values of a stock's price
+- id: LO6
+  claim: Apply modern portfolio theory and the Sharpe ratio to identify and evaluate
+    optimal stock portfolios using machine learning.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter covers using MPT and the Sharpe ratio to plot and
+    find optimal portfolios, and evaluating ML-predicted portfolios.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learn how to use modern portfolio theory (MPT) and the Sharpe ratio
+      to plot and find optimal stock portfolios. You'll also use machine learning
+      to predict the best portfolios. Finally, you'll evaluate performance of the
+      ML-predicted portfolios.
+- id: LO7
+  claim: Visualize and evaluate the performance of machine learning models and portfolios.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions plotting losses, measuring performance, and visualizing
+    prediction results, and the last chapter mentions evaluating performance.
+  citations:
+  - field: overview
+    evidence: plot losses, measure performance, and visualize your prediction results
+  - field: syllabus[3].summary
+    evidence: evaluate performance of the ML-predicted portfolios
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced evaluation or creation-level tasks
+    (e.g., designing new models or strategies).
+  - There is no explicit mention of metacognitive skills or critical evaluation of
+    model limitations.
+  - The course appears focused on application and basic analysis, not on deeper theoretical
+    or creative aspects.

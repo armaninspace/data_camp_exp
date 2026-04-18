@@ -1,0 +1,113 @@
+course_id: '24400'
+course_title: Introduction to Data Visualization with Seaborn
+learning_outcomes:
+- id: LO1
+  claim: Describe the purpose and advantages of using the Seaborn library for data
+    visualization in Python.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The first chapter introduces Seaborn, its use cases, and its advantages,
+    such as adding a third variable using color.
+  citations:
+  - field: syllabus[0].summary
+    evidence: What is Seaborn, and when should you use it?... introduced to one of
+      the big advantages of using Seaborn - the ability to easily add a third variable
+      to your plots by using color to represent different subgroups.
+- id: LO2
+  claim: Create basic scatter plots and count plots using Seaborn with both lists
+    and pandas DataFrames.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly states that students will learn to create
+    scatter plots and count plots with different data structures.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you will learn how to create scatter plots and count plots with both
+      lists of data and pandas DataFrames
+- id: LO3
+  claim: Visualize relationships between two quantitative variables using scatter
+    plots and line plots in Seaborn.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on creating and customizing plots for two
+    quantitative variables, specifically mentioning scatter and line plots.
+  citations:
+  - field: syllabus[1].summary
+    evidence: you will create and customize plots that visualize the relationship
+      between two quantitative variables. To do this, you will use scatter plots and
+      line plots
+- id: LO4
+  claim: Create and customize categorical plots (box plots, bar plots, count plots,
+    point plots) in Seaborn.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter details learning to create and customize several types
+    of categorical plots.
+  citations:
+  - field: syllabus[2].summary
+    evidence: you will learn how to create and customize categorical plots such as
+      box plots, bar plots, count plots, and point plots
+- id: LO5
+  claim: Customize Seaborn plots by adding informative titles, axis labels, and adjusting
+    plot styles.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter is dedicated to customizing plots, including adding
+    titles, axis labels, and adjusting styles.
+  citations:
+  - field: syllabus[3].summary
+    evidence: you will learn how to add informative plot titles and axis labels...
+      customize the style of your visualizations
+- id: LO6
+  claim: Combine multiple Seaborn techniques to create custom visualizations for real-world
+    datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The course overview and final chapter mention applying all learned skills
+    to real datasets and integrating multiple techniques.
+  citations:
+  - field: overview
+    evidence: create your Seaborn plots based on a variety of real-world data sets
+  - field: syllabus[3].summary
+    evidence: you will put everything you have learned together for the final exercises
+      of the course
+- id: LO7
+  claim: Communicate data analysis results effectively using Seaborn visualizations.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The overview emphasizes improving data communication skills and using
+    Seaborn to communicate analysis results.
+  citations:
+  - field: overview
+    evidence: effectively communicate the results of your data analysis to others
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced topics such as statistical inference,
+    interactive visualizations, or advanced customization beyond basic style and labeling.
+  - There is no explicit mention of assessment types or depth of metacognitive reflection.
+  - The course appears to focus on application and understanding, with limited evidence
+    for higher-order skills such as evaluation or creation beyond combining learned
+    techniques.

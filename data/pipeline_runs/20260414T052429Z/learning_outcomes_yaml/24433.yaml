@@ -1,0 +1,90 @@
+course_id: '24433'
+course_title: Understanding Data Visualization
+learning_outcomes:
+- id: LO1
+  claim: Describe the value and purpose of data visualizations for representing distributions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter focuses on learning the value of visualizations and
+    using them to represent the spread of variables, indicating conceptual understanding
+    of why and how visualizations are used.
+  citations:
+  - field: syllabus[0].summary
+    evidence: In this chapter you’ll learn the value of visualizations, using real-world
+      data ... to graphically represent the spread of a variable using histograms
+      and box plots.
+- id: LO2
+  claim: Interpret and explain common plot types such as histograms, box plots, scatter
+    plots, line plots, bar plots, and dot plots.
+  knowledge_type: factual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: Multiple chapters explicitly mention interpreting and understanding various
+    plot types, indicating factual knowledge and comprehension.
+  citations:
+  - field: syllabus[0].summary
+    evidence: graphically represent the spread of a variable using histograms and
+      box plots
+  - field: syllabus[1].summary
+    evidence: explore the relationship between two continuous variables using scatter
+      plots and line plots ... introduced to two other popular visualizations—bar
+      plots and dot plots
+  - field: subjects
+    evidence: Histograms, Scatter Plots, Line Plots, Bar Plots
+- id: LO3
+  claim: Apply core data visualization concepts such as correlation, linear relationships,
+    and log scales to interpret relationships between variables.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The second chapter covers interpreting data plots and understanding concepts
+    like correlation and log scales, suggesting application of these concepts to real
+    data.
+  citations:
+  - field: syllabus[1].summary
+    evidence: understand core data visualization concepts such as correlation, linear
+      relationships, and log scales
+- id: LO4
+  claim: Enhance data visualizations by effectively using color and shape, especially
+    when visualizing more than two variables.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The third chapter focuses on adding color and shape to make visualizations
+    clearer, indicating procedural knowledge and application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Discover how you can add color and shape to make your data visualizations
+      clearer and easier to understand, especially when you find yourself working
+      with more than two variables at the same time.
+- id: LO5
+  claim: Identify and avoid common pitfalls in data visualization to prevent misleading
+    or hard-to-interpret plots.
+  knowledge_type: metacognitive
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final chapter is dedicated to recognizing and avoiding common plot
+    problems, which requires analytical and metacognitive skills.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learn how to identify and avoid the most common plot problems. For example,
+      how can you avoid creating misleading or hard to interpret plots
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not cover advanced or interactive visualization techniques.
+  - There is no evidence of learners creating original visualizations from scratch.
+  - No coding or software-specific skills are addressed.
+  - Assessment details are not provided beyond a passing score requirement.

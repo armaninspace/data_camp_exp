@@ -1,0 +1,79 @@
+course_id: '24503'
+course_title: Machine Learning for Business
+learning_outcomes:
+- id: LO1
+  claim: Identify common machine learning use cases and job roles in various industries.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn about machine
+    learning use cases and job roles, which is a factual recall of information.
+  citations:
+  - field: syllabus[0].title
+    evidence: Machine learning and data use cases
+  - field: syllabus[0].summary
+    evidence: This chapter outlines machine learning use cases, job roles and how
+      they fit in the data needs pyramid.
+- id: LO2
+  claim: Distinguish between different types of machine learning, including supervised,
+    unsupervised, classification, regression, and causal vs. prediction models.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus details that students will overview and explore different
+    machine learning types and sub-types, which requires conceptual understanding
+    and differentiation.
+  citations:
+  - field: syllabus[1].title
+    evidence: Machine learning types
+  - field: syllabus[1].summary
+    evidence: 'We will look into differences between causal and prediction models,
+      explore supervised and unsupervised learning, and finally understand the sub-types
+      of supervised learning: classification and regression.'
+- id: LO3
+  claim: Describe the process of scoping business requirements and identifying machine
+    learning opportunities.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions reviewing steps in scoping business requirements
+    and identifying ML opportunities, which involves understanding procedural steps.
+  citations:
+  - field: syllabus[2].title
+    evidence: Business requirements and model design
+  - field: syllabus[2].summary
+    evidence: This chapter reviews key steps in scoping out business requirements,
+      identifying and sizing machine learning opportunities, assessing the model performance,
+      and identifying any performance risks in the process.
+- id: LO4
+  claim: Recognize common mistakes and best practices in managing machine learning
+    projects, including communication and deployment challenges.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus covers best and worst practices, common mistakes, and communication
+    challenges, which are conceptual understandings relevant to project management.
+  citations:
+  - field: syllabus[3].title
+    evidence: Managing machine learning projects
+  - field: syllabus[3].summary
+    evidence: We will identify most common machine learning mistakes, learn how to
+      manage communication between the business and ML teams and finally address the
+      challenges when deploying machine learning models to production.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on conceptual and procedural understanding rather
+    than hands-on technical skills or advanced analysis.
+  - There is no explicit mention of practical application, coding, or data analysis
+    tasks.
+  - Assessment methods and depth of coverage for each topic are not specified.

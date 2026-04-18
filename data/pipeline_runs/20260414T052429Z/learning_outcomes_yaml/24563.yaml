@@ -1,0 +1,83 @@
+course_id: '24563'
+course_title: Supply Chain Analytics in Python
+learning_outcomes:
+- id: LO1
+  claim: Recall and describe the basics of Linear Programming (LP) and the PuLP framework
+    for supply chain optimization.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.95
+  reasoning: The first chapter explicitly introduces the basics of LP and the PuLP
+    framework, focusing on foundational knowledge.
+  citations:
+  - field: syllabus[0].title
+    evidence: Basics of supply chain optimization and PuLP
+  - field: syllabus[0].summary
+    evidence: In this chapter we learn the basics of LP problems and start to learn
+      how to use the PuLP framework to solve them.
+- id: LO2
+  claim: Apply PuLP to model and solve linear and integer programming problems, including
+    large-scale supply chain scenarios.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter focuses on modeling LP and IP problems in PuLP, including
+    large-scale problems and a case study.
+  citations:
+  - field: syllabus[1].title
+    evidence: Modeling in PuLP
+  - field: syllabus[1].summary
+    evidence: We continue to learn how to model LP and IP problems in PuLP. We touch
+      on how to use PuLP for large scale problems. Additionally, we begin our case
+      study example on how to solve the Capacitated Plant location model.
+- id: LO3
+  claim: Identify and correct common modeling mistakes and perform reasonableness
+    checks on LP solutions.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third chapter discusses common mistakes in constraints, solving the
+    model, and reasonableness/sanity checking results.
+  citations:
+  - field: syllabus[2].title
+    evidence: Solve and evaluate model
+  - field: syllabus[2].summary
+    evidence: This chapter reviews some common mistakes made when creating constraints,
+      and step through the process of solving the model. Once we have a solution to
+      our LP model, how do we know if it is correct? In this chapter we also review
+      a process for reasonableness checking or sanity checking the results.
+- id: LO4
+  claim: Conduct sensitivity analysis and simulation testing on LP models to answer
+    business-related supply chain questions.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The final chapter covers sensitivity analysis (shadow prices, slack)
+    and simulation testing, applying these to business questions and the case study.
+  citations:
+  - field: syllabus[3].title
+    evidence: Sensitivity and simulation testing of model
+  - field: syllabus[3].summary
+    evidence: We review sensitivity analysis of constraints through shadow prices
+      and slack. Additionally, we look at simulation testing our LP models. These
+      different techniques allow us to answer different business-related questions
+      about our models, such as available capacity and incremental costs.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on application and analysis of LP models in supply
+    chain contexts, but does not explicitly cover advanced topics such as multi-objective
+    optimization, stochastic programming, or deep metacognitive reflection.
+  - There is no explicit mention of assessment types, depth of Python programming
+    required, or the extent of real-world data integration.
+  - Metacognitive skills (e.g., reflecting on modeling choices) are not explicitly
+    addressed.

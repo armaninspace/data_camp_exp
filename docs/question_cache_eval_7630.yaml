@@ -1,0 +1,13 @@
+examples:
+  - question: How do I create a vector in R?
+    course_id: "7630"
+    expected_hit: true
+  - question: Show me how to make a vector in R.
+    course_id: "7630"
+    expected_hit: true
+  - question: What is a vector in R?
+    course_id: "7630"
+    expected_hit: false
+  - question: Why does x(2) fail on my vector?
+    course_id: "7630"
+    expected_hit: false

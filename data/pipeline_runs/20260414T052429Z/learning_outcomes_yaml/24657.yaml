@@ -1,0 +1,111 @@
+course_id: '24657'
+course_title: Analyzing US Census Data in Python
+learning_outcomes:
+- id: '1'
+  claim: Retrieve and load US Census data using the Census API and Python libraries
+    (requests, pandas).
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will use the Census API
+    and the requests package to retrieve data and load it into pandas data frames.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Use the Census API and the requests package to retrieve data, load into
+      pandas data frames
+- id: '2'
+  claim: Conduct exploratory data visualization of Census data using seaborn.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions conducting exploratory visualization in seaborn,
+    indicating students will apply visualization techniques.
+  citations:
+  - field: syllabus[0].summary
+    evidence: conduct exploratory visualization in seaborn
+- id: '3'
+  claim: Identify and understand key Census geographies such as states, counties,
+    tracts, and Metropolitan Statistical Areas.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus highlights learning about important Census geographies and
+    Metropolitan Statistical Areas.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Learn about important Census geographies, including states, counties,
+      and tracts.
+  - field: syllabus[2].summary
+    evidence: Learn about and use Metropolitan Statistical Areas, and important geography
+      for urban research.
+- id: '4'
+  claim: Analyze American Community Survey data to explore topics such as health insurance
+    coverage and gentrification, including calculating Margins of Error and exploring
+    change over time.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The syllabus specifies exploring topics using the American Community
+    Survey, calculating Margins of Error, and exploring change over time.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Explore topics such as health insurance coverage and gentrification
+      using the American Community Survey. Calculate Margins of Error and explore
+      change over time.
+- id: '5'
+  claim: Create choropleth maps of Census data using geopandas.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus directly states that students will create choropleth maps
+    using geopandas.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Create choropleth maps using geopandas.
+- id: '6'
+  claim: Calculate and interpret the Index of Dissimilarity to measure racial segregation.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The syllabus mentions calculating the Index of Dissimilarity and studying
+    segregation changes over time.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Calculate the Index of Dissimilarity, and important measure of segregation.
+      Study segregation changes over time in Chicago.
+- id: '7'
+  claim: Apply learned techniques to analyze topical Census data questions, including
+    unemployment by race and ethnicity, commuting patterns, immigration flows, and
+    rent burden.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The final chapter summary states students will apply what they have learned
+    to four topical studies.
+  citations:
+  - field: syllabus[3].summary
+    evidence: apply what you have learned to four topical studies. Explore unemployment
+      by race and ethnicity; commuting patterns and worker density; immigration and
+      state-to-state population flows; and rent burden in San Francisco.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment types or depth of independent project work.
+  - No direct evidence of metacognitive or creative (create-level) learning outcomes.
+  - No explicit coverage of data cleaning, advanced statistical analysis, or model
+    building.

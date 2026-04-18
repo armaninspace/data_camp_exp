@@ -1,0 +1,1030 @@
+course_id: '7630'
+course_title: Introduction to R
+claims:
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO1
+  claim_text: Recall and use basic R syntax for calculations and variable assignment.
+  question_groups:
+  - question_group_id: 7630_LO1_recall
+    course_id: '7630'
+    claim_id: LO1
+    intent_slug: recall
+    canonical_question: How do you recall?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO1_recall_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[0].title
+      evidence: Intro to basics
+    - field: syllabus[0].summary
+      evidence: learn how to use the console as a calculator and how to assign variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO1_use-basic-r-syntax-for-calculations
+    course_id: '7630'
+    claim_id: LO1
+    intent_slug: use-basic-r-syntax-for-calculations
+    canonical_question: How do you use basic r syntax for calculations?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO1_use-basic-r-syntax-for-calculations_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[0].title
+      evidence: Intro to basics
+    - field: syllabus[0].summary
+      evidence: learn how to use the console as a calculator and how to assign variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: validated
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO1_variable-assignment
+    course_id: '7630'
+    claim_id: LO1
+    intent_slug: variable-assignment
+    canonical_question: How do you variable assignment?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO1_variable-assignment_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[0].title
+      evidence: Intro to basics
+    - field: syllabus[0].summary
+      evidence: learn how to use the console as a calculator and how to assign variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO1_recall_how-do-you-recall
+    question_group_id: 7630_LO1_recall
+    text: How do you recall?
+    normalized_text: how do you recall
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO1_use-basic-r-syntax-for-calculations_how-do-you-use-basic-r-syntax-for-calcul
+    question_group_id: 7630_LO1_use-basic-r-syntax-for-calculations
+    text: How do you use basic r syntax for calculations?
+    normalized_text: how do you use basic r syntax for calculations
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: true
+  - variation_id: 7630_LO1_variable-assignment_how-do-you-variable-assignment
+    question_group_id: 7630_LO1_variable-assignment
+    text: How do you variable assignment?
+    normalized_text: how do you variable assignment
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  canonical_answers:
+  - canonical_answer_id: 7630_LO1_recall_v1
+    question_group_id: 7630_LO1_recall
+    answer_markdown: You recall basic R syntax by learning to use the console as a
+      calculator and how to assign variables.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[0].title
+      evidence: Intro to basics
+    - field: syllabus[0].summary
+      evidence: learn how to use the console as a calculator and how to assign variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO1_use-basic-r-syntax-for-calculations_v1
+    question_group_id: 7630_LO1_use-basic-r-syntax-for-calculations
+    answer_markdown: You use basic R syntax for calculations by entering expressions
+      in the console and assign variables using the assignment operator.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[0].title
+      evidence: Intro to basics
+    - field: syllabus[0].summary
+      evidence: learn how to use the console as a calculator and how to assign variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: pass
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO1_variable-assignment_v1
+    question_group_id: 7630_LO1_variable-assignment
+    answer_markdown: In R, you assign variables using the assignment operator (<-).
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[0].title
+      evidence: Intro to basics
+    - field: syllabus[0].summary
+      evidence: learn how to use the console as a calculator and how to assign variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: pass
+    grounding_status: fail
+    grounding_reason: null
+    answer_scope_notes: null
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO2
+  claim_text: Identify and use basic data types in R.
+  question_groups:
+  - question_group_id: 7630_LO2_identify
+    course_id: '7630'
+    claim_id: LO2
+    intent_slug: identify
+    canonical_question: How do you identify in R?
+    pedagogical_move: definition
+    canonical_answer_id: 7630_LO2_identify_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[0].summary
+      evidence: get to know the basic data types in R
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO2_use-basic-data-types
+    course_id: '7630'
+    claim_id: LO2
+    intent_slug: use-basic-data-types
+    canonical_question: How do you use basic data types in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO2_use-basic-data-types_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[0].summary
+      evidence: get to know the basic data types in R
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO2_identify_how-do-you-identify-in-r
+    question_group_id: 7630_LO2_identify
+    text: How do you identify in R?
+    normalized_text: how do you identify in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO2_use-basic-data-types_how-do-you-use-basic-data-types-in-r
+    question_group_id: 7630_LO2_use-basic-data-types
+    text: How do you use basic data types in R?
+    normalized_text: how do you use basic data types in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  canonical_answers:
+  - canonical_answer_id: 7630_LO2_identify_v1
+    question_group_id: 7630_LO2_identify
+    answer_markdown: In R, you identify basic data types by getting to know them.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[0].summary
+      evidence: get to know the basic data types in R
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO2_use-basic-data-types_v1
+    question_group_id: 7630_LO2_use-basic-data-types
+    answer_markdown: In R, you use basic data types such as numeric, character, and
+      logical to store and manipulate data.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[0].summary
+      evidence: get to know the basic data types in R
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: fail
+    grounding_reason: null
+    answer_scope_notes: null
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO3
+  claim_text: Create, name, select, and compare vectors in R.
+  question_groups:
+  - question_group_id: 7630_LO3_create
+    course_id: '7630'
+    claim_id: LO3
+    intent_slug: create
+    canonical_question: How do you create in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO3_create_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO3_name
+    course_id: '7630'
+    claim_id: LO3
+    intent_slug: name
+    canonical_question: How do you name in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO3_name_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO3_select
+    course_id: '7630'
+    claim_id: LO3
+    intent_slug: select
+    canonical_question: How do you select in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO3_select_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO3_compare-vectors
+    course_id: '7630'
+    claim_id: LO3
+    intent_slug: compare-vectors
+    canonical_question: How do you compare vectors in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO3_compare-vectors_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: validated
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO3_create_how-do-you-create-in-r
+    question_group_id: 7630_LO3_create
+    text: How do you create in R?
+    normalized_text: how do you create in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO3_name_how-do-you-name-in-r
+    question_group_id: 7630_LO3_name
+    text: How do you name in R?
+    normalized_text: how do you name in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO3_select_how-do-you-select-in-r
+    question_group_id: 7630_LO3_select
+    text: How do you select in R?
+    normalized_text: how do you select in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO3_compare-vectors_how-do-you-compare-vectors-in-r
+    question_group_id: 7630_LO3_compare-vectors
+    text: How do you compare vectors in R?
+    normalized_text: how do you compare vectors in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: true
+  canonical_answers:
+  - canonical_answer_id: 7630_LO3_create_v1
+    question_group_id: 7630_LO3_create
+    answer_markdown: In R, you can create vectors, name them, select elements from
+      them, and compare different vectors.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO3_name_v1
+    question_group_id: 7630_LO3_name
+    answer_markdown: In R, you can name vectors.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO3_select_v1
+    question_group_id: 7630_LO3_select
+    answer_markdown: In R, you select elements from vectors.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO3_compare-vectors_v1
+    question_group_id: 7630_LO3_compare-vectors
+    answer_markdown: You can compare vectors in R using comparison operators to check
+      for equality or differences between elements.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[1].title
+      evidence: Vectors
+    - field: syllabus[1].summary
+      evidence: create vectors in R, name them, select elements from them, and compare
+        different vectors
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: pass
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO4
+  claim_text: Create matrices and perform basic computations with them in R.
+  question_groups:
+  - question_group_id: 7630_LO4_create-matrices
+    course_id: '7630'
+    claim_id: LO4
+    intent_slug: create-matrices
+    canonical_question: How do you create matrices in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO4_create-matrices_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[2].title
+      evidence: Matrices
+    - field: syllabus[2].summary
+      evidence: create matrices and understand how to do basic computations with them
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO4_perform-basic-computations-with-them
+    course_id: '7630'
+    claim_id: LO4
+    intent_slug: perform-basic-computations-with-them
+    canonical_question: How do you perform basic computations with them in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO4_perform-basic-computations-with-them_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[2].title
+      evidence: Matrices
+    - field: syllabus[2].summary
+      evidence: create matrices and understand how to do basic computations with them
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO4_create-matrices_how-do-you-create-matrices-in-r
+    question_group_id: 7630_LO4_create-matrices
+    text: How do you create matrices in R?
+    normalized_text: how do you create matrices in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO4_perform-basic-computations-with-them_how-do-you-perform-basic-computations-wi
+    question_group_id: 7630_LO4_perform-basic-computations-with-them
+    text: How do you perform basic computations with them in R?
+    normalized_text: how do you perform basic computations with them in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  canonical_answers:
+  - canonical_answer_id: 7630_LO4_create-matrices_v1
+    question_group_id: 7630_LO4_create-matrices
+    answer_markdown: You create matrices in R and perform basic computations with
+      them using built-in functions.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[2].title
+      evidence: Matrices
+    - field: syllabus[2].summary
+      evidence: create matrices and understand how to do basic computations with them
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO4_perform-basic-computations-with-them_v1
+    question_group_id: 7630_LO4_perform-basic-computations-with-them
+    answer_markdown: In R, you can create matrices and perform basic computations
+      with them.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[2].title
+      evidence: Matrices
+    - field: syllabus[2].summary
+      evidence: create matrices and understand how to do basic computations with them
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO5
+  claim_text: Create, subset, and compare factors to represent categorical data in
+    R.
+  question_groups:
+  - question_group_id: 7630_LO5_create
+    course_id: '7630'
+    claim_id: LO5
+    intent_slug: create
+    canonical_question: How do you create in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO5_create_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[3].title
+      evidence: Factors
+    - field: syllabus[3].summary
+      evidence: create, subset, and compare them now
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO5_subset
+    course_id: '7630'
+    claim_id: LO5
+    intent_slug: subset
+    canonical_question: How do you subset in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO5_subset_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[3].title
+      evidence: Factors
+    - field: syllabus[3].summary
+      evidence: create, subset, and compare them now
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO5_compare-factors-to-represent-categorical-data
+    course_id: '7630'
+    claim_id: LO5
+    intent_slug: compare-factors-to-represent-categorical-data
+    canonical_question: How do you compare factors to represent categorical data in
+      R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO5_compare-factors-to-represent-categorical-data_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[3].title
+      evidence: Factors
+    - field: syllabus[3].summary
+      evidence: create, subset, and compare them now
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO5_create_how-do-you-create-in-r
+    question_group_id: 7630_LO5_create
+    text: How do you create in R?
+    normalized_text: how do you create in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO5_subset_how-do-you-subset-in-r
+    question_group_id: 7630_LO5_subset
+    text: How do you subset in R?
+    normalized_text: how do you subset in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO5_compare-factors-to-represent-categorical-data_how-do-you-compare-factors-to-represent-
+    question_group_id: 7630_LO5_compare-factors-to-represent-categorical-data
+    text: How do you compare factors to represent categorical data in R?
+    normalized_text: how do you compare factors to represent categorical data in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  canonical_answers:
+  - canonical_answer_id: 7630_LO5_create_v1
+    question_group_id: 7630_LO5_create
+    answer_markdown: In R, you create factors to represent categorical data, and you
+      can subset and compare them.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[3].title
+      evidence: Factors
+    - field: syllabus[3].summary
+      evidence: create, subset, and compare them now
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO5_subset_v1
+    question_group_id: 7630_LO5_subset
+    answer_markdown: You subset in R by selecting elements from a factor using indexing.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[3].title
+      evidence: Factors
+    - field: syllabus[3].summary
+      evidence: create, subset, and compare them now
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO5_compare-factors-to-represent-categorical-data_v1
+    question_group_id: 7630_LO5_compare-factors-to-represent-categorical-data
+    answer_markdown: In R, you can create, subset, and compare factors to represent
+      categorical data.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[3].title
+      evidence: Factors
+    - field: syllabus[3].summary
+      evidence: create, subset, and compare them now
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO6
+  claim_text: Create data frames, select parts of them, and order data frames by variables
+    in R.
+  question_groups:
+  - question_group_id: 7630_LO6_create-data-frames
+    course_id: '7630'
+    claim_id: LO6
+    intent_slug: create-data-frames
+    canonical_question: How do you create data frames in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO6_create-data-frames_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[4].title
+      evidence: Data frames
+    - field: syllabus[4].summary
+      evidence: create a data frame, select interesting parts of a data frame, and
+        order a data frame according to certain variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO6_select-parts-of-them
+    course_id: '7630'
+    claim_id: LO6
+    intent_slug: select-parts-of-them
+    canonical_question: How do you select parts of them in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO6_select-parts-of-them_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[4].title
+      evidence: Data frames
+    - field: syllabus[4].summary
+      evidence: create a data frame, select interesting parts of a data frame, and
+        order a data frame according to certain variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO6_order-data-frames-by-variables
+    course_id: '7630'
+    claim_id: LO6
+    intent_slug: order-data-frames-by-variables
+    canonical_question: How do you order data frames by variables in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO6_order-data-frames-by-variables_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[4].title
+      evidence: Data frames
+    - field: syllabus[4].summary
+      evidence: create a data frame, select interesting parts of a data frame, and
+        order a data frame according to certain variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO6_create-data-frames_how-do-you-create-data-frames-in-r
+    question_group_id: 7630_LO6_create-data-frames
+    text: How do you create data frames in R?
+    normalized_text: how do you create data frames in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO6_select-parts-of-them_how-do-you-select-parts-of-them-in-r
+    question_group_id: 7630_LO6_select-parts-of-them
+    text: How do you select parts of them in R?
+    normalized_text: how do you select parts of them in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO6_order-data-frames-by-variables_how-do-you-order-data-frames-by-variable
+    question_group_id: 7630_LO6_order-data-frames-by-variables
+    text: How do you order data frames by variables in R?
+    normalized_text: how do you order data frames by variables in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  canonical_answers:
+  - canonical_answer_id: 7630_LO6_create-data-frames_v1
+    question_group_id: 7630_LO6_create-data-frames
+    answer_markdown: In R, you can create a data frame, select parts of it, and order
+      it by variables.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[4].title
+      evidence: Data frames
+    - field: syllabus[4].summary
+      evidence: create a data frame, select interesting parts of a data frame, and
+        order a data frame according to certain variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO6_select-parts-of-them_v1
+    question_group_id: 7630_LO6_select-parts-of-them
+    answer_markdown: You select parts of data frames in R by choosing interesting
+      parts of a data frame.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[4].title
+      evidence: Data frames
+    - field: syllabus[4].summary
+      evidence: create a data frame, select interesting parts of a data frame, and
+        order a data frame according to certain variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO6_order-data-frames-by-variables_v1
+    question_group_id: 7630_LO6_order-data-frames-by-variables
+    answer_markdown: You can order a data frame in R according to certain variables.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[4].title
+      evidence: Data frames
+    - field: syllabus[4].summary
+      evidence: create a data frame, select interesting parts of a data frame, and
+        order a data frame according to certain variables
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO7
+  claim_text: Create, name, and subset lists in R.
+  question_groups:
+  - question_group_id: 7630_LO7_create
+    course_id: '7630'
+    claim_id: LO7
+    intent_slug: create
+    canonical_question: How do you create in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO7_create_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[5].title
+      evidence: Lists
+    - field: syllabus[5].summary
+      evidence: create, name, and subset these lists
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO7_name
+    course_id: '7630'
+    claim_id: LO7
+    intent_slug: name
+    canonical_question: How do you name in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO7_name_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[5].title
+      evidence: Lists
+    - field: syllabus[5].summary
+      evidence: create, name, and subset these lists
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  - question_group_id: 7630_LO7_subset-lists
+    course_id: '7630'
+    claim_id: LO7
+    intent_slug: subset-lists
+    canonical_question: How do you subset lists in R?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO7_subset-lists_v1
+    confidence: 0.65
+    citations:
+    - field: syllabus[5].title
+      evidence: Lists
+    - field: syllabus[5].summary
+      evidence: create, name, and subset these lists
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: validated
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO7_create_how-do-you-create-in-r
+    question_group_id: 7630_LO7_create
+    text: How do you create in R?
+    normalized_text: how do you create in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO7_name_how-do-you-name-in-r
+    question_group_id: 7630_LO7_name
+    text: How do you name in R?
+    normalized_text: how do you name in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  - variation_id: 7630_LO7_subset-lists_how-do-you-subset-lists-in-r
+    question_group_id: 7630_LO7_subset-lists
+    text: How do you subset lists in R?
+    normalized_text: how do you subset lists in r
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: true
+  canonical_answers:
+  - canonical_answer_id: 7630_LO7_create_v1
+    question_group_id: 7630_LO7_create
+    answer_markdown: In R, you can create, name, and subset lists.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[5].title
+      evidence: Lists
+    - field: syllabus[5].summary
+      evidence: create, name, and subset these lists
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO7_name_v1
+    question_group_id: 7630_LO7_name
+    answer_markdown: In R, you can name elements in a list to identify them.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[5].title
+      evidence: Lists
+    - field: syllabus[5].summary
+      evidence: create, name, and subset these lists
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+  - canonical_answer_id: 7630_LO7_subset-lists_v1
+    question_group_id: 7630_LO7_subset-lists
+    answer_markdown: You can subset lists in R using their names or positions.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: syllabus[5].title
+      evidence: Lists
+    - field: syllabus[5].summary
+      evidence: create, name, and subset these lists
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: pass
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null
+- course_id: '7630'
+  course_title: Introduction to R
+  claim_id: LO8
+  claim_text: Apply R skills to analyze simple real-world datasets.
+  question_groups:
+  - question_group_id: 7630_LO8_apply-r-skills-to-analyze-simple-real-world-datasets
+    course_id: '7630'
+    claim_id: LO8
+    intent_slug: apply-r-skills-to-analyze-simple-real-world-datasets
+    canonical_question: How do you apply r skills to analyze simple real-world datasets?
+    pedagogical_move: worked-example
+    canonical_answer_id: 7630_LO8_apply-r-skills-to-analyze-simple-real-world-datasets_v1
+    confidence: 0.65
+    citations:
+    - field: summary
+      evidence: practice R with real data sets
+    - field: syllabus[1].summary
+      evidence: analyze your gambling results using vectors in R
+    - field: syllabus[2].summary
+      evidence: analyze the box office numbers of the Star Wars movies
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    generation_stage: validated
+    validator_status: rejected
+    coverage_status: accounted_for
+  variations:
+  - variation_id: 7630_LO8_apply-r-skills-to-analyze-simple-real-world-datasets_how-do-you-apply-r-skills-to-analyze-sim
+    question_group_id: 7630_LO8_apply-r-skills-to-analyze-simple-real-world-datasets
+    text: How do you apply r skills to analyze simple real-world datasets?
+    normalized_text: how do you apply r skills to analyze simple real world datasets
+    equivalence_notes: Pending same-answer validation.
+    source: canonical
+    candidate_source: canonical_question
+    validation_decision: ACCEPT
+    validation_reason: Canonical question anchors the group.
+    accepted_for_runtime: false
+  canonical_answers:
+  - canonical_answer_id: 7630_LO8_apply-r-skills-to-analyze-simple-real-world-datasets_v1
+    question_group_id: 7630_LO8_apply-r-skills-to-analyze-simple-real-world-datasets
+    answer_markdown: You apply R skills to analyze simple real-world datasets by practicing
+      with real data sets, such as analyzing gambling results using vectors or examining
+      box office numbers of movies.
+    answer_style: short_direct
+    answer_version: 1
+    reviewer_state: unreviewed
+    citations:
+    - field: summary
+      evidence: practice R with real data sets
+    - field: syllabus[1].summary
+      evidence: analyze your gambling results using vectors in R
+    - field: syllabus[2].summary
+      evidence: analyze the box office numbers of the Star Wars movies
+    source_run_id: 20260414T025608Z
+    prompt_version: question-cache-v2
+    answer_fit_status: fail
+    grounding_status: pass
+    grounding_reason: null
+    answer_scope_notes: null

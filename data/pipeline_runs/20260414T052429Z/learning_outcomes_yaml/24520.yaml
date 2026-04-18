@@ -1,0 +1,121 @@
+course_id: '24520'
+course_title: Reshaping Data with pandas
+learning_outcomes:
+- id: LO1
+  claim: Understand the concepts of wide and long data formats and their advantages.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly states that students will understand the
+    concept of wide and long formats and their advantages.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Let's start by understanding the concept of wide and long formats and
+      the advantages of using each of them.
+- id: LO2
+  claim: Apply pivoting techniques to reshape data from long to wide format and obtain
+    summary statistics from DataFrames.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The first chapter mentions learning to pivot data and get summary statistics,
+    which are procedural skills.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll then learn how to pivot data from long to a wide format, and
+      get summary statistics from a large DataFrame.
+- id: LO3
+  claim: Use pandas methods such as melt and wide_to_long to reshape DataFrames from
+    wide to long format.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter focuses on mastering the technique of reshaping DataFrames
+    using specific pandas methods.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Master the technique of reshaping DataFrames from wide to long format.
+      In this chapter, you'll learn how to use the melting method and wide to long
+      function...
+- id: LO4
+  claim: Manipulate string columns during reshaping by concatenating or splitting
+    them.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The second chapter includes handling string columns by concatenating
+    or splitting, which is a procedural skill.
+  citations:
+  - field: syllabus[1].summary
+    evidence: '...before discovering how to handle string columns by concatenating
+      or splitting them.'
+- id: LO5
+  claim: Reshape DataFrames using multi-level indexing, including stacking and unstacking
+    row and column indexes.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter is dedicated to stacking and unstacking DataFrames
+    using multi-level indexing.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll learn how to reshape DataFrames by rearranging levels of the
+      row indexes to the column axis, or vice versa.
+- id: LO6
+  claim: Handle missing data generated during stacking and unstacking processes.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The third chapter mentions gaining skills to handle missing data from
+    stacking/unstacking.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll also gain the skills you need to handle missing data generated
+      in the stacking and unstacking processes.
+- id: LO7
+  claim: Combine reshaping with grouping operations for efficient data manipulation.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter covers combining reshaping with grouping for data
+    manipulation.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You'll finish by learning how to combine the reshaping process with
+      grouping to produce quick data manipulations.
+- id: LO8
+  claim: Transform list-like columns and handle complex nested data, such as nested
+    JSON files, during data reshaping.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter mentions transforming list-like columns and handling
+    nested JSON files.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Lastly, you'll discover how to transform list-like columns and handle
+      complex nested data, such as nested JSON files.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention assessment types or depth of mastery beyond
+    procedural application.
+  - There is no explicit mention of metacognitive or evaluative skills.
+  - No details are provided about the complexity or size of real-world datasets used.

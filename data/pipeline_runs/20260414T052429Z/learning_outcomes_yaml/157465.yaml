@@ -1,0 +1,104 @@
+course_id: '157465'
+course_title: Intermediate Julia
+learning_outcomes:
+- id: '1'
+  claim: Understand and apply loops and ranges in Julia to iterate over data structures.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will learn about for loops,
+    while loops, and ranges, and how to use them to iterate over data structures.
+  citations:
+  - field: syllabus[0].title
+    evidence: Loops and Ranges
+  - field: syllabus[0].summary
+    evidence: learn about for loops and while loops, and how to use them to iterate
+      over data structures... cover ranges, a useful tool for generating sequences
+      of data.
+- id: '2'
+  claim: Use advanced Julia data structures such as tuples, dictionaries, multi-dimensional
+    arrays, and structs for efficient data storage and traversal.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus details learning to use tuples, dictionaries, multi-dimensional
+    arrays, and structures for data storage and traversal.
+  citations:
+  - field: syllabus[1].title
+    evidence: Data Structures
+  - field: syllabus[1].summary
+    evidence: Learn how to use tuples, dictionaries, multi-dimensional arrays, and
+      structures to store and traverse data quickly and efficiently.
+- id: '3'
+  claim: Define and use advanced functions in Julia, including positional, keyword,
+    and default arguments, and measure code execution time.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus specifies extending understanding of functions, including
+    argument types and timing code execution.
+  citations:
+  - field: syllabus[2].title
+    evidence: Advanced Functions in Julia
+  - field: syllabus[2].summary
+    evidence: exploring positional, keyword, and default function arguments... cover
+      code execution timing... capstone on writing your own functions to solve real-world
+      problems.
+- id: '4'
+  claim: Perform basic data cleaning and modification operations on dataframes in
+    Julia.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions learning how to clean and modify data within dataframes.
+  citations:
+  - field: syllabus[3].title
+    evidence: Dataframe Operations and Python/R Packages in Julia
+  - field: syllabus[3].summary
+    evidence: discover how to clean and modify data within dataframes.
+- id: '5'
+  claim: Use anonymous functions and understand the concept of multiple dispatch in
+    Julia.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The syllabus introduces anonymous functions and recaps multiple dispatch,
+    but does not specify application or deeper analysis.
+  citations:
+  - field: syllabus[3].summary
+    evidence: introduce anonymous functions and will recap one of the powerful features
+      of Julia; multiple dispatch.
+- id: '6'
+  claim: Integrate Python and R functions into Julia using PyCall and RCall packages.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and syllabus both mention using Python and R functions in
+    Julia via PyCall and RCall.
+  citations:
+  - field: overview
+    evidence: introduce the PyCall and RCall packages, allowing you to use Python
+      and R functions in Julia.
+  - field: syllabus[3].summary
+    evidence: learn how to use functions from Python and R packages within Julia
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment types or depth of mastery beyond application
+    level.
+  - No details on error handling, debugging, or performance optimization beyond timing.
+  - No explicit coverage of metacognitive strategies or higher-order analysis/creation
+    tasks.

@@ -1,0 +1,81 @@
+course_id: '133411'
+course_title: Data Governance Concepts
+learning_outcomes:
+- id: LO1
+  claim: Define data governance and explain its importance to organizations.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.95
+  reasoning: The first syllabus chapter explicitly states that students will learn
+    what data governance is and why it is important, which aligns with understanding
+    key concepts and their significance.
+  citations:
+  - field: syllabus[0].title
+    evidence: What is Data Governance, and Why is it Important?
+  - field: syllabus[0].summary
+    evidence: you'll learn what data governance is, why it is important, and how data
+      governance can benefit any organization.
+- id: LO2
+  claim: Identify and describe the components, types, and principles of data governance
+    frameworks.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second syllabus chapter covers types, components, and principles
+    of data governance frameworks, indicating students will be able to recognize and
+    describe these elements.
+  citations:
+  - field: syllabus[1].title
+    evidence: Governance Frameworks, Principles, and Maturity
+  - field: syllabus[1].summary
+    evidence: Learn about data governance types, components, principles, and benefits
+      in this chapter, as well as the importance of data management maturity.
+- id: LO3
+  claim: Explain the roles, responsibilities, and operating models involved in data
+    governance.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third syllabus chapter focuses on roles, committees, and operating
+    models, suggesting students will be able to explain these organizational aspects.
+  citations:
+  - field: syllabus[2].title
+    evidence: Governance Roles, Committees, and Operating Models
+  - field: syllabus[2].summary
+    evidence: Learn about data governance roles and responsibilities, data governance
+      committees, and different types of operating models.
+- id: LO4
+  claim: Outline the steps to implement a data governance program, including maturity
+    assessment, strategy development, and technical solution selection.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The fourth syllabus chapter describes learning how to implement a data
+    governance program, including specific steps such as maturity assessment, strategy,
+    and solution selection. This supports procedural knowledge at an understanding
+    level.
+  citations:
+  - field: syllabus[3].title
+    evidence: Implementing your Data Governance Program
+  - field: syllabus[3].summary
+    evidence: Learn how to implement your own data governance program, from conducting
+      maturity assessments to developing strategies and roadmaps and choosing a technical
+      solution that fits your organization's needs.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears introductory and does not provide evidence of higher-order
+    skills such as critical evaluation, analysis, or creation of new frameworks.
+  - There is no explicit mention of practical application, case studies, or assessment
+    of real-world scenarios.
+  - No metacognitive or extended abstract learning outcomes are supported by the provided
+    content.

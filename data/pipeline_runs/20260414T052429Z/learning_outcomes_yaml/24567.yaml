@@ -1,0 +1,42 @@
+course_id: '24567'
+course_title: Creating Dashboards with shinydashboard
+learning_outcomes:
+- id: LO1
+  claim: A reasonably successful student will be able to build dashboards using the
+    shinydashboard package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary explicitly states that students will learn to build dashboards
+    with shinydashboard. However, without a syllabus or detailed description, the
+    depth and breadth of skills are unclear. The claim is limited to procedural application
+    of shinydashboard for dashboard creation.
+  citations:
+  - field: summary
+    evidence: In this course you'll learn to build dashboards using the shinydashboard
+      package.
+- id: LO2
+  claim: A reasonably successful student will gain exposure to R programming concepts
+    relevant to data visualization.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.4
+  reasoning: The subjects field lists 'R Programming' and 'Data Visualization', suggesting
+    some conceptual understanding of these areas, but without a syllabus or further
+    detail, the extent of learning is uncertain.
+  citations:
+  - field: subjects
+    evidence: R Programming, Data Visualization
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific topics, skills, or
+    assessment types are unknown.
+  - The summary is brief and does not specify learning objectives beyond dashboard
+    creation.
+  - No information about prerequisite knowledge, project work, or evaluation criteria.

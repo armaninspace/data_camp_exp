@@ -1,0 +1,83 @@
+course_id: '91610'
+course_title: Statistical Techniques in Tableau
+learning_outcomes:
+- id: LO1
+  claim: Create and interpret univariate visualizations (tables, bar plots, histograms,
+    box plots) in Tableau for exploratory data analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will be creating and interpreting
+    various univariate visualizations in Tableau as part of exploratory data analysis.
+  citations:
+  - field: syllabus[0].title
+    evidence: Univariate exploratory data analysis
+  - field: syllabus[0].summary
+    evidence: you’ll be creating and interpreting tables, bar plots, histograms, and
+      box plots in no time!
+- id: LO2
+  claim: Explain and use measures of center and spread (including variance, standard
+    deviation, and confidence intervals) in Tableau, distinguishing between sample
+    and population statistics.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes a conceptual focus on measures of center and spread,
+    calculation and visualization of variance, standard deviation, and confidence
+    intervals, and understanding the difference between sample and population.
+  citations:
+  - field: syllabus[1].title
+    evidence: Measures of spread and confidence intervals
+  - field: syllabus[1].summary
+    evidence: dive deeper into the use of different measures of center and spread...
+      difference between sample and population, and how variance, standard deviation,
+      and confidence intervals can be calculated and visualized.
+- id: LO3
+  claim: Analyze relationships between two variables using regression techniques in
+    Tableau, including fitting trend lines, describing models, and making predictions.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The syllabus indicates students will describe relationships between two
+    variables, find the best trend line, describe the trend model, and predict future
+    observations using regression in Tableau.
+  citations:
+  - field: syllabus[2].title
+    evidence: Bivariate exploratory data analysis
+  - field: syllabus[2].summary
+    evidence: Describing the relationship between two variables, or regression...
+      find the best trend line, describe the trend model, and predict future observations
+- id: LO4
+  claim: Apply forecasting and clustering techniques in Tableau to identify patterns
+    in time-series and unlabeled data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus states students will explore forecasting to detect recurring
+    patterns and predict future changes, and use clustering to find patterns in unlabeled
+    data.
+  citations:
+  - field: syllabus[3].title
+    evidence: Forecasting and clustering
+  - field: syllabus[3].summary
+    evidence: Forecasting helps you detect recurring patterns in your time-series
+      data, and can predict how these patterns will change in the future. With clustering,
+      you’re able to detect patterns in unlabeled data
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment types or depth of mastery beyond application
+    and basic analysis.
+  - No details on the complexity of datasets or the extent of independent project
+    work.
+  - No explicit coverage of metacognitive strategies or critical evaluation of statistical
+    techniques.

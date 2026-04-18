@@ -1,0 +1,103 @@
+course_id: '24465'
+course_title: Building Web Applications with Shiny in R
+learning_outcomes:
+- id: LO1
+  claim: Understand what a web application is and when to build one using Shiny.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly states that students will learn what a web
+    app is and when to build one, which is foundational conceptual knowledge.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you'll learn what a web app is and when you should build one
+- id: LO2
+  claim: Apply basic Shiny syntax to create text inputs and outputs in web applications.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Students are guided to build apps with text inputs and outputs, indicating
+    procedural application of Shiny syntax.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learn to make text inputs and outputs in a few ways
+- id: LO3
+  claim: Use various input and output widgets in Shiny, including text, plots, and
+    tables.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter focuses on using different input and output options,
+    including rendering text, plots, and tables.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn the syntax for taking inputs from users and rendering different
+      kinds of outputs, including text, plots, and tables
+- id: LO4
+  claim: Explain the concepts of reactive programming in Shiny, including reactive
+    sources, conductors, and endpoints.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter introduces the concepts of reactive programming and
+    its components, focusing on understanding rather than deep analysis.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learn about reactive programming...reactive sources, conductors and
+      endpoints
+- id: LO5
+  claim: Build functional Shiny applications from scratch, incorporating user inputs
+    and outputs.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.95
+  reasoning: The final chapter requires students to build several apps from scratch,
+    integrating multiple elements and demonstrating relational understanding.
+  citations:
+  - field: syllabus[3].summary
+    evidence: make several apps from scratch, including one that allows you to gather
+      insights from the Mental Health in Tech Survey and another that uses recipe
+      ingredients as its input
+- id: LO6
+  claim: Utilize advanced Shiny widgets such as input validation, word clouds, and
+    interactive maps.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The course mentions learning about advanced widgets, but does not specify
+    depth of mastery beyond usage.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learn about more advanced input and output widgets, such as input validation,
+      word clouds, and interactive maps
+- id: LO7
+  claim: Apply understanding of reactivity to build performant Shiny apps.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: Students are expected to use their understanding of reactivity to improve
+    app performance, indicating integration of concepts and procedures.
+  citations:
+  - field: syllabus[2].summary
+    evidence: utilize your understanding of reactivity to build performant Shiny apps
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment or evaluation of app quality beyond 'performant'.
+  - No coverage of deployment, security, or collaboration features.
+  - Depth of advanced widget usage is not specified.

@@ -1,0 +1,88 @@
+course_id: '24600'
+course_title: Generalized Linear Models in Python
+learning_outcomes:
+- id: LO1
+  claim: Recall and explain the foundational concepts of linear models and how generalized
+    linear models (GLMs) extend them for different types of response variables.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will review linear models
+    and learn how GLMs extend them, indicating a focus on understanding key concepts
+    and distinctions.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Review linear models and learn how GLMs are an extension of the linear
+      model given different types of response variables.
+- id: LO2
+  claim: Apply the technical process of fitting generalized linear models in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions learning the technical process of fitting a GLM
+    in Python, which implies procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You will also learn the building blocks of GLMs and the technical process
+      of fitting a GLM in Python.
+- id: LO3
+  claim: Describe and implement logistic regression for modeling binary data, including
+    interpreting coefficients, performing inference, and assessing model performance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The chapter on Modeling Binary Data covers logistic regression, model
+    fitting, interpretation, inference, and performance assessment, indicating both
+    conceptual and procedural knowledge at the application level.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You'll learn about the structure of binary data, the logit link function,
+      model fitting, as well as how to interpret model coefficients, model inference,
+      and how to assess model performance.
+- id: LO4
+  claim: Describe and implement Poisson regression for modeling count data, including
+    addressing overdispersion and visualizing model results.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The chapter on Modeling Count Data covers Poisson regression, overdispersion,
+    and model visualization, indicating procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll learn about Poisson regression, including the discussion on count
+      data, Poisson distribution and the interpretation of the model fit. You'll also
+      learn how to overcome problems with overdispersion. Finally, you'll get hands-on
+      experience with the process of model visualization.
+- id: LO5
+  claim: Construct and interpret multivariable logistic regression models, including
+    handling multicollinearity, categorical variables, and interaction terms.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The final chapter focuses on increasing model complexity, handling multicollinearity,
+    and working with categorical and interaction terms, indicating procedural application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You'll learn how to increase the complexity of your model by adding
+      more than one explanatory variable. You'll practice with the problem of multicollinearity,
+      and with treating categorical and interaction terms in your model.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level summaries, but does not specify the
+    depth of statistical theory, the extent of coding practice, or the complexity
+    of datasets used.
+  - There is no explicit mention of advanced evaluation (e.g., model selection, diagnostics
+    beyond overdispersion), nor of metacognitive or creative tasks.
+  - No information is provided about assessment types or project work.

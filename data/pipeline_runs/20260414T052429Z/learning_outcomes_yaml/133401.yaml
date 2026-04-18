@@ -1,0 +1,86 @@
+course_id: '133401'
+course_title: Manipulating Time Series Data in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the foundational concepts of time series data and how to manage
+    date and time information in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first syllabus chapter explicitly covers the foundations of time
+    series, summary statistics, visual interpretation, and date/time management in
+    R.
+  citations:
+  - field: syllabus[0].title
+    evidence: What Is Time Series Data?
+  - field: syllabus[0].summary
+    evidence: You'll learn the foundations of what a time series represents, how to
+      retrieve summary statistics about the data in a time series, and how to visually
+      interpret a time series plot as part of the exploration step of your analysis.
+      You’ll also cover how to manage date and time information within R objects and
+      ways of incorporating consistent formatting for dates.
+- id: LO2
+  claim: Apply the zoo package in R to create and manipulate time series objects,
+    and convert between data frames and time series.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second syllabus chapter focuses on using the zoo package for creating/manipulating
+    time series and converting between data frames and time series.
+  citations:
+  - field: syllabus[1].title
+    evidence: Manipulating Time Series with zoo
+  - field: syllabus[1].summary
+    evidence: You'll also be introduced to the zoo package, which contains tools and
+      functions for creating and manipulating time series objects. Many data science
+      applications in R use the data frame paradigm; you'll learn how to convert between
+      a data frame and a time series.
+- id: LO3
+  claim: Subset, sample, aggregate, and impute time series data using R packages such
+    as xts, including handling missing values with various methods.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third syllabus chapter details subsetting, sampling, aggregating,
+    and imputing time series data, including specific imputation methods.
+  citations:
+  - field: syllabus[2].title
+    evidence: Indexing Time Series Objects
+  - field: syllabus[2].summary
+    evidence: You’ll cover how to subset a window from a time series... sample time
+      series data at various rates... aggregating your data... see the overall trends
+      in the data using the xts package... methods of 'imputing' your data – filling
+      in missing values with constant fill, LOCF, or linear interpolation methods.
+- id: LO4
+  claim: Create and interpret rolling and expanding windows to compute and analyze
+    dynamic summary statistics over time series data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth syllabus chapter covers creating rolling and expanding windows
+    and using them to compute dynamic statistics.
+  citations:
+  - field: syllabus[3].title
+    evidence: Rolling and Expanding Windows
+  - field: syllabus[3].summary
+    evidence: You’ll learn to create “rolling” windows of a time series... summarize
+      trends in the data across time... compute statistics dynamically... create expanding
+      windows, which show how these summary statistics approach their final value.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced analysis, forecasting, or model
+    evaluation for time series.
+  - There is no mention of assessment types or depth of practical application beyond
+    manipulation and summary statistics.
+  - No explicit mention of metacognitive or creative tasks (e.g., designing new analyses
+    or reflecting on method choice).

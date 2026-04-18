@@ -1,0 +1,89 @@
+course_id: '24381'
+course_title: Introduction to Tableau
+learning_outcomes:
+- id: LO1
+  claim: Understand and use Tableau's fundamental concepts and interface to connect
+    to data sources and create basic visualizations.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn Tableau's fundamental
+    concepts, connect to data sources, use the drag-and-drop interface, and create
+    visualizations. This supports procedural knowledge at the 'understand' level,
+    as students are not only recalling facts but also using the interface to perform
+    basic tasks.
+  citations:
+  - field: syllabus[0].title
+    evidence: Getting Started with Tableau
+  - field: syllabus[0].summary
+    evidence: 'You will get an understanding of Tableau''s fundamental concepts and
+      features: how to connect to data sources, use Tableau’s drag-and-drop interface,
+      and create compelling visualizations.'
+- id: LO2
+  claim: Apply core Tableau techniques to analyze and explore data, including filtering,
+    creating calculated fields, and aggregating data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes learning to filter data, create calculated fields,
+    and aggregate dimensions and measures, which are procedural skills requiring application
+    of knowledge.
+  citations:
+  - field: syllabus[1].title
+    evidence: Building and Customizing Visualizations
+  - field: syllabus[1].summary
+    evidence: You’ll learn how to slice and dice data with filters, create new columns
+      using your own calculated fields, and aggregate dimensions and measures in a
+      view.
+- id: LO3
+  claim: Visualize geographic and temporal data in Tableau, including plotting data
+    on maps and analyzing trends over time.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Students will learn to visualize geographic data, plot on maps, work
+    with dates, and add trend/forecast lines. These are procedural applications of
+    Tableau's features.
+  citations:
+  - field: syllabus[2].title
+    evidence: Digging Deeper
+  - field: syllabus[2].summary
+    evidence: Dive deeper into analytics by learning how to visualize geographic data
+      and plot data onto a map visualization. You’ll learn how to work with dates
+      in Tableau and explore how the data changes with time. You’ll also learn how
+      to add reference, trend, and forecasting lines to your views.
+- id: LO4
+  claim: Format and present data visualizations effectively, including building a
+    basic Tableau dashboard and applying best practices for data storytelling.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus indicates students will learn best practices for formatting
+    and presenting visualizations, and will build their first dashboard, which are
+    procedural skills at the application level.
+  citations:
+  - field: syllabus[3].title
+    evidence: Presenting Your Data
+  - field: syllabus[3].summary
+    evidence: Learn best practices for formatting and presenting visualisations to
+      tell data-driven stories. Using a new dataset on video game sales you'll be
+      building your first dashboard!
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on procedural and basic conceptual knowledge, with
+    little evidence of higher-order skills such as analysis, evaluation, or creation
+    beyond basic dashboard building.
+  - There is no explicit mention of metacognitive skills or advanced data analysis
+    techniques.
+  - The course is introductory and does not cover advanced Tableau features or complex
+    data modeling.

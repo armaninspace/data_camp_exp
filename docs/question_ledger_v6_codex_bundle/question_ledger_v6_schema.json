@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Question Ledger Row",
+  "type": "object",
+  "required": [
+    "question_id",
+    "question_text",
+    "answer_text",
+    "anchor_id",
+    "anchor_label",
+    "question_family",
+    "question_type",
+    "mastery_band",
+    "canonical",
+    "alias",
+    "required_entry",
+    "validated_correct",
+    "grounded",
+    "serviceable",
+    "delivery_class",
+    "visible",
+    "non_visible_reasons",
+    "tags",
+    "scores",
+    "source_refs"
+  ],
+  "properties": {
+    "question_id": {
+      "type": "string"
+    },
+    "question_text": {
+      "type": "string"
+    },
+    "answer_text": {
+      "type": "string"
+    },
+    "anchor_id": {
+      "type": "string"
+    },
+    "anchor_label": {
+      "type": "string"
+    },
+    "anchor_type": {
+      "type": "string"
+    },
+    "question_family": {
+      "type": "string",
+      "enum": [
+        "entry",
+        "bridge",
+        "procedural",
+        "friction",
+        "diagnostic",
+        "transfer"
+      ]
+    },
+    "question_type": {
+      "type": "string",
+      "enum": [
+        "definition",
+        "purpose",
+        "comparison",
+        "procedure",
+        "misconception",
+        "diagnostic",
+        "application"
+      ]
+    },
+    "mastery_band": {
+      "type": "string",
+      "enum": [
+        "novice",
+        "developing",
+        "proficient"
+      ]
+    },
+    "canonical": {
+      "type": "boolean"
+    },
+    "alias": {
+      "type": "boolean"
+    },
+    "canonical_target": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "required_entry": {
+      "type": "boolean"
+    },
+    "validated_correct": {
+      "type": "boolean"
+    },
+    "grounded": {
+      "type": "boolean"
+    },
+    "serviceable": {
+      "type": "boolean"
+    },
+    "delivery_class": {
+      "type": "string",
+      "enum": [
+        "curated_visible",
+        "cache_servable",
+        "alias_only",
+        "analysis_only",
+        "hard_reject"
+      ]
+    },
+    "visible": {
+      "type": "boolean"
+    },
+    "non_visible_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reject_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "groundedness",
+        "correctness",
+        "query_likelihood",
+        "pedagogical_value",
+        "serviceability",
+        "distinctiveness"
+      ],
+      "properties": {
+        "groundedness": {
+          "type": "number"
+        },
+        "correctness": {
+          "type": "number"
+        },
+        "query_likelihood": {
+          "type": "number"
+        },
+        "pedagogical_value": {
+          "type": "number"
+        },
+        "serviceability": {
+          "type": "number"
+        },
+        "distinctiveness": {
+          "type": "number"
+        }
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+course_id: '24623'
+course_title: Analyzing Survey Data in R
+learning_outcomes:
+- id: LO1
+  claim: Explain the importance of survey weights and describe how clustering and
+    stratification affect survey data analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn what survey weights
+    are, why they are important, and how clustering and stratification are unique
+    features of survey data.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to survey data
+  - field: syllabus[0].summary
+    evidence: we will learn what survey weights are and why they are so important
+      in survey data analysis. Another unique feature of survey data are how they
+      were collected via clustering and stratification.
+- id: LO2
+  claim: Apply survey weights to the analysis of categorical data, including calculating
+    summary statistics, building summary tables, constructing bar graphs, and conducting
+    chi-squared tests.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus details that students will practice incorporating survey
+    weights into categorical data analysis, including specific procedures such as
+    summary statistics, tables, bar graphs, and chi-squared tests.
+  citations:
+  - field: syllabus[1].title
+    evidence: Exploring categorical data
+  - field: syllabus[1].summary
+    evidence: practice incorporating those weights into our analysis of categorical
+      data... calculating summary statistics, building summary tables, and constructing
+      bar graphs... run chi-squared tests.
+- id: LO3
+  claim: Compute and interpret survey-weighted statistics for quantitative data, including
+    means and quantiles, and visualize data using bar graphs, histograms, and density
+    plots.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus specifies that students will compute survey-weighted statistics
+    and create various visualizations for quantitative data.
+  citations:
+  - field: syllabus[2].title
+    evidence: Exploring quantitative data
+  - field: syllabus[2].summary
+    evidence: compute survey-weighted statistics, such as the mean and quantiles...
+      construct bar-graphs, histograms and density plots.
+- id: LO4
+  claim: Conduct analytic inference on quantitative survey data using survey-weighted
+    t-tests.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions conducting analytic inference with survey-weighted
+    t-tests, indicating procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: conducting analytic inference with survey-weighted t-tests.
+- id: LO5
+  claim: Model quantitative survey data using linear regression, including the incorporation
+    of survey weights, categorical predictors, and polynomial terms.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes modeling survey data with linear regression and
+    incorporating survey weights, categorical predictors, and polynomial terms.
+  citations:
+  - field: syllabus[3].title
+    evidence: Modeling quantitative data
+  - field: syllabus[3].summary
+    evidence: model the survey data with linear regression and will explore how to
+      incorporate categorical predictors and polynomial terms into our models.
+- id: LO6
+  claim: Visualize survey data in R using appropriate graphical techniques, including
+    the use of survey weights in scatter plots via aesthetics such as size, color,
+    and transparency.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The syllabus notes learning to incorporate survey weights into scatter
+    plots using various aesthetics.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learning how to incorporate survey weights into scatter plots through
+      aesthetics such as size, color, and transparency.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention advanced modeling techniques beyond linear
+    regression.
+  - There is no explicit mention of assessment types or depth of metacognitive reflection.
+  - The course appears to focus on application and understanding, with limited evidence
+    for higher-order synthesis or evaluation.

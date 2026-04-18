@@ -1,0 +1,93 @@
+course_id: '24409'
+course_title: 'Supervised Learning in R: Classification'
+learning_outcomes:
+- id: '1'
+  claim: Understand the basic concept of supervised machine learning classification.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The course introduces classification as a foundational concept in supervised
+    machine learning, especially in the context of kNN.
+  citations:
+  - field: syllabus[0].summary
+    evidence: This chapter will introduce classification while working through the
+      application of kNN to self-driving vehicle road sign recognition.
+  - field: summary
+    evidence: In this course you will learn the basics of machine learning for classification.
+- id: '2'
+  claim: Describe and apply the k-Nearest Neighbors (kNN) algorithm for classification
+    tasks in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will work through the application
+    of kNN to a real-world problem (road sign recognition).
+  citations:
+  - field: syllabus[0].title
+    evidence: k-Nearest Neighbors (kNN)
+  - field: syllabus[0].summary
+    evidence: working through the application of kNN to self-driving vehicle road
+      sign recognition.
+- id: '3'
+  claim: Explain the principles of Naive Bayes and apply the algorithm to classification
+    problems in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapter introduces the basics of Bayesian methods and their application
+    to a practical scenario.
+  citations:
+  - field: syllabus[1].title
+    evidence: Naive Bayes
+  - field: syllabus[1].summary
+    evidence: introduce the basics of Bayesian methods while exploring how to apply
+      these techniques to iPhone-like destination suggestions.
+- id: '4'
+  claim: Summarize the concept of logistic regression and apply it to binary classification
+    problems in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapter provides an overview of logistic regression and illustrates
+    its application to fundraising data.
+  citations:
+  - field: syllabus[2].title
+    evidence: Logistic Regression
+  - field: syllabus[2].summary
+    evidence: provide an overview of the technique while illustrating how to apply
+      it to fundraising data.
+- id: '5'
+  claim: Describe and apply classification trees for decision-making in R, with an
+    emphasis on interpretability.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapter discusses the use of classification trees, their interpretability,
+    and application to a loan approval scenario.
+  citations:
+  - field: syllabus[3].title
+    evidence: Classification Trees
+  - field: syllabus[3].summary
+    evidence: Classification trees use flowchart-like structures to make decisions...
+      We'll use the Lending Club dataset to simulate this scenario.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on understanding and basic application of four classification
+    algorithms, but does not provide evidence of deeper analytical, evaluative, or
+    creative skills (e.g., model comparison, parameter tuning, or critical evaluation).
+  - There is no explicit mention of metacognitive skills or advanced procedural knowledge
+    (e.g., handling real-world data issues, model validation, or performance metrics).
+  - The course is described as 'beginner' and 'basics', so learning outcomes are limited
+    to foundational knowledge and application.

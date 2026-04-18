@@ -1,0 +1,139 @@
+course_id: '24436'
+course_title: Unsupervised Learning in R
+learning_outcomes:
+- id: '1'
+  claim: Explain the fundamental concepts of k-means clustering and how the algorithm
+    works.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn how the k-means
+    algorithm works 'under the hood,' indicating conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Learn how the algorithm works under the hood
+- id: '2'
+  claim: Implement k-means clustering in R and apply it to real-world datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions implementing k-means in R and applying it to a
+    real-world dataset, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: implement k-means clustering in R, ... By the end of the chapter, you'll
+      have applied k-means clustering to a fun 'real-world' dataset
+- id: '3'
+  claim: Visualize and interpret the results of k-means clustering.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus states students will visualize and interpret k-means results,
+    which is procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: visualize and interpret the results
+- id: '4'
+  claim: Select the number of clusters in k-means when it is not known ahead of time.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions selecting the number of clusters, which is a procedural
+    skill.
+  citations:
+  - field: syllabus[0].summary
+    evidence: select the number of clusters when it's not known ahead of time
+- id: '5'
+  claim: Describe how hierarchical clustering works and compare it to k-means clustering.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus states the chapter covers how hierarchical clustering works
+    and how it compares to k-means, indicating conceptual understanding and comparison.
+  citations:
+  - field: syllabus[1].summary
+    evidence: go over how it works, how to use it, and how it compares to k-means
+      clustering
+- id: '6'
+  claim: Use hierarchical clustering in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The syllabus mentions 'how to use' hierarchical clustering, implying
+    procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: how to use it
+- id: '7'
+  claim: Explain the purpose and process of principal component analysis (PCA) for
+    dimensionality reduction.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states students will learn 'exactly what PCA does,' indicating
+    conceptual understanding.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Learn exactly what PCA does
+- id: '8'
+  claim: Visualize PCA results using biplots and scree plots.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions visualizing PCA results with biplots and scree
+    plots, which is procedural.
+  citations:
+  - field: syllabus[2].summary
+    evidence: visualize the results of PCA with biplots and scree plots
+- id: '9'
+  claim: Address practical issues in PCA such as centering and scaling data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions dealing with centering and scaling before PCA,
+    which is a procedural skill.
+  citations:
+  - field: syllabus[2].summary
+    evidence: deal with practical issues such as centering and scaling the data before
+      performing PCA
+- id: '10'
+  claim: Combine PCA and clustering techniques in a complete analysis of real-world
+    data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The final chapter guides students through a complete analysis using PCA
+    as a preprocessing step for clustering, indicating integration of multiple techniques
+    (relational, DOK 3).
+  citations:
+  - field: syllabus[3].summary
+    evidence: guide you through a complete analysis using the unsupervised learning
+      techniques ... combining PCA as a preprocessing step to clustering
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment types or depth of metacognitive skills.
+  - No details on troubleshooting or advanced parameter tuning.
+  - No explicit coverage of other unsupervised learning methods beyond k-means, hierarchical
+    clustering, and PCA.

@@ -1,0 +1,79 @@
+course_id: '24676'
+course_title: Machine Learning for Marketing Analytics in R
+learning_outcomes:
+- id: LO1
+  claim: Apply linear regression to model customer lifetime value in a marketing context.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn how to model
+    customer lifetime value using linear regression, which involves applying a statistical
+    method to a marketing problem.
+  citations:
+  - field: syllabus[0].title
+    evidence: Modeling Customer Lifetime Value with Linear Regression
+  - field: syllabus[0].summary
+    evidence: Learn how to model the customer lifetime value using linear regression.
+- id: LO2
+  claim: Apply logistic regression to predict customer churn for marketing retention
+    strategies.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus describes learning to model customer churn using logistic
+    regression, which is a direct application of a machine learning technique to a
+    marketing analytics problem.
+  citations:
+  - field: syllabus[1].title
+    evidence: Logistic Regression for Churn Prevention
+  - field: syllabus[1].summary
+    evidence: Learn how to model customer churn using logistic regression.
+- id: LO3
+  claim: Apply survival analysis to model time-to-event outcomes such as time to reorder
+    or churn.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus states that students will learn to model the time to an
+    event using survival analysis, which is a procedural application in marketing
+    analytics.
+  citations:
+  - field: syllabus[2].title
+    evidence: Modeling Time to Reorder with Survival Analysis
+  - field: syllabus[2].summary
+    evidence: Learn how to model the time to an event using survival analysis.
+- id: LO4
+  claim: Apply principal component analysis (PCA) to reduce dimensionality and address
+    multicollinearity in marketing datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus details learning to reduce the number of variables using
+    PCA, including condensing information and solving multicollinearity, which are
+    procedural skills.
+  citations:
+  - field: syllabus[3].title
+    evidence: Reducing Dimensionality with Principal Component Analysis
+  - field: syllabus[3].summary
+    evidence: Learn how to reduce the number of variables in your data using principal
+      component analysis. PCA also enables you to condense information to single indices
+      and to solve multicollinearity problems in a regression analysis with many intercorrelated
+      variables.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of theoretical understanding or the extent
+    of hands-on practice with R.
+  - There is no explicit mention of metacognitive or evaluative skills, such as selecting
+    the most appropriate model for a given marketing problem.
+  - No information is provided about assessment methods or the complexity of datasets
+    used.

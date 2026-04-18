@@ -1,0 +1,63 @@
+course_id: '207044'
+course_title: 'Case Study: Supply Chain Analytics in Tableau'
+learning_outcomes:
+- id: '1'
+  claim: Apply Tableau to analyze supply chain data, focusing on shipment and inventory
+    management.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary emphasize hands-on use of Tableau for analyzing
+    supply chain data, specifically shipment and inventory management. The course
+    is described as a case study with practical application.
+  citations:
+  - field: overview
+    evidence: Test your Tableau skills on a real-world dataset focusing on supply
+      chain analytics. In this case study, you will help solve key challenges of shipment
+      and inventory management, analyze supply chain inefficiencies...
+  - field: summary
+    evidence: Tackle shipment, inventory management, and dashboard creation to drive
+      business improvements.
+- id: '2'
+  claim: Create interactive Tableau dashboards to communicate supply chain insights
+    to business stakeholders.
+  knowledge_type: procedural
+  process_level: create
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The overview and summary both highlight dashboard creation as a key activity,
+    with an emphasis on communicating findings and informing business improvements.
+  citations:
+  - field: overview
+    evidence: You will then bring your findings together to create interactive dashboards
+      that demonstrate clear insights.
+  - field: summary
+    evidence: Tackle shipment, inventory management, and dashboard creation to drive
+      business improvements.
+- id: '3'
+  claim: Identify and analyze supply chain inefficiencies using Tableau visualizations
+    and calculations.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions analyzing supply chain inefficiencies and using
+    Tableau calculations and visualizations to draw insights, indicating a focus on
+    analysis.
+  citations:
+  - field: overview
+    evidence: Analyze supply chain inefficiencies and create insightful dashboards
+      to inform business stakeholders about the potential problems and propose structural
+      business improvements.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level detail and specific skills or concepts
+    covered are unclear.
+  - No explicit mention of assessment types or depth of Tableau features used.
+  - No information on prerequisite knowledge or expected prior experience.

@@ -1,0 +1,84 @@
+course_id: '182496'
+course_title: Analyzing Survey Data in Python
+learning_outcomes:
+- id: LO1
+  claim: Identify and classify different types of survey data and select appropriate
+    statistical tests for analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first syllabus chapter emphasizes defining survey data types, understanding
+    when to use descriptive vs. inferential statistics, and visualizing data to determine
+    the right modeling technique. This supports conceptual understanding and selection
+    of methods.
+  citations:
+  - field: syllabus[0].title
+    evidence: Why Analyze Survey Data & When to Apply Statistical Tools
+  - field: syllabus[0].summary
+    evidence: define all sorts of survey data types, encounter important concepts
+      like descriptive and inferential statistics, and visualize survey data to determine
+      the appropriate statistical modeling technique needed
+- id: LO2
+  claim: Explain and apply different sampling methods and weighting techniques to
+    survey data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second syllabus chapter focuses on learning different ways of creating
+    sample survey data and analyzing sampling parameters, indicating procedural knowledge
+    and application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Sampling and Weighting
+  - field: syllabus[1].summary
+    evidence: learn the different ways of creating sample survey data out of population
+      survey data by analyzing the parameters by which the survey data was taken
+- id: LO3
+  claim: Distinguish between descriptive and inferential statistics and interpret
+    key measures (e.g., central tendency, z-score) in survey data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third syllabus chapter highlights understanding the difference between
+    descriptive and inferential statistics, interpreting variables and measures, and
+    drawing actionable insights.
+  citations:
+  - field: syllabus[2].title
+    evidence: Descriptive & Inferential Statistics
+  - field: syllabus[2].summary
+    evidence: understand the difference between descriptive and inferential statistics...
+      interpret the meaning of different variables, key measures such as central tendency
+      and zscore, and interpret results for actionable steps
+- id: LO4
+  claim: Apply statistical modeling techniques (regression analysis, two-sample t-test,
+    chi-square test) to survey data and interpret their assumptions and results.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The final syllabus chapter explicitly mentions applying statistical modeling
+    techniques and interpreting their assumptions, which is procedural and application-focused.
+  citations:
+  - field: syllabus[3].title
+    evidence: Statistical Modeling
+  - field: syllabus[3].summary
+    evidence: apply statistical modeling to survey data analysis with regression analysis,
+      the two-sample t-test, chi-square test, and interpret the assumptions associated
+      with these tests
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of Python programming skills required or
+    developed.
+  - There is no explicit mention of advanced data cleaning, handling missing data,
+    or survey design.
+  - Interpretation of results is mentioned, but the extent of critical evaluation
+    or creation of new analyses is unclear.

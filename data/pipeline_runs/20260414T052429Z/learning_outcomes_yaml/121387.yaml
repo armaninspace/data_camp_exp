@@ -1,0 +1,44 @@
+course_id: '121387'
+course_title: Intro to data.world in Python
+learning_outcomes:
+- id: LO1
+  claim: A student will be able to use the data.world Python SDK to pull data and
+    metadata into their environment.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that students will learn to use the data.world
+    Python SDK to pull data and metadata. This suggests procedural knowledge at the
+    'apply' level, as students are expected to perform a specific task using a tool.
+    However, without a syllabus or further detail, the depth of understanding or ability
+    to analyze or create with the SDK cannot be inferred.
+  citations:
+  - field: summary
+    evidence: In this course, you'll learn to use the data.world Python SDK to pull
+      data and metadata into your environment.
+- id: LO2
+  claim: A student will gain introductory familiarity with data.world as a platform
+    for discovering and sharing data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The summary mentions that data.world allows users to discover and share
+    data, implying that students will be introduced to the platform's purpose and
+    basic concepts. However, there is no evidence of deeper engagement or practical
+    application beyond this introductory exposure.
+  citations:
+  - field: summary
+    evidence: data.world allows data people to discover and share cool data.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific skills, topics, or
+    assessment methods are unknown.
+  - No information about the depth of Python or data manipulation skills taught.
+  - No explicit mention of learning outcomes related to data analysis, sharing, or
+    advanced SDK usage.

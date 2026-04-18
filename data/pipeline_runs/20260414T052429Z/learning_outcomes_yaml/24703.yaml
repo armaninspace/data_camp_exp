@@ -1,0 +1,84 @@
+course_id: '24703'
+course_title: Probability Puzzles in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and implement basic programming constructs in R, such as loops
+    and functions, to solve probability puzzles.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will be introduced to writing
+    loops and functions in R and will use these to solve classic probability problems.
+  citations:
+  - field: syllabus[0].summary
+    evidence: This chapter will introduce some basic principles that will be used
+      throughout the course, such as writing loops and functions.
+- id: LO2
+  claim: Apply R programming to analyze and solve classic probability puzzles, including
+    the Birthday Problem and Monty Hall.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter summary specifically mentions solving the Birthday
+    Problem and Monty Hall using R.
+  citations:
+  - field: syllabus[0].summary
+    evidence: 'Then, we dive into a couple of classic problems: the Birthday Problem,
+      and Monty Hall.'
+- id: LO3
+  claim: Use built-in R functions to perform combinatorial calculations and analyze
+    dice-based games such as Yahtzee, Settlers of Catan, and Craps.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter summary highlights the use of R functions for combinatorics
+    and specific dice games.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You will learn tools such as using built-in R functions to calculate
+      combinatorics, and using functions such as replicate and the %in% operator.
+- id: LO4
+  claim: Combine R programming tools such as nested loops and vectorized functions
+    to solve novel probability puzzles inspired by online sources.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The third chapter summary mentions combining tools like nested for loops
+    and functions (round, identical, sapply) to solve puzzles.
+  citations:
+  - field: syllabus[2].summary
+    evidence: In order to solve them, you will learn to combine tools such as nested
+      for loops, and the functions round, identical, and sapply.
+- id: LO5
+  claim: Calculate win probabilities in poker scenarios using R, including Texas Hold'em
+    and theoretical models like the von Neumann model.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The fourth chapter summary states students will code for win probabilities
+    in poker and explore theoretical models using R functions.
+  citations:
+  - field: syllabus[3].summary
+    evidence: We will learn to code for win probabilities with any given number of
+      outs, and also explore a more theoretical model of poker known as the von Neumann
+      model. We will learn to use functions such as Reduce, runif, and ifelse.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly address higher-order skills such as analysis, evaluation,
+    or creation beyond applying R tools to solve given problems.
+  - There is no explicit mention of metacognitive strategies or reflection on problem-solving
+    approaches.
+  - The depth of conceptual understanding of probability theory (beyond application
+    to puzzles) is not clear.

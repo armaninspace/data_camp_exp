@@ -1,0 +1,56 @@
+course_id: '24533'
+course_title: Introduction to Scala
+learning_outcomes:
+- id: lo1
+  claim: Recall basic facts about Scala as a programming language.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The course summary and subjects indicate an introduction to Scala, but
+    without a syllabus or detailed description, only basic recall of facts about Scala
+    can be confidently inferred.
+  citations:
+  - field: summary
+    evidence: Begin your journey with Scala, a popular language for scalable applications
+      and data engineering infrastructure.
+  - field: subjects
+    evidence: Scala
+- id: lo2
+  claim: Identify the roles of object-oriented and functional programming in Scala.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subjects list includes both object-oriented and functional programming,
+    suggesting the course covers these paradigms in the context of Scala, but without
+    a syllabus, only basic identification and understanding can be inferred.
+  citations:
+  - field: subjects
+    evidence: Object-oriented programming, Functional Programming
+- id: lo3
+  claim: Recognize Scala's relevance to scalable applications and data engineering.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The summary mentions Scala's use in scalable applications and data engineering
+    infrastructure, but without further detail, only recognition of this relevance
+    can be inferred.
+  citations:
+  - field: summary
+    evidence: Scala, a popular language for scalable applications and data engineering
+      infrastructure.
+  - field: subjects
+    evidence: Data Engineering
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, limiting inference to basic factual
+    and conceptual knowledge.
+  - No evidence of procedural or metacognitive learning outcomes.
+  - No explicit mention of practical programming tasks or assessments.

@@ -1,0 +1,54 @@
+course_id: '24443'
+course_title: Linear Classifiers in Python
+learning_outcomes:
+- id: '1'
+  claim: Recall the basic concepts of linear classifiers, including logistic regression
+    and SVM.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that the course covers the details of linear
+    classifiers like logistic regression and SVM. However, without a syllabus, we
+    cannot infer depth beyond basic recall.
+  citations:
+  - field: summary
+    evidence: In this course you will learn the details of linear classifiers like
+      logistic regression and SVM.
+  - field: subjects
+    evidence: Logistic Regression, Machine Learning, SVM
+- id: '2'
+  claim: Understand the use of Python and scikit-learn for implementing linear classifiers.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The subjects list includes Python and scikit-learn, suggesting students
+    will learn to use these tools for linear classifiers, but the lack of syllabus
+    limits certainty about depth or application.
+  citations:
+  - field: subjects
+    evidence: Python, scikit-learn
+- id: '3'
+  claim: Recognize the concepts of hyperparameter tuning and loss functions in the
+    context of linear classifiers.
+  knowledge_type: conceptual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: Hyperparameter tuning and loss functions are listed as subjects, but
+    without a syllabus, we cannot infer more than basic recognition.
+  citations:
+  - field: subjects
+    evidence: Hyperparameter Tuning, Loss Functions
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail about specific skills
+    or depth of coverage.
+  - No explicit mention of practical exercises, projects, or assessments.
+  - No information about metacognitive or higher-order skills.

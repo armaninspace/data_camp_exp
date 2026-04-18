@@ -1,0 +1,100 @@
+course_id: '24395'
+course_title: Introduction to Data Visualization with ggplot2
+learning_outcomes:
+- id: LO1
+  claim: Describe the principles of meaningful data visualization and the importance
+    of considering the audience.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The 'Introduction' chapter summary explicitly mentions developing meaningful
+    visualizations and thinking about the audience, indicating conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: In this chapter we’ll get you into the right frame of mind for developing
+      meaningful visualizations with R. You’ll understand that as a communications
+      tool, visualizations require you to think about your audience first.
+- id: LO2
+  claim: Identify and explain the seven grammatical elements (layers) of ggplot2 and
+    their roles in plot construction.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The 'Introduction' chapter introduces the seven grammatical elements,
+    suggesting students will be able to identify and explain them.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll also be introduced to the basics of ggplot2 - the 7 different
+      grammatical elements (layers) and aesthetic mappings.
+- id: LO3
+  claim: Apply aesthetic mappings in ggplot2 to represent continuous and categorical
+    data visually.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The 'Aesthetics' chapter focuses on understanding and choosing aesthetic
+    mappings, implying students will apply these in practice.
+  citations:
+  - field: syllabus[1].summary
+    evidence: In this chapter you’ll understand how to choose the best aesthetic mappings
+      for your data.
+- id: LO4
+  claim: Construct basic plots (scatter plots, bar charts, line plots) using appropriate
+    geometries in ggplot2.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The 'Geometries' chapter explicitly covers constructing common plot types
+    using geometries.
+  citations:
+  - field: syllabus[2].summary
+    evidence: We’ll familiarize you with the geometries used in the three most common
+      plot types you’ll encounter - scatter plots, bar charts and line plots. We’ll
+      look at a variety of different ways to construct these plots.
+- id: LO5
+  claim: Customize the appearance of ggplot2 plots using themes to produce publication-quality
+    visualizations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The 'Themes' chapter discusses making plots 'pretty' and publication
+    quality, indicating students will learn to apply themes.
+  citations:
+  - field: syllabus[3].summary
+    evidence: The Themes layer will enable you to make publication quality plots directly
+      in R.
+- id: LO6
+  claim: Explain the relationship between data structure and effective visualization
+    choices.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The 'Themes' chapter mentions understanding data structure to make visualization
+    easier, suggesting conceptual understanding.
+  citations:
+  - field: syllabus[3].summary
+    evidence: We’ll explore how understanding the structure of your data makes data
+      visualization much easier.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on foundational concepts and basic application of
+    ggplot2; there is no evidence of advanced topics such as interactive graphics,
+    advanced customization, or integration with other R packages.
+  - There is no explicit mention of assessment types or practical project work beyond
+    the general reference to a qualified assessment for CPE credits.
+  - Metacognitive skills (e.g., reflecting on visualization choices or critiquing
+    visualizations) are not explicitly addressed.

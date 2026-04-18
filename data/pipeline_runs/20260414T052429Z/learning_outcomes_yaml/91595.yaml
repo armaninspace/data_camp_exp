@@ -1,0 +1,95 @@
+course_id: '91595'
+course_title: Hypothesis Testing in R
+learning_outcomes:
+- id: LO1
+  claim: Explain the purpose and workflow of hypothesis testing, including key concepts
+    such as z-scores, p-values, and error types.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter explicitly covers the usefulness of hypothesis
+    testing, the workflow for a one-sample proportion test, and introduces z-scores,
+    p-values, and error types.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Learn why hypothesis testing is useful, and step through the workflow
+      for a one sample proportion test. In doing so, you'll encounter important concepts
+      like z-scores, p-p-values, and false negative and false positive errors.
+- id: LO2
+  claim: Apply t-tests and ANOVA in R to test for differences in means between two
+    or more groups.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second syllabus chapter focuses on using t-tests for two groups and
+    ANOVA for more than two groups, indicating procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Learn how to test for differences in means between two groups using
+      t-tests, and how to extend this to more than two groups using ANOVA and pairwise
+      t-tests.
+- id: LO3
+  claim: Apply proportion tests and chi-square tests in R to compare proportions and
+    test independence or goodness of fit.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third syllabus chapter covers proportion tests for two groups, chi-square
+    independence tests for more than two groups, and chi-square goodness of fit tests.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Learn how to test for differences in proportions between two groups
+      using proportion tests, extended it to more than two groups with chi-square
+      independence tests, and return to the one sample case with chi-square goodness
+      of fit tests.
+- id: LO4
+  claim: Identify assumptions of parametric hypothesis tests and select appropriate
+    non-parametric alternatives when assumptions are violated.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The fourth syllabus chapter discusses the assumptions of parametric tests
+    and introduces simulation-based and rank-based non-parametric tests as alternatives.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Learn about the assumptions made by parametric hypothesis tests and
+      see how simulation-based and rank-based non-parametric tests can be used when
+      those assumptions aren't met.
+- id: LO5
+  claim: Describe the relationships and differences between various hypothesis tests
+    in R, including when to use each.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and syllabus reference understanding relationships between
+    tests and when to use specific tests, but do not provide detailed procedural or
+    analytical depth.
+  citations:
+  - field: overview
+    evidence: You'll also learn how different hypothesis tests are related using the
+      "There is only one test" framework and use non-parametric tests that let you
+      sidestep the requirements of traditional hypothesis tests.
+  - field: overview
+    evidence: By the time you finish this course, you’ll have a deeper understanding
+      of hypothesis testing in R and when it’s appropriate to use specific tests on
+      your data.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced topics such as effect size calculation,
+    power analysis, or the interpretation of borderline p-values.
+  - There is no explicit mention of students designing their own hypothesis tests
+    or conducting original research.
+  - The depth of R programming skills required or developed is not specified beyond
+    applying built-in tests.

@@ -1,0 +1,120 @@
+course_id: '24545'
+course_title: Recurrent Neural Networks (RNNs) for Language Modeling with Keras
+learning_outcomes:
+- id: LO1
+  claim: Understand the foundational concepts and information flow of Recurrent Neural
+    Networks (RNNs).
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly covers the foundations of RNNs and how information
+    flows through them, indicating a conceptual understanding is expected.
+  citations:
+  - field: syllabus[0].title
+    evidence: Recurrent Neural Networks and Keras
+  - field: syllabus[0].summary
+    evidence: learn the foundations of Recurrent Neural Networks (RNN)... understanding
+      how information flows through the network
+- id: LO2
+  claim: Implement basic RNN models for sentiment classification using Keras.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter summary states students will implement RNN models with
+    Keras for sentiment classification, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: seeing how to implement such models with Keras in the sentiment classification
+      task
+- id: LO3
+  claim: Explain and address vanishing and exploding gradient problems in RNNs using
+    GRU and LSTM cells.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter covers vanishing/exploding gradients and introduces
+    GRU and LSTM as solutions, indicating conceptual understanding.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn about the vanishing and exploding gradient problems... and how
+      to deal with them with the GRU and LSTM cells
+- id: LO4
+  claim: Create embedding layers for language models in Keras.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The second chapter mentions creating embedding layers, which is a procedural
+    skill.
+  citations:
+  - field: syllabus[1].summary
+    evidence: you'll create embedding layers for language models
+- id: LO5
+  claim: Prepare data for multi-class classification tasks and distinguish between
+    multi-class and binary classification.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third chapter covers data preparation for multi-class classification
+    and the differences from binary classification, indicating conceptual understanding.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learn how to prepare data for the multi-class classification task, as
+      well as the differences between multi-class classification and binary classification
+- id: LO6
+  claim: Build and evaluate multi-class classification models using Keras.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The third chapter states students will create models and measure their
+    performance, indicating procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learn how to create models and measure their performance with Keras
+- id: LO7
+  claim: Prepare text data for sequence-to-sequence RNN models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter mentions preparing text data for sequence-to-sequence
+    models, which is a procedural skill.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learn how to prepare the text data to the format needed by the models
+- id: LO8
+  claim: Implement RNN models for text generation and neural machine translation tasks.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The fourth chapter describes building models for text generation and
+    translation, indicating procedural application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: The Text Generation model is used for replicating a character's way
+      of speech... you will create a model that translates Portuguese small phrases
+      into English
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention advanced evaluation techniques, hyperparameter
+    tuning, or deployment of models.
+  - There is no explicit mention of metacognitive skills or critical evaluation of
+    model limitations.
+  - The course appears to focus on application and understanding, with little evidence
+    for higher-order creation or extended abstract reasoning.

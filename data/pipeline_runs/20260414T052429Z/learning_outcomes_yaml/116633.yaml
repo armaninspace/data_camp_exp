@@ -1,0 +1,81 @@
+course_id: '116633'
+course_title: 'Case Study: Competitor Sales Analysis in Power BI'
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply ETL (Extract, Transform, Load) concepts in Power BI
+    using Power Query Editor.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview and summary repeatedly mention applying ETL concepts and
+    using Power Query Editor for data integration, transformation, and modeling. However,
+    without a syllabus, the depth of application is unclear.
+  citations:
+  - field: overview
+    evidence: Through Power BI and Power Query Editor, you will work on the development
+      of a complete Power BI report, starting from the data integration from multiple
+      sources, data transformation, modeling, and then visualization.
+  - field: summary
+    evidence: you will apply the concepts of ETL and visualization
+- id: LO2
+  claim: Develop and visualize a Power BI report based on integrated and transformed
+    data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview describes the process of developing a complete Power BI
+    report, including visualization, but does not specify advanced or creative reporting
+    techniques.
+  citations:
+  - field: overview
+    evidence: you will work on the development of a complete Power BI report, starting
+      from the data integration from multiple sources, data transformation, modeling,
+      and then visualization.
+- id: LO3
+  claim: Conduct sales and market share analysis to compare company performance with
+    competitors using Power BI.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.6
+  reasoning: The overview states that students will analyze both internal and external
+    sales data to assess company and competitor performance. The lack of syllabus
+    limits certainty about the complexity of analysis.
+  citations:
+  - field: overview
+    evidence: You will carry out a sales and market share analysis, focusing not only
+      on the company's performance internally, reflecting on how well the products
+      sell, but also externally analyzing how well they are doing against competing
+      manufacturers.
+- id: LO4
+  claim: Gain confidence in independently using Power BI for similar business data
+    analysis tasks.
+  knowledge_type: metacognitive
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The overview claims students will have more confidence in using Power
+    BI on their own datasets, suggesting some metacognitive growth, but without details
+    on reflection or self-assessment.
+  citations:
+  - field: overview
+    evidence: By the end of this case study, you’ll have a stronger understanding
+      of competitor sales analysis and have more confidence in using Power BI on your
+      own datasets.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so the specific sequence, depth, or assessment of skills
+    is unclear.
+  - No explicit mention of advanced analytical techniques, evaluation, or creative
+    report-building.
+  - No details on the types of datasets, complexity of transformations, or visualization
+    types.
+  - No information on assessment methods or opportunities for reflection.

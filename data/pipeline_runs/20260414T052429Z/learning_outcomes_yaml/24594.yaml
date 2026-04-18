@@ -1,0 +1,101 @@
+course_id: '24594'
+course_title: 'Case Study: Analyzing City Time Series Data in R'
+learning_outcomes:
+- id: '1'
+  claim: Apply time series data manipulation techniques in R using xts and zoo packages.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course repeatedly emphasizes practicing and applying time series
+    data manipulation skills in R, specifically using the xts and zoo packages, across
+    multiple real-world datasets.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you'll practice the skills you've learned for time series data manipulation
+      in R by exploring data on flights arriving at Boston's Logan International Airport
+      (BOS) using xts & zoo.
+  - field: overview
+    evidence: practice the skills you've learned for time series data manipulation
+      in R by exploring data on flights arriving at Boston's Logan International Airport
+      (BOS) using xts & zoo.
+- id: '2'
+  claim: Manipulate and merge multiple time series datasets, including isolating specific
+    periods of data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The Weather Data chapter explicitly mentions merging multiple xts objects
+    and isolating certain periods, indicating hands-on procedural skills with time
+    series data.
+  citations:
+  - field: syllabus[1].summary
+    evidence: you'll need to do some data manipulation, including merging multiple
+      xts objects and isolating certain periods of the data.
+- id: '3'
+  claim: Work with time series data from diverse domains (flights, weather, economic
+    indicators, sports) to support exploratory analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The course covers time series data from several domains, suggesting students
+    will gain conceptual understanding of how to approach and explore different types
+    of time series datasets.
+  citations:
+  - field: syllabus[0].title
+    evidence: Flight Data
+  - field: syllabus[1].title
+    evidence: Weather Data
+  - field: syllabus[2].title
+    evidence: Economic Data
+  - field: syllabus[3].title
+    evidence: Sports Data
+- id: '4'
+  claim: Assemble and prepare time series datasets for analysis in the context of
+    real-world case studies.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The Sports Data chapter specifically mentions assembling time series
+    data, and the overall course is framed as a case study, indicating practical data
+    preparation skills.
+  citations:
+  - field: syllabus[3].summary
+    evidence: your supervisor has asked you to assemble some time series data on Boston's
+      sports teams over the past few years.
+  - field: overview
+    evidence: practice the skills you've learned for time series data manipulation
+      in R by exploring data on flights arriving at Boston's Logan International Airport
+      (BOS) using xts & zoo.
+- id: '5'
+  claim: Recognize the relevance of time series data analysis to real-world questions
+    about tourism and related factors in Boston.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The course contextually links time series analysis to tourism, weather,
+    economics, and sports, suggesting students will understand the application of
+    these analyses to real-world scenarios, though not necessarily at a deep analytical
+    level.
+  citations:
+  - field: overview
+    evidence: your client is interested in how Boston's tourism industry is affected
+      by economic trends... Boston's tourism industry must be related to the success
+      of local sports teams.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of advanced analysis, modeling, or interpretation of results
+    beyond data manipulation and assembly.
+  - No evidence of metacognitive or evaluative learning outcomes.
+  - No explicit coverage of creating new analytical methods or original research.

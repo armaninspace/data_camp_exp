@@ -1,0 +1,109 @@
+course_id: '24511'
+course_title: Categorical Data in the Tidyverse
+learning_outcomes:
+- id: '1'
+  claim: Distinguish between categorical and ordinal variables and understand how
+    R represents them as factors.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn the difference
+    between categorical and ordinal variables and how R represents them, which is
+    a conceptual understanding task.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll discover the difference between categorical and ordinal variables,
+      how R represents them
+- id: '2'
+  claim: Inspect factor variables in R to determine the number and names of their
+    levels.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions inspecting factors to find the number and names
+    of levels, which is a procedural skill.
+  citations:
+  - field: syllabus[0].summary
+    evidence: how to inspect them to find the number and names of the levels
+- id: '3'
+  claim: Use the forcats package to reorder factor variables by frequency for improved
+    data visualization.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: Explicit mention of using forcats to reorder variables by frequency for
+    plotting.
+  citations:
+  - field: syllabus[0].summary
+    evidence: how forcats, a tidyverse package, can improve your plots by letting
+      you quickly reorder variables by their frequency
+- id: '4'
+  claim: Manipulate factor variables in R by changing the order and names of levels
+    and collapsing levels using the forcats package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes learning to change order, rename, and collapse
+    factor levels, which are procedural manipulations.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learning how to change the order and names of levels and even collapse
+      them into one another
+- id: '5'
+  claim: Create and manipulate factor variables using functions from dplyr, tidyr,
+    and stringr.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions expanding to dplyr, tidyr, and stringr for creating
+    factor variables, indicating procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learning and reviewing functions from dplyr, tidyr, and stringr
+- id: '6'
+  claim: Refine data visualizations with ggplot2, including changing axes to percentage
+    scales and editing text layout.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus specifies refining graphs with ggplot2, changing axes, and
+    editing text layout, which are procedural visualization skills.
+  citations:
+  - field: syllabus[2].summary
+    evidence: refine graphs with ggplot2 by changing axes to percentage scales, editing
+      the layout of the text, and more
+- id: '7'
+  claim: Apply learned skills in a case study by working with strings, summarizing
+    data, and replicating a publication-quality plot.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The case study requires integrating multiple skills (strings, summarizing,
+    plotting) to replicate a complex plot, indicating relational understanding and
+    higher DOK.
+  citations:
+  - field: syllabus[3].summary
+    evidence: apply it in a case study. You’ll learn more about working with strings
+      and summarizing data, then replicate a publication quality 538 plot
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment types or depth of metacognitive reflection.
+  - Limited detail on the complexity of data manipulation or visualization tasks beyond
+    the case study.
+  - No information about prerequisite knowledge or assumed prior experience.

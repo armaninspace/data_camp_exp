@@ -1,0 +1,83 @@
+course_id: '275603'
+course_title: Deep Learning for Images with PyTorch
+learning_outcomes:
+- id: '1'
+  claim: Apply convolutional neural networks (CNNs) for binary and multi-class image
+    classification using PyTorch.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview explicitly states that students will apply CNNs for image
+    classification tasks, including both binary and multi-class problems, using PyTorch.
+  citations:
+  - field: overview
+    evidence: You'll apply CNNs for binary and multi-class image classification and
+      understand how to leverage pre-trained models in PyTorch.
+- id: '2'
+  claim: Leverage pre-trained models in PyTorch for image classification tasks.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions understanding how to leverage pre-trained models,
+    which implies practical application but does not specify depth.
+  citations:
+  - field: overview
+    evidence: understand how to leverage pre-trained models in PyTorch
+- id: '3'
+  claim: Detect objects within images using bounding boxes and evaluate object recognition
+    model performance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary both mention object detection with bounding
+    boxes and evaluating model performance.
+  citations:
+  - field: summary
+    evidence: use deep learning models for object detection with bounding boxes
+  - field: overview
+    evidence: With bounding boxes, you'll also be able to detect objects within an
+      image and evaluate the performance of object recognition models.
+- id: '4'
+  claim: Apply image segmentation techniques, including semantic, instance, and panoptic
+    segmentation, using appropriate model architectures.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview details that students will explore and apply different types
+    of image segmentation and learn about the model architectures for each.
+  citations:
+  - field: overview
+    evidence: Explore image segmentation, including semantic, instance, and panoptic
+      segmentation, by applying masks to images and learn about the different model
+      architectures needed for each type of segmentation.
+- id: '5'
+  claim: Build and train Deep Convolutional Generative Adversarial Networks (DCGANs)
+    to generate images and assess their quality and diversity.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview states that students will learn to build and train DCGANs
+    and assess generated images, indicating practical procedural skills.
+  citations:
+  - field: overview
+    evidence: learn the skills to build and train Deep Convolutional GANs (DCGANs)
+      and how to assess the quality and diversity of generated images.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level detail and assessment types are missing.
+  - Depth of conceptual understanding, troubleshooting, or metacognitive skills is
+    not specified.
+  - No explicit mention of evaluation or creation-level tasks beyond building standard
+    models.

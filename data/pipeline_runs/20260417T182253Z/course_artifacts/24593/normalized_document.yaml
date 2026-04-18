@@ -1,0 +1,97 @@
+doc_id: '24593'
+title: Visualizing Time Series Data in R
+summary: 'Learn how to visualize time series in R, then practice with a stock-picking
+
+  case study.'
+overview: 'R Time Series Visualization Tools
+
+
+  This chapter will introduce you to basic R time series visualization tools.
+
+
+  Univariate Time Series
+
+
+  Univariate plots are designed to learn as much as possible about the
+
+  distribution, central tendency and spread of the data at hand. In this
+
+  chapter you will be presented with some visual tools used to diagnose
+
+  univariate times series.
+
+
+  Multivariate Time Series
+
+
+  What to do if you have to deal with multivariate time series? In this
+
+  chapter, you will learn how to identify patterns in the distribution,
+
+  central tendency and spread over pairs or groups of data.
+
+
+  Case study: Visually Selecting a Stock That Improves Your Existing Portfolio
+
+
+  Let''s put everything you learned so far in practice! Imagine you already own
+
+  a portfolio of stocks and you have some spare cash to invest, how can you
+
+  wisely select a new stock to invest your additional cash? Analyzing the
+
+  statistical properties of individual stocks vs. an existing portfolio is a
+
+  good way of approaching the problem.'
+level: intermediate
+tooling:
+- DataCamp
+- Time Series Analysis
+- R Programming
+subjects:
+- Time Series Analysis
+- Data Analysis
+- R Programming
+sections:
+- section_index: 1
+  title: R Time Series Visualization Tools
+  summary: 'This chapter will introduce you to basic R time series visualization
+
+    tools.'
+  source: explicit
+- section_index: 2
+  title: Univariate Time Series
+  summary: 'Univariate plots are designed to learn as much as possible about the
+
+    distribution, central tendency and spread of the data at hand. In
+
+    this chapter you will be presented with some visual tools used to
+
+    diagnose univariate times series.'
+  source: explicit
+- section_index: 3
+  title: Multivariate Time Series
+  summary: 'What to do if you have to deal with multivariate time series? In
+
+    this chapter, you will learn how to identify patterns in the
+
+    distribution, central tendency and spread over pairs or groups of
+
+    data.'
+  source: explicit
+- section_index: 4
+  title: 'Case study: Visually Selecting a Stock That Improves Your Existing
+
+    Portfolio'
+  summary: 'Let''s put everything you learned so far in practice! Imagine you
+
+    already own a portfolio of stocks and you have some spare cash to
+
+    invest, how can you wisely select a new stock to invest your
+
+    additional cash? Analyzing the statistical properties of individual
+
+    stocks vs. an existing portfolio is a good way of approaching the
+
+    problem.'
+  source: explicit

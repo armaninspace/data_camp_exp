@@ -1,0 +1,60 @@
+course_id: '24423'
+course_title: Exploratory Data Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Recall and recognize basic graphical and numerical techniques for exploratory
+    data analysis in R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary states that students will 'learn how to use graphical and
+    numerical techniques' for uncovering data structure, which implies exposure to
+    and recognition of these techniques. However, without a syllabus or detailed description,
+    the depth of learning is unclear.
+  citations:
+  - field: summary
+    evidence: Learn how to use graphical and numerical techniques to begin uncovering
+      the structure of your data.
+  - field: subjects
+    evidence: R Programming, Statistics & Probability, Data Analysis, Data Visualization,
+      Data Structures, Exploratory Data Analysis
+- id: LO2
+  claim: Understand the purpose of exploratory data analysis and its role in uncovering
+    data structure.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary and subjects suggest students will gain a conceptual understanding
+    of EDA's purpose, but lack of syllabus limits evidence for deeper or applied learning.
+  citations:
+  - field: summary
+    evidence: Learn how to use graphical and numerical techniques to begin uncovering
+      the structure of your data.
+  - field: subjects
+    evidence: Exploratory Data Analysis
+- id: LO3
+  claim: Identify and use R programming tools relevant to exploratory data analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The inclusion of 'R Programming' and 'Data Visualization' as subjects
+    implies some procedural application, but without a syllabus, the extent of hands-on
+    practice is uncertain.
+  citations:
+  - field: subjects
+    evidence: R Programming, Data Visualization
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description provided, limiting insight into specific topics,
+    depth, or assessment methods.
+  - Unclear which graphical and numerical techniques are covered or how much practical
+    application is expected.
+  - No explicit mention of data types, datasets, or real-world contexts.

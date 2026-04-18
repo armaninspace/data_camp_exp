@@ -1,0 +1,81 @@
+course_id: '24405'
+course_title: Introduction to Python for Finance
+learning_outcomes:
+- id: '1'
+  claim: Recall and understand basic Python syntax and data types relevant to finance.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview and summary state that students will learn Python basics
+    such as printing output, performing calculations, understanding data types, and
+    creating variables. This supports recall and basic understanding of Python syntax
+    and data types.
+  citations:
+  - field: overview
+    evidence: You will then learn Python basics such as printing output, performing
+      calculations, understanding data types, and creating variables.
+  - field: summary
+    evidence: Learn how to work with lists, arrays and data visualizations to master
+      financial analyses.
+- id: '2'
+  claim: Apply Python to manipulate and visualize financial data using lists, arrays,
+    NumPy, and Matplotlib.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview describes using lists and arrays, and specifically mentions
+    using NumPy and Matplotlib to manipulate and visualize data. This supports procedural
+    application of these tools to financial data.
+  citations:
+  - field: overview
+    evidence: You’ll use the NumPy and Matplotlib packages to manipulate and visualize
+      data.
+  - field: subjects
+    evidence: Data Visualization, Matplotlib, NumPy
+- id: '3'
+  claim: Conduct basic financial analysis on datasets using Python, including filtering,
+    summarizing, plotting, and identifying trends and outliers.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview states that students will conduct a Python financial analysis
+    on an S&P 100 dataset, including filtering lists, summarizing sector data, plotting
+    P/E ratios, visualizing trends, and identifying outliers. This supports procedural
+    application to real financial data.
+  citations:
+  - field: overview
+    evidence: You will finish the course by conducting a Python financial analysis
+      on an S&P 100 dataset. Here, you will apply your Python skills to filter lists,
+      summarize sector data, plot P/E ratios in histograms, visualize financial trends,
+      and identify outliers.
+- id: '4'
+  claim: Understand the relevance and application of Python in quantitative finance
+    contexts.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The overview and summary emphasize the connection between Python and
+    finance, and the importance of these skills in the finance industry. This supports
+    conceptual understanding of Python's role in finance.
+  citations:
+  - field: overview
+    evidence: The financial industry uses Python extensively for quantitative analysis,
+      ranging from understanding trading dynamics to risk management systems.
+  - field: summary
+    evidence: Build Python skills to elevate your finance career.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level detail is missing.
+  - No explicit mention of assessment types or depth of analysis.
+  - No evidence for higher-order skills such as analyze, evaluate, or create.
+  - No explicit coverage of metacognitive skills.

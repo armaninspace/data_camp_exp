@@ -1,0 +1,57 @@
+course_id: '24507'
+course_title: Artificial Intelligence (AI) Concepts in Python
+learning_outcomes:
+- id: lo1
+  claim: Recall basic concepts and terminology related to AI, Machine Learning, and
+    Python.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The course is described as covering 'fundamentals' and is at a beginner
+    level, suggesting a focus on basic facts and terminology.
+  citations:
+  - field: summary
+    evidence: Learn the fundamentals behind AI and Machine Learning.
+  - field: details.level
+    evidence: beginner
+  - field: subjects
+    evidence: Python, Artificial Intelligence, Machine Learning
+- id: lo2
+  claim: Understand the foundational concepts of supervised and unsupervised learning,
+    including clustering, regression, and anomaly detection.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The subjects list includes specific AI/ML topics, indicating that students
+    will be introduced to and expected to comprehend these concepts.
+  citations:
+  - field: subjects
+    evidence: Supervised Learning, Unsupervised Learning, Clustering, Regression Models,
+      Anomaly Detection
+- id: lo3
+  claim: Identify the role of neural networks and deep learning within the broader
+    context of AI.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: Neural networks and deep learning are listed as subjects, but without
+    a syllabus, the depth is unclear; likely limited to basic understanding.
+  citations:
+  - field: subjects
+    evidence: Neural Networks, Deep Learning
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so the depth and specific learning
+    activities are unclear.
+  - No explicit mention of practical or procedural skills, such as implementing algorithms
+    in Python.
+  - No evidence of higher-order skills (analyze, evaluate, create) or metacognitive
+    outcomes.

@@ -1,0 +1,87 @@
+course_id: '24402'
+course_title: Writing Functions in Python
+learning_outcomes:
+- id: '1'
+  claim: Apply best practices for writing maintainable and reusable Python functions,
+    including the use of docstrings and understanding when to refactor code into functions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will cover best practices,
+    docstrings, and when to turn code into functions, indicating procedural application
+    of these concepts.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You'll cover docstrings and why they matter and how to know when you
+      need to turn a chunk of code into a function.
+  - field: summary
+    evidence: Learn to use best practices to write maintainable, reusable, complex
+      functions with good documentation.
+- id: '2'
+  claim: Understand and explain how Python passes arguments to functions and identify
+    common pitfalls in function calls.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions learning the details of how Python passes arguments
+    and common gotchas, supporting conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You will also learn the details of how Python passes arguments to functions,
+      as well as some common gotchas that can cause debugging headaches when calling
+      functions.
+- id: '3'
+  claim: Use context managers in Python to manage resources and write custom context
+    managers.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus states students will learn to use and write context managers,
+    indicating procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: This chapter will show you how to use context managers, as well as how
+      to write your own.
+- id: '4'
+  claim: Explain the foundational concepts behind Python decorators, including functions
+    as objects, scope, and closures.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus highlights foundational concepts needed to understand decorators,
+    supporting conceptual understanding.
+  citations:
+  - field: syllabus[2].summary
+    evidence: This chapter will lay the foundational concepts needed to thoroughly
+      understand decorators (functions as objects, scope, and closures)...
+- id: '5'
+  claim: Define and use decorators in Python, including writing decorators that take
+    arguments and preserve function metadata.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus describes writing decorators, including advanced concepts
+    like argument-taking and metadata preservation, indicating procedural application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You will also learn advanced decorator concepts like how to preserve
+      the metadata of your decorated functions and how to write decorators that take
+      arguments.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify assessment types or depth of practice, so mastery
+    beyond application and understanding is not claimed.
+  - No explicit mention of error handling, testing, or integration with larger codebases.
+  - No explicit coverage of metacognitive strategies or reflection on function design.

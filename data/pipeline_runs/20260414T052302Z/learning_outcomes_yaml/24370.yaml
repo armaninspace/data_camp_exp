@@ -1,0 +1,186 @@
+course_id: '24370'
+course_title: Statistician in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply foundational statistical concepts, including probability,
+    random variables, and distributions, using R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus includes chapters on 'Introduction to Statistics in R' and
+    'Foundations of Probability in R', which explicitly mention learning about probability,
+    random variables, and distributions. The focus is on understanding and applying
+    these concepts in R.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Statistics in R
+  - field: syllabus[1].title
+    evidence: Foundations of Probability in R
+  - field: syllabus[1].summary
+    evidence: learn about the concepts of random variables, distributions, and conditioning
+- id: LO2
+  claim: Implement and interpret regression analyses, including linear and logistic
+    regression with multiple explanatory variables, in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: 'Two chapters focus on regression: ''Introduction to Regression in R''
+    and ''Intermediate Regression in R''. The summaries mention implementing, analyzing,
+    and interpreting regression, including linear and logistic regression with multiple
+    variables.'
+  citations:
+  - field: syllabus[2].title
+    evidence: Introduction to Regression in R
+  - field: syllabus[2].summary
+    evidence: implementing, analyzing, and interpreting regression analysis in R
+  - field: syllabus[3].title
+    evidence: Intermediate Regression in R
+  - field: syllabus[3].summary
+    evidence: perform linear and logistic regression with multiple explanatory variables
+- id: LO3
+  claim: Apply sampling techniques and survey design to collect and analyze data efficiently
+    in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapters 'Sampling in R' and 'Analyzing Survey Data in R' indicate
+    that students will learn to master sampling and survey design, as well as analyze
+    and visualize survey results.
+  citations:
+  - field: syllabus[4].title
+    evidence: Sampling in R
+  - field: syllabus[4].summary
+    evidence: Master sampling to get more accurate statistics with less data.
+  - field: syllabus[7].title
+    evidence: Analyzing Survey Data in R
+  - field: syllabus[7].summary
+    evidence: Learn survey design using common design structures followed by visualizing
+      and analyzing survey results.
+- id: LO4
+  claim: Conduct hypothesis testing and draw statistical inferences using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapters 'Hypothesis Testing in R' and 'Foundations of Inference
+    in R' cover hypothesis testing (t-tests, proportion tests, chi-square tests) and
+    statistical inference.
+  citations:
+  - field: syllabus[5].title
+    evidence: Hypothesis Testing in R
+  - field: syllabus[5].summary
+    evidence: Learn how and when to use hypothesis testing in R, including t-tests,
+      proportion tests, and chi-square tests.
+  - field: syllabus[12].title
+    evidence: Foundations of Inference in R
+  - field: syllabus[12].summary
+    evidence: Learn how to draw conclusions about a population from a sample of data
+      via a process known as statistical inference.
+- id: LO5
+  claim: Design basic experiments and analyze experimental data in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapter 'Experimental Design in R' explicitly mentions learning about
+    basic experimental design and its importance in data analysis.
+  citations:
+  - field: syllabus[6].title
+    evidence: Experimental Design in R
+  - field: syllabus[6].summary
+    evidence: learn about basic experimental design, a crucial part of any data analysis
+- id: LO6
+  claim: Fit and interpret hierarchical and mixed effects models in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapter 'Hierarchical and Mixed Effects Models in R' states that
+    students will learn to fit hierarchical models with random effects.
+  citations:
+  - field: syllabus[8].title
+    evidence: Hierarchical and Mixed Effects Models in R
+  - field: syllabus[8].summary
+    evidence: learn to fit hierarchical models with random effects
+- id: LO7
+  claim: Perform survival analysis, including estimation, visualization, and interpretation
+    of survival models in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The chapter 'Survival Analysis in R' covers working with time-to-event
+    data, estimating, visualizing, and interpreting survival models.
+  citations:
+  - field: syllabus[9].title
+    evidence: Survival Analysis in R
+  - field: syllabus[9].summary
+    evidence: Learn to estimate, visualize, and interpret survival models
+- id: LO8
+  claim: Understand and apply Bayesian data analysis techniques in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The chapter 'Fundamentals of Bayesian Data Analysis in R' introduces
+    Bayesian data analysis, its workings, and its usefulness.
+  citations:
+  - field: syllabus[10].title
+    evidence: Fundamentals of Bayesian Data Analysis in R
+  - field: syllabus[10].summary
+    evidence: Learn what Bayesian data analysis is, how it works, and why it is a
+      useful tool
+- id: LO9
+  claim: Conduct factor analysis to explore latent variables using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The chapter 'Factor Analysis in R' covers exploratory and confirmatory
+    factor analyses for latent variables.
+  citations:
+  - field: syllabus[11].title
+    evidence: Factor Analysis in R
+  - field: syllabus[11].summary
+    evidence: Explore latent variables, such as personality, using exploratory and
+      confirmatory factor analyses.
+- id: LO10
+  claim: Communicate statistical findings effectively to both technical and non-technical
+    audiences.
+  knowledge_type: metacognitive
+  process_level: understand
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.6
+  reasoning: The overview and summary emphasize communicating findings and providing
+    actionable insights, though the syllabus does not specify communication-focused
+    chapters.
+  citations:
+  - field: overview
+    evidence: interpreting results, and effectively communicating your findings
+  - field: summary
+    evidence: helps companies make sense of quantitative data, including spotting
+      trends and making predictions
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The final syllabus item, 'How Environmental Factors Influence Wildlife Populations',
+    lacks a summary, so its learning outcome cannot be determined.
+  - While communication of findings is mentioned in the overview, there is no dedicated
+    syllabus chapter on communication or data visualization, so claims about communication
+    skills are less certain.
+  - The course is labeled 'beginner', but some topics (e.g., hierarchical models,
+    Bayesian analysis) may require more advanced background than is indicated.

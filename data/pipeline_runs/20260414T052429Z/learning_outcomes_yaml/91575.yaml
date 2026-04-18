@@ -1,0 +1,61 @@
+course_id: '91575'
+course_title: Introduction to DAX in Power BI
+learning_outcomes:
+- id: LO1
+  claim: Learners can create custom calculations in Power BI using DAX, including
+    calculated columns and measures.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that learners will create custom calculations
+    using DAX, expand tables with calculated columns, and write calculated measures.
+    This indicates procedural knowledge and the ability to apply these techniques.
+  citations:
+  - field: syllabus[0].summary
+    evidence: In this chapter, you’ll learn how to create custom calculations using
+      Microsoft’s formula language, DAX (Data Analysis Expressions). You’ll learn
+      how to expand your source tables with calculated columns, before progressing
+      to writing calculated measures to help summarize your data.
+- id: LO2
+  claim: Learners can explain and use context in DAX formulas, including row-level
+    evaluation with iterator functions, filtering with CALCULATE, and using variables.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus describes learning about context in DAX, using iterator
+    functions, CALCULATE for filtering, and variables. This supports understanding
+    and some application of these concepts.
+  citations:
+  - field: syllabus[1].summary
+    evidence: In this chapter, you'll learn about context in Power BI and how it plays
+      an important part when building reports. Next, we'll learn how to use iterator
+      functions to evaluate data at a row level. We'll then introduce you to the CALCULATE
+      function to help you filter your data and finally, we'll show you how to use
+      variables to make writing DAX functions more efficient.
+- id: LO3
+  claim: Learners can use DAX's date and time intelligence functions and quick measures
+    to perform time-based calculations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus states that learners will use DAX's date and time intelligence
+    functions and quick measures, indicating procedural knowledge and application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: In this chapter, you'll learn the power of DAX's date and time intelligence
+      functions. You'll be able to use these functions in actions, as well as use
+      quick measures to create complex DAX code.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify assessment types or depth of mastery beyond introductory
+    application and understanding.
+  - No explicit mention of troubleshooting, debugging, or advanced DAX optimization.
+  - No evidence of metacognitive or creative (designing new solutions) outcomes.

@@ -1,0 +1,112 @@
+course_id: '24671'
+course_title: Market Basket Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the basic concepts and applications of market basket analysis
+    (MBA), including its use in online and offline retail and beyond.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter introduces MBA, its purpose, and its applications,
+    indicating students will gain conceptual understanding of what MBA is and where
+    it can be applied.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Market Basket Analysis
+  - field: syllabus[0].summary
+    evidence: learn how market basket analysis (MBA) can be used to look into baskets
+      and dig into itemsets to better understand customers and predict their needs...
+      learn the power of using market basket analysis for online shopping, offline
+      shopping, and use cases beyond retail.
+- id: LO2
+  claim: Apply R packages (tidyverse, dplyr, arules, arulesViz) to prepare, analyze,
+    and visualize transactional data for market basket analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Multiple chapters reference hands-on use of R packages for data preparation,
+    analysis, and visualization, indicating procedural application skills.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Using tidyverse and dplyr you’ll discover how many baskets can be created
+      from a given set of items
+  - field: syllabus[1].summary
+    evidence: convert transactional datasets to a basket format, ready for analysis
+      using the Apriori algorithm... explore how the arules package is used for market
+      basket analysis
+  - field: syllabus[2].summary
+    evidence: You’ll use the arulesViz package to create barplots, scatterplots, and
+      graphs to visualize your sets of inferred rules.
+- id: LO3
+  claim: 'Explain and use key metrics in market basket analysis: support, confidence,
+    and lift.'
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter explicitly introduces these metrics and their use
+    in MBA, supporting understanding and basic application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: 'introduced to the three main metrics for market basket analysis: support,
+      confidence, and lift, before getting hands-on with the Apriori algorithm to
+      extract rules'
+- id: LO4
+  claim: Extract association rules from transactional datasets using the Apriori algorithm.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Students are guided to use the Apriori algorithm to extract rules, indicating
+    procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: getting hands-on with the Apriori algorithm to extract rules from a
+      transactional dataset
+- id: LO5
+  claim: Visualize and interpret sets of association rules using barplots, scatterplots,
+    graphs, and interactive plots.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third chapter focuses on creating and interpreting visualizations
+    of association rules using arulesViz.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You’ll use the arulesViz package to create barplots, scatterplots, and
+      graphs to visualize your sets of inferred rules. You’ll then turn sets of plots
+      into interactive plots
+- id: LO6
+  claim: Apply market basket analysis techniques to a real-world dataset to build
+    a simple recommendation system.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The final chapter involves applying all learned techniques to a movie
+    dataset to create a recommendation system, indicating integration and application
+    in a new context.
+  citations:
+  - field: syllabus[3].summary
+    evidence: apply everything you’ve learned as you work with a movie dataset. Using
+      market basket analysis you’ll turn this dataset into a movie recommendation
+      system
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment or depth of mastery beyond application and basic
+    integration.
+  - No evidence of advanced evaluation or creation (e.g., designing new algorithms
+    or critically evaluating MBA limitations).
+  - No explicit coverage of metacognitive strategies or troubleshooting complex data
+    issues.

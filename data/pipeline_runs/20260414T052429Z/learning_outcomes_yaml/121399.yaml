@@ -1,0 +1,53 @@
+course_id: '121399'
+course_title: R, Yelp and the Search for Good Indian Food
+learning_outcomes:
+- id: LO1
+  claim: Recognize that not all Yelp restaurant reviews are equally reliable or useful.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly raises the question of whether all Yelp reviews
+    are created equal, suggesting students will learn to distinguish between reviews
+    in terms of reliability or usefulness.
+  citations:
+  - field: summary
+    evidence: Are all Yelp restaurant reviews created equal?
+- id: LO2
+  claim: Describe basic techniques for analyzing Yelp data to identify useful metrics
+    for restaurant selection.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary mentions learning techniques to 'cut through the noise' and
+    deliver useful metrics, implying some procedural understanding of data analysis
+    methods, though specifics are lacking.
+  citations:
+  - field: summary
+    evidence: You will learn the techniques to 'cut through the noise' and deliver
+      useful metrics for finding a great place to eat on Friday night!
+- id: LO3
+  claim: Identify the relevance of data analysis in the context of Indian cuisine
+    and restaurant selection.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subjects field connects data analysis with Indian cuisine, suggesting
+    students will understand the application of data analysis to this specific context.
+  citations:
+  - field: subjects
+    evidence: Data Analysis, Indian Cuisine
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific techniques, tools
+    (such as R), or depth of analysis cannot be confirmed.
+  - No explicit mention of hands-on activities, assessments, or expected level of
+    mastery.
+  - No information about the structure, duration, or workload of the course.

@@ -1,0 +1,108 @@
+course_id: '24672'
+course_title: Survey and Measurement Development in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the role of surveys in marketing research and the importance of
+    reliability and validity in measurement.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview explicitly mentions exploring the use of surveys in marketing
+    research and the importance of reliability and validity, indicating conceptual
+    understanding.
+  citations:
+  - field: overview
+    evidence: explore the use of surveys in marketing research and the importance
+      of reliability and validity in measurement
+- id: LO2
+  claim: Apply exploratory data analysis techniques to survey data using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview states that students will perform exploratory data analysis
+    on freshly-collected survey data, implying procedural application.
+  citations:
+  - field: overview
+    evidence: perform exploratory data analysis on freshly-collected survey data
+- id: LO3
+  claim: Conduct exploratory factor analysis to identify latent variables and assess
+    internal reliability.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes using exploratory factor analysis to find hidden
+    patterns and assess internal reliability, indicating procedural knowledge and
+    application.
+  citations:
+  - field: overview
+    evidence: look for hidden patterns in the data using exploratory factor analysis...
+      Of particular interest... is internal reliability
+- id: LO4
+  claim: Use confirmatory factor analysis to test model fit and evaluate construct
+    validity.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The overview mentions using confirmatory factor analysis to formally
+    test hypotheses about model fit and to answer questions of construct validity,
+    which requires analysis.
+  citations:
+  - field: overview
+    evidence: use confirmatory factor analysis to formally test the hypothesis that
+      our model fits our data... answer the question of construct validity
+- id: LO5
+  claim: Assess criterion validity and examine relationships between survey scales
+    and demographic variables.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview states that students will use validated scales to test relationships
+    to demographic variables and assess criterion validity, indicating analysis of
+    relationships.
+  citations:
+  - field: overview
+    evidence: test its relationship to demographic variables like age or spending
+      habits... criterion validity
+- id: LO6
+  claim: Evaluate the reproducibility and replicability of survey results.
+  knowledge_type: conceptual
+  process_level: evaluate
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview mentions confirming the reproducibility and replicability
+    of the survey, which involves evaluation.
+  citations:
+  - field: overview
+    evidence: confirm the reproducibility and replicability of the survey
+- id: LO7
+  claim: Apply factor scores in modeling customer behavior.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview briefly mentions using factor scores in modeling customer
+    behavior, suggesting procedural application but with limited detail.
+  citations:
+  - field: overview
+    evidence: explore the power of factor scores in modeling customer behavior
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so all inferences are based on the overview
+    and summary.
+  - Specific R programming skills or packages are not detailed.
+  - Assessment methods and depth of practical application are unclear.
+  - No explicit mention of metacognitive or creative learning outcomes.

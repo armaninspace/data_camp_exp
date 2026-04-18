@@ -1,0 +1,80 @@
+course_id: '24499'
+course_title: Functions for Manipulating Data in SQL Server
+learning_outcomes:
+- id: '1'
+  claim: Identify and use the most common data types in SQL Server, including understanding
+    implicit and explicit data type conversions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn about the most
+    used data types, understand implicit vs. explicit conversion, and become familiar
+    with CAST() and CONVERT(). This supports conceptual understanding and some procedural
+    familiarity.
+  citations:
+  - field: syllabus[0].title
+    evidence: Choosing the appropriate data type
+  - field: syllabus[0].summary
+    evidence: 'learn what are the most used data types in SQL Server... understand
+      the differences between implicit and explicit conversion... get familiar with
+      the functions used for explicitly converting data: CAST() and CONVERT().'
+- id: '2'
+  claim: Apply common date and time functions in SQL Server to retrieve, assemble,
+    and validate date values.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus describes learning to use functions for date and time manipulation,
+    including retrieving the current date, extracting parts, assembling dates, and
+    validating date expressions. This supports procedural application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Manipulating time
+  - field: syllabus[1].summary
+    evidence: get familiar with the most common functions for date and time manipulation...
+      retrieve the current date, only parts from a date, to assemble a date from pieces
+      and to check if an expression is a valid date or not.
+- id: '3'
+  claim: Manipulate string data in SQL Server using built-in string functions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will learn how to manipulate strings
+    to achieve desired results, indicating procedural knowledge and application.
+  citations:
+  - field: syllabus[2].title
+    evidence: Working With Strings
+  - field: syllabus[2].summary
+    evidence: learn how to manipulate strings, to get the results you want.
+- id: '4'
+  claim: Use aggregate and numeric functions in SQL Server to calculate minimum, maximum,
+    sum, powers, and square roots.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies working with aggregate functions (min, max, sum)
+    and numeric functions (power, square root), supporting procedural application.
+  citations:
+  - field: syllabus[3].title
+    evidence: Recognizing Numeric Data Properties
+  - field: syllabus[3].summary
+    evidence: use aggregate functions for calculating the minimum, maximum or the
+      sum of values from a set... raise a number to a power or to calculate its square
+      root.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on procedural and conceptual knowledge at the application
+    and understanding levels, but does not provide evidence for higher-order skills
+    such as analysis, evaluation, or creation.
+  - There is no explicit mention of metacognitive strategies or complex problem-solving.
+  - No information is provided about assessment types or depth of practice.

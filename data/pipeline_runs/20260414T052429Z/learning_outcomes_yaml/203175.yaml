@@ -1,0 +1,149 @@
+course_id: '203175'
+course_title: Introduction to Deep Learning with PyTorch
+learning_outcomes:
+- id: LO1
+  claim: Recall and describe the basic concepts of deep learning and the role of PyTorch
+    as a deep learning framework.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter introduces deep learning's ubiquity and PyTorch
+    as a framework, focusing on foundational knowledge.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to PyTorch, a Deep Learning Library
+  - field: syllabus[0].summary
+    evidence: become familiar with PyTorch, a deep learning framework
+  - field: overview
+    evidence: Understanding the power of Deep Learning
+- id: LO2
+  claim: Manipulate tensors and create basic data structures in PyTorch.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly mentions learning to manipulate tensors
+    and create PyTorch data structures.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learn how to manipulate tensors, create PyTorch data structures
+  - field: subjects
+    evidence: Tensors
+- id: LO3
+  claim: Build a simple neural network in PyTorch using linear layers.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter summary states students will build their first neural
+    network in PyTorch with linear layers.
+  citations:
+  - field: syllabus[0].summary
+    evidence: build your first neural network in PyTorch with linear layers
+- id: LO4
+  claim: Identify and explain the components of a neural network, including activation
+    and loss functions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on understanding neural network components,
+    including activation and loss functions.
+  citations:
+  - field: syllabus[1].summary
+    evidence: understand additional components, such as activation and loss functions
+  - field: subjects
+    evidence: Loss Functions
+- id: LO5
+  claim: Explain and perform the process of training a neural network, including loss
+    minimization and parameter updates using gradients.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter summary describes minimizing loss functions and updating
+    parameters using gradients.
+  citations:
+  - field: syllabus[1].summary
+    evidence: training a network requires minimizing that loss function, which is
+      done by calculating gradients. You will learn how to use these gradients to
+      update your model's parameters.
+- id: LO6
+  claim: Implement a training loop for a neural network in PyTorch.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter summary states students will train a neural network
+    using a training loop.
+  citations:
+  - field: syllabus[2].summary
+    evidence: you'll train one using a training loop
+- id: LO7
+  claim: Recognize and address common training issues such as vanishing gradients
+    by tuning hyperparameters and using alternative activation functions.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The third chapter discusses vanishing gradients and strategies to address
+    them, including tuning learning rate and momentum.
+  citations:
+  - field: syllabus[2].summary
+    evidence: explore potential issues like vanishing gradients and learn strategies
+      to address them, such as alternative activation functions and tuning learning
+      rate and momentum
+  - field: subjects
+    evidence: Overfitting, Hyperparameters
+- id: LO8
+  claim: Evaluate model performance using metrics such as loss and accuracy, and apply
+    techniques to reduce overfitting.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter focuses on calculating metrics and reducing overfitting.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learn how to calculate such metrics and how to reduce overfitting
+  - field: subjects
+    evidence: Model Evaluation, Overfitting
+- id: LO9
+  claim: Apply PyTorch to solve basic classification and regression problems on tabular
+    and image data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary state that students will be able to solve classification
+    and regression problems using PyTorch.
+  citations:
+  - field: overview
+    evidence: leverage PyTorch to solve classification and regression problems on
+      both tabular and image data
+  - field: summary
+    evidence: tackle classification and regression problems in PyTorch
+  - field: subjects
+    evidence: Classification
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on foundational and practical skills, but does not
+    cover advanced topics such as convolutional or recurrent neural networks, deployment,
+    or interpretability.
+  - There is no explicit mention of metacognitive skills or higher-order creative
+    tasks (e.g., designing novel architectures from scratch).
+  - The course does not specify the depth of coverage for image data versus tabular
+    data.
+  - No explicit mention of real-world datasets or project-based assessments.

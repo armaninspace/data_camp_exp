@@ -1,0 +1,76 @@
+course_id: '203169'
+course_title: 'Data Storytelling Case Study: College Majors'
+learning_outcomes:
+- id: '1'
+  claim: Understand the fundamentals of data storytelling and its importance in analytics.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary emphasize learning the fundamentals of data
+    storytelling and why it is important in analytics. The course is described as
+    beginner level, focusing on foundational concepts.
+  citations:
+  - field: overview
+    evidence: In this course, you will complete a case study to learn the fundamentals
+      of data storytelling and why it's important in analytics.
+  - field: summary
+    evidence: Learn narrative building and visualizations in this course with a college
+      major dataset!
+  - field: details.level
+    evidence: beginner
+- id: '2'
+  claim: Identify and describe key elements of effective data stories, such as narrative
+    arcs, data foundations, and visualizations.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The overview lists specific elements (narrative arcs, data foundation,
+    visualizations) that students will learn to include in data stories. The evidence
+    supports recognition and description, but not necessarily application or creation.
+  citations:
+  - field: overview
+    evidence: You'll have the opportunity to learn key elements to include in every
+      data story such as building narrative arcs, establishing a data foundation,
+      and leveraging visualizations.
+- id: '3'
+  claim: Recognize the role of data storytelling in communicating analytical findings
+    to stakeholders.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview and summary highlight the importance of data storytelling
+    for conveying findings to stakeholders and providing data-driven impact.
+  citations:
+  - field: overview
+    evidence: Stories help us solve business problems and convey valuable findings
+      to stakeholders.
+- id: '4'
+  claim: Gain exposure to evolving data findings across multiple data story maturity
+    levels for actionable insights.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview mentions evolving findings across data story maturity levels,
+    but does not specify the depth of application or analysis.
+  citations:
+  - field: overview
+    evidence: Students will evolve their findings across multiple data story maturity
+      levels for optimal and accessible value claims, and actionable insights.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail about specific activities,
+    assessments, or depth of skill development.
+  - It is unclear whether students will actually practice creating data stories or
+    only learn about their components.
+  - The course claims students will have 'necessary skills to provide data-driven
+    impact,' but the evidence does not support mastery beyond foundational understanding.

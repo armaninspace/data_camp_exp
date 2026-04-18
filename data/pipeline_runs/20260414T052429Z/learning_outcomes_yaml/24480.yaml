@@ -1,0 +1,110 @@
+course_id: '24480'
+course_title: Cluster Analysis in R
+learning_outcomes:
+- id: '1'
+  claim: Understand and calculate distances between observations for both continuous
+    and categorical features.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter explicitly states that students will learn
+    how to calculate distances for both continuous and categorical features and develop
+    intuition for how feature scales affect distance.
+  citations:
+  - field: syllabus[0].title
+    evidence: Calculating Distance Between Observations
+  - field: syllabus[0].summary
+    evidence: you will learn how to calculate the distance between observations for
+      both continuous and categorical features. You will also develop an intuition
+      for how the scales of your features can affect distance.
+- id: '2'
+  claim: Explain and apply the fundamental principles of hierarchical clustering,
+    including linkage criteria and dendrogram plots.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second syllabus chapter covers the principles of hierarchical clustering,
+    linkage criteria, and dendrogram plots, and their use in building clusters.
+  citations:
+  - field: syllabus[1].title
+    evidence: Hierarchical Clustering
+  - field: syllabus[1].summary
+    evidence: You will learn about the fundamental principles of hierarchical clustering
+      - the linkage criteria and the dendrogram plot - and how both are used to build
+      clusters.
+- id: '3'
+  claim: Perform market segmentation using hierarchical clustering on real-world data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second syllabus chapter mentions applying hierarchical clustering
+    to wholesale distributor data for market segmentation.
+  citations:
+  - field: syllabus[1].summary
+    evidence: explore data from a wholesale distributor in order to perform market
+      segmentation of clients using their spending habits.
+- id: '4'
+  claim: Understand the principles behind the k-means clustering algorithm and methods
+    for selecting the number of clusters (k).
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third syllabus chapter states that students will build an understanding
+    of k-means principles and learn how to select k.
+  citations:
+  - field: syllabus[2].title
+    evidence: K-means Clustering
+  - field: syllabus[2].summary
+    evidence: build an understanding of the principles behind the k-means algorithm,
+      learn how to select the right k when it isn't previously known
+- id: '5'
+  claim: Apply k-means clustering to real-world data and interpret the results.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third syllabus chapter mentions revisiting wholesale data from a
+    different perspective, implying practical application of k-means.
+  citations:
+  - field: syllabus[2].summary
+    evidence: revisit the wholesale data from a different perspective
+- id: '6'
+  claim: Apply hierarchical and k-means clustering techniques to analyze changes in
+    occupational mean wages over time.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final syllabus chapter describes a case study where students combine
+    hierarchical and k-means clustering to analyze wage data over time, indicating
+    integration of multiple techniques.
+  citations:
+  - field: syllabus[3].title
+    evidence: 'Case Study: National Occupational Mean Wage'
+  - field: syllabus[3].summary
+    evidence: apply the skills you have learned to explore how the average salary
+      amongst professions have changed over time.
+  - field: overview
+    evidence: This will combine hierarchical clustering techniques such as occupation
+      trees, preparing for exploration, and plotting occupational clusters, with k-means
+      techniques including elbow analysis and average silhouette widths.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention advanced topics such as cluster validation
+    beyond silhouette widths, handling of missing data, or integration with other
+    machine learning methods.
+  - There is no explicit mention of metacognitive skills such as evaluating the appropriateness
+    of clustering methods for different data types or problem contexts.
+  - The depth of statistical theory behind clustering algorithms is not specified.

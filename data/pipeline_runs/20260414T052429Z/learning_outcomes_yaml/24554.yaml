@@ -1,0 +1,89 @@
+course_id: '24554'
+course_title: Financial Analytics in Google Sheets
+learning_outcomes:
+- id: '1'
+  claim: Describe and graphically represent the historical price evolution of a stock
+    using Google Sheets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will be able to graphically
+    represent the evolution of a stock price over a specific period, after being introduced
+    to relevant definitions and data.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you’ll be able to graphically represent the evolution of a stock price
+      over a specific period.
+- id: '2'
+  claim: Calculate and interpret key performance indicators of historical stock returns,
+    including risk and reward measures.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states students will compute main performance indicators
+    of past returns and be introduced to risk-adjusted performance measures.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You’ll learn (and compute) the main performance indicators of past returns,
+      both in terms of reward and risk. Finally, you’ll be introduced to risk-adjusted
+      performance measures.
+- id: '3'
+  claim: Construct and interpret histograms of stock returns and assess the fit of
+    the Gaussian distribution model.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: Students are taught to build histograms, compare empirical data to the
+    Gaussian model, and identify potential flaws, which requires analysis and relational
+    understanding.
+  citations:
+  - field: syllabus[2].summary
+    evidence: you’ll learn how to build a histogram to describe the distribution of
+      historical returns... you’ll be introduced to the Gaussian distribution... You'll
+      visually inspect if the Gaussian model is reasonable... you'll understand potential
+      flaws with the Gaussian model.
+- id: '4'
+  claim: Benchmark a stock's performance against a market index using cumulative wealth,
+    Sharpe Ratio, Drawdown, and correlation coefficient in Google Sheets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus details that students will compare ABC stock to a benchmark
+    using several metrics and spreadsheet features.
+  citations:
+  - field: syllabus[3].summary
+    evidence: you’ll benchmark ABC stock against a market index... analyze the cumulative
+      wealth... extend the comparison using different indicators such as Sharpe Ratio
+      and Drawdown... examine the linear relation between ABC stock and the benchmark
+      through the correlation coefficient.
+- id: '5'
+  claim: Utilize advanced spreadsheet features to add interactivity to financial dashboards
+    in Google Sheets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions an introduction to advanced spreadsheet features
+    for interactivity, but does not specify depth or exact features.
+  citations:
+  - field: syllabus[3].summary
+    evidence: you’ll be introduced to more powerful and advanced spreadsheet features
+      that introduce interactivity in your analysis.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course focuses on a single hypothetical stock (ABC), so transferability to
+    real-world data or other asset classes is implied but not directly evidenced.
+  - The depth of advanced spreadsheet features and interactivity is not specified.
+  - No explicit mention of assessment or project work to demonstrate synthesis or
+    creation-level skills.

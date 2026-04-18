@@ -1,0 +1,21 @@
+{
+  "bucket_distribution": {
+    "curated_core": 5,
+    "cache_servable": 7
+  },
+  "family_coverage": {
+    "diagnostic": 3,
+    "friction": 7,
+    "bridge": 1,
+    "entry": 2,
+    "procedural": 4,
+    "transfer": 1
+  },
+  "canonical_count": 12,
+  "alias_count": 0,
+  "cache_servable_rate": 1.0,
+  "analysis_only_rate": 0.0,
+  "hard_reject_rate": 0.0,
+  "entry_share": 0.1111,
+  "friction_share": 0.3889
+}

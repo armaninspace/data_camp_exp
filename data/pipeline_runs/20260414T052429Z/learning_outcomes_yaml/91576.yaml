@@ -1,0 +1,39 @@
+course_id: '91576'
+course_title: Data Visualization in Power BI
+learning_outcomes:
+- id: lo1
+  claim: Recognize that Power BI is a tool for data visualization, reports, and dashboards.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that Power BI is a data visualization tool
+    used for reports and dashboards. No further detail is provided about specific
+    skills or concepts.
+  citations:
+  - field: summary
+    evidence: Power BI is a powerful data visualization tool that can be used in reports
+      and dashboards.
+- id: lo2
+  claim: Identify data visualization and audience analysis as relevant subject areas
+    in the context of Power BI.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The subjects field lists 'Data Visualization' and 'Audience Analysis',
+    suggesting these are covered at least at a basic level, but no further detail
+    is provided.
+  citations:
+  - field: subjects
+    evidence: Data Visualization, Audience Analysis
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific skills, concepts,
+    or procedural knowledge cannot be inferred.
+  - No information about practical application, analysis, or creation tasks.
+  - No explicit mention of assessment, project work, or higher-order thinking.

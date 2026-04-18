@@ -1,0 +1,84 @@
+course_id: '24461'
+course_title: Software Engineering Principles in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand the importance of software engineering concepts for data science
+    workflows.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first syllabus chapter explicitly addresses why software engineering
+    concepts matter for data scientists, indicating students will gain conceptual
+    understanding of their relevance.
+  citations:
+  - field: syllabus[0].title
+    evidence: Software Engineering & Data Science
+  - field: syllabus[0].summary
+    evidence: Why should you as a Data Scientist care about Software Engineering concepts?
+      Here we'll cover specific Software Engineering concepts and how these important
+      ideas can revolutionize your Data Science workflow!
+- id: LO2
+  claim: Apply techniques to structure and write Python modules that can be installed,
+    used, and distributed.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second syllabus chapter focuses on writing a Python package, including
+    structuring code for installation and distribution, which is a procedural and
+    applied skill.
+  citations:
+  - field: syllabus[1].title
+    evidence: Writing a Python Module
+  - field: syllabus[1].summary
+    evidence: Become a fully fledged Python package developer by writing your first
+      package! You'll learn how to structure and write Python code that you can be
+      installed, used, and distributed just like famous packages such as NumPy and
+      Pandas.
+- id: LO3
+  claim: Utilize object-oriented programming concepts such as classes and inheritance
+    in Python packages.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third syllabus chapter emphasizes leveraging classes and inheritance,
+    indicating students will apply OOP concepts in their code.
+  citations:
+  - field: syllabus[2].title
+    evidence: Utilizing Classes
+  - field: syllabus[2].summary
+    evidence: Object Oriented Programming is a staple of Python development. By leveraging
+      classes and inheritance your Python package will become a much more powerful
+      tool for your users.
+- id: LO4
+  claim: Implement best practices for maintainability, including documentation and
+    unit testing, in Python projects.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth syllabus chapter discusses leveraging best practices for documentation
+    and unit testing, which are procedural skills applied to maintainability.
+  citations:
+  - field: syllabus[3].title
+    evidence: Maintainability
+  - field: syllabus[3].summary
+    evidence: To make maintaining your project as easy as possible we'll leverage
+      best practices around concepts such as documentation and unit testing.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of coverage for advanced topics such as
+    automated testing frameworks, packaging for distribution (e.g., PyPI), or advanced
+    OOP patterns.
+  - There is no explicit mention of assessment types or project requirements, so mastery
+    beyond basic application cannot be inferred.
+  - The course appears to focus on procedural and conceptual knowledge, with no evidence
+    for higher-order skills such as evaluation or creation beyond basic package development.

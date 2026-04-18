@@ -1,0 +1,76 @@
+course_id: '24649'
+course_title: Bond Valuation and Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply the mechanics of valuing plain vanilla bonds using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will learn the mechanics
+    of valuing bonds, focusing on annual coupon, fixed rate, fixed maturity, and option-free
+    bonds. The use of R is implied by the course title and subject list.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction and Plain Vanilla Bond Valuation
+  - field: syllabus[0].summary
+    evidence: we demonstrate the mechanics of valuing bonds by focusing on an annual
+      coupon, fixed rate, fixed maturity, and option-free bond.
+  - field: subjects
+    evidence: R Programming
+- id: LO2
+  claim: Estimate the Yield to Maturity (YTM) of a bond.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus specifically mentions discussing how to estimate YTM, which
+    is a key bond valuation skill.
+  citations:
+  - field: syllabus[1].title
+    evidence: Yield to Maturity
+  - field: syllabus[1].summary
+    evidence: We will discuss how one can estimate YTM of a bond.
+- id: LO3
+  claim: Understand and apply measures of interest rate risk, including duration and
+    convexity.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus covers the concepts of duration and convexity as measures
+    of interest rate risk, and discusses their application in managing risk.
+  citations:
+  - field: syllabus[2].title
+    evidence: Duration and Convexity
+  - field: syllabus[2].summary
+    evidence: we discuss duration and convexity, which are two common measures that
+      are used to manage interest rate risk.
+- id: LO4
+  claim: Integrate bond valuation, YTM estimation, and risk measures in a comprehensive
+    analysis using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final chapter requires students to synthesize techniques from previous
+    chapters in a comprehensive example, indicating integration of multiple skills.
+  citations:
+  - field: syllabus[3].title
+    evidence: Comprehensive Example
+  - field: syllabus[3].summary
+    evidence: The student will be asked to value a bond by using the yield on a comparable
+      bond and estimate the bond's duration and convexity.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of R programming skills required or taught.
+  - There is no explicit mention of assessment types or the extent of independent
+    analysis expected.
+  - The course appears focused on plain vanilla bonds; coverage of more complex instruments
+    is not included.

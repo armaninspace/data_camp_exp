@@ -1,0 +1,63 @@
+course_id: '24404'
+course_title: Intermediate Importing Data in Python
+learning_outcomes:
+- id: '1'
+  claim: Recall and describe methods for importing data from the web and APIs in Python.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The course overview and summary explicitly state that students will learn
+    to import data from the web and APIs, but do not provide details on specific methods
+    or deeper conceptual understanding.
+  citations:
+  - field: overview
+    evidence: you'll extend this knowledge base by learning to import data from the
+      web and by pulling data from Application Programming Interfaces— APIs
+  - field: summary
+    evidence: Improve your Python data importing skills and learn to work with web
+      and API data.
+- id: '2'
+  claim: Understand the role of data importing as a prerequisite for data cleaning,
+    wrangling, visualization, and modeling in Python.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview situates data importing as foundational to subsequent data
+    science tasks, suggesting students will understand its importance in the workflow,
+    though not necessarily perform those later steps.
+  citations:
+  - field: overview
+    evidence: As a data scientist, you will need to clean data, wrangle and munge
+      it, visualize it, build predictive models and interpret these models. Before
+      you can do so, however, you will need to know how to get data into Python.
+- id: '3'
+  claim: Apply Python skills to import data from web sources and APIs at an intermediate
+    level.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The course is labeled 'intermediate' and focuses on practical skills
+    for importing data from the web and APIs, implying students will be able to perform
+    these tasks, though the absence of a syllabus limits specificity.
+  citations:
+  - field: details.level
+    evidence: intermediate
+  - field: overview
+    evidence: you'll extend this knowledge base by learning to import data from the
+      web and by pulling data from Application Programming Interfaces— APIs
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail on specific tools,
+    libraries, or techniques covered.
+  - No explicit mention of assessment types or practical exercises.
+  - No information on the depth of API or web data handling (e.g., authentication,
+    pagination, error handling).
+  - No details on which APIs or web data sources are used as examples.

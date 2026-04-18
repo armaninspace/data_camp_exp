@@ -1,0 +1,63 @@
+course_id: '24509'
+course_title: Building Data Engineering Pipelines in Python
+learning_outcomes:
+- id: LO1
+  claim: A successful student will be able to describe the process of building and
+    testing data engineering pipelines in Python using PySpark and Apache Airflow.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary and overview repeatedly state that students will learn how
+    to build and test data engineering pipelines using PySpark and Apache Airflow,
+    but do not provide evidence of deeper application or analysis.
+  citations:
+  - field: summary
+    evidence: Learn how to build and test data engineering pipelines in Python using
+      PySpark and Apache Airflow.
+  - field: overview
+    evidence: In this course, we illustrate common elements of data engineering pipelines.
+- id: LO2
+  claim: A successful student will be able to outline the steps of data ingestion,
+    cleaning, transformation, code deployment, and scheduling dependencies in data
+    pipelines.
+  knowledge_type: procedural
+  process_level: remember
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview lists the main topics covered in each chapter, but without
+    a syllabus or detailed descriptions, there is no evidence of students performing
+    these tasks beyond basic recall or outlining.
+  citations:
+  - field: overview
+    evidence: In Chapter 1, you will learn how to ingest data. Chapter 2 will go one
+      step further with cleaning and transforming data. In Chapter 3, you will learn
+      how to safely deploy code. Finally, in Chapter 4 you will schedule complex dependencies
+      between applications.
+- id: LO3
+  claim: A successful student will be able to identify the roles and responsibilities
+    of data engineers and the importance of production-grade code in data-driven organizations.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The overview briefly discusses the role of data engineers and the importance
+    of production processes, but does not provide detail or evidence of deeper engagement.
+  citations:
+  - field: overview
+    evidence: In any data-driven company, you will undoubtedly cross paths with data
+      engineers. Among other things, they facilitate some of your work by making data
+      readily available to everyone within the organization, and possibly in bringing
+      machine learning models into production.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus or chapter-level detail is provided, limiting the ability to infer
+    depth of learning or specific skills.
+  - No explicit mention of hands-on activities, assessments, or project work.
+  - No information about the extent to which students apply, analyze, or create data
+    pipelines beyond basic understanding.

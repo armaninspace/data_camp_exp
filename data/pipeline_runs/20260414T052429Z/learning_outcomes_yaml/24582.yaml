@@ -1,0 +1,95 @@
+course_id: '24582'
+course_title: Case Studies in Statistical Thinking
+learning_outcomes:
+- id: LO1
+  claim: Recall and review foundational concepts from Statistical Thinking I and II,
+    including basic data analysis and statistical methods.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter is explicitly a review of prior courses, focusing on
+    key points and foundational skills.
+  citations:
+  - field: syllabus[0].title
+    evidence: 'Fish sleep and bacteria growth: A review of Statistical Thinking I
+      and II'
+  - field: syllabus[0].summary
+    evidence: rehash the key points of Statistical Thinking I and II to prepare you
+      for the following case studies
+- id: LO2
+  claim: Apply exploratory data analysis (EDA), parameter estimation, and hypothesis
+    testing to real-world sports data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter focuses on practicing EDA, parameter estimation, and
+    hypothesis testing using the 2015 FINA World Swimming Championships data.
+  citations:
+  - field: syllabus[1].title
+    evidence: Analysis of results of the 2015 FINA World Swimming Championships
+  - field: syllabus[1].summary
+    evidence: practice your EDA, parameter estimation, and hypothesis testing skills
+      on the results
+- id: LO3
+  claim: Analyze and evaluate claims using statistical evidence, specifically investigating
+    the presence of a current in the 2013 World Swimming Championships.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The third chapter requires students to investigate a real-world claim
+    using statistical analysis, moving beyond application to analysis and evaluation.
+  citations:
+  - field: syllabus[2].title
+    evidence: The "Current Controversy" of the 2013 World Championships
+  - field: syllabus[2].summary
+    evidence: you'll investigate this claim! ... there was a swirling current in the
+      pool
+- id: LO4
+  claim: Understand and apply basic statistical seismology concepts, including the
+    Gutenberg-Richter law, to analyze earthquake data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The fourth chapter introduces statistical seismology and the Gutenberg-Richter
+    law, focusing on understanding and applying these concepts to earthquake data.
+  citations:
+  - field: syllabus[3].title
+    evidence: Statistical seismology and the Parkfield region
+  - field: syllabus[3].summary
+    evidence: learn some basic statistical seismology, including the Gutenberg-Richter
+      law
+- id: LO5
+  claim: Investigate the relationship between human activity (wastewater injection)
+    and seismicity using statistical analysis.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The final chapter involves analyzing the effect of oil mining practices
+    on earthquake frequency, requiring students to relate human activity to seismic
+    data using statistical methods.
+  citations:
+  - field: syllabus[4].title
+    evidence: Earthquakes and oil mining in Oklahoma
+  - field: syllabus[4].summary
+    evidence: investigate the effect that increased injection of saline wastewater
+      due to oil mining in Oklahoma has had on the seismicity of the region
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course assumes prior completion of Statistical Thinking I and II, so foundational
+    skills are not taught here but only reviewed.
+  - Details on the depth of statistical methods (e.g., specific techniques or Python
+    libraries used) are not provided.
+  - No explicit mention of assessment methods or the extent of independent project
+    work.

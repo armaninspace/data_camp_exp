@@ -1,0 +1,42 @@
+course_id: '91584'
+course_title: Data Modeling in Power BI
+learning_outcomes:
+- id: lo1
+  claim: Recall key concepts of data modeling in Power BI.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary states that the course covers 'key concepts of data modeling
+    on Power BI.' Without a syllabus or detailed description, we can only infer that
+    students will be able to recall basic facts and terminology related to data modeling
+    in Power BI.
+  citations:
+  - field: summary
+    evidence: Learn the key concepts of data modeling on Power BI.
+- id: lo2
+  claim: Identify and describe foundational topics such as data visualization, data
+    analysis, data cleaning, data modeling, Power Query, dimensional modeling, and
+    star schema.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The subjects list includes these topics, suggesting that students will
+    be exposed to them. However, without a syllabus, we cannot infer deeper understanding
+    or application.
+  citations:
+  - field: subjects
+    evidence: Data Visualization, Data Analysis, Data Cleaning, Data Modeling, Power
+      Query, Dimensional Modeling, Star Schema
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so it is unclear what specific
+    skills or depth of understanding are targeted.
+  - Cannot infer procedural or higher-order cognitive outcomes (e.g., application,
+    analysis) due to lack of detail.
+  - No information on assessments, practical exercises, or project work.

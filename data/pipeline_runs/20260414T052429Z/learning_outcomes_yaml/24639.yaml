@@ -1,0 +1,113 @@
+course_id: '24639'
+course_title: Sentiment Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Identify positive and negative language in text data using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and summary both state that students will learn to
+    identify positive and negative language, which is a core procedural skill in sentiment
+    analysis.
+  citations:
+  - field: summary
+    evidence: Learn sentiment analysis by identifying positive and negative language
+  - field: overview
+    evidence: you will learn to identify positive and negative language
+- id: LO2
+  claim: Recognize and interpret specific emotional intent in text using sentiment
+    analysis techniques.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions learning to identify specific emotional intent
+    and references Plutchik’s wheel of emotion, suggesting students will understand
+    and interpret a range of emotions in text.
+  citations:
+  - field: summary
+    evidence: identifying ... specific emotional intent
+  - field: overview
+    evidence: navigate those difficulties using Plutchik’s wheel of emotion
+- id: LO3
+  claim: Apply polarity scoring using qdap’s sentiment function in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview explicitly states that students will be introduced to polarity
+    scoring using qdap’s sentiment function, indicating procedural application.
+  citations:
+  - field: overview
+    evidence: introduction to polarity scoring using qdap’s sentiment function
+- id: LO4
+  claim: Explain the concepts of Zipf’s law and subjectivity lexicons as they relate
+    to sentiment analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The overview mentions building understanding of Zipf’s law and subjectivity
+    lexicons, suggesting conceptual knowledge at a basic level.
+  citations:
+  - field: overview
+    evidence: build your understanding of Zipf’s law and subjectivity lexicons
+- id: LO5
+  claim: Use Tidytext from the Tidyverse to organize and perform sentiment analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview states that students will organize their work using Tidytext,
+    indicating procedural application of this R package.
+  citations:
+  - field: overview
+    evidence: organizes your work using Tidytext from the Tidyverse
+- id: LO6
+  claim: Create clear and impactful data visualizations to communicate sentiment analysis
+    results.
+  knowledge_type: procedural
+  process_level: create
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The summary and overview emphasize making compelling visualizations and
+    creating graphics that tell the full story of the data, indicating a higher-order
+    procedural skill.
+  citations:
+  - field: summary
+    evidence: making compelling visualizations
+  - field: overview
+    evidence: create simple and impactful graphics that tell the full story of your
+      data
+- id: LO7
+  claim: Apply sentiment analysis techniques to a real-world case study (Airbnb reviews)
+    to extract insights.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview mentions a final case study using Airbnb reviews, indicating
+    students will synthesize and apply their skills to real data.
+  citations:
+  - field: overview
+    evidence: finish off the course by putting all of your knowledge to the test with
+      a case study. Using Airbnb reviews, you’ll explore what people really look for
+      in a good rental.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so chapter-level learning objectives and assessment
+    types are unclear.
+  - The depth of conceptual understanding (e.g., Zipf’s law, subjectivity lexicons)
+    is not specified.
+  - The extent of metacognitive or evaluative skills is not evidenced.
+  - No explicit mention of assessment methods or project requirements.

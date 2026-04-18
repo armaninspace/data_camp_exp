@@ -1,0 +1,51 @@
+course_id: '24585'
+course_title: Text Mining with Bag-of-Words in R
+learning_outcomes:
+- id: lo1
+  claim: Recall the basic concept of the bag-of-words technique in text mining.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The course summary explicitly states that students will learn the bag-of-words
+    technique for text mining, which implies at least factual recall of the concept.
+  citations:
+  - field: summary
+    evidence: Learn the bag of words technique for text mining with R.
+- id: lo2
+  claim: Understand how to apply the bag-of-words technique using R.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary and subjects indicate the course covers using R for bag-of-words
+    text mining, suggesting students will understand the process, though the lack
+    of syllabus limits evidence for deeper application.
+  citations:
+  - field: summary
+    evidence: Learn the bag of words technique for text mining with R.
+  - field: subjects
+    evidence: Text Mining, R Programming, Bag of Words
+- id: lo3
+  claim: Identify the relevance of bag-of-words in HR analytics and data analysis
+    contexts.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subjects list HR Analytics and Data Analysis, suggesting some contextualization,
+    but without a syllabus, the depth of this connection is unclear.
+  citations:
+  - field: subjects
+    evidence: HR Analytics, Data Analysis
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus provided, so specific skills, activities, or assessments are unknown.
+  - No details on the depth of R programming or text mining techniques beyond bag-of-words.
+  - No explicit mention of data visualization or HR analytics applications in the
+    summary or details.

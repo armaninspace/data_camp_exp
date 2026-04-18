@@ -1,0 +1,41 @@
+course_id: '121408'
+course_title: Introduzione a R
+learning_outcomes:
+- id: LO1
+  claim: Recognize and recall the basic data structures in R, including vectors, factors,
+    lists, and data frames.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The summary explicitly states that students will learn the basics of
+    R, specifically mentioning vectors, factors, lists, and data frames. However,
+    without a syllabus or detailed description, the depth is likely limited to recognition
+    and basic recall.
+  citations:
+  - field: summary
+    evidence: imparerai ad utilizzare i vettori, i fattori, le liste e i data frames
+- id: LO2
+  claim: Understand how to use basic R data structures (vectors, factors, lists, data
+    frames) in simple contexts.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary uses 'imparerai ad utilizzare' (you will learn to use), suggesting
+    students will not only recognize but also understand how to use these structures
+    at a basic level. However, without further detail, this likely does not extend
+    to complex applications.
+  citations:
+  - field: summary
+    evidence: imparerai ad utilizzare i vettori, i fattori, le liste e i data frames
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so the scope and depth of learning
+    are unclear.
+  - No explicit mention of practical exercises, assessment, or higher-order skills.
+  - No information about the duration or workload.

@@ -1,0 +1,85 @@
+course_id: '133405'
+course_title: Data Structures and Algorithms in Python
+learning_outcomes:
+- id: LO1
+  claim: Recognize and describe common data structures such as linked lists, stacks,
+    queues, hash tables, and graphs.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The summary and overview explicitly state that students will explore
+    and familiarize themselves with these data structures.
+  citations:
+  - field: summary
+    evidence: Explore data structures such as linked lists, stacks, queues, hash tables,
+      and graphs
+  - field: overview
+    evidence: 'You’ll familiarize yourself with some of the most common data structures:
+      linked lists, stacks, queues, and trees.'
+- id: LO2
+  claim: Recognize and describe common algorithms such as Depth First Search, Breadth
+    First Search, Bubble sort, Merge sort, and Quicksort.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview lists these algorithms as part of the course content.
+  citations:
+  - field: overview
+    evidence: You’ll also implement popular algorithms, such as Depth First Search,
+      Breadth First Search, Bubble sort, Merge sort, and Quicksort.
+- id: LO3
+  claim: Implement common data structures and algorithms in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview states students will implement these algorithms and practice
+    applying them in Python.
+  citations:
+  - field: overview
+    evidence: You’ll also implement popular algorithms... You’ll be practising this
+      in Python
+- id: LO4
+  claim: Identify and relate data structures and algorithms to real-world scenarios.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions practicing with real-world analogies (decks of
+    cards, music playlists, etc.), suggesting students will relate concepts to practical
+    examples.
+  citations:
+  - field: overview
+    evidence: You'll practice applying data structures and algorithms to decks of
+      cards, music playlists, international dishes, and stacks of books.
+- id: LO5
+  claim: Analyze the efficiency of algorithms using Big O Notation.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview states students will analyze algorithms in terms of efficiency
+    and come to grips with Big O Notation.
+  citations:
+  - field: overview
+    evidence: you’ll stop to analyze popular algorithms in terms of their efficiency.
+      You’ll come to grips with “Big O Notation”, the industry standard for describing
+      the complexity of an algorithm.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail about depth or specific
+    activities.
+  - It is unclear whether students will be able to evaluate or create new data structures
+    or algorithms, or just recognize and implement existing ones.
+  - The extent of analysis regarding algorithm efficiency is not specified beyond
+    basic familiarity with Big O Notation.
+  - No explicit mention of metacognitive skills or higher-order problem solving.

@@ -1,0 +1,54 @@
+course_id: '24546'
+course_title: Hierarchical and Recursive Queries in SQL Server
+learning_outcomes:
+- id: LO1
+  claim: A successful student will be able to write recursive queries in SQL Server.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The course summary explicitly states that students will learn how to
+    write recursive queries, which implies procedural knowledge and the ability to
+    apply it. However, without a syllabus, the depth and complexity are unclear.
+  citations:
+  - field: summary
+    evidence: Learn how to write recursive queries and query hierarchical data structures.
+- id: LO2
+  claim: A successful student will be able to query hierarchical data structures in
+    SQL Server.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary indicates students will learn to query hierarchical data
+    structures, suggesting procedural application. The lack of syllabus limits certainty
+    about the complexity or variety of structures covered.
+  citations:
+  - field: summary
+    evidence: Learn how to write recursive queries and query hierarchical data structures.
+- id: LO3
+  claim: A successful student will understand the relationship between SQL, relational
+    databases, and data modeling in the context of hierarchical and recursive queries.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subjects list includes SQL, relational databases, and data modeling,
+    suggesting some conceptual understanding is expected, but the absence of a syllabus
+    means the depth is unclear.
+  citations:
+  - field: subjects
+    evidence: '["SQL", "Relational Databases", "Data Modeling"]'
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail about specific topics,
+    skills, or assessments.
+  - The summary is brief and does not specify the types of hierarchical data structures
+    or recursive query techniques covered.
+  - No information about practical exercises, project work, or assessment methods.
+  - No explicit mention of prerequisite knowledge or assumed skills.

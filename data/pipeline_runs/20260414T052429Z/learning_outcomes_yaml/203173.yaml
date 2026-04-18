@@ -1,0 +1,100 @@
+course_id: '203173'
+course_title: Introduction to Excel
+learning_outcomes:
+- id: LO1
+  claim: Navigate the Excel interface and work with tables.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will learn to navigate Excel,
+    work with tables, and manipulate data, which are procedural skills requiring application.
+  citations:
+  - field: syllabus[0].title
+    evidence: Getting started with Excel
+  - field: syllabus[0].summary
+    evidence: learn how to navigate Excel and understand how best to work with tables.
+      You will cover topics such as navigating the grid layout, importing data, manipulating
+      data with tables, and creating basic formulas.
+- id: LO2
+  claim: Import data and create basic formulas in Excel.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions importing data and creating basic formulas, which
+    are procedural tasks that require applying learned steps.
+  citations:
+  - field: syllabus[0].summary
+    evidence: importing data, manipulating data with tables, and creating basic formulas.
+- id: LO3
+  claim: Create named ranges and apply data validation rules.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus specifies creating named ranges and applying data validation,
+    which are procedural skills involving multiple steps.
+  citations:
+  - field: syllabus[1].summary
+    evidence: creating named ranges, using subtotals to summarize groups of data,
+      and applying data validation rules.
+- id: LO4
+  claim: Use aggregate functions (e.g., SUM, AVERAGE, COUNT) to summarize data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: Aggregate functions are specifically mentioned in both the overview and
+    syllabus, and using them to summarize data is a procedural application.
+  citations:
+  - field: overview
+    evidence: leverage built-ins such as SUM, AVERAGE, COUNT, UPPER, LEFT, and more.
+  - field: syllabus[1].summary
+    evidence: learn how to use aggregate functions in Excel to help summarize your
+      data.
+- id: LO5
+  claim: Apply text, date, time, and statistical functions in Excel.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus and overview mention learning to use various built-in functions,
+    including text, date, time, and statistical functions, which are procedural applications.
+  citations:
+  - field: syllabus[2].summary
+    evidence: cover text, date and time, statistical functions
+  - field: overview
+    evidence: You’ll learn about the many available functions in Excel that can help
+      you to perform calculations, analyze data and, in some cases, automate tasks.
+- id: LO6
+  claim: Create basic data visualizations using area, column, and pie charts in Excel.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and syllabus both mention creating basic visualizations
+    with specific chart types, which is a procedural skill.
+  citations:
+  - field: overview
+    evidence: explore the versatility of area, column, and pie charts to help tell
+      a story to bring your analysis to life.
+  - field: syllabus[2].summary
+    evidence: learning to use built-in Excel features to visualize your data.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on basic and procedural Excel skills; there is no
+    evidence of higher-order skills such as analyzing, evaluating, or creating complex
+    solutions.
+  - No explicit mention of metacognitive strategies or conceptual understanding beyond
+    procedural application.
+  - No assessment or project details are provided, so mastery level is inferred only
+    from the described content.

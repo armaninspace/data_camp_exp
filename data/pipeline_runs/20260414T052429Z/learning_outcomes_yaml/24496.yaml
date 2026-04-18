@@ -1,0 +1,100 @@
+course_id: '24496'
+course_title: Communicating with Data in the Tidyverse
+learning_outcomes:
+- id: '1'
+  claim: Apply custom themes to ggplot2 visualizations to enhance their aesthetic
+    appeal and clarity.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly states that students will 'apply a custom
+    look' to a graphic, turning an ordinary plot into an aesthetically pleasing and
+    unique data visualization. This requires procedural knowledge and the ability
+    to apply learned techniques.
+  citations:
+  - field: syllabus[0].title
+    evidence: Custom ggplot2 Themes
+  - field: syllabus[0].summary
+    evidence: You will then apply a custom look to that graphic – you'll turn an ordinary
+      plot into an aesthetically pleasing and unique data visualization.
+- id: '2'
+  claim: Construct custom data visualizations (including dot plots) to effectively
+    communicate specific data insights.
+  knowledge_type: procedural
+  process_level: create
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The second chapter focuses on building a custom and unique visualization,
+    specifically mentioning dot plots to highlight and explain one aspect of a data
+    story. This involves creating new visualizations tailored to communication goals.
+  citations:
+  - field: syllabus[1].title
+    evidence: Creating a Custom and Unique Visualization
+  - field: syllabus[1].summary
+    evidence: In this chapter, you'll build a custom and unique visualization that
+      emphasizes and explains exactly one aspect of the story you want to tell.
+- id: '3'
+  claim: Integrate R code, formatted text, tables, and plots into a reproducible RMarkdown
+    report.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter describes combining R chunks, formatted prose, tables,
+    and plots into a report using RMarkdown, indicating students will learn to assemble
+    these elements into a cohesive document.
+  citations:
+  - field: syllabus[2].title
+    evidence: Introduction to RMarkdown
+  - field: syllabus[2].summary
+    evidence: You'll take your previous findings, results, and graphics and integrate
+      them into such a report to tell the story that needs to be told.
+- id: '4'
+  claim: Customize the style and branding of RMarkdown reports to produce clear, concise,
+    and visually distinctive documents.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter emphasizes customizing and branding RMarkdown reports
+    for clarity and uniqueness, suggesting students will learn to apply style modifications
+    to their reports.
+  citations:
+  - field: syllabus[3].title
+    evidence: Customizing Your RMarkdown Report
+  - field: syllabus[3].summary
+    evidence: You'll take your report from the last chapter and brand it with your
+      own custom and unique style.
+- id: '5'
+  claim: Explore and visualize relationships in real-world data (e.g., working hours
+    and compensation) using tidyverse tools.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter mentions exploring a dataset and discovering a correlation
+    using exploratory visualization, indicating students will analyze data relationships
+    using tidyverse tools.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You'll dive right in and discover a stunning correlation by employing
+      an exploratory visualization.
+  - field: overview
+    evidence: the relationship between weekly working hours and monetary compensation
+      in European countries, according to the International Labour Organization (ILO)
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify assessment methods or depth of conceptual understanding
+    beyond procedural skills.
+  - There is no explicit mention of metacognitive strategies or evaluation/critique
+    of visualizations.
+  - The course appears focused on practical application rather than theoretical or
+    extended abstract knowledge.

@@ -1,0 +1,114 @@
+course_id: '24486'
+course_title: Reporting with R Markdown
+learning_outcomes:
+- id: LO1
+  claim: 'Identify and modify the three main components of an R Markdown file: code,
+    text, and metadata.'
+  knowledge_type: factual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn about the three
+    components of a Markdown file and how to add and modify them.
+  citations:
+  - field: syllabus[0].title
+    evidence: Getting Started with R Markdown
+  - field: syllabus[0].summary
+    evidence: 'learn about the three components of a Markdown file: the code, the
+      text, and the metadata. You''ll also learn to add and modify each of these elements
+      to your own reports'
+- id: LO2
+  claim: Apply dplyr to analyze datasets and include the results in an R Markdown
+    report.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes using dplyr to analyze World Bank IFC datasets
+    and including the analyses in the report.
+  citations:
+  - field: syllabus[1].title
+    evidence: Adding Analyses and Visualizations
+  - field: syllabus[1].summary
+    evidence: use dplyr to begin to analyze the World Bank IFC datasets and include
+      the analyses in your report
+- id: LO3
+  claim: Create and modify data visualizations using ggplot2 within an R Markdown
+    report.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies creating visualizations with ggplot2 and modifying
+    how plots display in the knit report.
+  citations:
+  - field: syllabus[1].summary
+    evidence: create visualizations of the data using ggplot2 and learn to modify
+      how the plots display in your knit report
+- id: LO4
+  claim: Control the display of code and results in R Markdown reports using code
+    chunk options.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions learning about code chunk options to determine
+    whether code and results appear in the knit report.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learn about code chunk options. You can use these to determine whether
+      the code and results appear in the knit report
+- id: LO5
+  claim: Create lists and tables in R Markdown reports.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus states that students will discover how to create lists and
+    tables to include in their report.
+  citations:
+  - field: syllabus[2].summary
+    evidence: discover how to create lists and tables to include in your report
+- id: LO6
+  claim: Customize R Markdown reports by adding a table of contents and custom CSS
+    for branding.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus describes adding a table of contents and a CSS file to the
+    YAML header to personalize reports.
+  citations:
+  - field: syllabus[3].summary
+    evidence: customize your report by adding a table of contents and adding a CSS
+      file to the YAML header, to personalize reports with your brand’s fonts and
+      colors
+- id: LO7
+  claim: Use parameters in R Markdown to efficiently generate new reports from different
+    data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The syllabus mentions learning to efficiently create new reports from
+    data using parameters, indicating an ability to generalize report creation.
+  citations:
+  - field: syllabus[3].summary
+    evidence: efficiently create new reports from your data using parameters, which
+      will save you time from manually updating existing reports to create new ones
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment or depth of conceptual understanding beyond
+    procedural skills.
+  - No evidence of higher-order skills such as analysis, evaluation, or creation beyond
+    basic report customization.
+  - No explicit coverage of troubleshooting, debugging, or metacognitive strategies.

@@ -1,0 +1,87 @@
+course_id: '275593'
+course_title: 'Case Study: Analyzing Healthcare Data in Tableau'
+learning_outcomes:
+- id: LO1
+  claim: Import and perform initial exploratory analysis on healthcare datasets in
+    Tableau.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will bring data into Tableau
+    and perform initial exploratory analytics, which involves applying procedural
+    knowledge to a new dataset.
+  citations:
+  - field: syllabus[0].summary
+    evidence: To kick off this case study, you’ll bring the data into Tableau. ...
+      you’ll get started with some initial exploratory analytics.
+- id: LO2
+  claim: Conduct comparison analyses to measure efficiency in healthcare using Tableau.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The syllabus mentions learning about measuring efficiency and performing
+    comparison analyses, which requires understanding and analyzing conceptual relationships
+    in the data.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll learn about measuring efficiency in healthcare ... you’ll leverage
+      your Tableau skills to do some comparison analyses.
+- id: LO3
+  claim: Identify hospital performance outliers and key attributes influencing length
+    of stay and cost per patient discharge.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The second chapter focuses on identifying outliers and influential attributes,
+    which involves analyzing data to find patterns and relationships.
+  citations:
+  - field: syllabus[1].summary
+    evidence: This chapter is all about identifying hospital performance outliers
+      and revealing what attributes most influence length of stay and cost per patient
+      discharge.
+- id: LO4
+  claim: Build complex calculated fields in Tableau to support advanced healthcare
+    data analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus notes that students will sharpen Tableau skills by building
+    more complex calculated fields, which is a procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Along the way, you’ll sharpen your Tableau skills by building some more
+      complex calculated fields.
+- id: LO5
+  claim: Design and assemble a cohesive, interactive healthcare dashboard in Tableau,
+    incorporating branding and user-friendly navigation.
+  knowledge_type: procedural
+  process_level: create
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The final chapter centers on building a dashboard with branding and navigation
+    features, which involves creating a product by integrating multiple skills and
+    concepts.
+  citations:
+  - field: syllabus[2].summary
+    evidence: In this final chapter, you’ll focus on building your final dashboard
+      into a cohesive and interactive report. You’ll incorporate the HealthStat branding
+      for an appealing display, optimize user-friendly navigation features, and close
+      off by adding a dynamic title.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify assessment methods or depth of theoretical knowledge
+    about healthcare efficiency beyond practical Tableau application.
+  - No explicit mention of metacognitive skills or reflective practices.
+  - No details on the complexity or size of the dataset, which may affect the depth
+    of analysis possible.

@@ -1,0 +1,42 @@
+course_id: '24444'
+course_title: Introduction to Writing Functions in R
+learning_outcomes:
+- id: LO1
+  claim: Recognize the purpose and benefits of writing functions in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary states the course is about writing efficient, reusable functions,
+    which implies students will understand why functions are useful in R. However,
+    without a syllabus, the depth is unclear.
+  citations:
+  - field: summary
+    evidence: Take your R skills up a notch by learning to write efficient, reusable
+      functions.
+- id: LO2
+  claim: Apply basic skills to write simple functions in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The course title and summary both focus on writing functions, suggesting
+    students will practice creating functions, but the absence of a syllabus limits
+    certainty about complexity.
+  citations:
+  - field: title
+    evidence: Introduction to Writing Functions in R
+  - field: summary
+    evidence: Take your R skills up a notch by learning to write efficient, reusable
+      functions.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific topics, depth, and
+    assessment types are unknown.
+  - It is unclear whether advanced function topics (e.g., closures, scoping, error
+    handling) are covered.
+  - No explicit mention of metacognitive or higher-order skills.

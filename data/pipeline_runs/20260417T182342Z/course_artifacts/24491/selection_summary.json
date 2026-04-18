@@ -1,0 +1,31 @@
+{
+  "target_n": 8,
+  "selected_count": 8,
+  "candidate_count": 38,
+  "rejected_count": 13,
+  "duplicate_cluster_count": 3,
+  "quotas_requested": {
+    "max_definition_share": 0.3,
+    "min_friction_share": 0.25,
+    "min_advanced_share": 0.2,
+    "min_proficient_share": 0.15
+  },
+  "quotas_met": {
+    "max_definition_share": true,
+    "min_friction_share": true,
+    "min_advanced_share": true,
+    "min_proficient_share": true
+  },
+  "type_distribution": {
+    "diagnostic": 3,
+    "comparison": 1,
+    "misconception": 2,
+    "transfer": 1,
+    "procedure": 1
+  },
+  "mastery_distribution": {
+    "proficient": 4,
+    "developing": 4
+  },
+  "friction_linked_selection_rate": 1.0
+}

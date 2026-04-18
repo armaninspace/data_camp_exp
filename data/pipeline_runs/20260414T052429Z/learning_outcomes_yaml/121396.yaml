@@ -1,0 +1,41 @@
+course_id: '121396'
+course_title: Tidy Data in Python Mini-Course
+learning_outcomes:
+- id: LO1
+  claim: A successful student will be able to describe the standards for tidy data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary states that students will 'learn about the standards for
+    tidy data,' which supports understanding and describing these standards, but does
+    not provide evidence for deeper application or analysis.
+  citations:
+  - field: summary
+    evidence: you'll learn about the standards for tidy data
+- id: LO2
+  claim: A successful student will be able to create tidy data sets from messy ones
+    using Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary claims students will 'create tidy data sets from messy ones,'
+    and the subjects include 'Python' and 'Data Cleaning,' supporting procedural application
+    but not higher-order skills.
+  citations:
+  - field: summary
+    evidence: you'll create tidy data sets from messy ones
+  - field: subjects
+    evidence: Data Cleaning, Python
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or chapter-level detail is provided, so learning outcomes are inferred
+    only from the summary and subject tags.
+  - No explicit mention of specific tools, libraries, or assessment types.
+  - No information about the depth or complexity of tasks beyond basic creation and
+    understanding.

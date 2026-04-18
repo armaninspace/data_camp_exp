@@ -1,0 +1,70 @@
+course_id: '24686'
+course_title: Scalable Data Processing in R
+learning_outcomes:
+- id: LO1
+  claim: Explain why new techniques are needed for processing data sets larger than
+    available RAM and describe basic remedies.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly covers the reasons for needing new techniques
+    with large data sets and introduces remedies for slow base R functions.
+  citations:
+  - field: syllabus[0].summary
+    evidence: In this chapter, we cover the reasons you need to apply new techniques
+      when data sets are larger than available RAM. We show that importing and exporting
+      data using the base R functions can be slow and some easy ways to remedy this.
+- id: LO2
+  claim: Use the bigmemory package in R to perform basic data exploration and implement
+    the split-apply-combine approach.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter focuses on using bigmemory for data exploration and
+    the split-apply-combine approach, indicating procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: we're going to go through some simple data exploration and analysis
+      techniques. In particular, we'll see how to create tables and implement the
+      split-apply-combine approach.
+- id: LO3
+  claim: Apply the iotools package for chunk-wise processing of numeric and string
+    data in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The third chapter introduces the iotools package and chunk-wise processing,
+    suggesting students will be able to use these tools.
+  citations:
+  - field: syllabus[2].summary
+    evidence: We'll use the iotools package that can process both numeric and string
+      data, and introduce the concept of chunk-wise processing.
+- id: LO4
+  claim: Conduct a preliminary analysis of a large housing data set, including comparing
+    trends over time using scalable techniques.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The final chapter involves a case study applying previously learned techniques
+    to analyze trends in a large data set.
+  citations:
+  - field: syllabus[3].summary
+    evidence: we'll go through a preliminary analysis of the data, comparing various
+      trends over time.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify assessment types or depth of mastery beyond basic
+    application and understanding.
+  - There is no explicit mention of advanced analysis, optimization, or metacognitive
+    reflection.
+  - Details on the complexity of data exploration and analysis techniques are limited.

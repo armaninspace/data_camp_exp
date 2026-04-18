@@ -1,0 +1,97 @@
+course_id: '98722'
+course_title: Intermediate SQL
+learning_outcomes:
+- id: LO1
+  claim: Select and retrieve specific data from a relational database using SQL queries.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter focuses on querying a films database and selecting
+    data to answer questions, indicating students will be able to apply SQL to retrieve
+    specific information.
+  citations:
+  - field: syllabus[0].title
+    evidence: Selecting Data
+  - field: syllabus[0].summary
+    evidence: you’ll learn how to query a films database and select the data needed
+      to answer questions about the movies and actors.
+- id: LO2
+  claim: Filter and compare data in SQL queries using appropriate keywords, operators,
+    and handling of NULL values.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter explicitly covers filtering numerical and textual
+    data, using new keywords and operators, and handling NULL values, supporting the
+    claim that students will be able to apply these techniques.
+  citations:
+  - field: syllabus[1].title
+    evidence: Filtering Records
+  - field: syllabus[1].summary
+    evidence: filter numerical and textual data with SQL...use new keywords and operators...gain
+      a better understanding of NULL values and how to handle them.
+- id: LO3
+  claim: Summarize and aggregate data using SQL aggregate functions and perform basic
+    arithmetic calculations within queries.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter focuses on summarizing data with aggregate functions
+    and performing arithmetic calculations, indicating students will be able to apply
+    these SQL features.
+  citations:
+  - field: syllabus[2].title
+    evidence: Aggregate Functions
+  - field: syllabus[2].summary
+    evidence: summarize data using aggregate functions and perform basic arithmetic
+      calculations inside queries
+- id: LO4
+  claim: Sort and group data in SQL queries to analyze trends, performance, and uncover
+    business insights.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter teaches sorting and grouping data, with application
+    to analyzing trends and performance, supporting the claim that students will be
+    able to apply these techniques.
+  citations:
+  - field: syllabus[3].title
+    evidence: Sorting and Grouping
+  - field: syllabus[3].summary
+    evidence: sort and group data...helping you uncover critical business insights
+      and identify trends and performance.
+- id: LO5
+  claim: Format and present SQL queries and results clearly, following best practices.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and first chapter mention understanding SQL code formatting
+    and being shown tips and best practices for presenting queries, suggesting students
+    will be able to apply basic formatting and presentation techniques.
+  citations:
+  - field: overview
+    evidence: you'll be shown some tips and best practices for presenting your data
+      and queries neatly
+  - field: syllabus[0].summary
+    evidence: understand how SQL code is executed and formatted
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course is labeled 'Intermediate SQL' but the details specify 'beginner' level,
+    which may cause confusion about the depth of content.
+  - There is no explicit mention of more advanced SQL topics such as subqueries, joins,
+    or database design.
+  - No assessment or project details are provided, so higher-order skills (analyze,
+    evaluate, create) cannot be confidently inferred.
+  - Metacognitive skills are not explicitly addressed.

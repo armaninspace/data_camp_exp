@@ -1,0 +1,73 @@
+course_id: '24412'
+course_title: Exploring and Analyzing Data in Python
+learning_outcomes:
+- id: LO1
+  claim: A student can read, clean, and validate datasets in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview explicitly states that students will read, check for errors,
+    and prepare data for analysis, which are procedural skills involving application
+    of Python tools.
+  citations:
+  - field: overview
+    evidence: The first step of almost any data project is to read the data, check
+      for errors and special cases, and prepare data for analysis.
+- id: LO2
+  claim: A student can visualize and describe distributions using histograms, PMFs,
+    and CDFs.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview details that students will use histograms, PMFs, and CDFs
+    to represent and understand distributions, which involves applying visualization
+    techniques.
+  citations:
+  - field: overview
+    evidence: You'll learn how to represent distributions using Probability Mass Functions
+      (PMFs) and Cumulative Distribution Functions (CDFs). You'll learn when to use
+      each of them, and why, while working with a new dataset.
+- id: LO3
+  claim: A student can explore and quantify relationships between two variables using
+    scatter plots, correlation, and simple regression.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview specifies that students will use scatter plots and other
+    visualizations to extract insights and quantify relationships using correlation
+    and simple regression.
+  citations:
+  - field: overview
+    evidence: You'll explore relationships between variables two at a time, using
+      scatter plots and other visualizations... quantify those relationships using
+      correlation and simple regression.
+- id: LO4
+  claim: A student can analyze multivariate relationships using multiple regression
+    and logistic regression.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions exploring multivariate relationships and using
+    multiple and logistic regression, indicating procedural application but not deep
+    analysis or creation.
+  citations:
+  - field: overview
+    evidence: Explore multivariate relationships using multiple regression to describe
+      non-linear relationships and logistic regression to explain and predict binary
+      variables.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so chapter-level learning outcomes are inferred
+    from the overview.
+  - No explicit mention of assessment or depth of conceptual understanding.
+  - No evidence of metacognitive or higher-order creative/evaluative skills.

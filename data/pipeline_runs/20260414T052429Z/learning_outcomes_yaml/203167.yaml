@@ -1,0 +1,54 @@
+course_id: '203167'
+course_title: Data Manipulation in Julia
+learning_outcomes:
+- id: lo1
+  claim: Recall and recognize key concepts and tools for data manipulation in Julia,
+    especially using DataFrames.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary and subjects list indicate a focus on essential skills and
+    tools for data manipulation, but without a syllabus, the depth is unclear.
+  citations:
+  - field: summary
+    evidence: Master the essential skills of data manipulation in Julia. Learn how
+      to inspect, transform, group, and visualize DataFrames using real-world datasets.
+  - field: subjects
+    evidence: DataFrames, Data Manipulation, Julia
+- id: lo2
+  claim: Understand and explain how to inspect, transform, group, and visualize data
+    using Julia DataFrames.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary lists these operations explicitly, but without a syllabus,
+    it is unclear how deeply each is covered or practiced.
+  citations:
+  - field: summary
+    evidence: Learn how to inspect, transform, group, and visualize DataFrames using
+      real-world datasets.
+- id: lo3
+  claim: Apply basic data manipulation techniques to real-world datasets in Julia.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The summary mentions using real-world datasets, suggesting some application,
+    but the lack of syllabus means the extent and complexity of application is uncertain.
+  citations:
+  - field: summary
+    evidence: using real-world datasets
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus provided, so chapter-level or detailed learning outcomes cannot be
+    inferred.
+  - No explicit mention of assessment, project work, or advanced topics.
+  - Unclear how much depth is given to each skill (e.g., visualization, grouping).
+  - No information about metacognitive or higher-order skills.

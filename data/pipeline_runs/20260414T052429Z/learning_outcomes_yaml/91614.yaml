@@ -1,0 +1,40 @@
+course_id: '91614'
+course_title: Programming with dplyr
+learning_outcomes:
+- id: LO1
+  claim: Learners will be able to perform advanced data transformations using dplyr.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that the course covers advanced dplyr transformations,
+    which implies learners will be able to use dplyr for more complex data manipulation
+    tasks.
+  citations:
+  - field: summary
+    evidence: Learn how to perform advanced dplyr transformations
+  - field: subjects
+    evidence: R Programming, Data Transformation
+- id: LO2
+  claim: Learners will be able to incorporate dplyr and ggplot2 code into functions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary mentions incorporating dplyr and ggplot2 code in functions,
+    indicating learners will practice embedding these tools within reusable code structures.
+  citations:
+  - field: summary
+    evidence: incorporate dplyr and ggplot2 code in functions
+  - field: subjects
+    evidence: R Programming, ggplot2
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or chapter-level detail is provided, so learning outcomes are inferred
+    only from the summary and subject tags.
+  - No explicit mention of assessment, depth of coverage, or specific advanced topics.
+  - No information about metacognitive or conceptual knowledge development.

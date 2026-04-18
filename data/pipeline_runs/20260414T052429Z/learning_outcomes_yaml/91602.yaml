@@ -1,0 +1,104 @@
+course_id: '91602'
+course_title: Financial Trading in Python
+learning_outcomes:
+- id: LO1
+  claim: Explain the basics of financial trading, including the distinction between
+    technical trading and value investing.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn what financial
+    trading is, why people trade, and the difference between technical trading and
+    value investing.
+  citations:
+  - field: syllabus[0].summary
+    evidence: What is financial trading, why do people trade, and what’s the difference
+      between technical trading and value investing? This chapter answers all these
+      questions and more.
+- id: LO2
+  claim: Use Python tools to explore trading data, generate plots, and implement and
+    backtest simple trading strategies.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus mentions learning tools to explore data, generate plots,
+    and implement/backtest a simple trading strategy in Python.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll also learn useful tools to explore trading data, generate plots,
+      and how to implement and backtest a simple trading strategy in Python.
+- id: LO3
+  claim: Calculate, plot, and interpret common technical indicators (moving averages,
+    ADX, RSI, Bollinger Bands) in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus states students will be able to calculate, plot, and understand
+    the implications of several technical indicators in Python.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You’ll get familiar with the three main indicator groups, including
+      moving averages, ADX, RSI, and Bollinger Bands. By the end of this chapter,
+      you’ll be able to calculate, plot, and understand the implications of indicators
+      in Python.
+- id: LO4
+  claim: Construct, implement, and backtest trading strategies (trend following and
+    mean reversion) using real stock data in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus describes hands-on experience with constructing signals,
+    building strategies, and backtesting them using real-life stock data.
+  citations:
+  - field: syllabus[2].summary
+    evidence: 'You’re now ready to construct signals and use them to build trading
+      strategies. You’ll get to know the two main styles of trading strategies: trend
+      following and mean reversion. Working with real-life stock data, you’ll gain
+      hands-on experience in implementing and backtesting these strategies.'
+- id: LO5
+  claim: Describe and compute key performance metrics (returns, drawdowns, Calmar
+    ratio, Sharpe ratio, Sortino ratio) to evaluate trading strategies.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus specifies that students will learn to obtain and use these
+    metrics to evaluate strategy performance.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You’ll gain knowledge of useful performance metrics, such as returns,
+      drawdowns, Calmar ratio, Sharpe ratio, and Sortino ratio. You’ll then tie it
+      all together by learning how to obtain these ratios from the backtest results
+      and evaluate the strategy performance on a risk-adjusted basis.
+- id: LO6
+  claim: Understand the concepts of strategy optimization and benchmarking in the
+    context of trading strategies.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions becoming more familiar with strategy optimization
+    and benchmarking, but does not specify hands-on application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: become more familiar with the concepts of strategy optimization and
+      benchmarking.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of advanced or metacognitive skills such as evaluating or
+    creating novel strategies.
+  - No detail on the depth of statistical or programming rigor required.
+  - No explicit coverage of risk management beyond performance metrics.
+  - No mention of portfolio construction or multi-asset strategies.

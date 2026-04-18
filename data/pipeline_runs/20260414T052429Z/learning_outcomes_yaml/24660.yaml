@@ -1,0 +1,95 @@
+course_id: '24660'
+course_title: Conditional Formatting in Google Sheets
+learning_outcomes:
+- id: LO1
+  claim: Describe the purpose and basic use cases of conditional formatting in Google
+    Sheets.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter introduces what conditional formatting is
+    and its use to emphasize important data, indicating students will be able to explain
+    its purpose and basic applications.
+  citations:
+  - field: syllabus[0].title
+    evidence: A Primer on Conditional Formatting
+  - field: syllabus[0].summary
+    evidence: Learn what conditional formatting is and how it can be used to emphasize
+      the important data in a spreadsheet.
+- id: LO2
+  claim: Apply built-in conditional formatting options to highlight data in Google
+    Sheets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter covers using built-in options to apply conditional
+    formatting rules, indicating students will be able to use these features in practice.
+  citations:
+  - field: syllabus[0].summary
+    evidence: We will discuss a variety of the built-in options you can use to apply
+      conditional formatting rules to your data.
+- id: LO3
+  claim: Create custom conditional formatting rules using formulas and functions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on applying conditional formatting in flexible
+    ways using custom formulas and functions.
+  citations:
+  - field: syllabus[1].title
+    evidence: Custom Application of Conditional Formatting
+  - field: syllabus[1].summary
+    evidence: We'll discuss a variety of functions you can use to create conditional
+      formatting rules with custom formulas.
+- id: LO4
+  claim: Utilize advanced conditional formatting techniques, such as building interactive
+    task lists and custom searches.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter introduces tricks for unique uses, including building
+    searches and interactive lists, suggesting students will be able to implement
+    these advanced techniques.
+  citations:
+  - field: syllabus[2].title
+    evidence: Conditional Formatting Hacks
+  - field: syllabus[2].summary
+    evidence: Learn tricks to use conditional formatting in unique ways! ... build
+      your own searches, and make interactive task lists with checkboxes.
+- id: LO5
+  claim: Analyze a dataset (such as company payroll) using conditional formatting
+    to identify key metrics, duplicates, and errors.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final chapter and project require students to synthesize their skills
+    to analyze payroll data, identify duplicates, and check for errors, demonstrating
+    analytical application.
+  citations:
+  - field: syllabus[3].title
+    evidence: Putting It All Together
+  - field: syllabus[3].summary
+    evidence: You will be working with dates, looking for duplicates, and checking
+      for errors to create your report.
+  - field: overview
+    evidence: The course culminates in a hands-on project where you will apply your
+      newly acquired skills to analyze a company's payroll using conditional formatting.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover metacognitive strategies or evaluation/creation
+    process levels.
+  - No explicit mention of assessment methods or depth of troubleshooting skills.
+  - No coverage of integration with other Google Sheets features beyond conditional
+    formatting.

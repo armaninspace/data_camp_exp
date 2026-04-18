@@ -1,0 +1,73 @@
+course_id: '24513'
+course_title: Introduction to Text Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Recall and recognize key concepts and tools related to text analysis in R,
+    including wrangling, visualization, sentiment analysis, and topic modeling.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary and subjects list mention several core topics and tools,
+    suggesting students will be exposed to these concepts and can recall them, but
+    without a syllabus, deeper mastery cannot be assumed.
+  citations:
+  - field: summary
+    evidence: Learn to analyze text data using R's tidy framework. Covers wrangling,
+      visualization, sentiment analysis, and topic modeling techniques...
+  - field: subjects
+    evidence: R Programming, Data Visualization, Sentiment Analysis, Data Wrangling,
+      Text Analysis, ggplot2, Topic Modeling, Latent Dirichlet Allocation
+- id: LO2
+  claim: Understand the general process of extracting insights from text data using
+    R's tidy framework.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary describes extracting insights from text sources, implying
+    students will gain a conceptual understanding of the process, but without a syllabus,
+    the depth of understanding is unclear.
+  citations:
+  - field: summary
+    evidence: Covers wrangling, visualization, sentiment analysis, and topic modeling
+      techniques for extracting insights from various text sources like social media
+      and product reviews.
+- id: LO3
+  claim: Identify and describe basic applications of sentiment analysis and topic
+    modeling in R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: Sentiment analysis and topic modeling are explicitly mentioned, but without
+    a syllabus, only basic recognition and description can be inferred.
+  citations:
+  - field: summary
+    evidence: Covers ... sentiment analysis, and topic modeling techniques ...
+  - field: subjects
+    evidence: Sentiment Analysis, Topic Modeling, Latent Dirichlet Allocation
+- id: LO4
+  claim: Recognize the use of R packages such as ggplot2 for data visualization in
+    text analysis.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: ggplot2 is listed as a subject, suggesting students will be introduced
+    to its use, but the extent of application is not specified.
+  citations:
+  - field: subjects
+    evidence: ggplot2
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level or procedural learning outcomes cannot
+    be inferred.
+  - No explicit mention of assessment, project work, or depth of skill application.
+  - No details on the specific R functions, packages, or workflow steps covered.

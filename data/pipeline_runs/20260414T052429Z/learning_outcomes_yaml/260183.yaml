@@ -1,0 +1,82 @@
+course_id: '260183'
+course_title: Understanding Modern Data Architecture
+learning_outcomes:
+- id: LO1
+  claim: Explain the key requirements and components of modern data architectures,
+    including different types such as Lambda and Data Mesh.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will be able to explain
+    what modern data architecture is, its key requirements, and components, and review
+    different types of architectures.
+  citations:
+  - field: syllabus[0].summary
+    evidence: After seeing this chapter, you will be able to explain what modern data
+      architecture is, and what are their key requirements and components. You'll
+      also review different types of existing data architectures, ranging from Lambda
+      to Data Mesh.
+- id: LO2
+  claim: Describe the components and layers of modern data architectures, including
+    data ingestion, processing, and serving, and identify relevant cloud services.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus indicates students will learn about the different components
+    and layers, paradigms, and some cloud services, focusing on familiarity and description.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Learn about the different components and layers of modern data architectures;
+      from data ingestion to serving. Get familiar with the different paradigms and
+      approaches in each layer, and some of the cloud services used to implement modern
+      data solutions to get field experience!
+- id: LO3
+  claim: Identify and explain transversal components of data architectures, such as
+    data governance, metadata, data security, and observability.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies that students will dive into transversal components
+    and understand their importance for robust, secure, and efficient data platforms.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Dive into the transversal components that modern data architectures
+      consist of, covering key aspects like data governance, metadata, data security,
+      and observability. By understanding these vital elements, you'll be prepared
+      to design robust, secure, and efficient data platforms while maintaining high
+      standards for the data and overall service.
+- id: LO4
+  claim: Apply knowledge of data architecture components and transversal elements
+    to design and evaluate modern data solutions for business needs, including workflow
+    management and cloud cost optimization.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The final chapter summary states students will learn to manage workflows,
+    understand cloud costs, and create and judge data systems, indicating application
+    and integration of knowledge.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Learn how to manage workflows, understand costs in cloud services, and
+      create modern data designs. This chapter helps you work with tools like Apache
+      Airflow and teaches you ways to save money on cloud use. By the end, you'll
+      know how to build and judge strong data systems for businesses.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to be introductory and survey-based, so depth of mastery in
+    any one area (e.g., hands-on implementation, advanced evaluation) is not supported.
+  - While the course mentions tools like Apache Airflow and cloud services, it is
+    unclear how much practical, hands-on experience is provided versus conceptual
+    understanding.
+  - No explicit mention of assessment types or depth of project work, so claims about
+    higher-order skills (e.g., create, extended_abstract) are limited.

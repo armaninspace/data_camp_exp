@@ -1,0 +1,76 @@
+course_id: '91591'
+course_title: Marketing Analytics for Business
+learning_outcomes:
+- id: '1'
+  claim: Identify the primary roles and business questions addressed by marketing
+    analysts.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn about the roles
+    and business questions marketing analysts encounter.
+  citations:
+  - field: syllabus[0].title
+    evidence: Marketing Levers and Questions
+  - field: syllabus[0].summary
+    evidence: you’ll learn about roles and business questions that a marketing analyst
+      encounters
+- id: '2'
+  claim: Describe common data challenges in marketing analytics, including handling
+    multiple data sources, privacy legislation, and imperfect data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus details that students will learn about data challenges such
+    as multiple data sources, privacy, and imperfect data.
+  citations:
+  - field: syllabus[1].title
+    evidence: Marketing Data Challenges
+  - field: syllabus[1].summary
+    evidence: numerous data sources and ever-increasing privacy legislation... measuring
+      the indirect impact of marketing... imperfect data
+- id: '3'
+  claim: Explain and recognize basic techniques for analyzing marketing campaigns,
+    including text and sentiment analysis, audience segmentation, and predictive analytics.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions that students will 'dive into' these techniques,
+    but does not specify hands-on application or mastery.
+  citations:
+  - field: syllabus[2].title
+    evidence: Marketing Campaign Analysis
+  - field: syllabus[2].summary
+    evidence: you’ll dive into text and sentiment analysis, audience segmentation,
+      and predictive analytics
+- id: '4'
+  claim: Identify and describe key factors in evaluating marketing ROI, including
+    seasonal patterns, business models, campaign goals, and KPIs.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus states students will consider these factors and be responsible
+    for setting and measuring KPIs, but does not indicate deeper analysis or application.
+  citations:
+  - field: syllabus[3].title
+    evidence: Marketing ROI
+  - field: syllabus[3].summary
+    evidence: 'you''ll have to consider: seasonal patterns, business model, campaign
+      goals, and ROI. Most importantly, you’ll be responsible for setting and measuring
+      KPIs'
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No evidence of hands-on data analysis or advanced application skills.
+  - No explicit mention of metacognitive or evaluative skills.
+  - No indication of project-based or creative synthesis activities.
+  - Level is beginner and duration is short (2 hours), suggesting limited depth.

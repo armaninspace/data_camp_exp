@@ -1,0 +1,79 @@
+course_id: '24376'
+course_title: SQL for Joining Data
+learning_outcomes:
+- id: '1'
+  claim: Understand and apply different types of SQL joins (inner, self, left, right,
+    full, cross) to combine data from multiple tables.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview explicitly lists learning about inner joins, self joins,
+    left joins, right joins, full joins, and cross joins, and describes applying these
+    to enrich queries and gain insights.
+  citations:
+  - field: overview
+    evidence: explore the different ways you can enrich your queries using inner joins
+      and self joins...different kinds of outer joins...left joins, right joins, and
+      full joins...cross joins
+- id: '2'
+  claim: Use SQL set theory clauses (UNION, UNION ALL, INTERSECT, EXCEPT) to combine
+    and filter results from multiple queries.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview mentions learning about set theory using Venn diagrams and
+    introduces union, union all, intersect, and except clauses.
+  citations:
+  - field: overview
+    evidence: introduction to union, union all, intersect, and except clauses
+- id: '3'
+  claim: Construct and use subqueries (nested queries) in SQL to solve data problems.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview states that the final chapter covers using nested queries
+    and solving challenge problems with them.
+  citations:
+  - field: overview
+    evidence: learn how to use nested queries and you'll use what you’ve learned in
+      this course to solve three challenge problems
+- id: '4'
+  claim: Understand and use semi joins and anti joins as an introduction to subqueries.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The overview mentions investigating semi joins and anti joins as a lead-in
+    to subqueries, suggesting basic understanding rather than mastery.
+  citations:
+  - field: overview
+    evidence: investigating semi joins and anti joins, which provide a nice introduction
+      to subqueries
+- id: '5'
+  claim: Use the CASE statement in SQL to categorize data within queries.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The overview briefly mentions using the CASE statement to split up a
+    field into different categories.
+  citations:
+  - field: overview
+    evidence: see how to use the case statement to split up a field into different
+      categories
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus or chapter summaries; all inferences are based on the overview
+    and summary.
+  - No explicit mention of assessment types or depth of challenge problems.
+  - No information about prerequisite knowledge or expected prior experience.

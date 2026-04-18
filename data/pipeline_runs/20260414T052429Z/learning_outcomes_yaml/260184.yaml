@@ -1,0 +1,69 @@
+course_id: '260184'
+course_title: Introduction to Financial Statements in Power BI
+learning_outcomes:
+- id: LO1
+  claim: Recognize and describe the purpose of income statements and balance sheets
+    in the context of Power BI.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly mentions using the income statement and balance
+    sheet in Power BI, and these are also listed as subjects. However, without a syllabus,
+    the depth is unclear, so the claim is limited to recognition and basic description.
+  citations:
+  - field: summary
+    evidence: Discover how to use the income statement and balance sheet in Power
+      BI
+  - field: subjects
+    evidence: Balance Sheets, Income Statements
+- id: LO2
+  claim: Identify key financial analysis concepts such as KPIs, profitability ratios,
+    and forecasting within Power BI.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: Subjects list KPIs, profitability ratios, and forecasting, but without
+    a syllabus or description, the outcome is limited to identification rather than
+    application or analysis.
+  citations:
+  - field: subjects
+    evidence: Key Performance Indicators (KPIs), Profitability Ratios, Forecasting
+- id: LO3
+  claim: Recognize the role of DAX (Data Analysis Expressions) in financial data analysis
+    using Power BI.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: DAX is listed as a subject, but there is no evidence of procedural or
+    conceptual depth, so the claim is limited to recognition.
+  citations:
+  - field: subjects
+    evidence: DAX (Data Analysis Expressions)
+- id: LO4
+  claim: Recognize basic data visualization concepts as applied to financial statements
+    in Power BI.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: Data Visualization is listed as a subject, but without further detail,
+    the outcome is limited to basic recognition.
+  citations:
+  - field: subjects
+    evidence: Data Visualization
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so the depth and sequence of
+    learning are unclear.
+  - No explicit mention of procedural or conceptual skills, only subject areas.
+  - No evidence of higher-order skills (application, analysis, creation) or metacognitive
+    outcomes.

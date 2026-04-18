@@ -1,0 +1,98 @@
+course_id: '24642'
+course_title: Object-Oriented Programming with S3 and R6 in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the fundamental concepts of object-oriented programming (OOP)
+    and its application in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn what OOP consists
+    of, when to use it, and what OOP systems are available in R. This supports conceptual
+    understanding but does not indicate deeper application or analysis.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Learn what object-oriented programming (OOP) consists of, when to use
+      it, and what OOP systems are available in R.
+- id: LO2
+  claim: Identify and distinguish between classes, types, and modes in R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions learning how R identifies different types of variable,
+    using classes, types, and modes. This is a factual recall outcome.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You'll also learn how R identifies different types of variable, using
+      classes, types, and modes.
+- id: LO3
+  claim: Apply the S3 object-oriented system in R to define generics and methods for
+    functions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will learn how to use S3, including
+    how generics and methods work, which implies procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: This chapter explains how to use S3, and how generics and methods work.
+- id: LO4
+  claim: Define R6 classes and create R6 objects in R, understanding their structure
+    and separation of interface from implementation.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies learning how to define R6 classes, create R6 objects,
+    and understand their structure, which are procedural skills.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Learn how to define R6 classes, and to create R6 objects. You'll also
+      learn about the structure of R6 classes, and how to separate the user interface
+      from the implementation details.
+- id: LO5
+  claim: Explain and implement inheritance in R6 classes, including the relationship
+    between parent and child classes.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus indicates students will learn how to inherit from an R6
+    class and understand the relationship between parent and child classes, which
+    is conceptual understanding with some procedural elements.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Learn how to inherit from an R6 class, and how the relationship between
+      parent and child classes works.
+- id: LO6
+  claim: Apply advanced R6 features such as copying by reference, shared fields, cloning,
+    and finalizing objects.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus lists advanced R6 topics, including copying by reference,
+    shared fields, cloning, and finalizing objects, which are procedural applications.
+  citations:
+  - field: syllabus[4].summary
+    evidence: Complete your mastery of R6 by learning about advanced topics such as
+      copying by reference, shared fields, cloning objects, and finalizing objects.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not provide explicit evidence of higher-order skills such as analysis,
+    evaluation, or creation beyond procedural application.
+  - There is no explicit mention of assessment types or practical project work, so
+    mastery beyond application is not supported.
+  - The course does not cover other OOP systems in R (e.g., S4, Reference Classes)
+    beyond S3 and R6.

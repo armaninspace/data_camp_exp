@@ -1,0 +1,96 @@
+course_id: '24536'
+course_title: Model Validation in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand how to create and work with regression and classification models
+    in scikit-learn.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly states that students will gain an introduction
+    to running regression and classification models in scikit-learn, which is foundational
+    for the rest of the course.
+  citations:
+  - field: syllabus[0].title
+    evidence: Basic Modeling in scikit-learn
+  - field: syllabus[0].summary
+    evidence: This chapter provides an introduction to running regression and classification
+      models in scikit-learn.
+- id: LO2
+  claim: Understand and apply basic model validation techniques, including splitting
+    data into training, validation, and testing datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on the basics of model validation, specifically
+    mentioning splitting data into different sets, which is a procedural skill.
+  citations:
+  - field: syllabus[1].title
+    evidence: Validation Basics
+  - field: syllabus[1].summary
+    evidence: This chapter focuses on the basics of model validation. From splitting
+      data into training, validation, and testing datasets...
+- id: LO3
+  claim: Explain the bias-variance tradeoff in the context of model validation.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The bias-variance tradeoff is explicitly mentioned as a concept to be
+    understood in the context of model validation.
+  citations:
+  - field: syllabus[1].summary
+    evidence: creating an understanding of the bias-variance tradeoff
+  - field: subjects
+    evidence: Bias-Variance Tradeoff
+- id: LO4
+  claim: Apply K-Fold and Leave-One-Out cross-validation techniques to validate model
+    performance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus describes practicing K-Fold and Leave-One-Out validation,
+    and performing cross-validation to validate model performance.
+  citations:
+  - field: syllabus[1].summary
+    evidence: foundation for the techniques of K-Fold and Leave-One-Out validation
+      practiced in chapter three
+  - field: syllabus[2].title
+    evidence: Cross Validation
+  - field: syllabus[2].summary
+    evidence: This chapter focuses on performing cross-validation to validate model
+      performance.
+- id: LO5
+  claim: Use cross-validation results to tune hyperparameters and select the best
+    model.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final chapter focuses on applying cross-validation for hyperparameter
+    tuning and model selection, indicating students will use validation results to
+    inform these decisions.
+  citations:
+  - field: syllabus[3].title
+    evidence: Selecting the best model with Hyperparameter tuning.
+  - field: syllabus[3].summary
+    evidence: we apply these techniques, specifically cross-validation, while learning
+      about hyperparameter tuning. After all, model validation makes tuning possible
+      and helps us select the overall best model.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify which regression or classification algorithms are
+    covered, nor does it detail the depth of hyperparameter tuning techniques.
+  - There is no explicit mention of advanced topics such as model interpretability,
+    handling imbalanced data, or performance metrics beyond validation.
+  - No information is provided about assessment methods or practical project work.

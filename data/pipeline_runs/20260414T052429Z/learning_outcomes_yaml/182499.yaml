@@ -1,0 +1,97 @@
+course_id: '182499'
+course_title: Feature Engineering in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the principles and importance of feature engineering in machine
+    learning.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and the first syllabus chapter emphasize understanding
+    the role of feature engineering in improving model performance and interpretability.
+  citations:
+  - field: overview
+    evidence: You’ll become acquainted with principles of sound feature engineering,
+      helping to reduce the number of variables where possible, making learning algorithms
+      run faster, improving interpretability, and preventing overfitting.
+  - field: syllabus[0].summary
+    evidence: In this opening chapter, you will get a first look at how to transform
+      and create features that enhance your model's performance and interpretability.
+- id: LO2
+  claim: Apply feature transformation techniques using R and the tidymodels framework.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and the second syllabus chapter describe using R
+    (specifically tidymodels and the recipe package) to programmatically transform
+    and create features.
+  citations:
+  - field: overview
+    evidence: You will learn how to implement feature engineering techniques using
+      the R tidymodels framework, emphasizing the recipe package that will allow you
+      to create, extract, transform, and select the best features for your model.
+  - field: syllabus[1].summary
+    evidence: You’ll learn that, beyond manually transforming features, you can leverage
+      tools from the tidyverse to engineer new variables programmatically.
+- id: LO3
+  claim: Extract features from high-dimensional data, including text and categorical
+    variables, and assess their predictive power.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third syllabus chapter details extracting features from high-dimensional
+    data, including text and categorical encoding, and ranking variable importance.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You’ll explore methods including principal component analysis, kernel
+      principal component analysis, numerical extraction from text, categorical encodings,
+      and variable importance scores.
+- id: LO4
+  claim: Select relevant features and remove irrelevant or redundant ones using embedded
+    and shrinkage methods (e.g., lasso, ridge, elastic-net) in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth syllabus chapter covers identifying and removing irrelevant/redundant
+    features and using embedded and shrinkage methods for feature selection.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You’ll begin by focusing on the problems associated with using all available
+      features in a model and the importance of identifying irrelevant and redundant
+      features and learning to remove these features using embedded methods such as
+      lasso and elastic-net. Next, you’ll explore shrinkage methods such as lasso,
+      ridge, and elastic-net, which can be used to regularize feature weights or select
+      features by setting coefficients to zero.
+- id: LO5
+  claim: Construct an end-to-end feature engineering workflow and practice applying
+    learned techniques in a small project.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final syllabus chapter mentions creating an end-to-end workflow and
+    practicing concepts in a small project, indicating integration of learned skills.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Finally, you’ll finish by focusing on creating an end-to-end feature
+      engineering workflow and reviewing and practicing the previously learned concepts
+      and functions in a small project.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of theoretical understanding or the complexity
+    of datasets used.
+  - There is no explicit mention of assessment types or the extent of independent
+    project work.
+  - Metacognitive skills (e.g., reflecting on feature engineering choices) are not
+    explicitly addressed.

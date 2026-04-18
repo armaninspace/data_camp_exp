@@ -1,0 +1,87 @@
+course_id: '24529'
+course_title: Introduction to Linear Modeling in Python
+learning_outcomes:
+- id: LO1
+  claim: Describe and visualize linear relationships between two variables using Python
+    tools.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first syllabus chapter emphasizes exploring linear relationships,
+    motivating examples, and data visualization methods from matplotlib, as well as
+    using descriptive statistics and correlation.
+  citations:
+  - field: syllabus[0].title
+    evidence: Exploring Linear Trends
+  - field: syllabus[0].summary
+    evidence: initial exploration of linear relationships... demonstrations of data
+      visualization methods from matplotlib... use descriptive statistics... use correlation
+      to quantify the strength of linear relationships
+- id: LO2
+  claim: Construct and interpret simple linear models using Python libraries such
+    as numpy, statsmodels, and scikit-learn.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second syllabus chapter focuses on building linear models, understanding
+    slope and intercept, and applying Python modules to fit models using least-squares
+    and other tools.
+  citations:
+  - field: syllabus[1].title
+    evidence: Building Linear Models
+  - field: syllabus[1].summary
+    evidence: focus on the parameters slope and intercept... interpret them in several
+      applied contexts... apply a variety of python modules... computing the optimal
+      values of slope and intercept, using least-squares, numpy, statsmodels, and
+      scikit-learn
+- id: LO3
+  claim: Use linear models to make predictions and evaluate model performance using
+    metrics such as RMSE and R-squared.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third syllabus chapter covers applying models to real data, making
+    predictions, recognizing pitfalls, and evaluating models using goodness-of-fit
+    measures.
+  citations:
+  - field: syllabus[2].title
+    evidence: Making Model Predictions
+  - field: syllabus[2].summary
+    evidence: apply models to real data and make predictions... evaluate and compare
+      models by quantifying and contrasting several measures of goodness-of-fit, including
+      RMSE and R-squared
+- id: LO4
+  claim: Estimate linear model parameters using inferential statistics, including
+    maximum likelihood estimation and bootstrap resampling, and interpret confidence
+    in parameter estimates.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The final syllabus chapter introduces inferential statistics, maximum
+    likelihood estimation, bootstrap resampling, and making probabilistic statements
+    about model parameters.
+  citations:
+  - field: syllabus[3].title
+    evidence: Estimating Model Parameters
+  - field: syllabus[3].summary
+    evidence: introduce concepts from inferential statistics... maximum likelihood
+      estimation and bootstrap resampling... make probabilistic statements about our
+      confidence in the model parameters
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on simple linear models; there is no explicit mention
+    of multiple regression or more advanced modeling techniques.
+  - There is no explicit mention of data preprocessing, handling of categorical variables,
+    or model deployment.
+  - The depth of statistical inference (e.g., hypothesis testing, confidence intervals)
+    is not fully detailed.

@@ -1,0 +1,133 @@
+course_id: '24549'
+course_title: Introduction to Regression in R
+learning_outcomes:
+- id: '1'
+  claim: Describe the basics of regression analysis and distinguish between linear
+    and logistic regression.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn the basics of
+    regression and the differences between linear and logistic regression.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll learn the basics of this popular statistical model, what regression
+      is, and how linear and logistic regressions differ.
+- id: '2'
+  claim: Fit simple linear regression models in R using both numeric and categorical
+    explanatory variables.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus specifies hands-on fitting of simple linear regression models
+    with different types of explanatory variables.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll then learn how to fit simple linear regression models with numeric
+      and categorical explanatory variables.
+- id: '3'
+  claim: Interpret model coefficients to describe relationships between response and
+    explanatory variables.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions describing relationships using model coefficients,
+    which requires interpretation.
+  citations:
+  - field: syllabus[0].summary
+    evidence: describe the relationship between the response and explanatory variables
+      using model coefficients.
+- id: '4'
+  claim: Use linear regression models to make predictions on real-world datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus describes making predictions on datasets such as Taiwanese
+    house prices and Facebook advert clicks.
+  citations:
+  - field: syllabus[1].summary
+    evidence: use linear regression models to make predictions on Taiwanese house
+      prices and Facebook advert clicks.
+- id: '5'
+  claim: Manipulate and transform variables in datasets for regression analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions learning how to transform variables in a dataset,
+    which is a procedural skill.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn how to transform variables in a dataset.
+- id: '6'
+  claim: Assess the fit of linear regression models using quantitative measures and
+    visualizations.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The syllabus details quantifying model fit and diagnosing problems using
+    visualizations, which involves analysis.
+  citations:
+  - field: syllabus[2].summary
+    evidence: quantify how well a linear regression model fits, diagnose model problems
+      using visualizations
+- id: '7'
+  claim: Explain the concepts of leverage and influence in regression diagnostics.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions understanding leverage and influence, which are
+    key diagnostic concepts.
+  citations:
+  - field: syllabus[2].summary
+    evidence: understand the leverage and influence of each observation used to create
+      the model.
+- id: '8'
+  claim: Fit simple logistic regression models and interpret results as probabilities
+    and odds ratios.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states students will fit logistic regression models and
+    interpret outputs as probabilities and odds ratios.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Learn to fit logistic regression models. Using real-world data, you’ll
+      predict the likelihood of a customer closing their bank account as probabilities
+      of success and odds ratios
+- id: '9'
+  claim: Evaluate logistic regression model performance using confusion matrices.
+  knowledge_type: procedural
+  process_level: evaluate
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The syllabus mentions quantifying model performance using confusion matrices,
+    which involves evaluation.
+  citations:
+  - field: syllabus[3].summary
+    evidence: quantify model performance using confusion matrices.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of advanced regression topics (e.g., multiple regression,
+    regularization, interaction terms).
+  - No details on the depth of R programming skills required or taught.
+  - No explicit coverage of model selection, cross-validation, or advanced diagnostics.
+  - No mention of ethical considerations or limitations of regression analysis.

@@ -1,0 +1,79 @@
+course_id: '24389'
+course_title: Understanding Data Engineering
+learning_outcomes:
+- id: LO1
+  claim: Describe the role of data engineering and its relationship to data science.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will learn what data engineering
+    is, why demand is increasing, and how it relates to the data science lifecycle,
+    as well as how data engineers differ from data scientists.
+  citations:
+  - field: syllabus[0].summary
+    evidence: In this chapter, you’ll learn what data engineering is and why demand
+      for them is increasing. You’ll then discover where data engineering sits in
+      relation to the data science lifecycle, how data engineers differ from data
+      scientists...
+- id: LO2
+  claim: Identify and explain key data storage concepts, including data structures,
+    SQL, data lakes, and data warehouses.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus indicates students will learn about managing different data
+    structures, using SQL, and implementing data storage solutions such as data lakes
+    and warehouses. The focus is on identification and explanation, not application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: In this chapter, you’ll learn how data engineers manage different data
+      structures, work in SQL—the programming language of choice for querying and
+      storing data, and implement appropriate data storage solutions with data lakes
+      and data warehouses.
+- id: LO3
+  claim: Outline the basic steps involved in moving and processing data, including
+    the use of pipelines, automation, parallel, and cloud computing.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus describes learning about processing techniques, combining
+    steps into pipelines, automation, and the use of parallel and cloud computing.
+    The outcome is limited to outlining and understanding, not hands-on application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Data engineers make life easy for data scientists by preparing raw data
+      for analysis using different processing techniques at different steps. These
+      steps need to be combined to create pipelines, which is when automation comes
+      into play. Finally, data engineers use parallel and cloud computing to keep
+      pipelines flowing smoothly.
+- id: LO4
+  claim: Recognize the foundational responsibilities and skills of data engineers
+    in the context of the data science lifecycle.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The course is introductory and non-coding, focusing on foundational responsibilities
+    and skills rather than advanced or practical mastery.
+  citations:
+  - field: overview
+    evidence: you’ll learn what data engineering is and why demand for them is increasing.
+      You’ll then discover where data engineering sits in relation to the data science
+      lifecycle, how data engineers differ from data scientists, and have an introduction
+      to your first complete data pipeline.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No hands-on or coding skills are taught, as explicitly stated in the summary.
+  - The course is introductory and conceptual, so outcomes are limited to understanding
+    and recognition, not application or analysis.
+  - No assessment or project information is provided, so mastery beyond basic understanding
+    cannot be inferred.

@@ -1,0 +1,82 @@
+course_id: '24586'
+course_title: Fraud Detection in Python
+learning_outcomes:
+- id: '1'
+  claim: Identify and address challenges associated with fraud detection, including
+    handling imbalanced datasets through resampling techniques.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn about typical
+    challenges in fraud detection and how to resample data to address imbalanced datasets.
+    This suggests understanding and applying conceptual knowledge, but not necessarily
+    deep analysis or creation.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction and preparing your data
+  - field: syllabus[0].summary
+    evidence: learn about the typical challenges associated with fraud detection,
+      and will learn how to resample your data in a smart way, to tackle problems
+      with imbalanced data.
+- id: '2'
+  claim: Apply supervised learning techniques, including using, adjusting, and comparing
+    classifiers to flag fraudulent transactions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes using, adjusting, and comparing classifiers for
+    fraud detection with labeled data, indicating procedural application but not higher-order
+    synthesis or evaluation.
+  citations:
+  - field: syllabus[1].title
+    evidence: Fraud detection using labeled data
+  - field: syllabus[1].summary
+    evidence: use classifiers, adjust them, and compare them to find the most efficient
+      fraud detection model.
+- id: '3'
+  claim: Apply unsupervised learning techniques, such as K-means clustering, to segment
+    customers and detect suspicious occurrences in data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies using unsupervised learning, including clustering
+    algorithms, to segment customers and find suspicious data points, indicating procedural
+    application.
+  citations:
+  - field: syllabus[2].title
+    evidence: Fraud detection using unlabeled data
+  - field: syllabus[2].summary
+    evidence: segment customers, use K-means clustering and other clustering algorithms
+      to find suspicious occurrences in your data.
+- id: '4'
+  claim: Use text mining and topic modeling techniques to detect fraudulent behavior
+    in text data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions using text mining and topic modeling for fraud
+    detection, indicating procedural application but not deeper analysis or creation.
+  citations:
+  - field: syllabus[3].title
+    evidence: Fraud detection using text
+  - field: syllabus[3].summary
+    evidence: use text data, text mining, and topic modeling to detect fraudulent
+      behavior.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus does not specify the depth of model evaluation, deployment, or interpretation
+    of results.
+  - There is no explicit mention of metacognitive skills or higher-order synthesis/creation
+    tasks.
+  - Details about the extent of hands-on experience or real-life case studies are
+    not provided beyond brief mentions.

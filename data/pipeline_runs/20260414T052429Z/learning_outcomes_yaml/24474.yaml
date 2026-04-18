@@ -1,0 +1,83 @@
+course_id: '24474'
+course_title: Feature Engineering for Machine Learning in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand the concept and importance of feature engineering in machine learning.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The course introduces what feature engineering is and its application
+    to real-world data, indicating a conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: explore what feature engineering is and how to get started with applying
+      it to real-world data
+- id: LO2
+  claim: Apply pandas to create new features from categorical and continuous data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Students are expected to use pandas to create new features, which is
+    a procedural and application-level skill.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Using the pandas package you will create new features from both categorical
+      and continuous columns.
+- id: LO3
+  claim: Identify and handle missing values and unwanted characters in datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The course covers finding missing values and using string manipulation
+    to clean data, which are procedural skills.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn how to find where your data has missing values and explore multiple
+      approaches on how to deal with them. You will also use string manipulation techniques
+      to deal with unwanted characters in your dataset.
+- id: LO4
+  claim: Analyze data distributions and address skewness and outliers to meet statistical
+    assumptions for machine learning.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: Students are expected to analyze distributions and take action to address
+    skewness and outliers, which involves analysis and relational understanding.
+  citations:
+  - field: syllabus[2].summary
+    evidence: focus on analyzing the underlying distribution of your data ... deal
+      with skewed data and situations where outliers may be negatively impacting your
+      analysis.
+- id: LO5
+  claim: Engineer features from unstructured text data and compare different approaches
+    for extracting context.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The course covers engineering features from text and comparing approaches
+    for context extraction, which requires analysis and relational thinking.
+  citations:
+  - field: syllabus[3].summary
+    evidence: work with unstructured text data, understanding ways in which you can
+      engineer columnar features out of a text corpus. You will compare how different
+      approaches may impact how much context is being extracted from a text
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level summaries, but does not specify the
+    depth of coverage for advanced feature engineering techniques or evaluation of
+    feature impact on model performance.
+  - No explicit mention of metacognitive skills or the ability to create novel feature
+    engineering strategies beyond those taught.
+  - No assessment details or explicit learning objectives are provided.

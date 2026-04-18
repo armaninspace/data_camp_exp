@@ -1,0 +1,100 @@
+course_id: '24445'
+course_title: Preprocessing for Machine Learning in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand the concept and importance of data preprocessing in machine learning.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter introduces what data preprocessing means and its role
+    as the first step in a machine learning workflow.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Data Preprocessing
+  - field: syllabus[0].summary
+    evidence: learn exactly what it means to preprocess data
+- id: LO2
+  claim: Identify and handle missing data and explore data types in datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The first chapter specifies exploring data types and dealing with missing
+    data as key skills.
+  citations:
+  - field: syllabus[0].summary
+    evidence: exploring data types and dealing with missing data
+- id: LO3
+  claim: Standardize data to meet model assumptions and improve algorithm performance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter focuses on standardizing data to fit model assumptions
+    and enhance performance.
+  citations:
+  - field: syllabus[1].title
+    evidence: Standardizing Data
+  - field: syllabus[1].summary
+    evidence: Standardization is a way to make your data fit these assumptions and
+      improve the algorithm's performance.
+- id: LO4
+  claim: Engineer new features by encoding, aggregating, and extracting information
+    from numerical and textual data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter covers creating new features, encoding, aggregating,
+    and extracting from both numerical and textual features.
+  citations:
+  - field: syllabus[2].title
+    evidence: Feature Engineering
+  - field: syllabus[2].summary
+    evidence: encode, aggregate, and extract information from both numerical and textual
+      features
+- id: LO5
+  claim: Select important features for modeling using techniques such as dropping
+    redundant features, working with text vectors, and applying PCA.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth chapter lists specific feature selection techniques, including
+    dropping redundant features, text vectors, and PCA.
+  citations:
+  - field: syllabus[3].title
+    evidence: Selecting Features for Modeling
+  - field: syllabus[3].summary
+    evidence: drop redundant features, work with text vectors, and reduce the number
+      of features in your dataset using principal component analysis (PCA)
+- id: LO6
+  claim: Integrate multiple preprocessing techniques in a practical machine learning
+    workflow.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The final chapter involves applying all learned preprocessing techniques
+    to a real dataset, indicating integration of skills.
+  citations:
+  - field: syllabus[4].title
+    evidence: Putting It All Together
+  - field: syllabus[4].summary
+    evidence: try these techniques out on a dataset that records information on UFO
+      sightings
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment methods or depth of practical implementation.
+  - No details on specific Python libraries or tools used.
+  - No coverage of advanced or metacognitive skills such as evaluating preprocessing
+    choices or creating novel preprocessing pipelines.

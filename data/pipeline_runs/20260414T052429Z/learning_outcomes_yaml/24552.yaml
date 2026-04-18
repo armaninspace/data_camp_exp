@@ -1,0 +1,94 @@
+course_id: '24552'
+course_title: GARCH Models in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply the basics of specifying and estimating the standard
+    GARCH(1,1) model in R using the rugarch package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn the basics of
+    using the rugarch package for specifying and estimating the GARCH(1,1) model,
+    indicating procedural knowledge and application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: In this chapter, you will learn the basics of using the rugarch package
+      for specifying and estimating the workhorse GARCH(1,1) model in R.
+- id: LO2
+  claim: Explain the concept of time-varying volatility in financial returns and its
+    implications for forecasting.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus discusses rolling window analysis and the need to estimate
+    volatility of future returns, which requires conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: A rolling window analysis of daily stock returns shows that its standard
+      deviation changes massively through time. Looking forward, we need to estimate
+      the volatility of future returns.
+- id: LO3
+  claim: Identify and implement improvements to the standard GARCH model, including
+    models with leverage effects and skewed student t innovations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states students will learn about GARCH models with leverage
+    effects and skewed student t innovations, and be able to estimate many different
+    GARCH model specifications.
+  citations:
+  - field: syllabus[1].summary
+    evidence: In this chapter, you will learn about GARCH models with a leverage effect
+      and skewed student t innovations. At the end, you will be able to use GARCH
+      models for estimating over ten thousand different GARCH model specifications.
+- id: LO4
+  claim: Evaluate the performance of GARCH models using statistical significance,
+    information criteria, and prediction error metrics.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The syllabus describes learning to analyze statistical significance,
+    interpret information criteria, and use prediction errors, which involves analysis
+    and relational understanding.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You will learn about the analysis of statistical significance of the
+      estimated GARCH parameters, the properties of standardized returns, the interpretation
+      of information criteria and the use of rolling GARCH estimation and mean squared
+      prediction errors to analyze the accuracy of the volatility forecast.
+- id: LO5
+  claim: Apply GARCH models to practical financial tasks such as value-at-risk estimation,
+    simulation of returns, and portfolio optimization.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions using GARCH models for value-at-risk, simulating
+    returns, estimating beta, and finding minimum variance portfolios, indicating
+    practical application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: This chapter introduces specific rugarch functionality for making value-at-risk
+      estimates, for using the GARCH model in production and for simulating GARCH
+      returns. You will also discover that the presence of GARCH dynamics in the variance
+      has implications for simulating log-returns, the estimation of the beta of a
+      stock and finding the minimum variance portfolio.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear procedural and conceptual outcomes but does not specify
+    assessment methods or depth of mastery beyond application and analysis.
+  - There is no explicit mention of metacognitive skills or higher-order creative
+    tasks.
+  - Details about the complexity of datasets or real-world scenarios used are not
+    provided.

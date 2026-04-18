@@ -1,0 +1,51 @@
+course_id: '24550'
+course_title: Building and Optimizing Triggers in SQL Server
+learning_outcomes:
+- id: '1'
+  claim: Understand the design and implementation of triggers in SQL Server.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that students will learn how to design
+    and implement triggers, which implies conceptual understanding of triggers and
+    their use in SQL Server.
+  citations:
+  - field: summary
+    evidence: Learn how to design and implement triggers in SQL Server using real-world
+      examples.
+- id: '2'
+  claim: Apply knowledge of triggers to real-world scenarios in SQL Server.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary mentions 'using real-world examples,' suggesting that students
+    will practice applying trigger concepts in practical contexts.
+  citations:
+  - field: summary
+    evidence: using real-world examples
+- id: '3'
+  claim: Recognize the role of triggers in maintaining data integrity and supporting
+    database administration tasks.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subjects list includes 'Data Integrity' and 'Database Administration,'
+    indicating that the course covers the conceptual role of triggers in these areas,
+    though depth is unclear.
+  citations:
+  - field: subjects
+    evidence: Data Integrity, Database Administration
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific skills, depth, and
+    assessment types are unclear.
+  - No explicit mention of optimization techniques, despite the course title.
+  - No information about prerequisite knowledge or specific learning activities.

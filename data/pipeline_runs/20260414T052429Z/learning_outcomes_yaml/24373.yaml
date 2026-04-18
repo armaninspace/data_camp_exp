@@ -1,0 +1,84 @@
+course_id: '24373'
+course_title: Introduction to Data Science in Python
+learning_outcomes:
+- id: '1'
+  claim: Recall and use basic Python syntax and functions.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly states that students will learn the basics
+    of Python syntax and use functions, which are foundational skills.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you'll learn the basics of Python syntax, load your first Python modules,
+      and use functions
+- id: '2'
+  claim: Load, read, modify, and search tabular datasets using pandas.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on using pandas to manipulate tabular data,
+    which involves applying procedures to real datasets.
+  citations:
+  - field: syllabus[1].summary
+    evidence: pandas lets you read, modify, and search tabular datasets (like spreadsheets
+      and database tables)
+- id: '3'
+  claim: Create and interpret line plots using Matplotlib.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter states that students will create line plots and use
+    them to analyze data, indicating procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: 'You''ll create line plots with another Python module: Matplotlib. Using
+      line plots, you''ll analyze the letter frequencies'
+- id: '4'
+  claim: Create and interpret scatter plots, bar plots, and histograms.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The final chapter covers creating three new plot types, which is a procedural
+    skill at the application level.
+  citations:
+  - field: syllabus[3].summary
+    evidence: 'you''ll learn how to create three new plot types: scatter plots, bar
+      plots, and histograms'
+- id: '5'
+  claim: Analyze simple datasets to draw conclusions using basic data science tools
+    in Python.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: Multiple chapters reference using data analysis and visualization to
+    solve a problem (finding the kidnapper), indicating students will analyze data
+    using learned tools.
+  citations:
+  - field: overview
+    evidence: you'll analyze the letter frequencies from the ransom note and several
+      handwriting samples to determine the kidnapper
+  - field: syllabus[1].summary
+    evidence: You'll examine credit card records for the suspects and see if any of
+      them made suspicious purchases.
+  - field: syllabus[3].summary
+    evidence: You'll use these tools to locate where the kidnapper is hiding and rescue
+      Bayes, the Golden Retriever.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of advanced data science concepts (e.g., machine learning,
+    statistical inference).
+  - No evidence of metacognitive or creative skills development.
+  - No assessment details or explicit mention of project work beyond guided exercises.

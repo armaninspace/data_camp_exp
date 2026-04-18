@@ -1,0 +1,134 @@
+course_id: '24565'
+course_title: Visualizing Geospatial Data in R
+learning_outcomes:
+- id: lo1
+  claim: Understand and apply basic mapping techniques in R using ggplot2 and ggmap
+    to visualize spatial data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will display spatial data
+    using ggplot2 and be introduced to ggmap for adding spatial context, indicating
+    hands-on procedural skills.
+  citations:
+  - field: syllabus[0].title
+    evidence: Basic mapping with ggplot2 and ggmap
+  - field: syllabus[0].summary
+    evidence: displaying some spatial data -- property sales in a small US town --
+      using ggplot2 and we'll introduce you to the ggmap package as a quick way to
+      add spatial context to your plots
+- id: lo2
+  claim: Identify and differentiate common types of spatial data and understand what
+    makes spatial data unique.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The course introduces what makes spatial data special and the common
+    types of spatial data, focusing on conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: We'll talk about what makes spatial data special and introduce you to
+      the common types of spatial data we'll be working with throughout the course.
+- id: lo3
+  claim: Manipulate and explore spatial object classes in R, particularly for point
+    and polygon data, using the sp package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: Students are introduced to spatial object classes and learn to explore
+    and subset these objects, indicating procedural application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Point and polygon data
+  - field: syllabus[1].summary
+    evidence: introduce you to the spatial object classes provided by the sp package,
+      particularly for point and polygon data. You'll learn how to explore and subset
+      these objects by exploring a world map.
+- id: lo4
+  claim: Create maps using the tmap package in R, leveraging spatial objects as input.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus states students will use tmap to create maps, which requires
+    procedural knowledge of the package and spatial objects.
+  citations:
+  - field: syllabus[1].summary
+    evidence: we'll show you the package tmap which requires spatial objects as input,
+      but makes creating maps really easy! You'll finish up by making a map of the
+      world's population.
+- id: lo5
+  claim: Display and interpret raster data in R using the raster package, including
+    understanding the advantages of raster classes.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: Students are introduced to raster data classes and their advantages,
+    and learn to display them, indicating both conceptual and procedural understanding.
+  citations:
+  - field: syllabus[2].title
+    evidence: Raster data and color
+  - field: syllabus[2].summary
+    evidence: introduced to these classes and their advantages and then learn to display
+      them
+- id: lo6
+  claim: Apply principles of color selection to enhance map visualizations in R.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The course covers the importance of color in maps and teaches about color
+    in the context of visual display, suggesting application of conceptual knowledge.
+  citations:
+  - field: syllabus[2].summary
+    evidence: you'll learn about color -- an essential part of any visual display,
+      but especially important for maps.
+- id: lo7
+  claim: Import raw spatial data files into R and manage projections and coordinate
+    reference systems.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes reading spatial data into R and working with projections
+    and coordinate reference systems, which are procedural skills.
+  citations:
+  - field: syllabus[3].title
+    evidence: Data import and projections
+  - field: syllabus[3].summary
+    evidence: learn how to read spatial data into R, more about projections and coordinate
+      reference systems
+- id: lo8
+  claim: Enhance and polish map visualizations by adding data and credits in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The course includes adding additional data to spatial objects and tips
+    for polishing maps, indicating procedural application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: how to add additional data to a spatial object, and some tips for polishing
+      your maps
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced analysis or interpretation of spatial
+    data beyond visualization.
+  - There is no mention of assessment methods or depth of student engagement with
+    each tool.
+  - No explicit mention of troubleshooting, error handling, or advanced customization
+    in mapping.

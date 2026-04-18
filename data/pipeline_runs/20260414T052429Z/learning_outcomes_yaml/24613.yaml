@@ -1,0 +1,85 @@
+course_id: '24613'
+course_title: Introduction to Statistical Modeling in R
+learning_outcomes:
+- id: LO1
+  claim: Define what a statistical model is and identify R objects and notation used
+    for modeling.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview explicitly states that the course covers what a statistical
+    model is, R objects for models, and basic R notation (formulas). This supports
+    factual recall and basic understanding.
+  citations:
+  - field: overview
+    evidence: This chapter explores what a statistical model is, R objects which build
+      models, and the basic R notation, called formulas used for models.
+- id: LO2
+  claim: Apply R to design, train, and evaluate statistical models using specified
+    variables.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes building models, specifying variables, training
+    models, and generating outputs, which are procedural skills at the application
+    level.
+  citations:
+  - field: overview
+    evidence: 'In this chapter, you''ll start building models: specifying what variables
+      models should relate to one another and training models on the available data.
+      You''ll also provide new inputs to models to generate the corresponding outputs.'
+- id: LO3
+  claim: Assess and compare model prediction performance using cross-validation techniques.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview mentions using cross-validation to compare models and assess
+    whether explanatory variables improve prediction, which involves analysis and
+    comparison.
+  citations:
+  - field: overview
+    evidence: You'll use cross validation to compare different models.
+- id: LO4
+  claim: Use models to explore data and generate hypotheses about important factors
+    in a system.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview states that students will construct models to explore data
+    and generate hypotheses, which is conceptual and analytical work.
+  citations:
+  - field: overview
+    evidence: This chapter is about constructing models to explore masses of data,
+      for instance to generate hypotheses about what factors are important in how
+      a system works.
+- id: LO5
+  claim: Explain the concept of covariates and how to model the effect of multiple
+    explanatory variables.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview introduces covariates and modeling the effect of multiple
+    variables, which is conceptual understanding.
+  citations:
+  - field: overview
+    evidence: This chapter introduces the notion of covariates and how they allow
+      you to model the effect of an explanatory variable while taking into account
+      the effects of other variables.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so learning outcomes are inferred from the overview
+    and summary.
+  - No explicit mention of assessment types or depth of practical application.
+  - No information on specific statistical models or R packages covered.

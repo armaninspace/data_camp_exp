@@ -1,0 +1,145 @@
+course_id: '182501'
+course_title: Fully Automated MLOps
+learning_outcomes:
+- id: LO1
+  claim: Understand the importance and role of MLOps in supporting value generation
+    in industrial ML settings.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter summary explicitly states that students will learn
+    about the importance of MLOps in business and its role in enhancing ML stages.
+  citations:
+  - field: syllabus[0].summary
+    evidence: motivate the use of MLOps in an industrial setting... its importance
+      in supporting the generation of value in businesses... recap the ML stages,
+      focusing on how MLOps enhances these
+- id: LO2
+  claim: Identify and describe the components of a fully automated MLOps architecture.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: Both the first and second chapters focus on exploring and examining the
+    components of a fully automated MLOps system.
+  citations:
+  - field: syllabus[0].summary
+    evidence: explore a reference architecture for a fully automated MLOps system...
+      components important for any MLOps system
+  - field: syllabus[1].summary
+    evidence: exploration of the critical components that make up a fully automated
+      MLOps system
+- id: LO3
+  claim: Explain the role of orchestration in MLOps and its impact on efficiency and
+    scalability of ML pipelines.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter summary highlights examining orchestration and its
+    benefits for efficiency and scalability.
+  citations:
+  - field: syllabus[1].summary
+    evidence: examine the importance of orchestration in MLOps and how it helps to
+      ensure the efficiency and scalability of ML pipelines
+- id: LO4
+  claim: Compare different deployment strategies in MLOps and select appropriate strategies
+    for specific systems.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The second chapter mentions examining deployment strategies and learning
+    how to choose the right one, which implies analysis and selection.
+  citations:
+  - field: syllabus[1].summary
+    evidence: examine the different deployment strategies in MLOps and learn how to
+      choose the right strategy for your system
+- id: LO5
+  claim: Describe and apply CI/CD, Continuous Monitoring (CM), and Continuous Training
+    (CT) techniques in MLOps automation.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and second chapter both emphasize learning about
+    and applying CI/CD/CM/CT techniques as key automation practices.
+  citations:
+  - field: overview
+    evidence: learn how automated CI/CD, together with Continuous Monitoring (CM)
+      and Continuous Training (CT), are key techniques
+  - field: syllabus[1].summary
+    evidence: learn about CI/CD/CT/CM and how it complements orchestration and best
+      practices to achieve full automation
+- id: LO6
+  claim: Understand and implement automation patterns, including design patterns and
+    fail-safe mechanisms, in MLOps systems.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter focuses on understanding and implementing automation
+    and design patterns, as well as fail-safe mechanisms.
+  citations:
+  - field: syllabus[2].summary
+    evidence: understanding the fundamentals of automation... discover the power of
+      design patterns and fail-safe mechanisms
+- id: LO7
+  claim: Implement automated testing and hyperparameter tuning in MLOps workflows.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter explicitly mentions learning to implement automated
+    testing and hyperparameter tuning.
+  citations:
+  - field: syllabus[2].summary
+    evidence: implement automated testing in MLOps systems and how to use hyperparameter
+      tuning to optimize your models and workflows
+- id: LO8
+  claim: Describe and utilize automated experiment tracking, model registry, feature
+    store, and metadata store in MLOps deployments.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter summary lists these components as key elements to
+    be understood and used in automated MLOps architectures.
+  citations:
+  - field: syllabus[3].summary
+    evidence: understanding automated experiment tracking and the model registry to
+      exploring the feature store and the role of the metadata store
+- id: LO9
+  claim: Design automated MLOps workflows that are efficient, reliable, and scalable.
+  knowledge_type: procedural
+  process_level: create
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The course overview and final chapter both state that students will be
+    equipped to design automated MLOps workflows, implying synthesis and creation.
+  citations:
+  - field: overview
+    evidence: discover how to apply automation when designing MLOps systems
+  - field: syllabus[3].summary
+    evidence: provide you with the knowledge and skills necessary to design automated
+      MLOps workflows
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of hands-on implementation or assessment
+    methods, so claims about mastery are limited to understanding and application
+    rather than expert-level creation or evaluation.
+  - No explicit mention of metacognitive skills or reflective practices.
+  - No detailed breakdown of specific tools or platforms used in MLOps, so claims
+    are kept at the conceptual and procedural level.

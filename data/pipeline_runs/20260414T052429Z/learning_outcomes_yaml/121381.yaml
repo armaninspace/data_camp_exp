@@ -1,0 +1,41 @@
+course_id: '121381'
+course_title: Causal Inference with R - Regression
+learning_outcomes:
+- id: LO1
+  claim: Recognize basic concepts of causal inference and regression analysis.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.4
+  reasoning: The course title and subjects indicate coverage of causal inference and
+    regression analysis, but no syllabus or detailed description is provided to support
+    deeper or more applied learning outcomes.
+  citations:
+  - field: title
+    evidence: Causal Inference with R - Regression
+  - field: subjects
+    evidence: '["Causal Inference", "Regression Analysis"]'
+- id: LO2
+  claim: Identify that the course is part of a series on causal inference concepts
+    and methods.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.3
+  reasoning: The summary states this is the third course in a series, but does not
+    specify which concepts or methods are covered in this particular course.
+  citations:
+  - field: summary
+    evidence: Welcome to the 3rd course in our series on causal inference concepts
+      and methods created by Duke University with support from eBay, Inc.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific learning outcomes,
+    skills, or applications cannot be inferred.
+  - It is unclear which aspects of regression or causal inference are covered, or
+    what level of mastery is expected.
+  - No information on assessments, practical exercises, or depth of content.

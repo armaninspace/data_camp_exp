@@ -1,0 +1,103 @@
+course_id: '91617'
+course_title: Survival Analysis in Python
+learning_outcomes:
+- id: LO1
+  claim: Explain the fundamental concepts of survival analysis, including time-to-event
+    data and censorship.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter explicitly states that students will answer questions
+    about what problems survival analysis solves and what censorship is, indicating
+    conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: What problems does survival analysis solve, and what is censorship?
+      You’ll answer these questions as you explore survival analysis data...
+- id: LO2
+  claim: Construct, visualize, and interpret Kaplan-Meier survival curves using Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter details learning how the Kaplan-Meier model works,
+    how to fit, visualize, and interpret it, which are procedural skills at the application
+    level.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You’ll learn how the Kaplan-Meier model works and how to fit, visualize,
+      and interpret it.
+- id: LO3
+  claim: Analyze the effect of categorical variables on survival using the Kaplan-Meier
+    model and hypothesis testing (log-rank test).
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: Students are expected to apply the Kaplan-Meier model to explore how
+    categorical variables affect survival and use hypothesis testing, which involves
+    analysis and relational understanding.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Apply this model to explore how categorical variables affect survival
+      and learn how to supplement your analysis using hypothesis testing methods like
+      the log-rank test.
+- id: LO4
+  claim: Fit and interpret parametric survival models, specifically the Weibull and
+    Weibull AFT models, and use survival regression to infer covariate effects.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter covers using the Weibull and Weibull AFT models, and
+    using survival regression to make inferences about covariates, which are procedural
+    and application-level skills.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Learn how to use the Weibull model and the Weibull AFT model... Use
+      survival regression to make inferences about how covariates affect the survival
+      function...
+- id: LO5
+  claim: Select appropriate survival models for different data scenarios.
+  knowledge_type: metacognitive
+  process_level: evaluate
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The third chapter mentions learning how to select the best survival model
+    for your data, which is an evaluative and metacognitive skill.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Learn how to select the best survival model for your data.
+- id: LO6
+  claim: Fit, interpret, and use the Cox Proportional Hazards model to predict survival
+    times and understand the proportional hazards assumption.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The final chapter covers fitting and interpreting the Cox PH model, understanding
+    the proportional hazards assumption, and predicting survival times, which are
+    procedural and application-level skills.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You'll learn about the proportional hazards assumption and the role
+      it plays in fitting and interpreting the Cox Proportional Hazards model. You’ll
+      also learn how to predict new subjects' survival times using the Cox Proportional
+      Hazards model.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level outcomes, but does not specify the depth
+    of statistical theory, the extent of Python programming required, or the nature
+    of assessments/projects.
+  - No explicit mention of real-world datasets or advanced model diagnostics.
+  - No details on prerequisite knowledge or integration with broader data science
+    workflows.

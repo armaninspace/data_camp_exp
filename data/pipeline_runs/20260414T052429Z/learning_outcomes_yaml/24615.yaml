@@ -1,0 +1,88 @@
+course_id: '24615'
+course_title: Bayesian Modeling with RJAGS
+learning_outcomes:
+- id: LO1
+  claim: Recall and explain foundational Bayesian concepts, including the use of prior
+    and posterior distributions in the Beta-Binomial model.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will review Bayesian concepts
+    in the context of the Beta-Binomial model, indicating understanding of foundational
+    ideas.
+  citations:
+  - field: syllabus[0].summary
+    evidence: review these Bayesian concepts in the context of the foundational Beta-Binomial
+      model for a proportion parameter
+- id: LO2
+  claim: Apply the rjags package in R to define, compile, and simulate Bayesian models
+    such as the Beta-Binomial and Normal-Normal models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Multiple chapters specify hands-on use of rjags to define, compile, and
+    simulate models, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learn how to use the rjags package to define, compile, and simulate
+      this model in R
+  - field: syllabus[1].summary
+    evidence: define, compile, and simulate this model using rjags
+- id: LO3
+  claim: Explain and analyze the mechanics of Markov chains as used in RJAGS simulations.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions exploring the 'magic of the Markov chain mechanics
+    behind rjags simulation,' suggesting analysis of underlying simulation methods.
+  citations:
+  - field: syllabus[1].summary
+    evidence: explore the magic of the Markov chain mechanics behind rjags simulation
+- id: LO4
+  claim: Conduct posterior inference using RJAGS simulation output, including constructing
+    posterior estimates, credible intervals, hypothesis tests, and predictive distributions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: 'The syllabus details specific inference tasks: constructing estimates,
+    intervals, hypothesis tests, and predictive distributions using simulation output.'
+  citations:
+  - field: syllabus[2].summary
+    evidence: construct posterior estimates of regression parameters using posterior
+      means & credible intervals, ... test hypotheses using posterior probabilities,
+      ... construct posterior predictive distributions for new observations
+- id: LO5
+  claim: Extend Bayesian regression modeling to multivariate and generalized linear
+    models, including models with categorical predictors and Poisson regression for
+    count data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The final chapter summary describes generalizing regression models to
+    multivariate and Poisson contexts, indicating understanding of model extension.
+  citations:
+  - field: syllabus[3].summary
+    evidence: generalize the simple Normal regression model for application in broader
+      contexts. ... incorporate categorical predictors, engineer a multivariate regression
+      model with two predictors, ... extend this methodology to Poisson multivariate
+      regression models for count variables
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level summaries, but does not specify the
+    depth of mathematical derivations or the extent of independent model creation.
+  - There is no explicit mention of assessment types or the degree of metacognitive
+    reflection required.
+  - The course appears focused on application and understanding, with less evidence
+    for higher-order creation or evaluation tasks.

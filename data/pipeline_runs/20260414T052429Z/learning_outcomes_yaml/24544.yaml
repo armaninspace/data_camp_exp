@@ -1,0 +1,116 @@
+course_id: '24544'
+course_title: Introduction to AWS Boto in Python
+learning_outcomes:
+- id: '1'
+  claim: Understand the basics of AWS and set up AWS accounts for cloud operations.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter emphasizes learning how AWS works and setting
+    up AWS, which suggests conceptual understanding of AWS fundamentals.
+  citations:
+  - field: syllabus[0].summary
+    evidence: From learning how AWS works to creating S3 buckets and uploading files
+      to them. You will master the basics of setting up AWS and uploading files to
+      the cloud!
+- id: '2'
+  claim: Create and manage S3 buckets, including uploading files to the cloud using
+    Python and AWS Boto.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course covers creating S3 buckets and uploading files, which are
+    procedural skills using AWS Boto in Python.
+  citations:
+  - field: syllabus[0].summary
+    evidence: creating S3 buckets and uploading files to them
+  - field: overview
+    evidence: You will master the basics of setting up AWS and uploading files to
+      the cloud!
+- id: '3'
+  claim: Set and manage file permissions in S3 to control public and private access.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on uploading and sharing files securely, including
+    setting files to be public or private.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You will learn how set files to be public or private
+- id: '4'
+  claim: Generate web-based reports from data stored in AWS S3.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions generating web-based reports as a capstone to file
+    sharing activities.
+  citations:
+  - field: syllabus[1].summary
+    evidence: cap off what you learned by generating web-based reports
+- id: '5'
+  claim: Automate notifications (SMS and email) based on data analysis using AWS services.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter describes building notification triggers and sending
+    SMS/email notifications using AWS.
+  citations:
+  - field: syllabus[2].summary
+    evidence: building notification triggers for your analysis! You will learn how
+      to harness AWS to send SMS and email notifications to users
+- id: '6'
+  claim: Customize notification logic to meet different user needs.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions making custom notifications depending on user needs,
+    indicating some adaptation of notification logic.
+  citations:
+  - field: syllabus[2].summary
+    evidence: making custom notifications depending on a user's needs
+- id: '7'
+  claim: Use AWS Rekognition and related machine learning services for object detection,
+    language translation, and sentiment analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The final chapter covers using AWS Rekognition and other ML services
+    for recognizing cats, translating language, and detecting sentiment.
+  citations:
+  - field: syllabus[3].summary
+    evidence: using AWS Rekognition and other AWS machine learning services to recognize
+      cats, translate language and detect sentiment
+- id: '8'
+  claim: Integrate multiple AWS services in a real-world use case that combines file
+    management, sharing, notification, and machine learning.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The course culminates in applying a real-world use case that mixes all
+    previously learned skills, indicating integration and relational understanding.
+  citations:
+  - field: syllabus[3].summary
+    evidence: applying a real-world use case that mixes everything you've learned
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment methods or depth of coverage for each topic.
+  - No details on error handling, security best practices, or advanced AWS features.
+  - No explicit coverage of Python programming prerequisites or depth of Boto usage.

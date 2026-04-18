@@ -1,0 +1,34 @@
+validity_thresholds:
+  min_correctness: 0.65
+  min_groundedness: 0.72
+  max_contradiction_risk: 0.35
+  min_coherence: 0.60
+
+serving_thresholds:
+  min_serviceability: 0.70
+  max_context_dependence: 0.50
+  min_answer_stability: 0.70
+
+curation_thresholds:
+  min_pedagogical_value: 0.78
+  min_distinctiveness: 0.68
+  min_answer_richness: 0.70
+  min_groundedness_for_curation: 0.76
+  min_query_likelihood_for_curation: 0.72
+  max_curated_core_per_course: 8
+
+family_balance:
+  min_entry_share: 0.15
+  min_friction_share: 0.25
+  min_diagnostic_or_transfer_share: 0.20
+  max_entry_share: 0.40
+
+canonicalization:
+  alias_similarity_threshold: 0.88
+
+retention:
+  curated_core: full
+  cache_servable: full
+  alias_only: full
+  analysis_only: full
+  hard_reject: audit_only

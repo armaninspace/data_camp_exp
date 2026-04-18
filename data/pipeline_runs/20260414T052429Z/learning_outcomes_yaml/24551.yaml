@@ -1,0 +1,96 @@
+course_id: '24551'
+course_title: Visualizing Time Series Data in Python
+learning_outcomes:
+- id: '1'
+  claim: Produce and personalize basic line plots of time series data using Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn to use basic
+    plotting tools in Python, annotate, and personalize time series plots, and produce
+    compelling plots from static datasets.
+  citations:
+  - field: syllabus[0].title
+    evidence: Line Plots
+  - field: syllabus[0].summary
+    evidence: You will learn how to leverage basic plottings tools in Python, and
+      how to annotate and personalize your time series plots. By the end of this chapter,
+      you will be able to take any static dataset and produce compelling plots of
+      your data.
+- id: '2'
+  claim: Compute summary statistics and create aggregated visualizations to better
+    understand time series data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus indicates students will compute summary statistics and plot
+    aggregated views, which involves applying procedures to analyze data.
+  citations:
+  - field: syllabus[1].title
+    evidence: Summary Statistics and Diagnostics
+  - field: syllabus[1].summary
+    evidence: In this chapter, you will gain a deeper understanding of your time series
+      data by computing summary statistics and plotting aggregated views of your data.
+- id: '3'
+  claim: Identify and visualize seasonality, trend, and noise in time series data
+    using autocorrelation and partial autocorrelation plots.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The syllabus describes learning to use autocorrelation and partial autocorrelation
+    plots and to automatically detect seasonality, trend, and noise, which requires
+    analysis and conceptual understanding.
+  citations:
+  - field: syllabus[2].title
+    evidence: Seasonality, Trend and Noise
+  - field: syllabus[2].summary
+    evidence: You will go beyond summary statistics by learning about autocorrelation
+      and partial autocorrelation plots. You will also learn how to automatically
+      detect seasonality, trend and noise in your time series data.
+- id: '4'
+  claim: Plot and analyze multiple time series simultaneously and describe relationships
+    between them.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The syllabus states students will plot multiple time series at once and
+    discover and describe relationships, which involves analysis and conceptual understanding.
+  citations:
+  - field: syllabus[3].title
+    evidence: Work with Multiple Time Series
+  - field: syllabus[3].summary
+    evidence: We will show you how to plot multiple time series at once, and how to
+      discover and describe relationships between multiple time series.
+- id: '5'
+  claim: Apply learned visualization techniques to a real-world dataset (US unemployment
+    rate, 2000–2010).
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The case study chapter provides an opportunity to practice all course
+    concepts on a real dataset, indicating application of learned procedures.
+  citations:
+  - field: syllabus[4].title
+    evidence: 'Case Study: Unemployment Rate'
+  - field: syllabus[4].summary
+    evidence: This chapter will give you a chance to practice all the concepts covered
+      in the course. You will visualize the unemployment rate in the US from 2000
+      to 2010.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify which Python libraries or tools are used for visualization.
+  - There is no explicit mention of assessment methods or depth of theoretical coverage.
+  - No details are provided about handling missing data, data preprocessing, or advanced
+    modeling.

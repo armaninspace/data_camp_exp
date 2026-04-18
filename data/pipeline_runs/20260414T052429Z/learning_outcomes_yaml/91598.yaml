@@ -1,0 +1,89 @@
+course_id: '91598'
+course_title: Building Dashboards with Dash and Plotly
+learning_outcomes:
+- id: '1'
+  claim: Recall and understand the basic concepts of Plotly and Dash for dashboard
+    development.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The syllabus indicates a brief revision of Plotly and an introduction
+    to Dash, suggesting students will be able to recall and understand foundational
+    concepts.
+  citations:
+  - field: syllabus[0].summary
+    evidence: After briefly revising Plotly, you'll dive straight into building your
+      first Dash app.
+- id: '2'
+  claim: Apply knowledge of Dash and HTML to build basic interactive dashboards.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Students are guided to build their first Dash app and a multi-graph dashboard,
+    indicating procedural application of learned concepts.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You'll then get your first taste of HTML and how Dash harnesses this
+      vital web development language to structure larger Dash apps. Finally, you'll
+      put all this together in your first multi-graph dashboard for a global e-commerce
+      organization.
+- id: '3'
+  claim: Use HTML and CSS to style Dash apps, modifying size, color, and placement
+    of dashboard elements.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states students will learn to use HTML and CSS
+    to control and style elements in Dash apps.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Incorporate their powerful abilities in your Dash apps to change the
+      size, color, and placement of your objects.
+- id: '4'
+  claim: Implement interactive components in Dash apps, such as dropdowns, date pickers,
+    and text fields, to create user-driven dashboards.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Students are taught to master interactive components and build self-service
+    dashboards, indicating procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Learn how to include dropdowns, date pickers, and event free text fields
+      to modify elements on your Dash apps and build truly self-service dashboards
+      your users can explore.
+- id: '5'
+  claim: Develop advanced interactive Dash apps, including linking graphs and using
+    AG Grid tables with filtering, sorting, and pagination.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes triggering changes between graphs and using AG
+    Grid for advanced table features, indicating procedural skills at a moderate level
+    of complexity.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Triggering changes to one graph when a user clicks on or hovers over,
+      another graph. ... basics of Dash's AG Grid module for creating tables that
+      can be easily filtered, sorted, and paginated; as well as trigger changes in
+      other graphs as well.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment or evaluation of dashboard effectiveness.
+  - No evidence of metacognitive or higher-order creative skills (e.g., designing
+    novel dashboard solutions or evaluating dashboard usability).
+  - No details on data preparation, data cleaning, or integration with external data
+    sources.
+  - No explicit coverage of deployment or sharing dashboards beyond building and interactivity.

@@ -1,0 +1,62 @@
+course_id: '24437'
+course_title: PostgreSQL Summary Stats and Window Functions
+learning_outcomes:
+- id: '1'
+  claim: Learners will understand the use and purpose of window functions in SQL for
+    analytics and data engineering tasks.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview and summary repeatedly emphasize learning how to use window
+    functions for analytics and data engineering, suggesting a conceptual understanding
+    of their purpose and application.
+  citations:
+  - field: overview
+    evidence: Learn how to create queries for analytics and data engineering with
+      window functions, the SQL secret weapon!
+  - field: summary
+    evidence: Learn how to create queries for analytics and data engineering with
+      window functions, the SQL secret weapon!
+- id: '2'
+  claim: Learners will be able to apply window functions to solve business problems
+    such as generating rankings, calculating moving averages, running totals, deduplicating
+    data, and performing time intelligence in SQL.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview lists specific business problems addressed by window functions,
+    indicating learners will practice applying these techniques.
+  citations:
+  - field: overview
+    evidence: generating rankings, calculating moving averages and running totals,
+      deduplicating data, or performing time intelligence
+- id: '3'
+  claim: Learners will gain familiarity with using PostgreSQL for data analysis tasks
+    involving aggregate and window functions.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The subjects and course title indicate a focus on PostgreSQL, data analysis,
+    and aggregate functions, suggesting learners will recall relevant facts and syntax.
+  citations:
+  - field: subjects
+    evidence: '["PostgreSQL", "Data Analysis", "SQL", "Data Engineering", "Moving
+      Average", "Aggregate Functions"]'
+  - field: title
+    evidence: PostgreSQL Summary Stats and Window Functions
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so there is no chapter-level detail about specific skills,
+    concepts, or assessments.
+  - It is unclear whether learners will reach higher-order skills such as analyzing
+    or creating with window functions, or just applying them.
+  - No explicit mention of assessment types or practical exercises beyond a general
+    reference to a qualified assessment.

@@ -1,0 +1,94 @@
+course_id: '98726'
+course_title: 'Case Study: HR Analytics in Power BI'
+learning_outcomes:
+- id: LO1
+  claim: Import and connect HR data in Power BI to create a functional data model.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will bring data into Power
+    BI and connect the data model, which is a procedural and applied skill.
+  citations:
+  - field: syllabus[0].title
+    evidence: Data Modeling and EDA
+  - field: syllabus[0].summary
+    evidence: start by bringing all your data into Power BI and connecting your data
+      model
+- id: LO2
+  claim: Conduct exploratory data analysis (EDA) on HR datasets to identify general
+    trends.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus describes performing initial exploratory data analysis on
+    HR trends, which involves analyzing data to identify patterns.
+  citations:
+  - field: syllabus[0].summary
+    evidence: doing some initial exploratory data analysis on general HR trends
+- id: LO3
+  claim: Use DAX to build custom visuals and extract insights from HR data in Power
+    BI.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions using DAX to build custom visuals and extract insights,
+    which is a procedural application of Power BI features.
+  citations:
+  - field: syllabus[1].summary
+    evidence: using your Power BI skills to extract insights using DAX and learn how
+      to build custom visuals
+- id: LO4
+  claim: Analyze employee demographics and performance data to generate actionable
+    insights.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus specifies extracting insights on employee demographics and
+    performance, which requires conceptual understanding and analysis.
+  citations:
+  - field: syllabus[1].title
+    evidence: Analyzing Demographics and Performance
+  - field: syllabus[1].summary
+    evidence: explore their data further
+- id: LO5
+  claim: Identify and communicate factors affecting employee attrition and retention
+    using Power BI reports.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The final chapter focuses on delivering insights about attrition and
+    retention, which involves relational analysis and communication of findings.
+  citations:
+  - field: syllabus[2].summary
+    evidence: delivering insights on attrition and what factors affect employee retention
+- id: LO6
+  claim: Design and present a clean, branded, and user-friendly Power BI report for
+    HR analytics stakeholders.
+  knowledge_type: procedural
+  process_level: create
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The course concludes with cleaning up the report layout and branding,
+    which involves creating a final product for stakeholders.
+  citations:
+  - field: syllabus[2].summary
+    evidence: cleaning up the overall layout of the report to create a user-friendly,
+      clean, and branded experience
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course assumes prior knowledge of Power BI; foundational skills are not covered.
+  - Details on the depth of DAX usage or complexity of analysis are not specified.
+  - No explicit mention of assessment methods or feedback mechanisms.

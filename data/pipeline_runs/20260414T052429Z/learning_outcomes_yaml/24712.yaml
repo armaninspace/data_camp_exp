@@ -1,0 +1,83 @@
+course_id: '24712'
+course_title: 'HR Analytics: Predicting Employee Churn in R'
+learning_outcomes:
+- id: LO1
+  claim: Describe the concept of employee churn and calculate turnover rates across
+    different dimensions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn about employee
+    churn, reasons for turnover, and how to calculate and explore turnover rates across
+    dimensions.
+  citations:
+  - field: syllabus[0].summary
+    evidence: general introduction to employee churn/turnover and reasons for turnover...
+      calculate turnover rate and explore turnover rate across different dimensions
+- id: LO2
+  claim: Identify and segment talent groups for HR analysis using multiple data sources.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions identifying talent segments and integrating data
+    from multiple HR sources, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: identify talent segments for your analysis and bring together relevant
+      data from multiple HR data sources
+- id: LO3
+  claim: Engineer new features from HR data, including calculating compa-ratio and
+    using Information Value (IV) to assess variable importance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Students are instructed to create new variables, analyze compensation
+    data, calculate compa-ratio, and use IV, all of which are procedural applications.
+  citations:
+  - field: syllabus[1].summary
+    evidence: create new variables from existing data... analyze compensation data
+      and create compa-ratio... use the concept of Information Value (IV)
+- id: LO4
+  claim: Build a logistic regression model in R to predict employee turnover, considering
+    multicollinearity.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus directly states that students will build a logistic regression
+    model and account for multicollinearity.
+  citations:
+  - field: syllabus[2].summary
+    evidence: build a logistic regression model to predict turnover by taking into
+      account multicollinearity among variables
+- id: LO5
+  claim: Validate a predictive model, categorize employees by risk, and calculate
+    ROI for HR interventions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: Students are expected to calculate model accuracy, categorize risk, and
+    compute ROI, which are procedural tasks.
+  citations:
+  - field: syllabus[3].summary
+    evidence: calculate the accuracy of your model and categorize employees into specific
+      risk buckets... formulate an intervention strategy and calculate the ROI for
+      this strategy
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of statistical theory or R programming skills
+    required or developed.
+  - There is no explicit mention of advanced model evaluation techniques or alternative
+    modeling approaches.
+  - The course does not address ethical considerations or data privacy in HR analytics.

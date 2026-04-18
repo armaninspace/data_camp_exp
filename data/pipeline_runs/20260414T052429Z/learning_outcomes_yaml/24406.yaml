@@ -1,0 +1,49 @@
+course_id: '24406'
+course_title: Introduction to Importing Data in R
+learning_outcomes:
+- id: LO1
+  claim: Recall the basic methods for reading CSV, XLS, and text files in R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly states that students will learn to read CSV, XLS,
+    and text files in R, but does not provide detail on depth or application.
+  citations:
+  - field: summary
+    evidence: In this course, you will learn to read CSV, XLS, and text files in R
+      using tools like readxl and data.table.
+- id: LO2
+  claim: Identify and name R packages such as readxl and data.table used for importing
+    data.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary mentions specific tools (readxl and data.table), suggesting
+    students will at least be able to recognize these packages.
+  citations:
+  - field: summary
+    evidence: using tools like readxl and data.table
+- id: LO3
+  claim: Understand the general process of importing data files into R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary implies students will learn the process of reading files,
+    but without a syllabus, the depth of understanding is unclear.
+  citations:
+  - field: summary
+    evidence: you will learn to read CSV, XLS, and text files in R
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus provided, so no chapter-level detail on skills or concepts.
+  - No explicit mention of practical application, troubleshooting, or deeper conceptual
+    understanding.
+  - No information on assessment or metacognitive outcomes.

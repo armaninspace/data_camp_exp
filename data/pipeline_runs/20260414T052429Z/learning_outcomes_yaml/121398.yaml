@@ -1,0 +1,39 @@
+course_id: '121398'
+course_title: R 語言導論
+learning_outcomes:
+- id: LO1
+  claim: Recall basic data types in R, such as factors, vectors, lists, and data frames.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly mentions learning about factors, vectors, lists,
+    and data frames as data types in R. However, without a syllabus or further detail,
+    we cannot infer deeper understanding or application.
+  citations:
+  - field: summary
+    evidence: 包含因素向量、清單與資料框等資料類別
+- id: LO2
+  claim: Recognize that R is a popular open-source software for data analysis.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary describes R as a popular open-source software, and the subjects
+    list includes R Programming and Data Analysis, supporting basic factual knowledge.
+  citations:
+  - field: summary
+    evidence: 學習這個熱門的開源軟體
+  - field: subjects
+    evidence: '["R Programming", "Statistics & Probability", "Data Analysis", "Data
+      Manipulation"]'
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so only basic factual knowledge
+    can be inferred.
+  - No evidence of procedural, conceptual, or metacognitive learning outcomes.
+  - No information about practical application, analysis, or higher-order skills.

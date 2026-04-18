@@ -5,6 +5,8 @@ import re
 from pathlib import Path
 from typing import Iterable
 
+import yaml
+
 
 def slugify(value: str) -> str:
     value = value.lower().strip()
@@ -24,3 +26,15 @@ def write_jsonl(path: Path, rows: Iterable[dict]) -> None:
         for row in rows:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
+
+def write_yaml(path: Path, payload: dict, width: int = 80) -> None:
+    ensure_dir(path.parent)
+    path.write_text(
+        yaml.safe_dump(
+            payload,
+            sort_keys=False,
+            allow_unicode=True,
+            width=width,
+        ),
+        encoding="utf-8",
+    )

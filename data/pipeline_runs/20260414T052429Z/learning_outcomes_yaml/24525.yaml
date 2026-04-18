@@ -1,0 +1,84 @@
+course_id: '24525'
+course_title: Data Processing in Shell
+learning_outcomes:
+- id: LO1
+  claim: Download data files from web servers using command-line tools, including
+    handling documentation manuals, option flags, and multi-file processing.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn to download data
+    files from web servers via the command line, and also learn about documentation
+    manuals, option flags, and multi-file processing. This indicates procedural knowledge
+    and the ability to apply these skills.
+  citations:
+  - field: syllabus[0].title
+    evidence: Downloading Data on the Command Line
+  - field: syllabus[0].summary
+    evidence: learn how to download data files from web servers via the command line.
+      In the process, we also learn about documentation manuals, option flags, and
+      multi-file processing.
+- id: LO2
+  claim: Use csvkit on the command line to convert, preview, filter, and manipulate
+    data files for analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus specifies the use of csvkit for various data processing
+    tasks, indicating students will be able to apply these tools to manipulate data.
+  citations:
+  - field: syllabus[1].title
+    evidence: Data Cleaning and Munging on the Command Line
+  - field: syllabus[1].summary
+    evidence: utilize the command line library csvkit to convert, preview, filter
+      and manipulate files to prepare our data for further analyses.
+- id: LO3
+  claim: Perform basic database operations on the command line using csvkit, including
+    table creation, data extraction, and ETL transformations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes focusing on database operations with csvkit, such
+    as table creation, data pull, and ETL transformation, which are procedural and
+    application-level skills.
+  citations:
+  - field: syllabus[2].title
+    evidence: Database Operations on the Command Line
+  - field: syllabus[2].summary
+    evidence: focus on database operations we can do on the command line, including
+      table creation, data pull, and various ETL transformation.
+- id: LO4
+  claim: Integrate command-line tools with Python to build a simple data pipeline,
+    including executing Python scripts and managing dependencies with pip.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus indicates students will learn to execute Python on the command
+    line, install dependencies with pip, and build a model pipeline, which are procedural
+    skills at the application level.
+  citations:
+  - field: syllabus[3].title
+    evidence: Data Pipeline on the Command Line
+  - field: syllabus[3].summary
+    evidence: learn to execute Python on the command line, to install dependencies
+      using the package manager pip, and to build an entire model pipeline using the
+      command line.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of understanding or troubleshooting skills
+    beyond procedural application.
+  - There is no explicit mention of assessment or evaluation of data quality, nor
+    of advanced data analysis or modeling.
+  - Integration with Python is described as a case study, so the breadth of integration
+    with other languages or tools is unclear.
+  - No explicit mention of metacognitive or conceptual knowledge development.

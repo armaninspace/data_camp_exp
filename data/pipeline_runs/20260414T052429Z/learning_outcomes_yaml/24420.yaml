@@ -1,0 +1,46 @@
+course_id: '24420'
+course_title: Introduction to Version Control with Git
+learning_outcomes:
+- id: '1'
+  claim: Recognize the basic concepts and purpose of version control using Git.
+  knowledge_type: conceptual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The course is described as an introduction to version control with Git,
+    targeting beginners. However, without a syllabus or detailed description, we can
+    only infer that students will be exposed to basic concepts and terminology.
+  citations:
+  - field: summary
+    evidence: This course is an introduction to version control with Git for data
+      scientists.
+  - field: details.level
+    evidence: beginner
+  - field: subjects
+    evidence: '["Git", "Data Science", "Productivity", "Version Control"]'
+- id: '2'
+  claim: Identify the relevance of Git for data science workflows.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The summary and subjects link Git and version control to data science,
+    suggesting students will understand why Git is useful in this context, but there
+    is no evidence of deeper or procedural learning.
+  citations:
+  - field: summary
+    evidence: This course is an introduction to version control with Git for data
+      scientists.
+  - field: subjects
+    evidence: '["Git", "Data Science", "Productivity", "Version Control"]'
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific skills, commands,
+    or practical applications are not evidenced.
+  - Cannot infer procedural or higher-order learning outcomes (e.g., applying, analyzing,
+    or creating with Git) due to lack of detail.
+  - No explicit mention of assessment, project work, or hands-on activities.

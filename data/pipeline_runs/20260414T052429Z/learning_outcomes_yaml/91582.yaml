@@ -1,0 +1,98 @@
+course_id: '91582'
+course_title: Introduction to NumPy
+learning_outcomes:
+- id: '1'
+  claim: Understand and create NumPy arrays, including changing their shapes and understanding
+    data types.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter focuses on creating arrays, changing their shapes,
+    and understanding data types, which are foundational conceptual skills in NumPy.
+  citations:
+  - field: syllabus[0].title
+    evidence: Understanding NumPy Arrays
+  - field: syllabus[0].summary
+    evidence: Learn how to create and change array shapes to suit your needs. Finally,
+      discover NumPy's many data types and how they contribute to speedy array operations.
+- id: '2'
+  claim: Apply slicing, filtering, sorting, and conditional selection to manipulate
+    NumPy arrays.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter emphasizes practical data wrangling skills such as
+    slicing, filtering, sorting, and conditional selection, which are procedural and
+    application-focused.
+  citations:
+  - field: syllabus[1].title
+    evidence: Selecting and Updating Data
+  - field: syllabus[1].summary
+    evidence: Sharpen your NumPy data wrangling skills by slicing, filtering, and
+      sorting New York City’s tree census data. Create new arrays by pulling data
+      based on conditional statements, and add and remove data along any dimension
+      to suit your purpose.
+- id: '3'
+  claim: Perform mathematical operations on arrays using vectorization and broadcasting.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter covers vectorized operations and broadcasting, which
+    are procedural skills for efficient mathematical computation in NumPy.
+  citations:
+  - field: syllabus[2].title
+    evidence: Array Mathematics!
+  - field: syllabus[2].summary
+    evidence: Leverage NumPy’s speedy vectorized operations... Vectorize Python functions
+      for use in your NumPy code. Finally, use broadcasting logic to perform mathematical
+      operations between arrays of different sizes.
+- id: '4'
+  claim: Transform and manipulate multidimensional arrays, including image data, using
+    flipping, transposing, and stacking.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The final chapter describes using array transformations such as flipping,
+    transposing, and stacking, especially in the context of image data.
+  citations:
+  - field: syllabus[3].title
+    evidence: Array Transformations
+  - field: syllabus[3].summary
+    evidence: You’ll use flipping and transposing functionality to quickly transform
+      our masterpiece. Next, you’ll pull the Monet array apart, make changes, and
+      reconstruct it using array stacking to see the results.
+- id: '5'
+  claim: Recognize the importance and efficiency of NumPy arrays for data science
+    tasks compared to Python lists.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview and summary repeatedly highlight why NumPy arrays are more
+    efficient and essential for data science, indicating a conceptual understanding
+    outcome.
+  citations:
+  - field: overview
+    evidence: NumPy is an essential Python library for data scientists and analysts.
+      It offers a great alternative to Python lists, as they are more compact and
+      allow faster access to reading and writing items, making them a more convenient
+      and efficient option.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced NumPy topics such as custom dtypes,
+    memory management, or integration with other libraries.
+  - There is no explicit mention of assessment types or depth of practice, so mastery
+    beyond basic application is not supported.
+  - Metacognitive or evaluative skills (e.g., troubleshooting, optimizing, or critiquing
+    NumPy code) are not described.

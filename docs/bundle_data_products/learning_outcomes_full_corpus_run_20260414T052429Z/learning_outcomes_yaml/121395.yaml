@@ -1,0 +1,53 @@
+course_id: '121395'
+course_title: Basic Statistics
+learning_outcomes:
+- id: LO1
+  claim: Recognize and recall basic concepts and terminology in statistics and probability.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The course is labeled as 'beginner' and covers foundational topics such
+    as 'Statistics & Probability', 'Descriptive Statistics', and 'Probability'. With
+    no syllabus or detailed description, the most supported outcome is basic recall
+    of terms and concepts.
+  citations:
+  - field: subjects
+    evidence: Statistics & Probability, Descriptive Statistics, Probability
+  - field: details.level
+    evidence: beginner
+- id: LO2
+  claim: Understand the purpose and basic procedures of hypothesis testing and regression
+    analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The inclusion of 'Hypothesis Testing' and 'Regression Analysis' in the
+    subjects suggests students will gain a conceptual understanding of these topics,
+    but without a syllabus, depth or application cannot be assumed.
+  citations:
+  - field: subjects
+    evidence: Hypothesis Testing, Regression Analysis
+- id: LO3
+  claim: Identify and describe basic methods of data analysis.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.5
+  reasoning: The subject 'Data Analysis' implies some exposure to methods, but without
+    a syllabus or description, only basic identification and description can be inferred.
+  citations:
+  - field: subjects
+    evidence: Data Analysis
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so only general and introductory
+    learning outcomes can be inferred.
+  - No evidence of application, analysis, or higher-order skills.
+  - No information about assessment, workload, or specific instructional methods.

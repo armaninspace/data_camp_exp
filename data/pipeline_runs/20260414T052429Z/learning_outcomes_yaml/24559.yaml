@@ -1,0 +1,96 @@
+course_id: '24559'
+course_title: Improving Your Data Visualizations in Python
+learning_outcomes:
+- id: '1'
+  claim: Learners can use color and text to highlight important points in data visualizations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly discusses guiding viewers through data using
+    color-based highlights and text, indicating learners will be able to apply these
+    techniques.
+  citations:
+  - field: syllabus[0].title
+    evidence: Highlighting Your Data
+  - field: syllabus[0].summary
+    evidence: How do you show all of your data while making sure that viewers don't
+      miss an important point or points? Here we discuss how to guide your viewer
+      through the data with color-based highlights and text.
+- id: '2'
+  claim: Learners can select appropriate color palettes for visualizations based on
+    data type.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus covers choosing color palettes appropriate to the type of
+    data, which requires understanding and applying conceptual knowledge.
+  citations:
+  - field: syllabus[1].title
+    evidence: Using Color in Your Visualizations
+  - field: syllabus[1].summary
+    evidence: In this chapter, we talk about how to choose an appropriate color palette
+      for your visualization based upon the type of data it is showing.
+- id: '3'
+  claim: Learners can visualize uncertainty in data using confidence intervals and
+    bootstrap resampling.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus details reviewing confidence intervals, visualizing them,
+    and using bootstrap resampling, indicating learners will be able to apply these
+    procedures.
+  citations:
+  - field: syllabus[2].title
+    evidence: Showing Uncertainty
+  - field: syllabus[2].summary
+    evidence: Here, we review what a confidence interval is and how to visualize them
+      for both single estimates and continuous functions. Additionally, we discuss
+      the bootstrap resampling technique for assessing uncertainty and how to visualize
+      it properly.
+- id: '4'
+  claim: Learners can optimize visualizations for different stages of the data science
+    workflow, from exploration to final presentation.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions optimizing visualizations at each step of the data
+    science workflow, suggesting learners will be able to apply best practices in
+    various contexts.
+  citations:
+  - field: syllabus[3].title
+    evidence: Visualization in the Data Science Workflow
+  - field: syllabus[3].summary
+    evidence: In this chapter, we dive into how to optimize your visualizations at
+      each step of a data science workflow.
+- id: '5'
+  claim: Learners understand the importance of tailoring visualizations to their audience
+    and context.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview and syllabus reference building the right visualization
+    for a given audience and bending the rules for different scenarios, indicating
+    conceptual understanding.
+  citations:
+  - field: overview
+    evidence: how to build the right visualization for your given audience
+  - field: syllabus[3].summary
+    evidence: you will need to bend the rules for different scenarios
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify which Python libraries or tools are used for visualization.
+  - There is no explicit mention of assessment types or depth of coding practice.
+  - While the course covers key visualization concepts and procedures, it does not
+    address advanced or creative visualization design beyond application of best practices.

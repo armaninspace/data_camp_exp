@@ -1,0 +1,81 @@
+course_id: '24537'
+course_title: Transactions and Error Handling in SQL Server
+learning_outcomes:
+- id: LO1
+  claim: Understand and implement error handling in T-SQL using TRY...CATCH constructs.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn to handle errors
+    using TRY...CATCH and study the anatomy of errors, indicating both understanding
+    and practical application.
+  citations:
+  - field: syllabus[0].title
+    evidence: Starting with error handling
+  - field: syllabus[0].summary
+    evidence: learn how to handle errors using the TRY...CATCH construct that provides
+      T-SQL. You will study the anatomy of errors, and you will learn how to use some
+      functions that can give you information about errors.
+- id: LO2
+  claim: Raise and customize errors in T-SQL using RAISERROR and THROW.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies that students will learn to raise errors using
+    RAISERROR and THROW, and customize errors, which are procedural skills.
+  citations:
+  - field: syllabus[1].title
+    evidence: Raising, throwing and customizing your errors
+  - field: syllabus[1].summary
+    evidence: learn how to raise errors using RAISERROR and THROW. Additionally, you
+      will discover how to customize errors.
+- id: LO3
+  claim: Understand and manage transactions in SQL Server, including committing and
+    rolling back transactions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus indicates students will be introduced to transactions and
+    learn to commit and rollback them, which involves understanding and applying transaction
+    control.
+  citations:
+  - field: syllabus[2].title
+    evidence: Transactions in SQL Server
+  - field: syllabus[2].summary
+    evidence: introduced to the concept of transactions. You will discover how to
+      commit and rollback them. You will finish by learning how to return the number
+      of transactions and their state.
+- id: LO4
+  claim: Explain and distinguish between different transaction isolation levels and
+    their effects on concurrency (e.g., dirty reads, repeatable reads, phantom reads).
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus describes learning about concurrency, its effects, and exploring
+    different transaction isolation levels, which is conceptual understanding.
+  citations:
+  - field: syllabus[3].title
+    evidence: 'Controlling the concurrency: Transaction isolation levels'
+  - field: syllabus[3].summary
+    evidence: defines what concurrency is and how it can affect transactions. You
+      will learn exciting concepts like dirty reads, repeatable reads, and phantom
+      reads. To avoid or allow this reads, you will explore, one by one, the different
+      transaction isolation levels.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment or practice activities, so depth of mastery
+    is inferred from chapter summaries.
+  - No coverage of advanced or metacognitive skills such as evaluating or creating
+    complex transaction strategies.
+  - No explicit mention of integrating error handling and transaction management in
+    complex scenarios.

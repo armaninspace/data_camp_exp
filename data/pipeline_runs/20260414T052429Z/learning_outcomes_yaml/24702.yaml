@@ -1,0 +1,69 @@
+course_id: '24702'
+course_title: Pandas Joins for Spreadsheet Users
+learning_outcomes:
+- id: LO1
+  claim: Identify and describe different types of joins available in pandas.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn about the types
+    of joins and foundational concepts for joining data in pandas.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You'll learn about the types of joins and how pandas can improve your
+      effectiveness and productivity.
+- id: LO2
+  claim: Apply pandas to perform VLOOKUP-style one-to-one joins on tabular data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The course covers using pandas for VLOOKUP-style joins, focusing on one-to-one
+    joins, which involves procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You'll learn how to use pandas for joining data in a way similar to
+      using VLOOKUP formulas in a spreadsheet. You'll learn about three types of joins
+      and then focus on the first type, one-to-one joins.
+- id: LO3
+  claim: Perform one-to-many joins in pandas by identifying key columns and joining
+    data frames by column or index.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus details practicing identification of key columns and joining
+    data frames by column and index, which are procedural skills.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll practice identifying the relationship of key columns and joining
+      data frames by column. You'll also learn how to join two or more data frames
+      based on their indices.
+- id: LO4
+  claim: Utilize advanced joining techniques in pandas to solve challenging data integration
+    problems.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The final chapter mentions advanced joining techniques and a case study
+    challenge, indicating application of more complex procedures in context.
+  citations:
+  - field: syllabus[3].summary
+    evidence: You'll learn advanced joining techniques to use when faced with challenging
+      data. You'll be presented with a challenge of your own in the form of a case
+      study that tests your skills.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify which advanced joining techniques are covered.
+  - There is no explicit mention of error handling, performance considerations, or
+    joining more than two data frames except by index.
+  - No explicit assessment of metacognitive skills or ability to create novel join
+    strategies.

@@ -1,0 +1,94 @@
+course_id: '24438'
+course_title: Reshaping Data with tidyr
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply the concept of tidy data to transform messy datasets
+    for analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The course introduces the concept of tidy data and has students separate
+    messy character columns into tidy variables and observations, indicating both
+    conceptual understanding and practical application.
+  citations:
+  - field: syllabus[0].title
+    evidence: Tidy Data
+  - field: syllabus[0].summary
+    evidence: You'll be introduced to the concept of tidy data... separating messy
+      character columns into tidy variables and observations ready for analysis.
+- id: LO2
+  claim: Apply pivot_longer() and pivot_wider() functions to reshape data between
+    wide and long formats.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will use pivot_longer()
+    and pivot_wider() to reshape data, a procedural skill.
+  citations:
+  - field: syllabus[1].title
+    evidence: From Wide to Long and Back
+  - field: syllabus[1].summary
+    evidence: pivoting data from a wide to long format and back again using the pivot_longer()
+      and pivot_wider() functions.
+- id: LO3
+  claim: Identify and handle missing values in datasets, including overwriting, removing,
+    and completing missing observations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: Students learn to overwrite and remove missing values, and to complete
+    datasets with missing observations, indicating procedural knowledge and application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learn how to overwrite and remove missing values
+  - field: syllabus[2].title
+    evidence: Expanding Data
+  - field: syllabus[2].summary
+    evidence: learn how to complete your dataset with these missing observations.
+      You'll add observations with zero values to counted data, expand time series
+      to a full sequence of intervals
+- id: LO4
+  claim: Transform nested data structures (e.g., JSON, XML) into tidy, rectangular
+    data suitable for analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The course covers turning nested data structures into tidy, rectangular
+    data, a procedural skill relevant for data wrangling.
+  citations:
+  - field: syllabus[3].title
+    evidence: Rectangling Data
+  - field: syllabus[3].summary
+    evidence: learn how to turn nested data structures such as JSON and XML files
+      into tidy, rectangular data
+- id: LO5
+  claim: Recognize how tidy data principles support the creation of modeling pipelines
+    that produce tidy outputs.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The course mentions that nested data structures can be used to write
+    elegant modeling pipelines that produce tidy outputs, suggesting conceptual understanding
+    rather than deep procedural mastery.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learn how nested data structures can be used to write elegant modeling
+      pipelines that produce tidy outputs
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not provide detail on assessment types or depth of mastery beyond
+    application and understanding.
+  - No explicit mention of advanced analysis, evaluation, or creation tasks.
+  - No explicit coverage of metacognitive strategies or reflection.

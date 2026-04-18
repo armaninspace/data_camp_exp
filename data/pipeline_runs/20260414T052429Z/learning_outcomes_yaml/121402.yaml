@@ -1,0 +1,43 @@
+course_id: '121402'
+course_title: Data Exploration With Kaggle Scripts
+learning_outcomes:
+- id: LO1
+  claim: Recognize the basic concepts of data exploration.
+  knowledge_type: conceptual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary states that students will begin learning the art and science
+    of data exploration, indicating an introductory understanding of the topic.
+  citations:
+  - field: summary
+    evidence: you'll begin learning the art and science of data exploration
+  - field: subjects
+    evidence: Data Exploration
+  - field: details.level
+    evidence: beginner
+- id: LO2
+  claim: Identify widely used data visualization packages in data science.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary mentions becoming familiar with widely used visualization
+    packages, suggesting students will be able to recognize or name these tools.
+  citations:
+  - field: summary
+    evidence: become familiar with some of the most widely used visualization packages
+      in data science
+  - field: subjects
+    evidence: Data Visualization
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific skills, tools, or
+    deeper learning outcomes cannot be inferred.
+  - No information on procedural or higher-order skills (e.g., applying, analyzing,
+    creating) is available.
+  - No explicit mention of assessment, practical exercises, or metacognitive components.

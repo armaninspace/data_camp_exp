@@ -1,0 +1,86 @@
+course_id: '24485'
+course_title: Introduction to Statistics in Google Sheets
+learning_outcomes:
+- id: LO1
+  claim: Identify and compute basic descriptive statistics (mean, median, mode) for
+    various datasets using Google Sheets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter explicitly states that students will learn
+    to summarize data using mean, median, and mode, understand their differences,
+    and know when to use each. The use of Google Sheets is implied throughout.
+  citations:
+  - field: syllabus[0].title
+    evidence: Getting To Know Your Data
+  - field: syllabus[0].summary
+    evidence: Begin your journey by learning why and how to summarize your data using
+      statistics such as the mean, median, and mode... you'll learn about the differences
+      between each of these fundamental statistics and most importantly, when to use
+      each.
+- id: LO2
+  claim: Create and interpret basic statistical data visualizations (histogram, scatter
+    plot, bar plot) in Google Sheets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second syllabus chapter focuses on visualizing data using specific
+    plot types in Google Sheets and emphasizes interpretation and communication of
+    results.
+  citations:
+  - field: syllabus[1].title
+    evidence: Statistical Data Visualization
+  - field: syllabus[1].summary
+    evidence: you'll learn how to visualize your data in Google Sheets using statistical
+      plots such as the histogram, scatter plot, and bar plot.
+- id: LO3
+  claim: Construct and test statistical hypotheses using appropriate statistical tests
+    in Google Sheets, and interpret the results.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third syllabus chapter covers constructing hypotheses, testing them
+    with statistical tests, and interpreting results. The overview and summary reinforce
+    this focus.
+  citations:
+  - field: syllabus[2].title
+    evidence: Statistical Hypothesis Testing
+  - field: syllabus[2].summary
+    evidence: You'll learn how to construct a hypothesis, test it using different
+      statistical tests, and properly interpret the results.
+- id: LO4
+  claim: Apply foundational statistical techniques to analyze and draw conclusions
+    from real-world datasets in Google Sheets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final syllabus chapter and the overview emphasize applying learned
+    statistical techniques to a case study, integrating prior knowledge to analyze
+    real data.
+  citations:
+  - field: syllabus[3].title
+    evidence: 'Case Study: Dating Profile Analysis'
+  - field: syllabus[3].summary
+    evidence: Apply all of your newfound statistical knowledge and solidify everything
+      you have learned by working through a case study consisting of online dating
+      profile data.
+  - field: overview
+    evidence: By the end of the course, you'll be able to conduct your own analyses
+      and draw meaningful conclusions from data sets in various contexts.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify which statistical tests are covered under hypothesis
+    testing.
+  - There is no explicit mention of advanced statistical concepts (e.g., regression,
+    ANOVA) or deeper metacognitive skills.
+  - The level of depth for each topic is not detailed beyond introductory application.

@@ -1,0 +1,55 @@
+course_id: '157467'
+course_title: 'Data Literacy Case Study: Remote Working Analysis'
+learning_outcomes:
+- id: lo1
+  claim: A student will be able to recognize basic concepts related to data literacy
+    and remote working policies.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The course summary and subjects indicate a focus on data literacy and
+    remote working, but without a syllabus or detailed description, only basic recognition
+    of these concepts can be inferred.
+  citations:
+  - field: summary
+    evidence: Improve data literacy skills by analyzing remote working policies.
+  - field: subjects
+    evidence: Data Literacy, Communication Skills, Data Visualization, Team Collaboration,
+      Business Problem Solving
+- id: lo2
+  claim: A student will be able to identify the role of data visualization and communication
+    in analyzing business problems.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subjects list includes data visualization and communication skills,
+    suggesting students will be introduced to these concepts, but there is no evidence
+    of deeper application or analysis.
+  citations:
+  - field: subjects
+    evidence: Data Visualization, Communication Skills, Business Problem Solving
+- id: lo3
+  claim: A student will be able to describe basic approaches to team collaboration
+    in the context of data-driven business problem solving.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: Team collaboration is listed as a subject, but without a syllabus or
+    further detail, only a basic understanding can be inferred.
+  citations:
+  - field: subjects
+    evidence: Team Collaboration, Business Problem Solving
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, limiting inference to surface-level
+    knowledge.
+  - No explicit learning activities, assessments, or examples are described.
+  - No information on specific data analysis methods, tools, or case study details.

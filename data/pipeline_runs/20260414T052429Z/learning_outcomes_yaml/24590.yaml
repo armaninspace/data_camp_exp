@@ -1,0 +1,55 @@
+course_id: '24590'
+course_title: Introduction to A/B Testing in R
+learning_outcomes:
+- id: lo1
+  claim: Recall the basic concepts of A/B testing, including hypothesis testing, experimental
+    design, and confounding variables.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary explicitly lists A/B testing, hypothesis testing, experimental
+    design, and confounding variables as topics. With no syllabus, we can only infer
+    basic recall of these concepts.
+  citations:
+  - field: summary
+    evidence: 'Learn A/B testing: including hypothesis testing, experimental design,
+      and confounding variables.'
+- id: lo2
+  claim: Understand the role of R programming in conducting A/B tests.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The subject list includes 'R Programming' and 'A/B Testing', suggesting
+    the course covers how R is used in this context, but without a syllabus, depth
+    is unclear.
+  citations:
+  - field: subjects
+    evidence: R Programming, A/B Testing
+- id: lo3
+  claim: Recognize the importance of experimental design and confounding variables
+    in statistical analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary and subjects mention experimental design and confounding
+    variables, implying students will understand their significance, but not necessarily
+    apply or analyze them.
+  citations:
+  - field: summary
+    evidence: including hypothesis testing, experimental design, and confounding variables.
+  - field: subjects
+    evidence: Experimental Design
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus provided, so no chapter-level detail on skills or depth.
+  - No explicit mention of procedural or applied skills (e.g., running tests in R).
+  - No information on assessment or practical activities.
+  - Unclear if students will be able to design or conduct their own A/B tests.

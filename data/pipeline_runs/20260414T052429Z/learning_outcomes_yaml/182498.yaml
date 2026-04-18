@@ -1,0 +1,101 @@
+course_id: '182498'
+course_title: Analyzing Financial Statements in Python
+learning_outcomes:
+- id: LO1
+  claim: Read and interpret balance sheets, income statements, and cash flow statements.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will learn to read and interpret
+    all three major financial statements, which is a foundational conceptual skill.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learn how to read and interpret a balance sheet
+  - field: syllabus[1].summary
+    evidence: learn how to read and interpret an income statement
+  - field: syllabus[2].summary
+    evidence: analyze the cash flow statement
+- id: LO2
+  claim: Compute and interpret key financial ratios from financial statements using
+    Python and pandas.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: Multiple chapters focus on computing financial ratios from different
+    statements using Python and pandas, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: compute and use financial ratios to evaluate a company's performance
+      using information from the balance sheet
+  - field: syllabus[1].summary
+    evidence: calculate key financial ratios
+  - field: syllabus[2].summary
+    evidence: compute and interpret financial ratios
+  - field: syllabus[3].summary
+    evidence: compute them [profitability ratios]
+- id: LO3
+  claim: Use pandas and Seaborn to analyze, compare, and visualize financial ratios
+    across companies.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course repeatedly mentions using pandas for analysis and Seaborn
+    for visualization, specifically to compare ratios across companies.
+  citations:
+  - field: syllabus[0].summary
+    evidence: using the powerful pandas data manipulation package to analyze a company's
+      financial ratios and compare them to its peers
+  - field: syllabus[1].summary
+    evidence: gain experience using seaborn, a powerful data visualization library,
+      to produce figures
+  - field: syllabus[2].summary
+    evidence: create informative plots that compare financial ratios across different
+      companies
+  - field: syllabus[3].summary
+    evidence: create visualizations that help you analyze profitability ratios and
+      identify trends
+- id: LO4
+  claim: Handle missing values and messy real-world financial data in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The course overview and syllabus mention dealing with missing values
+    and messy data, but do not specify advanced techniques.
+  citations:
+  - field: overview
+    evidence: practice dealing with missing financial information through interactive
+      exercises
+  - field: syllabus[2].summary
+    evidence: handle messy, real-world data sets with missing data
+- id: LO5
+  claim: Write user-defined functions in Python to automate repetitive financial analysis
+    tasks.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The course overview and syllabus mention creating user-defined functions
+    to reduce repetitive work, indicating basic procedural automation.
+  citations:
+  - field: overview
+    evidence: writing your own functions in Python, you’ll learn to make your analysis
+      faster and more efficient by reducing repetition
+  - field: syllabus[1].summary
+    evidence: create your own functions in Python to automate repetitive tasks
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No evidence of advanced analysis (e.g., forecasting, valuation, or deep statistical
+    modeling).
+  - No explicit mention of metacognitive skills or evaluation/creation process levels.
+  - No coverage of non-financial data or integration with other business analytics.

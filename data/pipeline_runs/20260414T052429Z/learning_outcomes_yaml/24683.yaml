@@ -1,0 +1,80 @@
+course_id: '24683'
+course_title: Practicing Statistics Interview Questions in R
+learning_outcomes:
+- id: LO1
+  claim: Recall and explain basic probability theory and probability distributions
+    using real-life examples.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly mentions brushing up on probability theory and
+    explaining probabilities using real-life examples, indicating understanding of
+    concepts and their application to examples.
+  citations:
+  - field: syllabus[0].title
+    evidence: Probability Distributions
+  - field: syllabus[0].summary
+    evidence: brush up on your knowledge of probability theory... explain probabilities
+      using real-life examples
+- id: LO2
+  claim: Apply exploratory data analysis (EDA) techniques to real datasets using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will practice EDA using natural gas
+    prices and survey data, indicating hands-on application of EDA procedures.
+  citations:
+  - field: syllabus[1].title
+    evidence: Exploratory Data Analysis
+  - field: syllabus[1].summary
+    evidence: practice exploratory data analysis (EDA) using natural gas prices and
+      data from a survey analysis
+- id: LO3
+  claim: Understand and perform common statistical tests (t-test, ANOVA, normality
+    tests) and interpret confidence intervals.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions reviewing and preparing for t-test, ANOVA, and
+    normality tests, as well as confidence intervals, suggesting students will be
+    able to perform and interpret these tests.
+  citations:
+  - field: syllabus[2].title
+    evidence: Statistical Tests
+  - field: syllabus[2].summary
+    evidence: reviewing confidence intervals... review the t-test, ANOVA, and normality
+      tests
+- id: LO4
+  claim: Fit and evaluate linear and logistic regression models using R and biomedical
+    datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states that students will fit and evaluate linear and logistic
+    regression models, indicating procedural knowledge and application.
+  citations:
+  - field: syllabus[3].title
+    evidence: Regression Models
+  - field: syllabus[3].summary
+    evidence: fit and evaluate linear and logistic regression models using various
+      biomedical datasets
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of statistical theory or the complexity
+    of datasets used.
+  - There is no explicit mention of advanced analysis, evaluation, or creation-level
+    tasks.
+  - Metacognitive skills (e.g., reflecting on one's own statistical reasoning) are
+    not addressed.
+  - No explicit coverage of communicating results or interpreting findings in a broader
+    context.

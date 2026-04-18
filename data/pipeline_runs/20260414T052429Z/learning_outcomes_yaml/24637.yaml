@@ -1,0 +1,96 @@
+course_id: '24637'
+course_title: Inference for Categorical Data in R
+learning_outcomes:
+- id: LO1
+  claim: Perform statistical inference on a single categorical parameter using both
+    resampling and approximation methods.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn to perform inference
+    on a single parameter for categorical data using both resampling and approximation
+    methods. This involves applying procedures rather than just understanding concepts.
+  citations:
+  - field: syllabus[0].title
+    evidence: Inference for a single parameter
+  - field: syllabus[0].summary
+    evidence: perform statistical inference on a single parameter that describes categorical
+      data. This includes both resampling based methods and approximation based methods
+      for a single proportion.
+- id: LO2
+  claim: Conduct hypothesis tests and create confidence intervals for single and two
+    proportions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus details that students will perform hypothesis tests and
+    create confidence intervals for both single and two proportions, indicating procedural
+    application.
+  citations:
+  - field: syllabus[1].title
+    evidence: 'Proportions: testing and power'
+  - field: syllabus[1].summary
+    evidence: performing hypothesis tests and creating confidence intervals for a
+      single parameter... perform inference on a difference between two proportions.
+- id: LO3
+  claim: Test for independence between two categorical variables using both resampling
+    and classical (Chi-squared) methods.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies learning to test for independence between two
+    categorical variables using both resampling and classical (Chi-squared) methods,
+    which is a procedural skill.
+  citations:
+  - field: syllabus[2].title
+    evidence: 'Comparing many parameters: independence'
+  - field: syllabus[2].summary
+    evidence: use both resampling methods and classical methods to test for the indepence
+      of two categorical variables. This chapter covers how to perform a Chi-squared
+      test.
+- id: LO4
+  claim: Apply the Chi-squared goodness-of-fit test to real-world datasets and evaluate
+    conformity to theoretical distributions such as Benford's law.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus describes using the Chi-squared test for goodness-of-fit
+    on election data and testing Benford's law, indicating application of procedures
+    to real data.
+  citations:
+  - field: syllabus[3].title
+    evidence: 'Comparing many parameters: goodness of fit'
+  - field: syllabus[3].summary
+    evidence: learn how to use a Chi-squared test to check goodness-of-fit... test
+      if Benford's law applies to these datasets.
+- id: LO5
+  claim: Understand the implications of the null hypothesis being true in the context
+    of hypothesis testing for proportions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions an exploration of what happens when the null hypothesis
+    is true, which suggests conceptual understanding rather than procedural mastery.
+  citations:
+  - field: syllabus[1].summary
+    evidence: exploration of what happens when you know the null hypothesis is true.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of R programming skills required or taught.
+  - There is no explicit mention of metacognitive or higher-order analytical/evaluative
+    skills.
+  - Details on assessment types, feedback, or student support are absent.
+  - No explicit mention of data cleaning, visualization, or interpretation beyond
+    statistical testing.

@@ -1,0 +1,96 @@
+course_id: '24422'
+course_title: Joining Data with dplyr
+learning_outcomes:
+- id: LO1
+  claim: Recall and describe the purpose of different join types in dplyr (inner,
+    left, right, full, semi, anti).
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly lists the join types covered and the course focuses
+    on learning these verbs.
+  citations:
+  - field: syllabus[0].summary
+    evidence: 'Get started with your first joining verb: inner-join!'
+  - field: syllabus[1].summary
+    evidence: Learn two more mutating joins, the left and right join, which are mirror
+      images of each other!
+  - field: syllabus[2].summary
+    evidence: 'In this chapter, you''ll cover three more joining verbs: full-join,
+      semi-join, and anti-join.'
+- id: LO2
+  claim: Understand and explain use cases for different join types in data analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions learning use cases for each join type and applying
+    them to answer questions about data.
+  citations:
+  - field: syllabus[1].summary
+    evidence: You'll learn use cases for each type of join as you explore parts and
+      colors of LEGO themes.
+  - field: syllabus[2].summary
+    evidence: You'll then use these verbs to answer questions about the similarities
+      and differences between a variety of LEGO sets.
+- id: LO3
+  claim: Apply dplyr join functions to combine multiple tables and answer data-driven
+    questions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course is structured around practicing joins on real datasets, indicating
+    procedural application.
+  citations:
+  - field: overview
+    evidence: You'll practice your skills using a fun dataset about LEGOs from the
+      Rebrickable website.
+  - field: syllabus[0].summary
+    evidence: You'll learn to join tables together to answer questions about the LEGO
+      dataset.
+  - field: syllabus[3].summary
+    evidence: 'Put together all the types of join you learned in this course to analyze
+      a new dataset: Stack Overflow questions, answers, and tags.'
+- id: LO4
+  claim: Analyze and interpret the results of different join operations to compare
+    and contrast data across tables.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The course includes comparing similarities and differences between datasets
+    using joins, which requires analysis.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll then use these verbs to answer questions about the similarities
+      and differences between a variety of LEGO sets.
+- id: LO5
+  claim: Combine multiple join techniques and the bind_rows function to perform more
+    complex data manipulations and visualizations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final chapter involves synthesizing all join types and using bind_rows
+    to analyze and visualize trends in a new dataset.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Put together all the types of join you learned in this course to analyze
+      a new dataset... You'll also master one more method for combining tables, the
+      bind_rows verb, which stacks tables on top of each other.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention assessment types or depth of metacognitive
+    reflection.
+  - No explicit mention of error handling or troubleshooting join operations.
+  - No details on the extent of data visualization skills beyond 'calculating and
+    visualizing trends.'

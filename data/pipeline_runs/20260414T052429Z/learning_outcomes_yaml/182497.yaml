@@ -1,0 +1,93 @@
+course_id: '182497'
+course_title: Dashboard Design Concepts
+learning_outcomes:
+- id: '1'
+  claim: Understand the fundamentals of dashboard design, including structure and
+    key measurements.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary repeatedly emphasize learning the fundamentals
+    of dashboard design, including structure and key measurements. However, without
+    a syllabus, the depth of understanding is unclear.
+  citations:
+  - field: overview
+    evidence: You’ll start this course by covering some of the foundations of dashboard
+      design, including the structure and key measurements to consider when building
+      dashboards.
+  - field: summary
+    evidence: Understand dashboard design fundamentals, visual analytics components,
+      and dashboard types.
+- id: '2'
+  claim: Identify and select appropriate performance metrics for dashboards.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions choosing the right performance metrics as a skill
+    developed in the course, but without a syllabus, the extent of application is
+    uncertain.
+  citations:
+  - field: overview
+    evidence: including how to choose the right performance metrics
+- id: '3'
+  claim: Understand principles of visual analytics and their application to dashboard
+    design.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview and summary reference visual analytics principles and components,
+    but do not specify advanced analysis or creation.
+  citations:
+  - field: overview
+    evidence: you’ll explore some of the principles of visual analytics, giving you
+      the knowledge you need to improve your dashboards through data quality and metadata.
+  - field: summary
+    evidence: Understand dashboard design fundamentals, visual analytics components,
+      and dashboard types.
+- id: '4'
+  claim: Recognize different types of dashboards and their purposes.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary and overview mention dashboard types and taxonomies, but
+    do not indicate deeper analysis or application.
+  citations:
+  - field: summary
+    evidence: Understand dashboard design fundamentals, visual analytics components,
+      and dashboard types.
+  - field: overview
+    evidence: After covering dashboard taxonomies, you’ll finish the course by learning
+      about dashboard software and how to measure the performance of the dashboards
+      you create.
+- id: '5'
+  claim: Gain awareness of dashboard software and basic methods for measuring dashboard
+    performance.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The overview states that the course ends with learning about dashboard
+    software and performance measurement, but does not specify hands-on skills or
+    evaluation.
+  citations:
+  - field: overview
+    evidence: you’ll finish the course by learning about dashboard software and how
+      to measure the performance of the dashboards you create.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level detail and specific activities are missing.
+  - It is unclear whether students will actually create dashboards or only learn about
+    their design.
+  - The depth of application, analysis, or creation skills is not specified.
+  - No explicit mention of assessment or practical exercises.

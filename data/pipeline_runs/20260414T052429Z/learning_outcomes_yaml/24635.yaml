@@ -1,0 +1,90 @@
+course_id: '24635'
+course_title: Factor Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the concept of latent variables and their importance in research.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary and overview repeatedly mention latent variables and their
+    role in constructs like personality, math ability, and workplace climate. The
+    course aims to help students understand dimensionality and the need for models
+    that match theories and data.
+  citations:
+  - field: summary
+    evidence: Explore latent variables, such as personality, using exploratory and
+      confirmatory factor analyses.
+  - field: overview
+    evidence: The world is full of unobservable variables that can't be directly measured.
+      You might be interested in a construct such as math ability, personality traits,
+      or workplace climate.
+- id: LO2
+  claim: Apply exploratory factor analysis (EFA) in R, including viewing and interpreting
+    factor loadings and scores.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview states that students will learn to conduct EFA, view and
+    visualize factor loadings, and interpret factor scores. The course is described
+    as intermediate, suggesting some application skills.
+  citations:
+  - field: overview
+    evidence: You’ll start by getting to grips with exploratory factor analysis (EFA),
+      learning how to view and visualize factor loadings, interpret factor scores,
+      and view and test correlations.
+  - field: details.level
+    evidence: intermediate
+- id: LO3
+  claim: Apply confirmatory factor analysis (CFA) in R, including creating syntax
+    from EFA results and theory.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions learning how to conduct CFA and create syntax from
+    EFA results and theory, indicating procedural application.
+  citations:
+  - field: overview
+    evidence: Next, you’ll discover confirmatory factor analysis (CFAs), learning
+      how to create syntax from EFA results and theory.
+- id: LO4
+  claim: Differentiate between exploratory and confirmatory factor analysis and understand
+    when to use each.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview states that the final chapter looks at EFAs vs CFAs, giving
+    examples of both, and discusses improving models and measures.
+  citations:
+  - field: overview
+    evidence: The final chapter looks at EFAs vs CFAs, giving examples of both. You’ll
+      also learn how to improve your model and measure when using them.
+- id: LO5
+  claim: Develop and refine measurement models using factor analysis techniques.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview and summary mention developing, refining, and sharing measures
+    using factor analysis, which implies procedural application but not necessarily
+    higher-order skills.
+  citations:
+  - field: overview
+    evidence: With these statistical techniques in your toolkit, you'll be able to
+      develop, refine, and share your measures.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level detail is missing.
+  - No explicit mention of assessment types or depth of practical exercises.
+  - No information on prerequisite knowledge or assumed statistical background.
+  - No explicit coverage of advanced or metacognitive skills.

@@ -1,0 +1,100 @@
+course_id: '24700'
+course_title: Python for MATLAB Users
+learning_outcomes:
+- id: LO1
+  claim: Identify and explain key similarities and differences between MATLAB and
+    Python, including basic usage of methods and packages.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter explicitly focuses on transitioning from MATLAB to
+    Python, highlighting similarities and differences, and introducing methods and
+    packages.
+  citations:
+  - field: syllabus[0].title
+    evidence: From MATLAB to Python
+  - field: syllabus[0].summary
+    evidence: learn about some of the similarities and differences between MATLAB
+      and Python, how to use methods and packages
+- id: LO2
+  claim: Apply NumPy arrays for mathematical operations, indexing, and data manipulation,
+    and use Matplotlib to create custom plots.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter details hands-on use of NumPy arrays for operations
+    and indexing, and the creation of plots with Matplotlib.
+  citations:
+  - field: syllabus[1].title
+    evidence: NumPy and Matplotlib
+  - field: syllabus[1].summary
+    evidence: performing mathematical operations and indexing... making customs plots
+      of your arrays using Matplotlib
+- id: LO3
+  claim: Create and manipulate Python dictionaries and pandas DataFrames for organizing
+    and transforming tabular data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter covers creating dictionaries, modifying them, and working
+    with pandas DataFrames, including transforming data types.
+  citations:
+  - field: syllabus[2].title
+    evidence: Dictionaries and pandas
+  - field: syllabus[2].summary
+    evidence: create dictionaries by setting key-value pairs... introduced to one
+      of the most important packages... pandas... transform different data types into
+      DataFrames
+- id: LO4
+  claim: Use Python control flow constructs (if, else, elif, comparison operators)
+    and loops to process and filter data structures, including NumPy arrays.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The final chapter focuses on control flow, loops, and filtering arrays
+    using comparison operators.
+  citations:
+  - field: syllabus[3].title
+    evidence: Control Flow and Loops
+  - field: syllabus[3].summary
+    evidence: iterate through different Python data structures using for loops...
+      contingencies using if, else, and elif and the Python comparison operators...
+      filter your arrays
+- id: LO5
+  claim: Demonstrate a fundamental understanding of Python syntax and its core libraries
+    for data analysis and visualization.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary emphasize gaining a fundamental understanding
+    of Python syntax and libraries for data science, though this is a synthesis of
+    the course's general aims rather than a specific chapter outcome.
+  citations:
+  - field: overview
+    evidence: learn how to migrate from Matlab to Python for data analysis and visualization...
+      Learn the fundamentals of Python syntax, and how to use NumPy arrays... use
+      matplotlib to discover trends, correlations, and patterns
+  - field: summary
+    evidence: Transition from MATLAB by learning some fundamental Python concepts,
+      and diving into the NumPy and Matplotlib packages.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not provide evidence of advanced data science techniques, deep
+    statistical analysis, or complex programming constructs beyond basic data structures
+    and control flow.
+  - There is no explicit mention of assessment types, project work, or metacognitive
+    strategies.
+  - The course appears to focus on foundational procedural and conceptual knowledge,
+    with no evidence for higher-order creation or evaluation skills.

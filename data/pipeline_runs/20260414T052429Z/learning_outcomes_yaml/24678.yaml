@@ -1,0 +1,91 @@
+course_id: '24678'
+course_title: Predicting CTR with Machine Learning in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand the importance of click-through rates (CTR) in targeted advertising
+    and the basics of predicting CTR using machine learning models.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly states that students will learn why CTR
+    is integral to targeted advertising and how to use machine learning models for
+    CTR prediction. This supports conceptual understanding and basic application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you’ll learn why click-through-rates (CTR) are integral to targeted
+      advertising, how to perform basic DataFrame manipulation, and how you can use
+      machine learning models to predict CTR.
+- id: LO2
+  claim: Apply exploratory data analysis (EDA) techniques using pandas, including
+    inspecting data types, handling missing data, and performing feature engineering
+    on categorical features.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter summary details hands-on EDA tasks with pandas, including
+    feature engineering, which are procedural skills at the application level.
+  citations:
+  - field: syllabus[1].summary
+    evidence: you’ll use the pandas library to look at columns and data types, explore
+      missing data, and use hashing to perform feature engineering on categorical
+      features.
+- id: LO3
+  claim: Evaluate machine learning models for CTR prediction using performance metrics
+    such as precision and recall, and understand their relevance to real-world business
+    questions like ROI.
+  knowledge_type: conceptual
+  process_level: evaluate
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The third chapter focuses on using evaluation metrics to answer real-world
+    questions, which involves relational understanding and evaluation.
+  citations:
+  - field: syllabus[2].summary
+    evidence: Find out how you can use measures of model performance including precision
+      and recall to answer real-world questions, such as evaluating ROI on ad spend.
+- id: LO4
+  claim: Improve machine learning models for CTR prediction using ensemble methods
+    and hyperparameter tuning.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third chapter also introduces ensemble methods and hyperparameter
+    tuning as ways to improve models, which are procedural skills.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You’ll also learn ways to improve upon those evaluation metrics, such
+      as ensemble methods and hyperparameter tuning.
+- id: LO5
+  claim: Understand and apply deep learning models, specifically multi-layer perceptrons
+    (MLP) and neural networks, for CTR prediction, including basic hyperparameter
+    tuning and regularization.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth chapter covers the application of deep learning models and
+    related techniques, indicating procedural knowledge at the application level.
+  citations:
+  - field: syllabus[3].summary
+    evidence: you’ll learn how deep learning can be used to reduce that risk. You’ll
+      focus on multi-layer perceptron (MLP) and neural network models, and learn how
+      these can be used to capture the complex relationship between variables to more
+      accurately predict CTR. Lastly, you’ll explore how to apply the basics of hyperparameter
+      tuning and regularization to classification models.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of implementation or the complexity of datasets
+    used, so claims about advanced mastery or real-world deployment cannot be made.
+  - There is no explicit mention of metacognitive skills or the ability to create
+    novel models or solutions beyond applying taught techniques.
+  - Assessment methods and the extent of hands-on practice are not described.

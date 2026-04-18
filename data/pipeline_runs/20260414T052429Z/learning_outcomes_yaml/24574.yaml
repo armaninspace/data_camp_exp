@@ -1,0 +1,81 @@
+course_id: '24574'
+course_title: Introduction to Portfolio Analysis in R
+learning_outcomes:
+- id: '1'
+  claim: Compute asset returns and portfolio weights using R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter explicitly states that students will compute portfolio
+    weights and returns in R, indicating hands-on procedural application.
+  citations:
+  - field: syllabus[0].title
+    evidence: The Building Blocks
+  - field: syllabus[0].summary
+    evidence: This chapter is about computing those portfolio weights and returns
+      in R.
+- id: '2'
+  claim: Analyze investment performance using statistical and graphical methods in
+    R, including calculation of average return, risk, and risk-adjusted return over
+    rolling samples.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.95
+  reasoning: The second chapter describes analyzing performance using R, including
+    statistical and graphical analysis and calculation of key performance metrics,
+    which requires integrating multiple concepts and methods.
+  citations:
+  - field: syllabus[1].title
+    evidence: Analyzing Performance
+  - field: syllabus[1].summary
+    evidence: This chapter introduces the R functionality to analyze the investment
+      performance based on a statistical analysis of the portfolio returns. It includes
+      graphical analysis and the calculation of performance statistics expressing
+      average return, risk, and risk-adjusted return over rolling estimation samples.
+- id: '3'
+  claim: Explain how individual asset returns, volatilities, and correlations contribute
+    to overall portfolio performance.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter focuses on understanding the interaction of returns,
+    volatilities, and correlations in determining portfolio performance, which is
+    conceptual understanding.
+  citations:
+  - field: syllabus[2].title
+    evidence: Performance Drivers
+  - field: syllabus[2].summary
+    evidence: determine how individual (expected) returns, volatilities, and correlations
+      interact to determine the total portfolio performance.
+- id: '4'
+  claim: Determine optimal portfolio weights in R to achieve a target return with
+    minimum variance, subject to constraints.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The fourth chapter states that students will learn to determine optimal
+    portfolio weights in R, applying optimization techniques with constraints.
+  citations:
+  - field: syllabus[3].title
+    evidence: Optimizing the Portfolio
+  - field: syllabus[3].summary
+    evidence: you learn how to determine in R the portfolio weights that are optimal
+      in terms of achieving a target return with minimum variance, while satisfying
+      constraints on the portfolio weights.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear procedural and conceptual outcomes but does not specify
+    the depth of statistical methods or the complexity of optimization problems covered.
+  - There is no explicit mention of metacognitive skills or higher-order creative
+    tasks (e.g., designing new portfolio strategies).
+  - Assessment methods and the extent of independent project work are not described.

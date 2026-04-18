@@ -1,0 +1,84 @@
+course_id: '24701'
+course_title: Handling Missing Data with Imputations in R
+learning_outcomes:
+- id: LO1
+  claim: Identify and explain the risks of missing data and the three missing data
+    mechanisms.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter explicitly states that students will learn why missing
+    data is a risk and be introduced to the three missing data mechanisms, as well
+    as how to recognize them.
+  citations:
+  - field: syllabus[0].summary
+    evidence: find out why missing data can be a risk... introduced to the three missing
+      data mechanisms and learn how to recognize them using statistical tests and
+      visualization tools.
+- id: LO2
+  claim: Apply donor-based imputation techniques (mean, hot-deck, k-Nearest-Neighbors)
+    to real-world datasets in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter covers learning and applying three donor-based imputation
+    methods to a real-world dataset, indicating procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: 'learn three donor-based techniques: mean, hot-deck, and k-Nearest-Neighbors
+      imputation... learn how to apply them to a real-world tropical weather dataset.'
+- id: LO3
+  claim: Explain and implement model-based imputation using statistical and machine
+    learning models (linear regression, logistic regression, random forests) in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter describes using statistical and machine learning models
+    for imputation, including understanding how models make predictions and drawing
+    imputed values from conditional distributions.
+  citations:
+  - field: syllabus[2].summary
+    evidence: learn how to use statistical and machine learning models, such as linear
+      regression, logistic regression, and random forests, to impute missing data...
+      use this knowledge to draw the imputed values from conditional distributions.
+- id: LO4
+  claim: Incorporate and account for uncertainty in imputed data using bootstrapping
+    and chained equations (mice package) in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The final chapter focuses on using bootstrapping and chained equations
+    to incorporate imputation uncertainty, indicating procedural knowledge and application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: discover how bootstrapping and chained equation using the mice package
+      can be used to incorporate imputation uncertainty into your models and analyses
+- id: LO5
+  claim: Use statistical tests and visualization tools to diagnose and recognize missing
+    data patterns.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The first chapter mentions recognizing missing data mechanisms using
+    statistical tests and visualization tools, implying practical application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learn how to recognize them using statistical tests and visualization
+      tools.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment or depth of mastery beyond application.
+  - No details on the extent of metacognitive or evaluative skills developed.
+  - No explicit coverage of limitations or pitfalls of imputation methods beyond uncertainty.

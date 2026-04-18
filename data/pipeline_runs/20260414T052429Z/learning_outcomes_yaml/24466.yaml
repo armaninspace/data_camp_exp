@@ -1,0 +1,80 @@
+course_id: '24466'
+course_title: Big Data Fundamentals with PySpark
+learning_outcomes:
+- id: LO1
+  claim: Describe fundamental concepts of Big Data and compare different frameworks
+    for processing Big Data, with a focus on Apache Spark.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly covers Big Data concepts and frameworks,
+    and asks students to understand why Spark is considered the best framework.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Big Data analysis with Spark
+  - field: syllabus[0].summary
+    evidence: introduces the exciting world of Big Data, as well as the various concepts
+      and different frameworks for processing Big Data. You will understand why Apache
+      Spark is considered the best framework for BigData.
+- id: LO2
+  claim: Explain the concept of Resilient Distributed Datasets (RDDs) in Spark and
+    demonstrate how to create and execute RDD transformations and actions using PySpark.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter focuses on RDDs, their creation, and execution of
+    transformations and actions, indicating students will be able to apply these procedures.
+  citations:
+  - field: syllabus[1].title
+    evidence: Programming in PySpark RDD’s
+  - field: syllabus[1].summary
+    evidence: introduces RDDs and shows how RDDs can be created and executed using
+      RDD Transformations and Actions.
+- id: LO3
+  claim: Use Spark SQL and DataFrames in Python to process structured data and perform
+    distributed SQL queries.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter covers using Spark SQL and DataFrames, including their
+    use as a distributed SQL query engine, suggesting students will be able to apply
+    these tools.
+  citations:
+  - field: syllabus[2].title
+    evidence: PySpark SQL & DataFrames
+  - field: syllabus[2].summary
+    evidence: learn about Spark SQL... provides a programming abstraction called DataFrames...
+      shows how Spark SQL allows you to use DataFrames in Python.
+- id: LO4
+  claim: Implement basic machine learning algorithms in PySpark MLlib, including building
+    a movie recommendation engine, a spam filter, and applying k-means clustering.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth chapter specifies that students will build a recommendation
+    engine, a spam filter, and use k-means clustering, indicating hands-on application
+    of MLlib algorithms.
+  citations:
+  - field: syllabus[3].title
+    evidence: Machine Learning with PySpark MLlib
+  - field: syllabus[3].summary
+    evidence: learn important Machine Learning algorithms. You will build a movie
+      recommendation engine and a spam filter, and use k-means clustering.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level outcomes, but does not specify depth
+    of theoretical understanding or assessment methods.
+  - No explicit mention of troubleshooting, optimization, or advanced Spark/MLlib
+    features.
+  - No evidence of metacognitive or evaluative learning outcomes (e.g., reflecting
+    on model performance or comparing algorithms).

@@ -1,0 +1,89 @@
+course_id: '205173'
+course_title: Generative AI Concepts
+learning_outcomes:
+- id: '1'
+  claim: Define generative AI and distinguish it from traditional machine learning
+    and artificial general intelligence (AGI).
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will familiarize themselves
+    with generative AI, its ability to create content, and its differences from traditional
+    machine learning and AGI.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Familiarize yourself with the concept of generative AI and its ability
+      to create content is introduced, along with its real-world applications and
+      limitations. You'll delve into the differences between traditional machine learning
+      models, generative AI, and artificial general intelligence (AGI)...
+- id: '2'
+  claim: Describe the main steps involved in developing generative AI models, including
+    research, data collection, model training, and evaluation.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus details the essential steps in creating generative AI models,
+    including research, design, data collection, model training, and evaluation.
+  citations:
+  - field: syllabus[1].summary
+    evidence: 'In this chapter, we cover the essential steps in creating generative
+      AI models: research and design, data collection, model training, and evaluation.'
+- id: '3'
+  claim: Identify and explain key legal, ethical, and social considerations in the
+    use and development of generative AI, including bias, intellectual property, privacy,
+    and misuse.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus highlights discussion of social bias, intellectual property,
+    privacy, and ethical considerations to prevent misuse.
+  citations:
+  - field: syllabus[2].summary
+    evidence: We discuss the challenges and strategies to mitigate social bias, intellectual
+      property and privacy issues, and ethical considerations to prevent misuse.
+- id: '4'
+  claim: Summarize the potential impacts of generative AI on society, including productivity,
+    job dynamics, education, media, entertainment, and scientific advancements.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus mentions examining the impact and integration of generative
+    AI into various societal domains.
+  citations:
+  - field: syllabus[3].summary
+    evidence: It discusses key contributors to AI development, from universities to
+      companies, and explores societal adaptations to AI. It delves into AI's implications
+      for productivity, job dynamics, education, media, entertainment, scientific
+      advancements, and ethical considerations.
+- id: '5'
+  claim: Recognize strategies for responsible and effective use of generative AI tools.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and syllabus emphasize responsible leveraging and
+    use of generative AI, including strategies to mitigate bias and prevent misuse.
+  citations:
+  - field: overview
+    evidence: Discover how to begin responsibly leveraging generative AI.
+  - field: syllabus[2].summary
+    evidence: We discuss the challenges and strategies to mitigate social bias, intellectual
+      property and privacy issues, and ethical considerations to prevent misuse.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course is non-technical and introductory, so depth of understanding or ability
+    to critically evaluate or create generative AI models is not supported.
+  - No explicit mention of hands-on activities or assessments, so claims about practical
+    skills are limited to recognition and understanding.
+  - No evidence of metacognitive or higher-order creative outcomes.

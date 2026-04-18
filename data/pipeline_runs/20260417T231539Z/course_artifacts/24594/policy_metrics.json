@@ -1,0 +1,33 @@
+{
+  "bucket_distribution": {
+    "cache_servable": 12,
+    "analysis_only": 20,
+    "curated_core": 4
+  },
+  "family_coverage": {
+    "friction": 20,
+    "procedural": 7,
+    "entry": 10,
+    "diagnostic": 5,
+    "transfer": 7,
+    "bridge": 1
+  },
+  "canonical_count": 36,
+  "alias_count": 0,
+  "curated_core_count": 4,
+  "cache_servable_rate": 0.4444,
+  "analysis_only_rate": 0.5556,
+  "hard_reject_rate": 0.0,
+  "entry_share": 0.2,
+  "friction_share": 0.4,
+  "top_reason_codes": {
+    "servable_fail_low_serviceability": 20,
+    "quarantined_analysis_only": 20,
+    "servable_pass": 16,
+    "servable_fail_context_dependence": 14,
+    "servable_fail_instability": 14,
+    "not_distinct_enough_for_curation": 12,
+    "servable_fail_generic_template": 9,
+    "servable_fail_orientation_context": 4
+  }
+}

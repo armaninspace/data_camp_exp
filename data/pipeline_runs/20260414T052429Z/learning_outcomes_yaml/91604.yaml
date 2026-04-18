@@ -1,0 +1,92 @@
+course_id: '91604'
+course_title: Interactive Data Visualization with Bokeh
+learning_outcomes:
+- id: LO1
+  claim: Recall and describe the fundamental features and configuration tools of the
+    Bokeh library for interactive data visualization.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The syllabus explicitly states that students will learn about the fundamentals
+    of Bokeh and configuration tools such as the HoverTool.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Bokeh
+  - field: syllabus[0].summary
+    evidence: Learn about the fundamentals of the Bokeh library... set up configuration
+      tools, including the HoverTool...
+- id: LO2
+  claim: Apply Bokeh to build interactive plots in Python, enabling stakeholder interaction.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The course overview and syllabus indicate students will build interactive
+    plots and set up tools for stakeholder interaction.
+  citations:
+  - field: syllabus[0].summary
+    evidence: building interactive plots... providing various opportunities for stakeholders
+      to interact with your plots
+  - field: overview
+    evidence: enable you to level up your Python data visualization skills by building
+      interactive plots
+- id: LO3
+  claim: Customize visualizations in Bokeh by modifying axes, legends, glyph settings,
+    and applying custom themes.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus specifically lists customizing axes, legends, glyphs, and
+    themes as learning objectives.
+  citations:
+  - field: syllabus[1].title
+    evidence: Customizing Visualizations
+  - field: syllabus[1].summary
+    evidence: customize axes, create and enhance a legend, modify glyph settings,
+      and apply Bokeh's custom themes
+- id: LO4
+  claim: Create and enhance data stories using grouped bar plots, subplots, annotations,
+    and text modifications in Bokeh.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus describes producing grouped bar plots, building subplots,
+    adding annotations, and modifying text for storytelling.
+  citations:
+  - field: syllabus[2].title
+    evidence: Storytelling with Visualizations
+  - field: syllabus[2].summary
+    evidence: produce grouped bar plots with categorical data, build multiple subplots,
+      add annotations, and modify the text
+- id: LO5
+  claim: Implement and configure Bokeh widgets (Spinners, Sliders, Select) to enable
+    user-driven updates and interactivity in visualizations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The syllabus details learning about Spinners, Sliders, and Select widgets
+    for interactive visualization updates.
+  citations:
+  - field: syllabus[3].title
+    evidence: Introduction to Widgets
+  - field: syllabus[3].summary
+    evidence: learn about Spinners... Sliders... Select widget, which will enable
+      plot updates based on dropdown options
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention advanced analytical or evaluative skills
+    (e.g., analyzing or critiquing visualizations).
+  - There is no explicit mention of metacognitive strategies or reflective practices.
+  - No evidence of project-based or creative synthesis tasks (e.g., designing original
+    visualization dashboards from scratch).

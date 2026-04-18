@@ -1,0 +1,100 @@
+course_id: '24704'
+course_title: Course Creation at DataCamp
+learning_outcomes:
+- id: LO1
+  claim: Describe the phases of the DataCamp course creation process and identify
+    the roles of key team members.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter explicitly covers the phases of course creation
+    and introduces the roles of Curriculum Leads and Content Developers. The focus
+    is on understanding the process and the people involved.
+  citations:
+  - field: syllabus[0].title
+    evidence: Our Process
+  - field: syllabus[0].summary
+    evidence: overview of the different phases of course creation and the people you'll
+      work with during each phase
+- id: LO2
+  claim: Explain the core values (accountability, predictability, transparency) guiding
+    DataCamp course creation and describe the main tools used (GitHub, Asana, course
+    editor).
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter focuses on understanding the values and tools used
+    in course creation, emphasizing their importance and how they support the process.
+  citations:
+  - field: syllabus[1].title
+    evidence: Tools We Use
+  - field: syllabus[1].summary
+    evidence: learn the values we hold ourselves and our instructors to...understand
+      the tools we use, how they work, and how they support our values
+  - field: subjects
+    evidence: GitHub, Asana
+- id: LO3
+  claim: Identify the structure of a high-quality DataCamp course and apply basic
+    tips for effective eLearning instruction.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter discusses course structure, learning objectives, and
+    provides tips for effective online teaching, suggesting learners can apply these
+    tips in their own course creation.
+  citations:
+  - field: syllabus[2].title
+    evidence: What Makes a Great Course?
+  - field: syllabus[2].summary
+    evidence: provide a few tips and tricks on how to teach effectively on an eLearning
+      platform
+- id: LO4
+  claim: Develop course materials using DataCamp's tools, including creating videos
+    and interactive exercises, and follow guidelines for engagement and quality assurance.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The fourth chapter covers the practical aspects of developing course
+    content, including video creation, interactive exercises, and the use of GitHub
+    for content review.
+  citations:
+  - field: syllabus[3].title
+    evidence: Start Developing!
+  - field: syllabus[3].summary
+    evidence: learn about how to create videos and the different types of interactive
+      exercises...guidelines we follow to ensure our courses keep our students engaged...learn
+      about how [GitHub] is used to get all the content...reviewed
+- id: LO5
+  claim: Summarize the steps involved in launching a DataCamp course and describe
+    post-launch activities, including payment and opportunities for further involvement.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The final chapter outlines what happens after course development, including
+    launch, payment, and further opportunities, focusing on recalling these steps.
+  citations:
+  - field: syllabus[4].title
+    evidence: Course Launch and Beyond!
+  - field: syllabus[4].summary
+    evidence: learn about the different aspects of course launch, the work that goes
+      into a course following its launch, and importantly, how you will get paid for
+      your course
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level summaries, but does not detail the depth
+    of skill development (e.g., actual hands-on practice or assessment of mastery).
+  - No explicit mention of assessment methods or expected proficiency with the tools.
+  - Limited information on the extent of pedagogical theory or advanced instructional
+    design covered.

@@ -8,7 +8,18 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
 
 from course_pipeline.config import Settings
-from course_pipeline.schemas import ChapterOut, NormalizedCourse
+from course_pipeline.schemas import (
+    CanonicalAnswerOut,
+    ChapterOut,
+    ClaimCoverageAuditOut,
+    ClaimQuestionGroupOut,
+    LearningOutcomeExtractionOut,
+    NormalizedCourse,
+    QuestionCacheMatchResult,
+    QuestionCacheValidationLogOut,
+    QuestionGroupVariationOut,
+)
+from course_pipeline.utils import slugify
 
 
 DDL = """
@@ -63,6 +74,138 @@ create table if not exists chapters (
   confidence double precision not null,
   unique (run_id, course_id, chapter_index)
 );
+
+create table if not exists learning_outcome_extractions (
+  learning_outcome_extraction_pk bigserial primary key,
+  run_id text not null references extraction_runs(run_id),
+  course_id text not null,
+  course_title text not null,
+  payload jsonb not null,
+  unique (run_id, course_id)
+);
+
+create table if not exists claim_question_groups (
+  question_group_id text primary key,
+  course_id text not null,
+  claim_id text not null,
+  intent_slug text not null,
+  canonical_question text not null,
+  pedagogical_move text not null,
+  canonical_answer_id text not null,
+  confidence double precision not null,
+  citations jsonb not null default '[]'::jsonb,
+  source_run_id text not null,
+  prompt_version text not null,
+  generation_stage text not null default 'atomized',
+  validator_status text not null default 'pending',
+  coverage_status text not null default 'accounted_for',
+  created_at timestamptz not null default now(),
+  unique (course_id, claim_id, intent_slug)
+);
+
+create index if not exists idx_claim_question_groups_course_id on claim_question_groups (course_id);
+create index if not exists idx_claim_question_groups_claim_id on claim_question_groups (claim_id);
+
+create table if not exists question_group_variations (
+  variation_id text primary key,
+  question_group_id text not null references claim_question_groups(question_group_id),
+  text text not null,
+  normalized_text text not null,
+  equivalence_notes text not null,
+  source text not null,
+  candidate_source text not null default 'variation_generation',
+  validation_decision text not null default 'pending',
+  validation_reason text,
+  accepted_for_runtime boolean not null default false,
+  created_at timestamptz not null default now(),
+  unique (question_group_id, normalized_text)
+);
+
+create index if not exists idx_question_group_variations_group_id on question_group_variations (question_group_id);
+create index if not exists idx_question_group_variations_normalized_text on question_group_variations (normalized_text);
+
+create table if not exists canonical_answers (
+  canonical_answer_id text primary key,
+  question_group_id text not null references claim_question_groups(question_group_id),
+  answer_markdown text not null,
+  answer_style text not null,
+  answer_version integer not null,
+  reviewer_state text not null,
+  citations jsonb not null default '[]'::jsonb,
+  source_run_id text not null,
+  prompt_version text not null,
+  answer_fit_status text not null default 'pending',
+  grounding_status text not null default 'pending',
+  grounding_reason text,
+  answer_scope_notes text,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists idx_canonical_answers_group_id on canonical_answers (question_group_id);
+
+create table if not exists question_cache_match_logs (
+  match_log_id bigserial primary key,
+  course_id text,
+  claim_id text,
+  question_group_id text,
+  variation_id text,
+  canonical_answer_id text,
+  incoming_question text not null,
+  normalized_question text not null,
+  match_method text not null,
+  match_score double precision not null,
+  resolved_as_hit boolean not null,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists question_cache_fallback_logs (
+  fallback_log_id bigserial primary key,
+  course_id text,
+  claim_id text,
+  incoming_question text not null,
+  normalized_question text not null,
+  fallback_reason text not null,
+  llm_response_id text,
+  response_markdown text,
+  candidate_for_cache_warming boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists question_cache_validation_logs (
+  validation_log_id bigserial primary key,
+  entity_type text not null,
+  entity_id text not null,
+  validator_type text not null,
+  decision text not null,
+  reason text,
+  model_version text,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists claim_coverage_audit (
+  audit_id bigserial primary key,
+  course_id text not null,
+  claim_id text not null,
+  produced_question_groups boolean not null,
+  question_group_count integer not null default 0,
+  no_groups_reason text,
+  source_run_id text not null,
+  created_at timestamptz not null default now(),
+  unique (source_run_id, course_id, claim_id)
+);
+
+alter table if exists claim_question_groups add column if not exists generation_stage text not null default 'atomized';
+alter table if exists claim_question_groups add column if not exists validator_status text not null default 'pending';
+alter table if exists claim_question_groups add column if not exists coverage_status text not null default 'accounted_for';
+alter table if exists question_group_variations add column if not exists candidate_source text not null default 'variation_generation';
+alter table if exists question_group_variations add column if not exists validation_decision text not null default 'pending';
+alter table if exists question_group_variations add column if not exists validation_reason text;
+alter table if exists question_group_variations add column if not exists accepted_for_runtime boolean not null default false;
+alter table if exists canonical_answers add column if not exists answer_fit_status text not null default 'pending';
+alter table if exists canonical_answers add column if not exists grounding_status text not null default 'pending';
+alter table if exists canonical_answers add column if not exists grounding_reason text;
+alter table if exists canonical_answers add column if not exists answer_scope_notes text;
+alter table if exists question_cache_fallback_logs add column if not exists response_markdown text;
 """
 
 
@@ -213,3 +356,205 @@ class Storage:
                 "confidence": chapter.confidence,
             },
         )
+
+    def upsert_learning_outcome_extraction(
+        self,
+        run_id: str,
+        extraction: LearningOutcomeExtractionOut,
+    ) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into learning_outcome_extractions (run_id, course_id, course_title, payload)
+                    values (:run_id, :course_id, :course_title, cast(:payload as jsonb))
+                    on conflict (run_id, course_id) do update set
+                      course_title = excluded.course_title,
+                      payload = excluded.payload
+                    """
+                ),
+                {
+                    "run_id": run_id,
+                    "course_id": extraction.course_id,
+                    "course_title": extraction.course_title,
+                    "payload": extraction.model_dump_json(),
+                },
+            )
+
+    def upsert_question_group(self, group: ClaimQuestionGroupOut) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into claim_question_groups (
+                      question_group_id, course_id, claim_id, intent_slug, canonical_question,
+                      pedagogical_move, canonical_answer_id, confidence, citations,
+                      source_run_id, prompt_version, generation_stage, validator_status, coverage_status
+                    )
+                    values (
+                      :question_group_id, :course_id, :claim_id, :intent_slug, :canonical_question,
+                      :pedagogical_move, :canonical_answer_id, :confidence, cast(:citations as jsonb),
+                      :source_run_id, :prompt_version, :generation_stage, :validator_status, :coverage_status
+                    )
+                    on conflict (question_group_id) do update set
+                      canonical_question = excluded.canonical_question,
+                      pedagogical_move = excluded.pedagogical_move,
+                      canonical_answer_id = excluded.canonical_answer_id,
+                      confidence = excluded.confidence,
+                      citations = excluded.citations,
+                      source_run_id = excluded.source_run_id,
+                      prompt_version = excluded.prompt_version,
+                      generation_stage = excluded.generation_stage,
+                      validator_status = excluded.validator_status,
+                      coverage_status = excluded.coverage_status
+                    """
+                ),
+                {
+                    **group.model_dump(mode="json"),
+                    "citations": json.dumps([c.model_dump(mode="json") for c in group.citations]),
+                },
+            )
+
+    def upsert_question_variation(self, variation: QuestionGroupVariationOut) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into question_group_variations (
+                      variation_id, question_group_id, text, normalized_text, equivalence_notes, source,
+                      candidate_source, validation_decision, validation_reason, accepted_for_runtime
+                    )
+                    values (
+                      :variation_id, :question_group_id, :text, :normalized_text, :equivalence_notes, :source,
+                      :candidate_source, :validation_decision, :validation_reason, :accepted_for_runtime
+                    )
+                    on conflict (variation_id) do update set
+                      text = excluded.text,
+                      normalized_text = excluded.normalized_text,
+                      equivalence_notes = excluded.equivalence_notes,
+                      source = excluded.source,
+                      candidate_source = excluded.candidate_source,
+                      validation_decision = excluded.validation_decision,
+                      validation_reason = excluded.validation_reason,
+                      accepted_for_runtime = excluded.accepted_for_runtime
+                    """
+                ),
+                variation.model_dump(mode="json"),
+            )
+
+    def upsert_canonical_answer(self, answer: CanonicalAnswerOut) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into canonical_answers (
+                      canonical_answer_id, question_group_id, answer_markdown, answer_style,
+                      answer_version, reviewer_state, citations, source_run_id, prompt_version,
+                      answer_fit_status, grounding_status, grounding_reason, answer_scope_notes
+                    )
+                    values (
+                      :canonical_answer_id, :question_group_id, :answer_markdown, :answer_style,
+                      :answer_version, :reviewer_state, cast(:citations as jsonb), :source_run_id, :prompt_version,
+                      :answer_fit_status, :grounding_status, :grounding_reason, :answer_scope_notes
+                    )
+                    on conflict (canonical_answer_id) do update set
+                      answer_markdown = excluded.answer_markdown,
+                      answer_style = excluded.answer_style,
+                      answer_version = excluded.answer_version,
+                      reviewer_state = excluded.reviewer_state,
+                      citations = excluded.citations,
+                      source_run_id = excluded.source_run_id,
+                      prompt_version = excluded.prompt_version,
+                      answer_fit_status = excluded.answer_fit_status,
+                      grounding_status = excluded.grounding_status,
+                      grounding_reason = excluded.grounding_reason,
+                      answer_scope_notes = excluded.answer_scope_notes
+                    """
+                ),
+                {
+                    **answer.model_dump(mode="json"),
+                    "citations": json.dumps([c.model_dump(mode="json") for c in answer.citations]),
+                },
+            )
+
+    def log_question_cache_match(self, result: QuestionCacheMatchResult) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into question_cache_match_logs (
+                      course_id, claim_id, question_group_id, variation_id, canonical_answer_id,
+                      incoming_question, normalized_question, match_method, match_score, resolved_as_hit
+                    )
+                    values (
+                      :course_id, :claim_id, :question_group_id, :variation_id, :canonical_answer_id,
+                      :incoming_question, :normalized_question, :match_method, :match_score, :resolved_as_hit
+                    )
+                    """
+                ),
+                result.model_dump(mode="json", exclude={"answer_markdown", "fallback_reason", "candidate_for_cache_warming"}),
+            )
+
+    def log_question_cache_fallback(self, result: QuestionCacheMatchResult) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into question_cache_fallback_logs (
+                      course_id, claim_id, incoming_question, normalized_question, fallback_reason,
+                      llm_response_id, response_markdown, candidate_for_cache_warming
+                    )
+                    values (
+                      :course_id, :claim_id, :incoming_question, :normalized_question, :fallback_reason,
+                      null, :response_markdown, :candidate_for_cache_warming
+                    )
+                    """
+                ),
+                {
+                    "course_id": result.course_id,
+                    "claim_id": result.claim_id,
+                    "incoming_question": result.incoming_question,
+                    "normalized_question": result.normalized_question,
+                    "fallback_reason": result.fallback_reason or "unknown",
+                    "response_markdown": result.answer_markdown,
+                    "candidate_for_cache_warming": result.candidate_for_cache_warming,
+                },
+            )
+
+    def log_question_cache_validation(self, log: QuestionCacheValidationLogOut) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into question_cache_validation_logs (
+                      entity_type, entity_id, validator_type, decision, reason, model_version
+                    )
+                    values (
+                      :entity_type, :entity_id, :validator_type, :decision, :reason, :model_version
+                    )
+                    """
+                ),
+                log.model_dump(mode="json"),
+            )
+
+    def upsert_claim_coverage_audit(self, audit: ClaimCoverageAuditOut) -> None:
+        with self.engine.begin() as conn:
+            conn.execute(
+                text(
+                    """
+                    insert into claim_coverage_audit (
+                      course_id, claim_id, produced_question_groups, question_group_count,
+                      no_groups_reason, source_run_id
+                    )
+                    values (
+                      :course_id, :claim_id, :produced_question_groups, :question_group_count,
+                      :no_groups_reason, :source_run_id
+                    )
+                    on conflict (source_run_id, course_id, claim_id) do update set
+                      produced_question_groups = excluded.produced_question_groups,
+                      question_group_count = excluded.question_group_count,
+                      no_groups_reason = excluded.no_groups_reason
+                    """
+                ),
+                audit.model_dump(mode="json"),
+            )

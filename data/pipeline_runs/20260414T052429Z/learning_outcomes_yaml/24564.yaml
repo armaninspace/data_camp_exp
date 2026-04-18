@@ -1,0 +1,136 @@
+course_id: '24564'
+course_title: Introduction to Regression with statsmodels in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand the basics of regression analysis, including the differences between
+    linear and logistic regression.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first syllabus chapter explicitly states that students will learn
+    what regression is and how linear and logistic regressions differ, indicating
+    conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll learn the basics of this popular statistical model, what regression
+      is, and how linear and logistic regressions differ.
+- id: LO2
+  claim: Fit simple linear regression models with numeric and categorical explanatory
+    variables using Python statsmodels.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter summary mentions fitting simple linear regression models
+    with both numeric and categorical variables, indicating procedural application.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You’ll then learn how to fit simple linear regression models with numeric
+      and categorical explanatory variables...
+- id: LO3
+  claim: Describe relationships between response and explanatory variables using model
+    coefficients.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first chapter summary includes describing relationships using model
+    coefficients, which is conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: '...and how to describe the relationship between the response and explanatory
+      variables using model coefficients.'
+- id: LO4
+  claim: Use linear regression models to make predictions on real-world datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter summary states students will use linear regression
+    models to make predictions on datasets such as Taiwanese house prices and Facebook
+    advert clicks.
+  citations:
+  - field: syllabus[1].summary
+    evidence: In this chapter, you’ll discover how to use linear regression models
+      to make predictions on Taiwanese house prices and Facebook advert clicks.
+- id: LO5
+  claim: Manipulate and transform variables in datasets for regression analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter mentions learning how to transform variables in a
+    dataset, which is a procedural skill.
+  citations:
+  - field: syllabus[1].summary
+    evidence: '...and learn how to transform variables in a dataset.'
+- id: LO6
+  claim: Assess and quantify model fit for linear regression models.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The third chapter focuses on assessing fit, quantifying how well a model
+    fits, and diagnosing problems, which involves analysis.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You’ll learn how to ask questions of your model to assess fit. You’ll
+      learn how to quantify how well a linear regression model fits, diagnose model
+      problems using visualizations...
+- id: LO7
+  claim: Diagnose model problems using visualizations and understand leverage and
+    influence of observations.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The third chapter includes diagnosing model problems using visualizations
+    and understanding leverage and influence, which are analytical skills.
+  citations:
+  - field: syllabus[2].summary
+    evidence: '...diagnose model problems using visualizations, and understand each
+      observation''s leverage and influence to create the model.'
+- id: LO8
+  claim: Fit simple logistic regression models and interpret results as probabilities
+    and odds ratios.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth chapter states students will fit logistic regression models
+    and interpret results as probabilities and odds ratios.
+  citations:
+  - field: syllabus[3].summary
+    evidence: Learn to fit logistic regression models. Using real-world data, you’ll
+      predict the likelihood of a customer closing their bank account as probabilities
+      of success and odds ratios...
+- id: LO9
+  claim: Quantify logistic regression model performance using confusion matrices.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The fourth chapter mentions quantifying model performance using confusion
+    matrices, which is a procedural application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: '...and quantify model performance using confusion matrices.'
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on simple (not multiple) regression models; there
+    is no explicit mention of multiple regression or advanced topics.
+  - There is no explicit mention of model selection, regularization, or advanced diagnostics.
+  - The course does not appear to cover non-linear regression or time series analysis.
+  - No explicit mention of programming prerequisites or assumed statistical background.

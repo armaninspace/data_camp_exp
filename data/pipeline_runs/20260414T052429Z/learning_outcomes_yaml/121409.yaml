@@ -1,0 +1,48 @@
+course_id: '121409'
+course_title: Reading Data into R with readr
+learning_outcomes:
+- id: LO1
+  claim: Recall the basic features and functions of the readr package in R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The summary states that the course covers several features of the readr
+    package, implying students will be able to recall these features.
+  citations:
+  - field: summary
+    evidence: you'll learn several features of Hadley Wickham's readr package
+- id: LO2
+  claim: Understand how to import and export data sets using the readr package in
+    R.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The summary explicitly mentions importing and exporting data sets, suggesting
+    students will understand these procedures.
+  citations:
+  - field: summary
+    evidence: from importing and exporting data sets
+- id: LO3
+  claim: Understand basic type conversion in R using the readr package.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: The summary mentions 'more advanced topics, like type conversion,' indicating
+    students will gain an understanding of type conversion, though depth is unclear.
+  citations:
+  - field: summary
+    evidence: more advanced topics, like type conversion
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus provided, so no chapter-level detail on specific skills or depth.
+  - No explicit mention of practical application, analysis, or evaluation skills.
+  - No information on assessment or metacognitive outcomes.
+  - No details on duration, workload, or instructional methods.

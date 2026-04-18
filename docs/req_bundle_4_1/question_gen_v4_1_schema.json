@@ -1,0 +1,187 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Question Generation V4.1 Schema",
+  "type": "object",
+  "definitions": {
+    "ScoreMap": {
+      "type": "object",
+      "properties": {
+        "correctness": {
+          "type": "number"
+        },
+        "groundedness": {
+          "type": "number"
+        },
+        "query_likelihood": {
+          "type": "number"
+        },
+        "pedagogical_value": {
+          "type": "number"
+        },
+        "answer_richness": {
+          "type": "number"
+        },
+        "mastery_fit": {
+          "type": "number"
+        },
+        "distinctiveness": {
+          "type": "number"
+        },
+        "serviceability": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "CandidateRecord": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "question",
+        "delivery_class",
+        "visible",
+        "scores"
+      ],
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "string"
+        },
+        "topic_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "canonical_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "is_correct": {
+          "type": "boolean"
+        },
+        "is_grounded": {
+          "type": "boolean"
+        },
+        "delivery_class": {
+          "type": "string",
+          "enum": [
+            "curated_visible",
+            "cache_servable",
+            "alias_only",
+            "analysis_only",
+            "hard_reject"
+          ]
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "non_visible_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scores": {
+          "$ref": "#/definitions/ScoreMap"
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "is_foundational_anchor": {
+          "type": "boolean"
+        },
+        "is_required_entry_candidate": {
+          "type": "boolean"
+        },
+        "is_canonical": {
+          "type": "boolean"
+        },
+        "is_alias": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "CoverageWarning": {
+      "type": "object",
+      "required": [
+        "warning_id",
+        "concept_id",
+        "concept_label",
+        "warning_type",
+        "message"
+      ],
+      "properties": {
+        "warning_id": {
+          "type": "string"
+        },
+        "concept_id": {
+          "type": "string"
+        },
+        "concept_label": {
+          "type": "string"
+        },
+        "warning_type": {
+          "type": "string",
+          "enum": [
+            "missing_visible_canonical_entry",
+            "only_hidden_correct_entry_exists",
+            "only_alias_entry_exists",
+            "definition_generation_failed"
+          ]
+        },
+        "has_hidden_correct_variants": {
+          "type": "boolean"
+        },
+        "candidate_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "properties": {
+    "validated_correct_all": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CandidateRecord"
+      }
+    },
+    "visible_curated": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CandidateRecord"
+      }
+    },
+    "hidden_correct": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CandidateRecord"
+      }
+    },
+    "coverage_warnings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CoverageWarning"
+      }
+    }
+  },
+  "additionalProperties": true
+}

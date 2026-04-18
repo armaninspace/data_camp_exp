@@ -1,0 +1,109 @@
+course_id: '24634'
+course_title: Support Vector Machines in R
+learning_outcomes:
+- id: LO1
+  claim: Recall and explain key concepts of support vector machines (SVMs), including
+    linear separability and the role of kernels.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The course introduces key SVM concepts, linear separability, and kernel
+    functions, with intuitive and visual explanations.
+  citations:
+  - field: syllabus[0].summary
+    evidence: This chapter introduces some key concepts of support vector machines
+      through a simple 1-dimensional example.
+  - field: syllabus[2].summary
+    evidence: Provides an introduction to polynomial kernels via a dataset that is
+      radially separable... motivating an intuitive discussion of the kernel trick.
+- id: LO2
+  claim: Apply the SVM algorithm with linear, polynomial, and RBF kernels to datasets
+    in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: Students are guided through applying SVMs with different kernels to various
+    datasets, including creating and transforming datasets.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Applying the svm algorithm to a dataset that is linearly separable.
+  - field: syllabus[2].summary
+    evidence: Students will then apply the polynomial kernel to the dataset and tune
+      the resulting classifier.
+  - field: syllabus[3].summary
+    evidence: Students will create a 'complex' dataset that shows up the limitations
+      of polynomial kernels... students see how [the RBF kernel] addresses the shortcomings
+      of the other kernels.
+- id: LO3
+  claim: Visualize SVM decision boundaries and outputs using ggplot in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The course highlights the use of ggplot visualizations to illustrate
+    SVM outputs and decision boundaries.
+  citations:
+  - field: syllabus[1].summary
+    evidence: Key concepts are illustrated through ggplot visualisations that are
+      built from the outputs of the algorithm.
+- id: LO4
+  claim: Tune SVM parameters such as the cost parameter and kernel-specific settings.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The course discusses tuning the cost parameter and kernel-specific parameters
+    in the context of SVMs.
+  citations:
+  - field: syllabus[1].summary
+    evidence: The role of the cost parameter is highlighted via a simple example.
+  - field: syllabus[2].summary
+    evidence: Students will then apply the polynomial kernel to the dataset and tune
+      the resulting classifier.
+- id: LO5
+  claim: Identify and explain the limitations of different SVM kernels and select
+    appropriate kernels for different types of data.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The course demonstrates the inadequacy of linear and polynomial kernels
+    for certain datasets and motivates kernel selection based on data characteristics.
+  citations:
+  - field: syllabus[2].summary
+    evidence: After demonstrating the inadequacy of linear kernels for this dataset...
+      motivating an intuitive discussion of the kernel trick.
+  - field: syllabus[3].summary
+    evidence: Students will create a 'complex' dataset that shows up the limitations
+      of polynomial kernels... students see how [the RBF kernel] addresses the shortcomings
+      of the other kernels.
+- id: LO6
+  claim: Describe how SVMs handle multiclass classification problems.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The course includes a section on how SVM algorithms deal with multiclass
+    problems.
+  citations:
+  - field: syllabus[1].summary
+    evidence: The chapter closes with a section on how the algorithm deals with multiclass
+      problems.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention advanced topics such as SVM regularization
+    beyond the cost parameter, model evaluation metrics, or deployment.
+  - There is no explicit mention of metacognitive strategies or higher-order creative
+    tasks.
+  - The depth of parameter tuning and the extent of practical coding exercises are
+    not fully detailed.

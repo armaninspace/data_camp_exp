@@ -1,0 +1,92 @@
+course_id: '24454'
+course_title: Multiple and Logistic Regression in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply parallel slopes models involving one numeric and one
+    categorical explanatory variable in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview explicitly states that students will learn about 'parallel
+    slopes models' with one numeric and one categorical explanatory variable. The
+    process is primarily understanding and applying the concept, but there is no evidence
+    of deeper analysis or creation.
+  citations:
+  - field: overview
+    evidence: Parallel Slopes - In this chapter you'll learn about the class of linear
+      models called 'parallel slopes models.' These include one numeric and one categorical
+      explanatory variable.
+- id: LO2
+  claim: Evaluate and compare linear models using properties such as adjusted R-squared,
+    and understand interaction terms.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The overview mentions model evaluation, comparison using adjusted R-squared,
+    and learning about interaction terms. This suggests students will analyze and
+    relate different model properties.
+  citations:
+  - field: overview
+    evidence: Evaluating and extending parallel slopes model - This chapter covers
+      model evaluation. By looking at different properties of the model, including
+      the adjusted R-squared, you'll learn to compare models so that you can select
+      the best one. You'll also learn about interaction terms in linear models.
+- id: LO3
+  claim: Apply multiple regression techniques by adding two or more numeric explanatory
+    variables to a linear model in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview states that students will learn to add multiple numeric
+    explanatory variables to a linear model, indicating procedural application.
+  citations:
+  - field: overview
+    evidence: Multiple Regression - This chapter will show you how to add two, three,
+      and even more numeric explanatory variables to a linear model.
+- id: LO4
+  claim: Understand and use logistic regression to predict binary outcomes and classify
+    observations in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview specifies that students will learn about logistic regression
+    for binary classification, which is a conceptual and procedural understanding.
+  citations:
+  - field: overview
+    evidence: Logistic Regression - In this chapter you'll learn about using logistic
+      regression, a generalized linear model (GLM), to predict a binary outcome and
+      classify observations.
+- id: LO5
+  claim: Explore relationships between variables in a real-world dataset (Italian
+    restaurants in NYC) using regression techniques.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions a case study involving the exploration of relationships
+    between price and quality factors for restaurants, indicating practical application
+    of regression methods.
+  citations:
+  - field: overview
+    evidence: 'Case Study: Italian restaurants in NYC - Explore the relationship between
+      price and the quality of food, service, and decor for Italian restaurants in
+      NYC.'
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so chapter-level learning objectives are inferred
+    from the overview.
+  - There is no explicit mention of assessment types, depth of coding practice, or
+    metacognitive strategies.
+  - The course's practical application depth (e.g., project work, independent analysis)
+    is unclear.

@@ -1,0 +1,39 @@
+course_id: '121394'
+course_title: Data Analysis and Statistical Inference
+learning_outcomes:
+- id: lo1
+  claim: A reasonably successful student will be able to recall and recognize basic
+    concepts in data analysis and statistical inference.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.4
+  reasoning: The course title and subjects indicate coverage of data analysis and
+    statistical inference, but no specific topics or skills are listed. Therefore,
+    only basic recall of concepts can be inferred.
+  citations:
+  - field: title
+    evidence: Data Analysis and Statistical Inference
+  - field: subjects
+    evidence: '["Statistical Inference", "Data Analysis"]'
+- id: lo2
+  claim: A reasonably successful student will have a general understanding of the
+    purpose and scope of statistical inference and data analysis.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.3
+  reasoning: With no syllabus or detailed description, only a general conceptual understanding
+    can be inferred from the course's subject focus.
+  citations:
+  - field: subjects
+    evidence: '["Statistical Inference", "Data Analysis"]'
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or chapter-level detail is provided.
+  - No explicit learning objectives, skills, or assessment information.
+  - No description of specific statistical methods, tools, or applications.

@@ -1,0 +1,96 @@
+course_id: '24463'
+course_title: Introduction to Databases in Python
+learning_outcomes:
+- id: '1'
+  claim: Recall and describe the fundamentals of relational databases and the relational
+    model.
+  knowledge_type: conceptual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter explicitly states that students will get acquainted
+    with the fundamentals of relational databases and the relational model, which
+    supports recall and basic understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: you’ll get acquainted with the fundamentals of relational databases
+      and the relational model for database management
+- id: '2'
+  claim: Connect to a relational database and execute basic SQL queries using both
+    raw SQL and SQLAlchemy in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter summary specifies learning to connect to a database
+    and interact with it by writing basic SQL queries, both in raw SQL and SQLAlchemy.
+  citations:
+  - field: syllabus[0].summary
+    evidence: You will learn how to connect to a database and interact with it by
+      writing basic SQL queries, both in raw SQL as well as SQLAlchemy
+- id: '3'
+  claim: Write SQLAlchemy queries that filter, order, and group data in a database.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter focuses on writing more nuanced queries for filtering,
+    ordering, and counting data using SQLAlchemy.
+  citations:
+  - field: syllabus[1].summary
+    evidence: writing more nuanced queries that allow you to filter, order, and count
+      your data—all within the Pythonic framework provided by SQLAlchemy
+- id: '4'
+  claim: Perform advanced queries using SQLAlchemy to interact with data in powerful
+    ways.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third chapter mentions performing advanced and useful queries with
+    SQLAlchemy, indicating procedural application of more complex query techniques.
+  citations:
+  - field: syllabus[2].summary
+    evidence: perform advanced—and incredibly useful—queries that enable you to interact
+      with your data in powerful ways
+- id: '5'
+  claim: Create and update your own relational databases using Python tools.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth chapter explicitly states that students will learn to build
+    their own databases and keep them updated.
+  citations:
+  - field: syllabus[3].summary
+    evidence: learn how to build your own databases and keep them updated
+- id: '6'
+  claim: Integrate skills to complete a real-life project involving connecting, populating,
+    reading, and querying a database.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The final chapter summary describes bringing together all previously
+    acquired skills to work on a real-life project, indicating integration and application
+    in a practical context.
+  citations:
+  - field: syllabus[4].summary
+    evidence: Bring together all of the skills you acquired in the previous chapters
+      to work on a real-life project. From connecting to a database and populating
+      it, to reading and querying it.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify coverage of database design theory, normalization,
+    or security.
+  - No explicit mention of error handling, performance optimization, or advanced database
+    administration.
+  - Assessment methods and depth of project complexity are not described.

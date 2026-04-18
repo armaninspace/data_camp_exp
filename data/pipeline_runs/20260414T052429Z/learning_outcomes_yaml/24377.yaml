@@ -1,0 +1,102 @@
+course_id: '24377'
+course_title: Introduction to Functions in Python
+learning_outcomes:
+- id: LO1
+  claim: Student can write custom functions in Python, including those with multiple
+    parameters and return values.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview and summary both emphasize writing custom functions, including
+    handling multiple parameters and return values. However, without a syllabus, the
+    depth of application is unclear.
+  citations:
+  - field: overview
+    evidence: You'll come out of this course being able to write your very own custom
+      functions, complete with multiple parameters and multiple return values, along
+      with default arguments and variable-length arguments.
+  - field: summary
+    evidence: Learn the art of writing your own functions in Python, as well as key
+      concepts like scoping and error handling.
+- id: LO2
+  claim: Student can use default arguments and variable-length arguments in Python
+    functions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The overview mentions default and variable-length arguments, but without
+    a syllabus, the extent of practice or assessment is uncertain.
+  citations:
+  - field: overview
+    evidence: write your very own custom functions, complete with multiple parameters
+      and multiple return values, along with default arguments and variable-length
+      arguments.
+- id: LO3
+  claim: Student can explain and apply scoping rules in Python functions.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: Scoping is mentioned as a key concept, but the lack of syllabus means
+    it's unclear if students analyze or just recall/apply basic rules.
+  citations:
+  - field: summary
+    evidence: key concepts like scoping and error handling.
+  - field: overview
+    evidence: You'll gain insight into scoping in Python
+- id: LO4
+  claim: Student can write and use lambda functions in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: Lambda functions are listed as a subject and mentioned in the overview,
+    but the depth of use is not specified.
+  citations:
+  - field: subjects
+    evidence: Lambda Functions
+  - field: overview
+    evidence: be able to write lambda functions
+- id: LO5
+  claim: Student can handle errors in Python function writing.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.6
+  reasoning: Error handling is mentioned as a key concept, but the specific techniques
+    or depth are not described.
+  citations:
+  - field: summary
+    evidence: key concepts like scoping and error handling.
+  - field: overview
+    evidence: handle errors in your function writing practice
+- id: LO6
+  claim: Student can use functions to analyze Twitter data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The overview mentions wrapping up each chapter by writing functions to
+    analyze Twitter data, but without a syllabus, the complexity and scope of analysis
+    are unclear.
+  citations:
+  - field: overview
+    evidence: You'll wrap up each chapter by using your new skills to write functions
+      that analyze Twitter data.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level detail and assessment types are unknown.
+  - The depth of conceptual understanding and complexity of tasks (e.g., Twitter data
+    analysis) is unclear.
+  - No explicit mention of metacognitive skills or higher-order creation/evaluation
+    tasks.

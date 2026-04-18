@@ -1,0 +1,85 @@
+course_id: '24430'
+course_title: Introduction to Data Visualization in Python
+learning_outcomes:
+- id: '1'
+  claim: Recall and understand basic and advanced plotting techniques in Matplotlib,
+    including plot customization.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes a review of basic plotting and then delves into
+    customizing plots with Matplotlib, including overlaying plots, subplots, axes
+    control, legends, annotations, and plot styles. This suggests students will be
+    able to recall and understand these techniques, but not necessarily apply them
+    in novel contexts.
+  citations:
+  - field: overview
+    evidence: Following a review of basic plotting with Matplotlib, this chapter delves
+      into customizing plots using Matplotlib. This includes overlaying plots, making
+      subplots, controlling axes, adding legends and annotations, and using different
+      plot styles.
+- id: '2'
+  claim: Understand and describe techniques for visualizing two-dimensional arrays,
+    including pseudocolor plots, contour plots, color maps, 2D histograms, and images.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview lists several specific techniques for visualizing 2D arrays,
+    indicating students will be able to describe and distinguish between these methods.
+  citations:
+  - field: overview
+    evidence: This chapter showcases various techniques for visualizing two-dimensional
+      arrays. This includes the use, presentation, and orientation of grids for representing
+      two-variable functions followed by discussions of pseudocolor plots, contour
+      plots, color maps, two-dimensional histograms, and images.
+- id: '3'
+  claim: Identify and explain the use of seaborn for statistical data visualization,
+    including linear regression plots, univariate and multivariate distribution plots,
+    and category grouping.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes a high-level tour of seaborn, covering tools for
+    linear regression, univariate and multivariate distributions, and grouping categories.
+    This supports understanding and explanation, but not necessarily application or
+    analysis.
+  citations:
+  - field: overview
+    evidence: This is a high-level tour of the seaborn plotting library for producing
+      statistical graphics in Python. We’ll cover seaborn tools for computing and
+      visualizing linear regressions, as well as tools for visualizing univariate
+      distributions (like strip, swarm, and violin plots) and multivariate distributions
+      (like joint plots, pair plots, and heatmaps). We’ll also discuss grouping categories
+      in plots.
+- id: '4'
+  claim: Describe methods for visualizing and analyzing time series data and images,
+    including customizing stock data plots and enhancing image contrast.
+  knowledge_type: procedural
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions customizing plots of stock data, generating histograms
+    of image pixel intensities, and enhancing image contrast through histogram equalization.
+    This suggests students will be able to describe these methods, but the lack of
+    detail limits confidence in deeper mastery.
+  citations:
+  - field: overview
+    evidence: You’ll customize plots of stock data, generate histograms of image pixel
+      intensities, and enhance image contrast through histogram equalization.
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No syllabus is provided, so chapter-level learning objectives and assessment types
+    are unclear.
+  - The overview provides a list of topics but does not specify the depth of application
+    or assessment.
+  - It is unclear whether students will be able to apply, analyze, or create visualizations
+    independently, or only recognize and understand techniques.

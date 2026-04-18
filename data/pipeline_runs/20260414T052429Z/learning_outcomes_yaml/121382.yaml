@@ -1,0 +1,43 @@
+course_id: '121382'
+course_title: Causal Inference with R - Experiments
+learning_outcomes:
+- id: LO1
+  claim: Recognize foundational concepts in causal inference, particularly as they
+    relate to experimental design.
+  knowledge_type: conceptual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The course title and subjects indicate a focus on causal inference and
+    experimental design, but without a syllabus or detailed description, only basic
+    recognition of concepts can be inferred.
+  citations:
+  - field: title
+    evidence: Causal Inference with R - Experiments
+  - field: subjects
+    evidence: Causal Inference, R Programming, Experimental Design
+- id: LO2
+  claim: Identify the use of R programming in the context of causal inference experiments.
+  knowledge_type: procedural
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.5
+  reasoning: The subject list includes R Programming, suggesting students will encounter
+    R in the context of experiments, but the lack of syllabus or description limits
+    inference to basic identification.
+  citations:
+  - field: subjects
+    evidence: R Programming
+  - field: title
+    evidence: Causal Inference with R - Experiments
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus or detailed description is provided, so specific learning outcomes,
+    skills, or depth of coverage cannot be determined.
+  - It is unclear what specific experimental methods, R programming techniques, or
+    causal inference frameworks are taught.
+  - No information on assessment, application, or higher-order skills is available.

@@ -1,0 +1,122 @@
+course_id: '24645'
+course_title: Introduction to TensorFlow in R
+learning_outcomes:
+- id: LO1
+  claim: Recall the history and basic syntax of TensorFlow in R.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The overview explicitly states that students will learn the history of
+    TensorFlow and become comfortable with its syntax, which are factual knowledge
+    and basic recall tasks.
+  citations:
+  - field: overview
+    evidence: you'll learn the history of the program and will become comfortable
+      using TensorFlow syntax
+- id: LO2
+  claim: Understand and use TensorFlow constants, placeholders, and variables in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview mentions becoming versed in TensorFlow constants, placeholders,
+    and variables, indicating conceptual understanding and basic use.
+  citations:
+  - field: overview
+    evidence: You'll become versed in TensorFlow constants, placeholders, and Variables
+- id: LO3
+  claim: Apply TensorBoard to visualize dataflow diagrams and model metrics in TensorFlow.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes exploring dataflow diagrams and visualizations
+    using TensorBoard, which is a procedural application.
+  citations:
+  - field: overview
+    evidence: we'll explore some dataflow diagrams using TensorBoard, the TensorFlow
+      visualization tool
+- id: LO4
+  claim: Build and evaluate linear regression models using both the Core TensorFlow
+    API and the Estimators API in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview details training and evaluating linear regression models
+    with both APIs, which is procedural application.
+  citations:
+  - field: overview
+    evidence: we'll explore linear regression models using both the Core TensorFlow
+      API, as well as the Estimators API ... We'll train and evaluate several models
+- id: LO5
+  claim: Create and interpret a deep neural network (DNN) classifier using the Keras
+    API in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview states students will create a complete end-to-end DNN Classifier
+    with Keras and interpret results using TensorBoard.
+  citations:
+  - field: overview
+    evidence: you’ll create a complete end-to-end DNN Classifier with the Keras API
+      ... You’ll explore scalars and graphs in TensorBoard
+- id: LO6
+  claim: Compare the use of Keras and Estimators APIs for building DNN classifiers
+    in TensorFlow.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview asks students to decide which API is better for their model,
+    implying comparison and analysis.
+  citations:
+  - field: overview
+    evidence: Finish off the chapter with a glimpse into using a canned DNN Classifier
+      in Estimators. Which is the better API for your model? You decide!
+- id: LO7
+  claim: Apply regularization techniques such as Ridge Regression and Dropout to improve
+    DNN model accuracy in TensorFlow.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes exploring regularization techniques, including
+    Ridge Regression and Dropout, to increase model accuracy.
+  citations:
+  - field: overview
+    evidence: you'll explore a few regularization techniques, including incorporating
+      a Ridge Regression into a Keras model and adding a Dropout technique to an Estimators
+      canned DNN
+- id: LO8
+  claim: Summarize key concepts in TensorFlow and identify potential research ideas
+    for further exploration.
+  knowledge_type: metacognitive
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview mentions summarizing concepts and suggesting research ideas,
+    which are metacognitive and conceptual understanding tasks.
+  citations:
+  - field: overview
+    evidence: wrap up this course by summarizing all the concepts you've learned,
+      and give you some research ideas for you to try on your own
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided; all inferences are based on the overview and
+    summary.
+  - No explicit mention of assessment types or depth of practical exercises.
+  - Limited information on the extent of metacognitive or higher-order analytical
+    skills developed.

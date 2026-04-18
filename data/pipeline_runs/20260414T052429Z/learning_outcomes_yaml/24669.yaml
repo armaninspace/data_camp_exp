@@ -1,0 +1,80 @@
+course_id: '24669'
+course_title: Fraud Detection in R
+learning_outcomes:
+- id: LO1
+  claim: Define fraud and identify anomalies in payment methods and timing using R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn a formal definition
+    of fraud and how to detect anomalies in payment methods and timing, indicating
+    conceptual understanding and the ability to identify relevant patterns.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction & Motivation
+  - field: syllabus[0].summary
+    evidence: This chapter will first give a formal definition of fraud. You will
+      then learn how to detect anomalies in the type of payment methods used or the
+      time these payments are made to flag suspicious transactions.
+- id: LO2
+  claim: Apply social network analysis, including visualization and homophily, to
+    detect fraudulent transactions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus describes learning to use networks, visualize them, and
+    apply the concept of homophily for fraud detection, which involves procedural
+    application of these techniques.
+  citations:
+  - field: syllabus[1].title
+    evidence: Social network analytics
+  - field: syllabus[1].summary
+    evidence: You will visualize networks and use a sociology concept called homophily
+      to detect fraudulent transactions and catch fraudsters.
+- id: LO3
+  claim: Address imbalanced class distributions in fraud datasets using over- and
+    under-sampling methods.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies that students will tackle data imbalance using
+    over- and under-sampling, which is a procedural skill relevant to fraud detection
+    modeling.
+  citations:
+  - field: syllabus[2].title
+    evidence: Imbalanced class distributions
+  - field: syllabus[2].summary
+    evidence: In this chapter, you will tackle imbalance using over and under-sampling
+      methods.
+- id: LO4
+  claim: Use digit analysis and robust statistical methods to detect suspicious occurrences
+    in data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions learning about a mathematical law for digit analysis
+    and applying robust statistics, indicating procedural application for fraud detection.
+  citations:
+  - field: syllabus[3].title
+    evidence: Digit analysis and robust statistics
+  - field: syllabus[3].summary
+    evidence: You will learn about a surprising mathematical law used to detect suspicious
+      occurrences. You will then use robust statistics to make your models even more
+      bulletproof.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level outcomes but does not specify the depth
+    of implementation or assessment, so mastery beyond application (e.g., analysis,
+    evaluation, or creation) cannot be inferred.
+  - No explicit mention of metacognitive skills or higher-order synthesis.
+  - Details on the specific R packages or coding practices are not provided.

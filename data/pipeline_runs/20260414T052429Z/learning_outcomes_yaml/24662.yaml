@@ -1,0 +1,97 @@
+course_id: '24662'
+course_title: Intermediate Functional Programming with purrr
+learning_outcomes:
+- id: LO1
+  claim: Recall and describe the core concepts of functional programming in R using
+    purrr, including lambda functions, mappers, and predicates.
+  knowledge_type: conceptual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The first syllabus chapter explicitly mentions refreshing purrr memory
+    and introducing functional programming 101, anonymous functions, and predicates.
+    This supports recall and basic understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: After refreshing your purrr memory, we will dive into functional programming
+      101, discover anonymous functions and predicates...
+- id: LO2
+  claim: Apply purrr functions such as map(), safely(), possibly(), compact(), compose(),
+    negate(), and partial() to manipulate and clean data in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: Multiple syllabus chapters describe using specific purrr functions for
+    practical data manipulation, error handling, and code cleaning, indicating procedural
+    application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: explore error handling using including safely() and possibly(), and
+      introduce the function compact() for cleaning your code.
+  - field: syllabus[2].summary
+    evidence: learn how to write clean functions with compose() and negate(). We'll
+      also use partial() to compose functions by 'prefilling' arguments...
+- id: LO3
+  claim: Integrate purrr workflows into broader R codebases to write robust, clean,
+    and maintainable iterative code.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and syllabus emphasize using purrr for robust, clean, and
+    maintainable code, and integrating purrr workflows into other functions.
+  citations:
+  - field: overview
+    evidence: you will learn how to take full advantage of the flexibility offered
+      by the .f in map(.x, .f) to iterate other lists, vectors and data.frame with
+      a robust, clean, and easy to maintain code.
+  - field: syllabus[2].summary
+    evidence: write code that is clearer, cleaner, and easier to maintain... introduce
+      list-columns, which are a convenient data structure that helps us write clean
+      code using the Tidyverse.
+- id: LO4
+  claim: Analyze and organize nested list data using purrr, including extracting,
+    keeping, or discarding elements and composing functions to manipulate results.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The overview and case study chapter mention working with nested lists,
+    extracting and manipulating elements, and composing functions, which requires
+    analysis and integration of multiple skills.
+  citations:
+  - field: overview
+    evidence: see how you can use this newly acquired knowledge on a concrete example
+      of a simple nested list, how to extract, keep or discard elements, how to compose
+      functions to manipulate and parse results from this list...
+  - field: syllabus[3].summary
+    evidence: use purrr to analyze data that has been scraped from Twitter. We'll
+      use clean code to organize the data...
+- id: LO5
+  claim: Identify key influencers in a dataset by applying purrr-based workflows to
+    real-world data (e.g., Twitter data from a conference).
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The final case study involves using purrr to identify Twitter influencers,
+    which demonstrates practical application of learned skills to a real dataset.
+  citations:
+  - field: syllabus[3].summary
+    evidence: identify Twitter influencers from the 2018 RStudio conference.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not provide detailed information about assessment methods or the
+    depth of metacognitive reflection expected.
+  - There is no explicit mention of students designing their own functional programming
+    solutions beyond the provided case study.
+  - The course appears focused on application and analysis, with limited evidence
+    for higher-order creation or evaluation outcomes.

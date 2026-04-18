@@ -1,0 +1,96 @@
+course_id: '24610'
+course_title: Survival Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Understand the fundamental concepts of survival analysis, including censoring
+    and time-to-event data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter explicitly introduces survival analysis, the importance
+    of the topic, the theory behind survival curves, and the concept of censoring.
+    This supports conceptual understanding at a moderate depth.
+  citations:
+  - field: syllabus[0].title
+    evidence: What is Survival Analysis?
+  - field: syllabus[0].summary
+    evidence: introduce the concept of survival analysis, explain the importance of
+      this topic, and provide a quick introduction to the theory behind survival curves...
+      introduce the concept of censoring.
+- id: LO2
+  claim: Apply methods to estimate survival curves using Kaplan-Meier and Weibull
+    models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter focuses on methods for estimating survival curves,
+    specifically mentioning the Kaplan-Meier estimate and the Weibull model, indicating
+    procedural application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Estimation of survival curves
+  - field: syllabus[1].summary
+    evidence: look into different methods of estimating survival curves... discuss
+      the Kaplan-Meier estimate and the Weibull model as tools for survival curve
+      estimation
+- id: LO3
+  claim: Visualize and communicate results from survival analysis models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Both the second and third chapters mention learning to visualize and
+    communicate results from survival models, indicating procedural skills in presenting
+    analysis.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn how to communicate those results through visualization
+  - field: syllabus[2].summary
+    evidence: learn how to estimate and visualize a Weibull model
+- id: LO4
+  claim: Interpret the effects of covariates on time-to-event outcomes using the Weibull
+    model.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The third chapter specifies learning about the effects of covariates
+    on time-to-event outcomes using the Weibull model, supporting analysis at a conceptual
+    level.
+  citations:
+  - field: syllabus[2].title
+    evidence: The Weibull model
+  - field: syllabus[2].summary
+    evidence: learn about the effects of covariates on the time-to-event outcome
+- id: LO5
+  claim: Compute and interpret Cox proportional hazards models and distinguish them
+    from Weibull models.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The final chapter covers computing and interpreting Cox models and understanding
+    their differences from Weibull models, indicating procedural and analytical skills.
+  citations:
+  - field: syllabus[3].title
+    evidence: The Cox Model
+  - field: syllabus[3].summary
+    evidence: learn how to compute and interpret Cox models to understand why they
+      are useful and how they differ from Weibull models
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of hands-on coding in R, though implied by course title and
+    subject.
+  - No assessment or project details, so mastery beyond application/analysis is not
+    supported.
+  - No explicit mention of advanced or real-world data complexities (e.g., competing
+    risks, time-varying covariates).

@@ -18,6 +18,9 @@ def load_env() -> None:
 
 @dataclass(frozen=True)
 class Settings:
+    openai_api_key: str | None
+    openai_model: str
+    openai_timeout: int
     database_url: str
     output_root: Path
 
@@ -25,6 +28,9 @@ class Settings:
 def get_settings() -> Settings:
     load_env()
     return Settings(
+        openai_api_key=os.getenv("OPENAI_API_KEY"),
+        openai_model=os.getenv("OPENAI_MODEL", "gpt-4.1"),
+        openai_timeout=int(os.getenv("OPENAI_TIMEOUT", "180")),
         database_url=os.getenv(
             "DATABASE_URL",
             "postgresql+psycopg://agent@127.0.0.1:55432/course_pipeline",

@@ -1,0 +1,112 @@
+course_id: '24558'
+course_title: Credit Risk Modeling in Python
+learning_outcomes:
+- id: '1'
+  claim: Define credit risk and explain how it is calculated in the context of loan
+    data.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will discuss the concept
+    of credit risk and define how it is calculated.
+  citations:
+  - field: syllabus[0].summary
+    evidence: discuss the concept of credit risk and define how it is calculated
+- id: '2'
+  claim: Explore and preprocess real-world loan data, including identifying and resolving
+    data issues using cross tables and plots.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes exploring a real-world data set and processing
+    it by finding and resolving problems, which involves applying data preparation
+    techniques.
+  citations:
+  - field: syllabus[0].summary
+    evidence: explore a real-world data set... process this data by finding and resolving
+      problems
+- id: '3'
+  claim: Explain the components of logistic regression and evaluate its performance
+    in predicting loan defaults.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions understanding the components of logistic regression
+    and scoring its performance.
+  citations:
+  - field: syllabus[1].summary
+    evidence: discuss the logistic regression model... understand the components of
+      this model as well as how to score its performance
+- id: '4'
+  claim: Assess the financial impact of using logistic regression for credit risk
+    modeling.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The syllabus states that students will explore the financial impact of
+    utilizing the logistic regression model, which requires analysis.
+  citations:
+  - field: syllabus[1].summary
+    evidence: explore the financial impact of utilizing this model
+- id: '5'
+  claim: Develop and evaluate gradient boosted tree models using XGBoost for credit
+    risk prediction, including stress testing and feature selection for unbalanced
+    data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The syllabus describes creating gradient boosted trees with XGBoost,
+    stress testing their performance, and discussing column selection in unbalanced
+    data.
+  citations:
+  - field: syllabus[2].summary
+    evidence: use the trendy XGBoost package in Python to create gradient boosted
+      trees... stress test their performance and discuss column selection in unbalanced
+      data
+- id: '6'
+  claim: Compare machine learning models using key performance metrics and advanced
+    model selection techniques specific to financial modeling.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The syllabus mentions using key performance metrics to compare models
+    and applying advanced model selection techniques.
+  citations:
+  - field: syllabus[3].summary
+    evidence: use key performance metrics to compare them. Using advanced model selection
+      techniques specifically for financial modeling
+- id: '7'
+  claim: Develop a business strategy based on selected credit risk models, including
+    estimating portfolio value and minimizing expected loss.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The syllabus states that students will develop a business strategy, estimate
+    portfolio value, and minimize expected loss using the selected model.
+  citations:
+  - field: syllabus[3].summary
+    evidence: develop a business strategy, estimate portfolio value, and minimize
+      expected loss
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus provides clear chapter-level outcomes but does not specify the depth
+    of coding or statistical theory required.
+  - There is no explicit mention of assessment types or hands-on project requirements.
+  - The course does not detail coverage of regulatory or ethical considerations in
+    credit risk modeling.

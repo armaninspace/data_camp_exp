@@ -1,0 +1,81 @@
+course_id: '24685'
+course_title: Machine Translation with Keras
+learning_outcomes:
+- id: '1'
+  claim: Understand the encoder-decoder architecture and its application in machine
+    translation.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will understand the encoder-decoder
+    architecture and its use in machine translation, as well as GRUs.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Machine Translation
+  - field: syllabus[0].summary
+    evidence: you'll understand what the encoder-decoder architecture is and how it
+      is used for machine translation. You will also learn about Gated Recurrent Units
+      (GRUs) and how they are used in the encoder-decoder architecture.
+- id: '2'
+  claim: Implement an encoder-decoder model for machine translation using the Keras
+    functional API.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus states that students will implement the encoder-decoder
+    model with Keras, learning about specific layers.
+  citations:
+  - field: syllabus[1].title
+    evidence: Implementing an Encoder-Decoder Model with Keras
+  - field: syllabus[1].summary
+    evidence: you will implement the encoder-decoder model with the Keras functional
+      API. While doing so, you will learn several useful Keras layers such as RepeatVector
+      and TimeDistributed layers.
+- id: '3'
+  claim: Train a machine translation model and use it to generate English-to-French
+    translations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes training the model and using it to generate translations,
+    specifically English to French.
+  citations:
+  - field: syllabus[2].title
+    evidence: Training and Generating Translations
+  - field: syllabus[2].summary
+    evidence: you will train the previously defined model and then use a well-trained
+      model to generate translations. You will see that our model does a good job
+      when translating sentences.
+- id: '4'
+  claim: Explain and apply teacher forcing and word embeddings to improve machine
+    translation models.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus states students will learn about teacher forcing and word
+    embeddings, and how these techniques improve models.
+  citations:
+  - field: syllabus[3].title
+    evidence: Teacher Forcing and Word Embeddings
+  - field: syllabus[3].summary
+    evidence: you will learn about a technique known as Teacher Forcing, which enables
+      translation models to be trained better and faster. Then you will learn how
+      you can use word embeddings to make the model even better.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced evaluation of translation quality,
+    error analysis, or deployment of models.
+  - There is no explicit mention of metacognitive skills or creative model design
+    beyond applying known techniques.
+  - The course appears focused on English-to-French translation and may not generalize
+    to other language pairs or domains.

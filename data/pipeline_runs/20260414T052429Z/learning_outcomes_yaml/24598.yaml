@@ -1,0 +1,99 @@
+course_id: '24598'
+course_title: Interactive Maps with leaflet in R
+learning_outcomes:
+- id: '1'
+  claim: Students can create basic interactive web maps in R using the leaflet package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will build their first interactive
+    web map using leaflet, including adding map tiles, setting center and zoom, plotting
+    points, and storing maps as objects.
+  citations:
+  - field: syllabus[0].summary
+    evidence: students will build their first interactive web map using leaflet...adding
+      different map tiles, setting the center point and zoom level, plotting single
+      points based on latitude and longitude coordinates, and storing leaflet maps
+      as objects.
+- id: '2'
+  claim: Students can geocode locations and display them interactively on a map with
+    popups.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes geocoding DataCamp’s headquarters and creating
+    a leaflet map that plots the headquarters and displays a popup.
+  citations:
+  - field: syllabus[0].summary
+    evidence: students geocoding DataCamp’s headquarters, and creating a leaflet map
+      that plots the headquarters and displays a popup describing the location.
+- id: '3'
+  claim: Students can plot and customize multiple points on a leaflet map, including
+    color-coding markers based on a factor variable.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: Chapter 2 focuses on plotting hundreds of points, customizing markers,
+    and color-coding based on a factor variable.
+  citations:
+  - field: syllabus[1].summary
+    evidence: students will learn to customize the markers on their leaflet map. This
+      chapter will also how to color code markers based on a factor variable.
+- id: '4'
+  claim: Students can organize map data into groups and layers, allowing users to
+    toggle displayed data and base maps.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Chapter 3 describes using groups to toggle displayed colleges by sector
+    and adding multiple base maps for user toggling.
+  citations:
+  - field: syllabus[2].summary
+    evidence: using groups to enable users to toggle the colleges that are displayed
+      on the map...add multiple base maps so that users can toggle between multiple
+      map tiles.
+- id: '5'
+  claim: Students can plot polygons to represent geographic regions and customize
+    their appearance using color palettes, labels, and highlight options.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: Chapter 4 covers mapping polygons for regions, customizing with color
+    palettes and labels, and using highlight options.
+  citations:
+  - field: syllabus[3].summary
+    evidence: students will learn to customize the polygons with color palettes and
+      labels...customize their maps, such as the highlight option in addPolygons().
+- id: '6'
+  claim: Students gain introductory knowledge of spatial data formats (e.g., geoJSON)
+    and relevant R functions (e.g., addPolygons()).
+  knowledge_type: factual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions learning about spatial data generally, geoJSON
+    data, and the addPolygons() function.
+  citations:
+  - field: syllabus[3].summary
+    evidence: students will learn about spatial data generally, geoJSON data, the
+      @ symbol, and the addPolygons() function.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced spatial analysis, map deployment,
+    or integration with other data sources.
+  - There is no explicit mention of assessment methods or depth of conceptual understanding
+    beyond procedural application.
+  - Metacognitive skills (e.g., reflecting on map design choices) are not addressed.

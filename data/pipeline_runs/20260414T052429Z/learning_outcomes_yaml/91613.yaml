@@ -1,0 +1,129 @@
+course_id: '91613'
+course_title: Analyzing Social Media Data in R
+learning_outcomes:
+- id: '1'
+  claim: Extract Twitter data using the Twitter API and the 'rtweet' library in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will extract tweets using
+    the Twitter API and 'rtweet' library, indicating hands-on procedural knowledge.
+  citations:
+  - field: syllabus[0].summary
+    evidence: extract your first set of tweets using the Twitter API and functions
+      from the powerful ‘rtweet’ library
+- id: '2'
+  claim: Apply filters to Twitter data and analyze user data, including using the
+    golden ratio and Twitter lists.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes applying filters and analyzing user data with
+    specific metrics, which requires procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: apply filters to tweets and analyze Twitter user data using the golden
+      ratio and the Twitter lists they subscribe to
+- id: '3'
+  claim: Extract and analyze trending topics and temporal patterns in Twitter data.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: Students are expected to extract trending topics and analyze data over
+    time, which involves recognizing patterns and relationships.
+  citations:
+  - field: syllabus[1].summary
+    evidence: extract trending topics and analyze Twitter data over time to identify
+      interesting insights
+- id: '4'
+  claim: Visualize tweet text data using bar plots and word clouds.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus specifies visualization techniques for tweet text, indicating
+    procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: visualize text from tweets using bar plots and word clouds
+- id: '5'
+  claim: Process and clean tweet text data to prepare a text corpus for analysis.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus mentions preparing a clean text corpus, which is a procedural
+    skill.
+  citations:
+  - field: syllabus[2].summary
+    evidence: process tweet text and prepare a clean text corpus for analysis
+- id: '6'
+  claim: Extract key discussion topics and perform sentiment analysis on tweet data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Topic modeling and sentiment analysis are explicitly mentioned as skills
+    students will perform.
+  citations:
+  - field: syllabus[2].summary
+    evidence: extract key discussion topics ... using topic modeling and sentiment
+      analysis
+- id: '7'
+  claim: Analyze and visualize Twitter network structures, such as retweet networks.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: Students are expected to analyze and visualize complex network structures,
+    which involves relational understanding and analysis.
+  citations:
+  - field: syllabus[3].summary
+    evidence: analyze these network structures and visualize the relationships between
+      these individual people as a retweet network
+- id: '8'
+  claim: Extract geolocation data from tweets and visualize tweet locations on a map.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus describes extracting geolocation data and mapping it, which
+    are procedural skills.
+  citations:
+  - field: syllabus[3].summary
+    evidence: extracting geolocation data from the tweets you’ll also discover how
+      to display tweet locations on a map
+- id: '9'
+  claim: Interpret geographic patterns in Twitter data to answer questions about regional
+    activity.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: Students are expected to answer questions about which regions are most
+    active, requiring analysis and interpretation of mapped data.
+  citations:
+  - field: syllabus[3].summary
+    evidence: answer powerful questions such as which states or countries are talking
+      about your brand the most? Geographic data adds a new dimension to your Twitter
+      data analysis.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of statistical or machine learning methods
+    used for topic modeling or sentiment analysis.
+  - No explicit mention of assessment methods or project-based synthesis.
+  - No details on error handling, data ethics, or limitations of social media data.

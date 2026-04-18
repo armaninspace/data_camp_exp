@@ -1,0 +1,98 @@
+course_id: '24630'
+course_title: Spoken Language Processing in Python
+learning_outcomes:
+- id: LO1
+  claim: Understand and visualize the structure of audio files as soundwaves in Python.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The first chapter focuses on converting audio files into soundwaves and
+    comparing them visually, which requires understanding the conceptual structure
+    of audio data and basic visualization.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Spoken Language Processing with Python
+  - field: syllabus[0].summary
+    evidence: you'll learn the first steps to working with speech files by converting
+      two different audio files into soundwaves and comparing them visually.
+- id: LO2
+  claim: Apply the SpeechRecognition library in Python to convert spoken language
+    in audio files to text.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The second chapter explicitly states that students will learn to use
+    the SpeechRecognition library to convert audio to text, which is a procedural
+    and application-level skill.
+  citations:
+  - field: syllabus[1].title
+    evidence: Using the Python SpeechRecognition library
+  - field: syllabus[1].summary
+    evidence: you'll learn how to use the SpeechRecognition library to easily start
+      converting the spoken language in your audio files to text.
+- id: LO3
+  claim: Manipulate and preprocess audio files using the PyDub library to prepare
+    them for transcription.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The third chapter covers using PyDub to alter audio file attributes,
+    which is a procedural skill involving application of library functions.
+  citations:
+  - field: syllabus[2].title
+    evidence: Manipulating Audio Files with PyDub
+  - field: syllabus[2].summary
+    evidence: you'll learn how to use this helpful library to ensure all of your audio
+      files are in the right shape for transcription.
+- id: LO4
+  claim: Integrate speech transcription and text analysis techniques to build a basic
+    speech processing proof of concept.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.75
+  reasoning: The final chapter requires students to combine skills from previous chapters
+    (transcription, sentiment analysis, NER, text classification) in a project, indicating
+    relational understanding and higher-order application.
+  citations:
+  - field: syllabus[3].title
+    evidence: Processing text transcribed from spoken language
+  - field: syllabus[3].summary
+    evidence: you'll put everything you've learned together by building a speech processing
+      proof of concept project ... transcribing ... perform sentiment analysis ...
+      named entity recognition ... text classification ...
+- id: LO5
+  claim: Perform basic sentiment analysis, named entity recognition, and text classification
+    on transcribed speech using Python libraries.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The project chapter lists these specific text analysis tasks, but the
+    depth is likely introductory, focusing on application rather than deep analysis.
+  citations:
+  - field: syllabus[3].summary
+    evidence: perform sentiment analysis using NLTK, named entity recognition using
+      spaCy and text classification using scikit-learn on the transcribed text.
+  - field: subjects
+    evidence: Sentiment Analysis, Named Entity Recognition, Text Classification
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of theoretical background in speech processing
+    or machine learning concepts.
+  - There is no explicit mention of error analysis, model evaluation, or advanced
+    customization of the libraries used.
+  - Metacognitive skills (e.g., reflecting on method choice or evaluating model performance)
+    are not explicitly addressed.
+  - The course appears to focus on practical application rather than deep conceptual
+    or theoretical understanding.

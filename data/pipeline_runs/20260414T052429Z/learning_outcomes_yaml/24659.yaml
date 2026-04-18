@@ -1,0 +1,82 @@
+course_id: '24659'
+course_title: Life Insurance Products Valuation in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply the basics of cash flow valuation, including the use
+    of discount factors and net present value calculations.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn the basics of
+    cash flow vectors, their valuation with discount factors, and evaluate investments
+    based on net present value. The mention of building a mortgage calculator suggests
+    practical application.
+  citations:
+  - field: syllabus[0].title
+    evidence: Valuation of Cash Flows
+  - field: syllabus[0].summary
+    evidence: Learn the basics of cash flow vectors and their valuation with discount
+      factors. You will then evaluate investments based on their net present value
+      and build your own mortgage calculator.
+- id: LO2
+  claim: Interpret and visualize human mortality data using life tables, including
+    survival and death probabilities.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The syllabus describes working with data sets from the Human Mortality
+    Database, building visualizations, and using survival and death probabilities,
+    indicating analysis and interpretation skills.
+  citations:
+  - field: syllabus[1].title
+    evidence: Life Tables
+  - field: syllabus[1].summary
+    evidence: In this chapter you will work with data sets from the Human Mortality
+      Database by building meaningful visualizations to study the evolution of mortality
+      data over age and time. You will also use survival and death probabilities.
+- id: LO3
+  claim: Understand and perform basic valuation of life annuity products, including
+    simple annuities and retirement plans.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus states students will learn about life annuity products and
+    their valuation by working on cases, which implies procedural application but
+    not necessarily deep analysis.
+  citations:
+  - field: syllabus[2].title
+    evidence: Life Annuities
+  - field: syllabus[2].summary
+    evidence: Learn about the basics of life annuity products and their valuation
+      by working on cases ranging from simple life annuities to retirement plans.
+- id: LO4
+  claim: Design basic life insurance products, including whole life, temporary, and
+    endowment insurances, and understand their relevance in financial planning.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions designing various types of life insurance products
+    and understanding their relevance, which suggests conceptual understanding and
+    some procedural design, but not advanced evaluation or creation.
+  citations:
+  - field: syllabus[3].title
+    evidence: Life Insurances
+  - field: syllabus[3].summary
+    evidence: Learn how these products are relevant in your financial planning by
+      designing whole life, temporary and endowment insurances.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of mathematical or statistical rigor required.
+  - There is no explicit mention of assessment types or the extent of programming
+    in R beyond basic application.
+  - No explicit coverage of advanced actuarial modeling or regulatory/ethical considerations.

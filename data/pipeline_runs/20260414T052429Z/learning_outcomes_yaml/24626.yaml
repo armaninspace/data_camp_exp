@@ -1,0 +1,84 @@
+course_id: '24626'
+course_title: Performing Experiments in Python
+learning_outcomes:
+- id: LO1
+  claim: Identify and apply basic statistical hypothesis tests (t-test, Chi-Square,
+    Fisher exact, Pearson correlation) to answer data-driven questions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn to use these
+    specific tests to answer questions about data, indicating procedural knowledge
+    and application.
+  citations:
+  - field: syllabus[0].title
+    evidence: The Basics of Statistical Hypothesis Testing
+  - field: syllabus[0].summary
+    evidence: 'discover how to answer these question by using your first statistical
+      hypothesis tests: the t-test, the Chi-Square test, the Fisher exact test, and
+      the Pearson correlation test.'
+- id: LO2
+  claim: Understand and implement experimental design principles, including controlling
+    for confounding variables, randomization, blocking, and using ANOVA.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The chapter summary details learning about multiple factors, confounding
+    variables, randomization, blocking, and ANOVA, which are conceptual and procedural
+    elements of experimental design.
+  citations:
+  - field: syllabus[1].title
+    evidence: Design Considerations in Experimental Design
+  - field: syllabus[1].summary
+    evidence: examine and multiple factors at once, controlling for the effect of
+      confounding variables and examining interactions between variables. ... use
+      randomization and blocking ... use the powerful ANOVA method.
+- id: LO3
+  claim: Explain the relationship between sample size, power analysis, and effect
+    size, and their role in avoiding type I and type II errors.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The syllabus chapter focuses on understanding how these concepts interplay
+    to avoid statistical errors, indicating conceptual understanding.
+  citations:
+  - field: syllabus[2].title
+    evidence: Sample size, Power analysis, and Effect size
+  - field: syllabus[2].summary
+    evidence: focus on ways to avoid drawing false conclusions, whether false positives
+      (type I errors) or false negatives (type II errors). Central to avoiding false
+      negatives is understanding the interplay between sample size, power analysis,
+      and effect size.
+- id: LO4
+  claim: Assess the assumptions underlying statistical tests and select appropriate
+    parametric or non-parametric tests based on data normality.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The chapter summary indicates students will examine test assumptions
+    and decide when to use non-parametric tests, which requires analysis and relational
+    understanding.
+  citations:
+  - field: syllabus[3].title
+    evidence: 'Testing Normality: Parametric and Non-parametric Tests'
+  - field: syllabus[3].summary
+    evidence: examine the assumptions underlying statistical tests ... learning whether
+      a variable follows a normal distribution and when you should use non-parametric
+      statistical tests like the Wilcoxon rank-sum test and the Spearman correlation
+      test.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The syllabus does not specify the depth of Python programming required or taught,
+    despite the course title.
+  - There is no explicit mention of hands-on coding or implementation details in Python.
+  - Assessment methods and the extent of practical application are not described.

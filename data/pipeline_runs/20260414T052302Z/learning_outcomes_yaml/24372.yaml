@@ -1,0 +1,117 @@
+course_id: '24372'
+course_title: Intermediate Python
+learning_outcomes:
+- id: '1'
+  claim: Create and customize various types of data visualizations using Matplotlib.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus explicitly states that students will learn to build and
+    customize different types of plots using Matplotlib, which involves applying procedures
+    to create visualizations.
+  citations:
+  - field: syllabus[0].title
+    evidence: Matplotlib
+  - field: syllabus[0].summary
+    evidence: learn how to build various types of plots, and customize them to be
+      more visually appealing and interpretable
+- id: '2'
+  claim: Create and manipulate datasets using Python dictionaries and pandas DataFrames.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes hands-on practice with creating and manipulating
+    datasets using dictionaries and pandas DataFrames, indicating procedural knowledge
+    and application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Dictionaries & Pandas
+  - field: syllabus[1].summary
+    evidence: hands-on practice with creating and manipulating datasets
+- id: '3'
+  claim: Access and retrieve information from Python dictionaries and pandas DataFrames.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions learning how to access information from these data
+    structures, which is a procedural skill at the application level.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn how to access the information you need from these data structures
+- id: '4'
+  claim: Use Boolean logic and control flow structures to make decisions in Python
+    programs.
+  knowledge_type: conceptual
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus covers Boolean logic, comparison operators, Boolean operators,
+    and their use in control structures, indicating conceptual understanding and application.
+  citations:
+  - field: syllabus[2].title
+    evidence: Logic, Control Flow and Filtering
+  - field: syllabus[2].summary
+    evidence: Learn about different comparison operators, how to combine them with
+      Boolean operators, and how to use the Boolean outcomes in control structures.
+- id: '5'
+  claim: Filter data in pandas DataFrames using logical conditions.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus specifically mentions filtering data in pandas DataFrames
+    using logic, which is a procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: You'll also learn to filter data in pandas DataFrames using logic.
+- id: '6'
+  claim: Implement for and while loops to iterate over data structures and execute
+    repeated operations in Python.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus describes learning about for and while loops and their use
+    in iterating over data structures, which is procedural application.
+  citations:
+  - field: syllabus[3].title
+    evidence: Loops
+  - field: syllabus[3].summary
+    evidence: While loops are like repeated if statements, the for loop iterates over
+      all kinds of data structures.
+- id: '7'
+  claim: Apply Python programming concepts to solve a practical problem using hacker
+    statistics, including random number generation, loops, and visualization.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.8
+  reasoning: The case study requires integrating multiple concepts (random number
+    generators, loops, Matplotlib) to solve a practical problem, indicating relational
+    understanding and higher DOK.
+  citations:
+  - field: syllabus[4].title
+    evidence: 'Case Study: Hacker Statistics'
+  - field: syllabus[4].summary
+    evidence: apply all the concepts you've learned... use hacker statistics to calculate
+      your chances of winning a bet. Use random number generators, loops, and Matplotlib
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly cover advanced data science topics such as machine
+    learning, data cleaning, or advanced statistical analysis.
+  - There is no explicit mention of error handling, object-oriented programming, or
+    software engineering practices.
+  - Metacognitive skills (e.g., reflecting on one's own learning or debugging strategies)
+    are not explicitly addressed.

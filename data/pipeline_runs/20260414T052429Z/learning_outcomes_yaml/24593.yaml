@@ -1,0 +1,82 @@
+course_id: '24593'
+course_title: Visualizing Time Series Data in R
+learning_outcomes:
+- id: LO1
+  claim: Recall and recognize basic R tools for time series visualization.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter introduces basic R time series visualization tools,
+    suggesting students will be able to recall and recognize these tools.
+  citations:
+  - field: syllabus[0].title
+    evidence: R Time Series Visualization Tools
+  - field: syllabus[0].summary
+    evidence: This chapter will introduce you to basic R time series visualization
+      tools.
+- id: LO2
+  claim: Understand and interpret univariate time series plots, including distribution,
+    central tendency, and spread.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The univariate time series chapter focuses on learning from plots about
+    distribution, central tendency, and spread, indicating conceptual understanding
+    and interpretation.
+  citations:
+  - field: syllabus[1].title
+    evidence: Univariate Time Series
+  - field: syllabus[1].summary
+    evidence: Univariate plots are designed to learn as much as possible about the
+      distribution, central tendency and spread of the data at hand. In this chapter
+      you will be presented with some visual tools used to diagnose univariate times
+      series.
+- id: LO3
+  claim: Identify and interpret patterns in multivariate time series data using visual
+    tools.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The multivariate time series chapter states students will learn to identify
+    patterns in distribution, central tendency, and spread over pairs or groups of
+    data, indicating conceptual understanding.
+  citations:
+  - field: syllabus[2].title
+    evidence: Multivariate Time Series
+  - field: syllabus[2].summary
+    evidence: In this chapter, you will learn how to identify patterns in the distribution,
+      central tendency and spread over pairs or groups of data.
+- id: LO4
+  claim: Apply time series visualization techniques to analyze and select a stock
+    to improve an existing portfolio.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The case study chapter requires students to put their learning into practice
+    by analyzing statistical properties of stocks and making a selection, indicating
+    procedural knowledge and application.
+  citations:
+  - field: syllabus[3].title
+    evidence: 'Case study: Visually Selecting a Stock That Improves Your Existing
+      Portfolio'
+  - field: syllabus[3].summary
+    evidence: Let's put everything you learned so far in practice! ... Analyzing the
+      statistical properties of individual stocks vs. an existing portfolio is a good
+      way of approaching the problem.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify which R packages or specific visualization techniques
+    are covered.
+  - There is no explicit mention of assessment types or depth of statistical analysis
+    required.
+  - No explicit metacognitive or higher-order creative outcomes are described.

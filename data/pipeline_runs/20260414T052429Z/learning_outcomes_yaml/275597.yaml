@@ -1,0 +1,109 @@
+course_id: '275597'
+course_title: Developing R Packages
+learning_outcomes:
+- id: LO1
+  claim: Understand and apply the essential structure and components of an R package,
+    including directories and key files.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The first syllabus chapter details learning about R package architecture,
+    including the R and man directories, DESCRIPTION and NAMESPACE files, and using
+    usethis to create a package skeleton.
+  citations:
+  - field: syllabus[0].title
+    evidence: 'Creating R Packages: From Data to Functions'
+  - field: syllabus[0].summary
+    evidence: Dive into the essentials of R package construction, from understanding
+      the architecture, the critical R and man directories, to the significance of
+      the DESCRIPTION and NAMESPACE files.
+- id: LO2
+  claim: Apply best practices for writing and organizing R functions within a package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The first and second chapters mention strengthening R function writing
+    skills, structuring code and functions, and best practices for package development.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Strengthen your R function writing skills, grasp best practices for
+      package development, and get comfortable saving functions to a file.
+  - field: syllabus[1].summary
+    evidence: Discover effective strategies for structuring code and functions within
+      the R directory.
+- id: LO3
+  claim: Create and manage R package metadata, including naming, licensing, and dependencies.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The second chapter covers naming, licensing, and managing CRAN dependencies,
+    which are key aspects of package metadata.
+  citations:
+  - field: syllabus[1].title
+    evidence: 'Designing R Packages: Package Naming and Dependencies'
+  - field: syllabus[1].summary
+    evidence: choosing an appropriate name and license for your package. Finally,
+      you’ll learn how to manage CRAN package dependencies.
+- id: LO4
+  claim: Document R packages using roxygen2, including generating help files, examples,
+    and vignettes.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter focuses on using roxygen2 for documentation, creating
+    examples, and writing vignettes.
+  citations:
+  - field: syllabus[2].title
+    evidence: 'Package Documentation: Generating Help Files and Vignettes'
+  - field: syllabus[2].summary
+    evidence: Harness the power of examples in documentation by creating function
+      examples with roxygen2. ... Explore the purpose of vignettes in R package documentation
+      and learn best practices for creating engaging vignettes.
+- id: LO5
+  claim: Implement and interpret unit tests for R packages using the testthat package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The fourth chapter is dedicated to unit testing with testthat, converting
+    examples into tests, and understanding the importance of testing.
+  citations:
+  - field: syllabus[3].title
+    evidence: 'Testing R Packages: Using Unit Tests and Robust Checks'
+  - field: syllabus[3].summary
+    evidence: learn how to implement the testthat package for unit tests. Convert
+      R examples into expectations to build your unit test knowledge.
+- id: LO6
+  claim: Install and check R packages locally to ensure robustness and functionality.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The first and fourth chapters mention installing packages locally and
+    running final checks for robustness.
+  citations:
+  - field: syllabus[0].summary
+    evidence: Finally, install your package locally using devtools.
+  - field: syllabus[3].summary
+    evidence: run some final checks to ensure you have developed a robust R package.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears to focus on procedural and conceptual knowledge at the 'apply'
+    and 'understand' levels, with little explicit evidence for higher-order skills
+    such as 'analyze', 'evaluate', or 'create' beyond the creation of a simple package.
+  - There is no explicit mention of advanced topics such as package distribution,
+    continuous integration, or advanced testing strategies.
+  - The course seems to use a guided, example-driven approach (e.g., unit conversion
+    package), so independent package design or innovation is not strongly evidenced.

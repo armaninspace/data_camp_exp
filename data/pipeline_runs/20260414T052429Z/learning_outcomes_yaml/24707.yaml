@@ -1,0 +1,84 @@
+course_id: '24707'
+course_title: 'Case Studies: Network Analysis in R'
+learning_outcomes:
+- id: '1'
+  claim: Identify and analyze important nodes and patterns in temporal network data
+    using R.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The first chapter focuses on exploring an Amazon purchase graph over
+    time, finding important products, and discovering drivers of purchases. This requires
+    students to apply network analysis techniques to temporal data and interpret results.
+  citations:
+  - field: syllabus[0].title
+    evidence: Exploring graphs through time
+  - field: syllabus[0].summary
+    evidence: finding important products and discovering what drives purchases. You'll
+      also examine how graphs can change through time by looking at the graph during
+      different time periods.
+- id: '2'
+  claim: Construct and compare different network representations from social media
+    data (retweets and mentions) in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The second chapter requires students to build graphs from Twitter data
+    using two different methods (retweets and mentions) and compare them using various
+    metrics, demonstrating the ability to apply and differentiate between network
+    construction techniques.
+  citations:
+  - field: syllabus[1].title
+    evidence: How do people talk about R on Twitter?
+  - field: syllabus[1].summary
+    evidence: 'you''ll look at the raw data and think about how you want to build
+      your graph...we''ll cover two ways: retweets and mentions. You''ll build those
+      graphs and then compare them on a number of metrics.'
+- id: '3'
+  claim: Build and analyze weighted network graphs from raw data sources in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The third chapter involves starting with raw data from a bike sharing
+    network, constructing a graph (including handling weighted edges), and analyzing
+    it, which demonstrates procedural knowledge and application.
+  citations:
+  - field: syllabus[2].title
+    evidence: Bike sharing in Chicago
+  - field: syllabus[2].summary
+    evidence: add a few new ones to handle graphs with weighted edges. You will also
+      start with data in a slightly more raw form and cover how to build your graph
+      up from a data source you might find.
+- id: '4'
+  claim: Utilize multiple visualization frameworks (igraph, ggplot2, d3.js) to represent
+    network data, including advanced and interactive methods.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.8
+  reasoning: The fourth chapter covers using various plotting libraries and frameworks
+    to visualize network data, including interactive and animated plots, which demonstrates
+    the ability to apply different visualization tools.
+  citations:
+  - field: syllabus[3].title
+    evidence: Other ways to visualize graph data
+  - field: syllabus[3].summary
+    evidence: look at other plotting libraries that build on the ggplot2 framework...other
+      non-"hairball" type methods like hive plots, as well as building interactive
+      and animated plots.
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course assumes prior knowledge from an introductory course but does not specify
+    prerequisites or review foundational concepts.
+  - There is no explicit mention of assessment types or depth of theoretical coverage
+    (e.g., mathematical underpinnings of network metrics).
+  - Metacognitive and evaluative skills are not explicitly addressed in the syllabus.

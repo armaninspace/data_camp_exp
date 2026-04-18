@@ -1,0 +1,79 @@
+course_id: '24524'
+course_title: Dealing with Missing Data in Python
+learning_outcomes:
+- id: LO1
+  claim: Identify and summarize missing data in Python datasets.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The first chapter focuses on learning about null value operations, finding
+    missing data, and summarizing missingness, which requires applying Python procedures
+    to datasets.
+  citations:
+  - field: syllabus[0].title
+    evidence: The Problem With Missing Data
+  - field: syllabus[0].summary
+    evidence: Learn about different null value operations in your dataset, how to
+      find missing data and summarizing missingness in your data.
+- id: LO2
+  claim: Analyze patterns of missingness and determine appropriate basic treatments
+    such as listwise deletion.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.9
+  reasoning: The second chapter emphasizes analyzing types of missingness and establishing
+    patterns, as well as selecting and applying basic treatments like listwise deletion.
+  citations:
+  - field: syllabus[1].title
+    evidence: Does Missingness Have A Pattern?
+  - field: syllabus[1].summary
+    evidence: Analyzing the type of missingness in your dataset... establish patterns
+      in your missing and non-missing data, and how to appropriately treat the missingness
+      using simple techniques such as listwise deletion.
+- id: LO3
+  claim: Apply and evaluate basic imputation techniques to fill in missing data and
+    visualize the results.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The third chapter covers applying basic imputation techniques, visualizing
+    imputations, and evaluating their performance, which involves procedural application
+    and some evaluation.
+  citations:
+  - field: syllabus[2].title
+    evidence: Imputation Techniques
+  - field: syllabus[2].summary
+    evidence: apply basic imputation techniques to fill in missing data and visualize
+      your imputations to be able to evaluate your imputations' performance.
+- id: LO4
+  claim: Implement advanced imputation techniques using machine learning models such
+    as KNN and MICE, and evaluate their effectiveness.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.85
+  reasoning: The final chapter describes using advanced imputation techniques (KNN,
+    MICE) and evaluating their effectiveness, which requires procedural knowledge
+    and some analysis.
+  citations:
+  - field: syllabus[3].title
+    evidence: Advanced Imputation Techniques
+  - field: syllabus[3].summary
+    evidence: using advanced imputation techniques that rely on machine learning models...
+      using methods such as KNN and MICE in order to get the most out of your missing
+      data!
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not specify the depth of theoretical understanding of missing
+    data mechanisms (e.g., MCAR, MAR, MNAR).
+  - There is no explicit mention of assessment types or practical project requirements.
+  - The course does not detail the range of Python libraries or tools used.

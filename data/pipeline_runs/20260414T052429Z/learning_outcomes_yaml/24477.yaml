@@ -1,0 +1,86 @@
+course_id: '24477'
+course_title: Working with Dates and Times in R
+learning_outcomes:
+- id: '1'
+  claim: Identify and describe how R stores dates and times.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The first chapter introduces the ways R stores dates and times, which
+    is foundational knowledge for further work.
+  citations:
+  - field: syllabus[0].title
+    evidence: Dates and Times in R
+  - field: syllabus[0].summary
+    evidence: learn about some of the ways R stores dates and times
+- id: '2'
+  claim: Parse and import dates and times in various formats into R using the lubridate
+    package.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The second chapter focuses on parsing and importing dates and times with
+    lubridate, which is a procedural skill.
+  citations:
+  - field: syllabus[1].title
+    evidence: Parsing and Manipulating Dates and Times with lubridate
+  - field: syllabus[1].summary
+    evidence: parse the format you have into an R datetime... import dates and times
+      with the lubridate package
+- id: '3'
+  claim: Extract components (such as year, month, day) from datetime objects in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The second chapter also mentions extracting parts of a datetime, which
+    is a procedural application.
+  citations:
+  - field: syllabus[1].summary
+    evidence: learn how to extract parts of a datetime
+- id: '4'
+  claim: Perform arithmetic operations on dates and times, including calculating durations
+    and generating sequences.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The third chapter is dedicated to arithmetic with dates and times, including
+    calculations and generating sequences.
+  citations:
+  - field: syllabus[2].title
+    evidence: Arithmetic with Dates and Times
+  - field: syllabus[2].summary
+    evidence: do calculations with them... calculated how long it's been since the
+      first man stepped on the moon, generated sequences of dates
+- id: '5'
+  claim: Handle practical issues with dates and times in R, such as time zones, partial
+    times, and output formatting.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The final chapter addresses practical problems, including time zones,
+    partial times, and outputting dates and times.
+  citations:
+  - field: syllabus[3].title
+    evidence: Problems in practice
+  - field: syllabus[3].summary
+    evidence: handle time zones, deal with times when you don't care about dates,
+      parse dates quickly, and output dates and times
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - No explicit mention of assessment or depth of conceptual understanding beyond
+    procedural skills.
+  - No evidence of higher-order skills such as analysis, evaluation, or creation.
+  - No explicit coverage of error handling or debugging with dates and times.
+  - No mention of integration with other R packages or workflows.

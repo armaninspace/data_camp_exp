@@ -1,0 +1,117 @@
+course_id: '24435'
+course_title: Data Science for Business
+learning_outcomes:
+- id: LO1
+  claim: Define data science and describe its workflow in a business context.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will learn what data science
+    is, the data science workflow, and its application to real-world business problems.
+  citations:
+  - field: syllabus[0].title
+    evidence: Introduction to Data Science
+  - field: syllabus[0].summary
+    evidence: defining what data science is... the data science workflow... how data
+      science is applied to real-world business problems
+- id: LO2
+  claim: Identify and describe different data sources and basic data storage methods
+    relevant to business.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions learning about different data sources and how to
+    store collected data, but does not indicate deeper analysis or application.
+  citations:
+  - field: syllabus[1].title
+    evidence: Data Collection and Storage
+  - field: syllabus[1].summary
+    evidence: learn about the different data sources your company can draw from, and
+      how to store that data once it's collected
+- id: LO3
+  claim: Describe the purpose and elements of dashboards and make directed or ad hoc
+    data requests.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: Students will discuss dashboards, their elements, and how to make requests
+    for dashboards or ad hoc data, indicating understanding of these tools but not
+    necessarily the ability to create them.
+  citations:
+  - field: syllabus[2].title
+    evidence: Analysis and Visualization
+  - field: syllabus[2].summary
+    evidence: discuss ways to explore and visualize data through dashboards... elements
+      of a dashboard... how to make a directed request for a dashboard... making ad
+      hoc data requests
+- id: LO4
+  claim: Explain the concept and purpose of A/B testing in business analytics.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus states that A/B tests will be covered as a tool for de-risking
+    decision-making, suggesting students will understand their purpose.
+  citations:
+  - field: syllabus[2].summary
+    evidence: A/B tests, which are a powerful analytics tool that de-risk decision-making
+- id: LO5
+  claim: Summarize the main types of machine learning (supervised, unsupervised, clustering)
+    and their business applications.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 1
+  solo_level: multistructural
+  confidence: 0.85
+  reasoning: The syllabus indicates coverage of supervised and unsupervised machine
+    learning, clustering, and their relevance to business, but does not suggest deeper
+    application or analysis.
+  citations:
+  - field: syllabus[3].title
+    evidence: Prediction
+  - field: syllabus[3].summary
+    evidence: cover supervised and unsupervised machine learning, and clustering
+- id: LO6
+  claim: Recognize and describe advanced topics in machine learning, including time
+    series prediction, NLP, deep learning, and explainable AI.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.75
+  reasoning: The syllabus lists these topics as being discussed, but does not indicate
+    depth beyond basic recognition or description.
+  citations:
+  - field: syllabus[3].summary
+    evidence: special topics in machine learning, including time series prediction,
+      natural language processing, deep learning, and explainable AI
+- id: LO7
+  claim: Describe how to structure a data science team to meet organizational needs.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: unistructural
+  confidence: 0.8
+  reasoning: The syllabus mentions learning about ways to structure a data team for
+    organizational needs, indicating conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learning about ways to structure your data team to meet your organization's
+      needs
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course appears introductory and conceptual, with little evidence of procedural
+    or applied skills beyond making data requests.
+  - There is no indication that students will perform hands-on data analysis, build
+    dashboards, or implement machine learning models.
+  - Coverage of advanced machine learning topics is likely superficial, limited to
+    recognition or basic description.

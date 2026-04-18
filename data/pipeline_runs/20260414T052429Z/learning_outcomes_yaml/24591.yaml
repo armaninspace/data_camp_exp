@@ -1,0 +1,58 @@
+course_id: '24591'
+course_title: 'Marketing Analytics: Predicting Customer Churn in Python'
+learning_outcomes:
+- id: '1'
+  claim: Recall and recognize key concepts and tools related to customer churn analysis
+    and prediction using Python.
+  knowledge_type: factual
+  process_level: remember
+  dok_level: 1
+  solo_level: unistructural
+  confidence: 0.7
+  reasoning: The course summary and subjects list indicate exposure to core concepts
+    and tools (Python, pandas, scikit-learn, customer churn, feature selection/engineering),
+    but without a syllabus, depth is unclear.
+  citations:
+  - field: summary
+    evidence: Learn how to use Python to analyze customer churn and build a model
+      to predict it.
+  - field: subjects
+    evidence: Python, Data Analysis, Data Visualization, Machine Learning, pandas,
+      scikit-learn, Feature Selection, Feature Engineering
+- id: '2'
+  claim: Understand the process of building a predictive model for customer churn
+    using Python and relevant libraries.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The summary mentions building a model to predict churn, and the subjects
+    list includes machine learning and relevant libraries, suggesting conceptual understanding,
+    but no syllabus details are provided.
+  citations:
+  - field: summary
+    evidence: build a model to predict [customer churn]
+  - field: subjects
+    evidence: Machine Learning, pandas, scikit-learn
+- id: '3'
+  claim: Apply Python tools (such as pandas and scikit-learn) to perform data analysis
+    and feature engineering for churn prediction.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.6
+  reasoning: The subjects list includes practical tools and techniques (pandas, scikit-learn,
+    feature engineering), implying some procedural application, but the absence of
+    a syllabus limits certainty.
+  citations:
+  - field: subjects
+    evidence: pandas, scikit-learn, Feature Engineering
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: weak
+  gaps_or_ambiguities:
+  - No syllabus provided, so specific topics, depth, and assessment types are unknown.
+  - No explicit mention of evaluation, analysis, or creation-level tasks.
+  - No details on the extent of hands-on practice or project work.

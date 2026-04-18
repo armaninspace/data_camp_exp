@@ -1,0 +1,87 @@
+course_id: '24661'
+course_title: Advanced Dimensionality Reduction in R
+learning_outcomes:
+- id: LO1
+  claim: Understand and compare advanced dimensionality reduction techniques, including
+    t-SNE and GLRM, and their applications in R.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview and summary explicitly mention learning about t-SNE and
+    GLRM, understanding their hyperparameters, and comparing them to PCA. This supports
+    conceptual understanding and comparison, but not deep analysis or creation.
+  citations:
+  - field: summary
+    evidence: Learn how to apply advanced dimensionality techniques such as t-SNE
+      and GLRM.
+  - field: overview
+    evidence: 'compare the application of PCA and t-SNE; practice another useful dimensionality
+      reduction algorithm: GLRM'
+- id: LO2
+  claim: Apply t-SNE and GLRM algorithms to real datasets (MNIST, Fashion MNIST, credit
+    card fraud) for dimensionality reduction and classification tasks in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.75
+  reasoning: The overview describes hands-on application of t-SNE and GLRM to datasets
+    for classification and imputation, indicating procedural knowledge at the application
+    level.
+  citations:
+  - field: overview
+    evidence: represent handwritten digits using the MNIST dataset; compute centroids
+      prototypes of each digit to classify other digits; make use of the Fashion MNIST
+      data to classify clothes, impute missing data
+- id: LO3
+  claim: Optimize t-SNE hyperparameters and evaluate their impact on dimensionality
+    reduction results.
+  knowledge_type: procedural
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview states that students will understand and optimize t-SNE
+    hyperparameters and see their impact, which requires analysis of parameter effects.
+  citations:
+  - field: overview
+    evidence: understand the different hyperparameters that have an impact on your
+      results and how to optimize them
+- id: LO4
+  claim: Compare the performance of predictive models trained on original versus dimensionally
+    reduced features.
+  knowledge_type: conceptual
+  process_level: analyze
+  dok_level: 3
+  solo_level: relational
+  confidence: 0.7
+  reasoning: The overview mentions comparing random forest models trained on original
+    and embedded features, which involves analysis and comparison.
+  citations:
+  - field: overview
+    evidence: train a random forest with the original features and with the embedded
+      features and compare them
+- id: LO5
+  claim: Explain the challenges of high-dimensional data, including the curse of dimensionality
+    and the role of distance metrics.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.7
+  reasoning: The overview references learning about distance metrics and the curse
+    of dimensionality, supporting conceptual understanding.
+  citations:
+  - field: overview
+    evidence: learn what a distance metric is and which ones are the most common,
+      along with the problems that arise with the curse of dimensionality
+coverage_notes:
+  syllabus_present: false
+  evidence_strength: moderate
+  gaps_or_ambiguities:
+  - No detailed syllabus is provided, so all inferences are based on the overview
+    and summary.
+  - No explicit mention of assessment types or depth of practical skills.
+  - Limited information on metacognitive or creative learning outcomes.

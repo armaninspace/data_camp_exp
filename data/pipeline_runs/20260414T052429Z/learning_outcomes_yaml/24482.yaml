@@ -1,0 +1,98 @@
+course_id: '24482'
+course_title: Time Series Analysis in R
+learning_outcomes:
+- id: LO1
+  claim: Organize and visualize time series data in R.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus explicitly states that students will organize and visualize
+    time series data in R, which requires procedural knowledge and application.
+  citations:
+  - field: syllabus[0].title
+    evidence: Exploratory time series data analysis
+  - field: syllabus[0].summary
+    evidence: organize and visualize time series data in R
+- id: LO2
+  claim: Identify and explain simplifying assumptions and common characteristics of
+    financial time series.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The syllabus mentions learning about simplifying assumptions and characteristics,
+    which aligns with conceptual understanding.
+  citations:
+  - field: syllabus[0].summary
+    evidence: learn several simplifying assumptions that are widely used in time series
+      analysis, and common characteristics of financial time series
+- id: LO3
+  claim: Detect trends and understand the concepts of white noise, random walk, and
+    stationary processes in time series.
+  knowledge_type: conceptual
+  process_level: understand
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.9
+  reasoning: The chapter covers trend spotting and introduces key time series models
+    and concepts, indicating conceptual understanding.
+  citations:
+  - field: syllabus[1].summary
+    evidence: conduct some trend spotting, and learn the white noise (WN) model, the
+      random walk (RW) model, and the definition of stationary processes
+- id: LO4
+  claim: Calculate and interpret correlation coefficients and autocorrelation functions
+    for time series data.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Students are expected to review, estimate, and visualize correlations
+    and autocorrelations, which involves procedural application.
+  citations:
+  - field: syllabus[2].summary
+    evidence: review the correlation coefficient, use it to compare two time series,
+      and also apply it to compare a time series with its past, as an autocorrelation.
+      You will discover the autocorrelation function (ACF) and practice estimating
+      and visualizing autocorrelations for time series data.
+- id: LO5
+  claim: Simulate and estimate autoregressive (AR) models in R, and compare AR with
+    random walk models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: The syllabus specifies practicing simulation and estimation of AR models
+    and comparing them with RW models, which is procedural application.
+  citations:
+  - field: syllabus[3].summary
+    evidence: practice simulating and estimating the AR model in R, and compare the
+      AR model with the random walk (RW) model
+- id: LO6
+  claim: Simulate and estimate simple moving average (MA) models in R, and compare
+    MA with AR models.
+  knowledge_type: procedural
+  process_level: apply
+  dok_level: 2
+  solo_level: multistructural
+  confidence: 0.95
+  reasoning: Students will practice simulating and estimating MA models and compare
+    them with AR models, indicating procedural application.
+  citations:
+  - field: syllabus[4].summary
+    evidence: practice simulating and estimating the MA model in R, and compare the
+      MA model with the autoregressive (AR) model
+coverage_notes:
+  syllabus_present: true
+  evidence_strength: strong
+  gaps_or_ambiguities:
+  - The course does not explicitly mention advanced topics such as model diagnostics,
+    forecasting accuracy, or handling non-stationary data beyond basic definitions.
+  - There is no explicit mention of assessment methods or depth of statistical theory.
+  - The course appears to focus on foundational models (WN, RW, AR, MA) and does not
+    cover more advanced models (e.g., ARMA, ARIMA, GARCH).

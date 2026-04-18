@@ -1,13 +1,16 @@
 # Inspection Bundle 7
 
-This bundle is the Prefect smoke-test publication for the canonical question
-pipeline on course `24491` using run:
+This bundle is the current bounded inspection publication for the canonical
+question pipeline on course `24491`.
 
-- `20260418T140021Z`
+Source runs:
 
-It was produced by the new Prefect flow and preserves the current domain path:
+- candidate run: `20260418T182853Z`
+- ledger run: `20260418T182901Z`
 
-`raw YAML -> normalized course -> V3 generation -> V4.1 policy -> V6 ledger -> inspection bundle`
+Pipeline path:
+
+`raw YAML -> normalized course -> candidate generation -> policy -> ledger -> inspection bundle`
 
 Included files:
 
@@ -15,6 +18,7 @@ Included files:
 - `inspection_report.md`
 - `question_ledger_v6_report.md`
 - `run_manifest.json`
+- `entry_definition_fix_note.md`
 - `final_deliverables/all_questions.jsonl`
 
 Convention going forward:
@@ -22,6 +26,7 @@ Convention going forward:
 - each inspection bundle should include `final_deliverables/`
 - the authoritative final ledger export `all_questions.jsonl` should be copied there
 
-The source run lives under:
+Source run directories:
 
-- `data/pipeline_runs/20260418T140021Z`
+- `data/pipeline_runs/20260418T182853Z`
+- `data/pipeline_runs/20260418T182901Z`

@@ -45,8 +45,22 @@ raw course YAML
 -> policy classification
 -> foundational-entry coverage enforcement
 -> ledger normalization
+-> per-run LLM metering for live review-answer stages
 -> derived views and inspection bundle
 ```
+
+## Metering
+
+Live LLM-backed review-answer stages persist per-run metering as:
+
+- `llm_metering.jsonl`
+
+Each record includes run identity, stage, scoped entity ids, model metadata,
+latency, token counts, retry count, cache status, and estimated cost.
+
+Current implementation path:
+
+- [llm_metering.py](/code/src/course_pipeline/llm_metering.py)
 
 ## Terminology
 

@@ -45,6 +45,7 @@ Current reference layout:
 - the flow writes an immutable run manifest to `run_manifest.json`
 - the flow writes a promotion manifest for promoted prod runs
 - aggregate reference artifacts are rebuilt from per-course reference state
+- live review-answer stages write `llm_metering.jsonl` at the run root
 
 ## Future deployment path
 

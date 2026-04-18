@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from course_pipeline.question_gen_v3.pipeline import write_run_report as write_question_gen_v3_report
+from course_pipeline.questions.candidates import write_candidate_run_report
 from course_pipeline.utils import ensure_dir, write_jsonl
 
 try:
@@ -52,7 +52,7 @@ def run_candidate_generation(context, standardized_result, semantics_result):
     write_jsonl(outputs["duplicate_clusters"], duplicate_rows)
     write_jsonl(outputs["final_selected"], final_rows)
     write_jsonl(outputs["selection_summaries"], summary_rows)
-    write_question_gen_v3_report(context.candidates_dir, semantics_result["per_course"])
+    write_candidate_run_report(context.candidates_dir, semantics_result["per_course"])
     return {
         "per_course": semantics_result["per_course"],
         "artifact_paths": list(outputs.values()) + [context.candidates_dir / "question_gen_v3_report.md"],

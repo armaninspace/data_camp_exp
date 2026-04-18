@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from course_pipeline.question_ledger_v6.run_v6 import build_v6_review_bundle
+from course_pipeline.questions.inspection import build_ledger_review_bundle
 
 try:
     from prefect import task
@@ -15,7 +15,7 @@ except Exception:  # noqa: BLE001
 
 @task
 def render_bundle(context, standardized_result, ledger_result):
-    outputs = build_v6_review_bundle(context.run_root, standardized_result["courses"], ledger_result["per_course"])
+    outputs = build_ledger_review_bundle(context.run_root, standardized_result["courses"], ledger_result["per_course"])
     target_bundle = context.bundle_dir
     source_bundle = outputs["review_bundle"]
     if not target_bundle.exists():

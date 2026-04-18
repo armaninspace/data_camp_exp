@@ -7,33 +7,37 @@ import yaml
 
 from course_pipeline.config import Settings
 from course_pipeline.normalize import iter_courses
+from course_pipeline.questions.candidates import (
+    ScoredCandidate,
+    build_candidate_review_bundle,
+    run_candidate_generation_for_course,
+    write_candidate_course_artifacts,
+    write_candidate_run_report,
+)
+from course_pipeline.questions.ledger import (
+    AnchorSummary,
+    LedgerRow,
+    build_ledger_review_bundle,
+    build_question_ledger_for_course,
+    load_candidate_course_artifacts_for_ledger,
+    write_ledger_run_report,
+)
+from course_pipeline.questions.policy import (
+    CacheEntry,
+    CandidateRecord,
+    CoverageWarning,
+    PolicyDecision,
+    build_cache_entries,
+    build_legacy_policy_review_bundle,
+    build_policy_review_bundle,
+    load_candidate_course_artifacts,
+    run_legacy_policy_stage,
+    run_policy_stage,
+    write_legacy_policy_report,
+    write_policy_report,
+)
 from course_pipeline.schemas import (
     NormalizedCourse,
-)
-from course_pipeline.question_gen_v3.pipeline import (
-    build_review_bundle as build_question_gen_v3_review_bundle_internal,
-    run_question_gen_v3_for_course,
-    write_course_artifacts as write_question_gen_v3_course_artifacts,
-    write_run_report as write_question_gen_v3_report,
-)
-from course_pipeline.question_gen_v4.build_cache_entries import build_cache_entries
-from course_pipeline.question_gen_v4.run_v4_policy import (
-    build_v4_review_bundle as build_question_gen_v4_review_bundle_internal,
-    load_v3_course_artifacts,
-    run_question_gen_v4_policy,
-    write_v4_report,
-)
-from course_pipeline.question_gen_v4_1.run_v4_1_policy import (
-    build_v4_1_review_bundle as build_question_gen_v4_1_review_bundle_internal,
-    load_v3_course_artifacts as load_v3_course_artifacts_v4_1,
-    run_question_gen_v4_1_policy,
-    write_v4_1_report,
-)
-from course_pipeline.question_ledger_v6.run_v6 import (
-    build_question_ledger_v6_for_course,
-    build_v6_review_bundle as build_question_ledger_v6_review_bundle_internal,
-    load_v3_course_artifacts as load_v3_course_artifacts_v6,
-    write_v6_run_report,
 )
 from course_pipeline.storage import Storage
 from course_pipeline.utils import ensure_dir, write_jsonl
@@ -131,9 +135,9 @@ def run_question_generation_v3(
 
     for course in selected:
         try:
-            result = run_question_gen_v3_for_course(course)
+            result = run_candidate_generation_for_course(course)
             per_course[course.course_id] = result
-            write_question_gen_v3_course_artifacts(run_dir, course.course_id, result)
+            write_candidate_course_artifacts(run_dir, course.course_id, result)
             topic_rows.extend(item.model_dump(mode="json") for item in result["topics"])
             edge_rows.extend(item.model_dump(mode="json") for item in result["edges"])
             pedagogy_rows.extend(item.model_dump(mode="json") for item in result["pedagogy"])
@@ -182,7 +186,7 @@ def run_question_generation_v3(
     write_jsonl(outputs["final_selected"], final_rows)
     write_jsonl(outputs["selection_summaries"], summary_rows)
     write_jsonl(outputs["errors"], error_rows)
-    write_question_gen_v3_report(run_dir, per_course)
+    write_candidate_run_report(run_dir, per_course)
     return outputs
 
 
@@ -204,12 +208,12 @@ def build_question_generation_v3_review_bundle(
         artifact_dir = run_dir / "course_artifacts" / course.course_id
         per_course[course.course_id] = {
             "final_selected": [
-                __import__("course_pipeline.question_gen_v3.models", fromlist=["ScoredCandidate"]).ScoredCandidate.model_validate_json(line)
+                ScoredCandidate.model_validate_json(line)
                 for line in (artifact_dir / "final_selected.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ]
         }
-    return build_question_gen_v3_review_bundle_internal(run_dir, settings, course_rows, per_course)
+    return build_candidate_review_bundle(run_dir, settings, course_rows, per_course)
 
 
 def run_question_generation_v4_policy(
@@ -236,8 +240,8 @@ def run_question_generation_v4_policy(
     error_rows: list[dict] = []
     for course in course_rows:
         try:
-            v3_payload = load_v3_course_artifacts(source_run_dir, course.course_id)
-            result = run_question_gen_v4_policy(v3_payload)
+            v3_payload = load_candidate_course_artifacts(source_run_dir, course.course_id)
+            result = run_legacy_policy_stage(v3_payload)
             scored_by_id = {row.candidate.candidate_id: row for row in v3_payload["scored_candidates"]}
             answers_by_candidate_id = {}
             cache_entries = build_cache_entries(
@@ -277,7 +281,7 @@ def run_question_generation_v4_policy(
     write_jsonl(outputs["cache_entries"], cache_entry_rows)
     write_jsonl(outputs["policy_metrics"], metrics_rows)
     write_jsonl(outputs["errors"], error_rows)
-    write_v4_report(run_dir, per_course)
+    write_legacy_policy_report(run_dir, per_course)
     outputs["report"] = run_dir / "question_gen_v4_report.md"
     return outputs
 
@@ -298,15 +302,15 @@ def build_question_generation_v4_review_bundle(
         course_rows = [course for course in course_rows if course.course_id in allowed]
     per_course: dict[str, dict] = {}
     for course in course_rows:
-        v3_payload = load_v3_course_artifacts(source_run_dir, course.course_id)
+        v3_payload = load_candidate_course_artifacts(source_run_dir, course.course_id)
         scored_by_id = {row.candidate.candidate_id: row for row in v3_payload["scored_candidates"]}
         decisions = [
-            __import__("course_pipeline.question_gen_v4.policy_models", fromlist=["PolicyDecision"]).PolicyDecision.model_validate_json(line)
+            PolicyDecision.model_validate_json(line)
             for line in (run_dir / "course_artifacts" / course.course_id / "policy_decisions.jsonl").read_text(encoding="utf-8").splitlines()
             if line.strip()
         ]
         cache_entries = [
-            __import__("course_pipeline.question_gen_v4.policy_models", fromlist=["CacheEntry"]).CacheEntry.model_validate_json(line)
+            CacheEntry.model_validate_json(line)
             for line in (run_dir / "course_artifacts" / course.course_id / "cache_entries.jsonl").read_text(encoding="utf-8").splitlines()
             if line.strip()
         ]
@@ -317,7 +321,7 @@ def build_question_generation_v4_review_bundle(
             "metrics": metrics,
             "scored_by_id": scored_by_id,
         }
-    return build_question_gen_v4_review_bundle_internal(run_dir, settings, course_rows, per_course)
+    return build_legacy_policy_review_bundle(run_dir, settings, course_rows, per_course)
 
 
 def run_question_generation_v4_1_policy(
@@ -347,8 +351,8 @@ def run_question_generation_v4_1_policy(
     error_rows: list[dict] = []
     for course in course_rows:
         try:
-            v3_payload = load_v3_course_artifacts_v4_1(source_run_dir, course.course_id)
-            result = run_question_gen_v4_1_policy(v3_payload)
+            v3_payload = load_candidate_course_artifacts(source_run_dir, course.course_id)
+            result = run_policy_stage(v3_payload)
             scored_by_id = {row.candidate.candidate_id: row for row in v3_payload["scored_candidates"]}
             cache_entries = build_cache_entries(
                 candidates_by_id=scored_by_id,
@@ -402,7 +406,7 @@ def run_question_generation_v4_1_policy(
     write_jsonl(outputs["hard_reject_records"], reject_rows)
     write_jsonl(outputs["policy_metrics"], metrics_rows)
     write_jsonl(outputs["errors"], error_rows)
-    write_v4_1_report(run_dir, per_course)
+    write_policy_report(run_dir, per_course)
     return outputs
 
 
@@ -425,34 +429,34 @@ def build_question_generation_v4_1_review_bundle(
         artifact_dir = run_dir / "course_artifacts" / course.course_id
         per_course[course.course_id] = {
             "validated_correct_all": [
-                __import__("course_pipeline.question_gen_v4_1.policy_models", fromlist=["CandidateRecord"]).CandidateRecord.model_validate_json(line)
+                CandidateRecord.model_validate_json(line)
                 for line in (artifact_dir / "validated_correct_all.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "visible_curated": [
-                __import__("course_pipeline.question_gen_v4_1.policy_models", fromlist=["CandidateRecord"]).CandidateRecord.model_validate_json(line)
+                CandidateRecord.model_validate_json(line)
                 for line in (artifact_dir / "visible_curated.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "hidden_correct": [
-                __import__("course_pipeline.question_gen_v4_1.policy_models", fromlist=["CandidateRecord"]).CandidateRecord.model_validate_json(line)
+                CandidateRecord.model_validate_json(line)
                 for line in (artifact_dir / "hidden_correct.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "coverage_warnings": [
-                __import__("course_pipeline.question_gen_v4_1.policy_models", fromlist=["CoverageWarning"]).CoverageWarning.model_validate_json(line)
+                CoverageWarning.model_validate_json(line)
                 for line in (artifact_dir / "coverage_warnings.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "cache_entries": [
-                __import__("course_pipeline.question_gen_v4.policy_models", fromlist=["CacheEntry"]).CacheEntry.model_validate_json(line)
+                CacheEntry.model_validate_json(line)
                 for line in (artifact_dir / "cache_entries.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "metrics": json.loads((artifact_dir / "policy_metrics.json").read_text(encoding="utf-8")),
             "hard_reject_audit_summary": json.loads((artifact_dir / "hard_reject_audit_summary.json").read_text(encoding="utf-8")),
         }
-    return build_question_gen_v4_1_review_bundle_internal(run_dir, settings, course_rows, per_course)
+    return build_policy_review_bundle(run_dir, settings, course_rows, per_course)
 
 
 def run_question_ledger_v6(
@@ -480,8 +484,8 @@ def run_question_ledger_v6(
     inspection_sections: list[str] = []
     for course in course_rows:
         try:
-            v3_payload = load_v3_course_artifacts_v6(source_run_dir, course.course_id)
-            result = build_question_ledger_v6_for_course(v3_payload)
+            v3_payload = load_candidate_course_artifacts_for_ledger(source_run_dir, course.course_id)
+            result = build_question_ledger_for_course(v3_payload)
             per_course[course.course_id] = result
             course_dir = ensure_dir(run_dir / "course_artifacts" / course.course_id)
             write_jsonl(course_dir / "all_questions.jsonl", [item.model_dump(mode="json") for item in result["all_questions"]])
@@ -518,7 +522,7 @@ def run_question_ledger_v6(
     outputs["anchors_summary"].write_text(json.dumps(anchor_summary_rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     outputs["inspection_report"].write_text("\n\n".join(section.strip() for section in inspection_sections).rstrip() + "\n", encoding="utf-8")
     write_jsonl(outputs["errors"], error_rows)
-    write_v6_run_report(run_dir, per_course)
+    write_ledger_run_report(run_dir, per_course)
     return outputs
 
 
@@ -541,30 +545,29 @@ def build_question_ledger_v6_review_bundle(
         artifact_dir = run_dir / "course_artifacts" / course.course_id
         per_course[course.course_id] = {
             "all_questions": [
-                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                LedgerRow.model_validate_json(line)
                 for line in (artifact_dir / "all_questions.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "visible_curated": [
-                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                LedgerRow.model_validate_json(line)
                 for line in (artifact_dir / "visible_curated.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "cache_servable": [
-                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                LedgerRow.model_validate_json(line)
                 for line in (artifact_dir / "cache_servable.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "aliases": [
-                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                LedgerRow.model_validate_json(line)
                 for line in (artifact_dir / "aliases.jsonl").read_text(encoding="utf-8").splitlines()
                 if line.strip()
             ],
             "anchor_summaries": [
-                __import__("course_pipeline.question_ledger_v6.models", fromlist=["AnchorSummary"]).AnchorSummary.model_validate(item)
+                AnchorSummary.model_validate(item)
                 for item in json.loads((artifact_dir / "anchors_summary.json").read_text(encoding="utf-8"))
             ],
             "inspection_report": (artifact_dir / "inspection_report.md").read_text(encoding="utf-8"),
         }
-    return build_question_ledger_v6_review_bundle_internal(run_dir, course_rows, per_course)
-
+    return build_ledger_review_bundle(run_dir, course_rows, per_course)

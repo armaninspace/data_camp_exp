@@ -24,10 +24,14 @@ def publish_markdown(key: str, markdown: str) -> None:
 def build_artifact_index_entries(stage: str, paths: list[Path], run_root: Path) -> list[dict[str, str | int | None]]:
     entries: list[dict[str, str | int | None]] = []
     for path in paths:
+        try:
+            relative_path = str(path.relative_to(run_root))
+        except ValueError:
+            relative_path = str(path)
         entries.append(
             {
                 "artifact_type": path.suffix.lstrip(".") or "directory",
-                "relative_path": str(path.relative_to(run_root)),
+                "relative_path": relative_path,
                 "stage": stage,
                 "row_count": None,
                 "content_type": "directory" if path.is_dir() else "file",

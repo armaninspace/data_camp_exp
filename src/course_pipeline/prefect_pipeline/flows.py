@@ -11,6 +11,7 @@ from course_pipeline.prefect_pipeline.tasks.finalize import finalize_run_manifes
 from course_pipeline.prefect_pipeline.tasks.ledger import build_ledger
 from course_pipeline.prefect_pipeline.tasks.policy import run_policy
 from course_pipeline.prefect_pipeline.tasks.prepare import prepare_run_context
+from course_pipeline.prefect_pipeline.tasks.promote import promote_reference_data
 from course_pipeline.prefect_pipeline.tasks.standardize import run_standardization
 from course_pipeline.prefect_pipeline.tasks.semantics import run_semantics
 from course_pipeline.prefect_pipeline.tasks.views import derive_views
@@ -54,6 +55,7 @@ def question_generation_pipeline_flow(config: RunConfig):
     )
     blocking_failure = None
     status = "completed"
+    promoted_ref = False
     try:
         standardized_result = run_standardization(context, config)
         stage_summaries.append(
@@ -159,6 +161,23 @@ def question_generation_pipeline_flow(config: RunConfig):
             )
         )
         artifact_index.extend(build_artifact_index_entries("render_inspection_bundle", bundle_result["artifact_paths"], context.run_root))
+
+        promotion_result = promote_reference_data(context, standardized_result, ledger_result)
+        promoted_ref = bool(promotion_result["promoted"])
+        stage_summaries.append(
+            StageSummary(
+                stage_name="promote_ref_data",
+                started_at=context.started_at,
+                finished_at=context.started_at,
+                duration_seconds=0.0,
+                status="completed" if promoted_ref else "skipped",
+                output_count=promotion_result["course_count"],
+                warnings=[] if promoted_ref else [str(promotion_result["reason"])],
+                artifact_paths=[str(path) for path in promotion_result["artifact_paths"]],
+                metrics={"promoted_ref": promoted_ref, "run_mode": context.run_mode},
+            )
+        )
+        artifact_index.extend(build_artifact_index_entries("promote_ref_data", promotion_result["artifact_paths"], context.run_root))
     except Exception as exc:  # noqa: BLE001
         status = "failed"
         blocking_failure = str(exc)
@@ -193,4 +212,5 @@ def question_generation_pipeline_flow(config: RunConfig):
         artifact_index=artifact_index,
         status=status,
         blocking_failure=blocking_failure,
+        promoted_ref=promoted_ref,
     )

@@ -1,14 +1,18 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
 
 class RunConfig(BaseModel):
     run_label: str | None = None
+    run_mode: Literal["dev", "test", "prod"] = "dev"
     input_root: Path
     output_root: Path
+    ref_root: Path | None = None
+    promote_ref: bool = True
     standardized_output_subdir: str = "standardized"
     semantic_output_subdir: str = "semantics"
     candidate_output_subdir: str = "candidates"

@@ -204,7 +204,16 @@ These are the main operational truth for evaluation runs.
 Examples:
 
 - run directories under [data/pipeline_runs](/code/data/pipeline_runs)
+- promoted reference data under [data/ref](/code/data/ref)
 - bundle docs under [docs](/code/docs)
+
+The filesystem model now has two layers:
+
+- immutable run roots under `data/pipeline_runs/<run_id>/`
+- accumulative promoted reference data under `data/ref/current/`
+
+Only `prod` Prefect runs promote into `data/ref/current/`.
+`dev` and `test` runs remain isolated in run roots.
 
 ### Database persistence
 

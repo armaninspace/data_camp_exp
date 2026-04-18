@@ -87,4 +87,8 @@ Thumbs.db
 # Local temp / archives
 tmp/
 *.tar
+*.zip
 *.tar.gz
+
+# Generated pipeline runs
+data/pipeline_runs/

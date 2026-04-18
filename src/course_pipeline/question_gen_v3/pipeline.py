@@ -6,7 +6,6 @@ import urllib.request
 from pathlib import Path
 
 from course_pipeline.config import Settings
-from course_pipeline.question_gen_v2 import ReviewAnswerDraftList
 from course_pipeline.question_gen_v3.config import load_default_config
 from course_pipeline.question_gen_v3.dedupe import dedupe_candidates
 from course_pipeline.question_gen_v3.extract_edges import extract_edges

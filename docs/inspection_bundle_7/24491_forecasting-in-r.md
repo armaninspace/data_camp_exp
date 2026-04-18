@@ -14,6 +14,7 @@
 - question_id: arima-models-developing-comparison-how-is-arima-different-from-exponential-smoothing
 - anchor_id: arima-models
 - anchor_label: ARIMA models
+- tracked_topics: ["arima", "exponential-smoothing"]
 - anchor_type: foundational_vocabulary
 - question_family: bridge
 - question_type: comparison
@@ -39,6 +40,7 @@
 - question_id: arima-models-novice-definition-what-does-arima-stand-for
 - anchor_id: arima-models
 - anchor_label: ARIMA models
+- tracked_topics: ["arima"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -64,6 +66,7 @@
 - question_id: arima-models-novice-definition-what-is-arima
 - anchor_id: arima-models
 - anchor_label: ARIMA models
+- tracked_topics: ["arima"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -89,6 +92,7 @@
 - question_id: arima-models-proficient-diagnostic-when-would-arima-be-a-better-choice-than-exponential-smoothing
 - anchor_id: arima-models
 - anchor_label: ARIMA models
+- tracked_topics: ["arima", "exponential-smoothing"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: diagnostic
@@ -114,6 +118,7 @@
 - question_id: benchmark-methods-developing-comparison-why-do-we-compare-a-forecasting-model-against-benchmark-methods
 - anchor_id: benchmark-methods
 - anchor_label: Benchmark methods
+- tracked_topics: ["benchmark-methods"]
 - anchor_type: foundational_vocabulary
 - question_family: bridge
 - question_type: comparison
@@ -139,6 +144,7 @@
 - question_id: benchmark-methods-novice-definition-what-are-benchmark-methods
 - anchor_id: benchmark-methods
 - anchor_label: Benchmark methods
+- tracked_topics: ["benchmark-methods"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -164,6 +170,7 @@
 - question_id: benchmark-methods-proficient-diagnostic-how-do-i-know-when-a-benchmark-method-is-no-longer-enough-on-its-own
 - anchor_id: benchmark-methods
 - anchor_label: Benchmark methods
+- tracked_topics: ["benchmark-methods"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: diagnostic
@@ -189,6 +196,7 @@
 - question_id: exponential-smoothing-developing-misconception-why-do-more-recent-observations-get-more-weight-in-exponential-smoothing
 - anchor_id: exponential-smoothing
 - anchor_label: Exponential smoothing
+- tracked_topics: ["exponential-smoothing"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: misconception
@@ -214,6 +222,7 @@
 - question_id: exponential-smoothing-novice-definition-what-is-exponential-smoothing
 - anchor_id: exponential-smoothing
 - anchor_label: Exponential smoothing
+- tracked_topics: ["exponential-smoothing"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -239,6 +248,7 @@
 - question_id: exponential-smoothing-proficient-diagnostic-when-is-exponential-smoothing-a-poor-fit-for-the-data
 - anchor_id: exponential-smoothing
 - anchor_label: Exponential smoothing
+- tracked_topics: ["exponential-smoothing"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: diagnostic
@@ -264,6 +274,7 @@
 - question_id: forecast-accuracy-developing-procedural-how-do-i-measure-forecast-accuracy
 - anchor_id: forecast-accuracy
 - anchor_label: forecast accuracy
+- tracked_topics: ["forecast-accuracy"]
 - anchor_type: foundational_vocabulary
 - question_family: procedural
 - question_type: procedure
@@ -289,6 +300,7 @@
 - question_id: forecast-accuracy-novice-definition-what-is-forecast-accuracy
 - anchor_id: forecast-accuracy
 - anchor_label: forecast accuracy
+- tracked_topics: ["forecast-accuracy"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -314,6 +326,7 @@
 - question_id: forecast-accuracy-proficient-diagnostic-what-does-forecast-accuracy-tell-me-about-whether-i-should-trust-a-forecasting-m
 - anchor_id: forecast-accuracy
 - anchor_label: forecast accuracy
+- tracked_topics: ["forecast-accuracy"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: diagnostic
@@ -339,6 +352,7 @@
 - question_id: ljung-box-test-developing-procedural-how-do-i-use-ljung-box-test-to-check-whether-a-series-looks-random
 - anchor_id: ljung-box-test
 - anchor_label: Ljung-Box test
+- tracked_topics: ["ljung-box-test"]
 - anchor_type: foundational_vocabulary
 - question_family: procedural
 - question_type: procedure
@@ -364,6 +378,7 @@
 - question_id: ljung-box-test-novice-definition-what-is-the-ljung-box-test
 - anchor_id: ljung-box-test
 - anchor_label: Ljung-Box test
+- tracked_topics: ["ljung-box-test"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -389,6 +404,7 @@
 - question_id: ljung-box-test-proficient-diagnostic-what-would-ljung-box-test-tell-me-about-whether-i-should-keep-using-my-current-fore
 - anchor_id: ljung-box-test
 - anchor_label: Ljung-Box test
+- tracked_topics: ["ljung-box-test"]
 - anchor_type: foundational_vocabulary
 - question_family: diagnostic
 - question_type: diagnostic
@@ -414,6 +430,7 @@
 - question_id: repeated-cycles-developing-misconception-why-isn-t-repeated-cycles-enough-on-its-own
 - anchor_id: repeated-cycles
 - anchor_label: repeated cycles
+- tracked_topics: ["repeated-cycles"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: misconception
@@ -439,6 +456,7 @@
 - question_id: repeated-cycles-developing-procedural-how-would-i-apply-repeated-cycles-to-the-kind-of-data-used-here
 - anchor_id: repeated-cycles
 - anchor_label: repeated cycles
+- tracked_topics: ["repeated-cycles"]
 - anchor_type: foundational_vocabulary
 - question_family: procedural
 - question_type: procedure
@@ -464,6 +482,7 @@
 - question_id: repeated-cycles-novice-definition-what-are-repeated-cycles
 - anchor_id: repeated-cycles
 - anchor_label: repeated cycles
+- tracked_topics: ["repeated-cycles"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -489,6 +508,7 @@
 - question_id: repeated-cycles-novice-orientation-why-does-repeated-cycles-matter-in-this-course
 - anchor_id: repeated-cycles
 - anchor_label: repeated cycles
+- tracked_topics: ["repeated-cycles"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: purpose
@@ -514,6 +534,7 @@
 - question_id: repeated-cycles-proficient-diagnostic-what-would-make-repeated-cycles-fail-in-a-realistic-case
 - anchor_id: repeated-cycles
 - anchor_label: repeated cycles
+- tracked_topics: ["repeated-cycles"]
 - anchor_type: foundational_vocabulary
 - question_family: diagnostic
 - question_type: diagnostic
@@ -539,6 +560,7 @@
 - question_id: repeated-cycles-proficient-transfer-when-would-i-need-to-adapt-repeated-cycles-instead-of-applying-it-the-same-way-every
 - anchor_id: repeated-cycles
 - anchor_label: repeated cycles
+- tracked_topics: ["repeated-cycles"]
 - anchor_type: foundational_vocabulary
 - question_family: transfer
 - question_type: application
@@ -564,6 +586,7 @@
 - question_id: seasonality-developing-misconception-why-isn-t-seasonality-enough-on-its-own
 - anchor_id: seasonality
 - anchor_label: seasonality
+- tracked_topics: ["seasonality"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: misconception
@@ -589,6 +612,7 @@
 - question_id: seasonality-developing-procedural-how-would-i-apply-seasonality-to-the-kind-of-data-used-here
 - anchor_id: seasonality
 - anchor_label: seasonality
+- tracked_topics: ["seasonality"]
 - anchor_type: foundational_vocabulary
 - question_family: procedural
 - question_type: procedure
@@ -614,6 +638,7 @@
 - question_id: seasonality-novice-definition-what-is-seasonality
 - anchor_id: seasonality
 - anchor_label: seasonality
+- tracked_topics: ["seasonality"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -639,6 +664,7 @@
 - question_id: seasonality-novice-orientation-why-does-seasonality-matter-in-this-course
 - anchor_id: seasonality
 - anchor_label: seasonality
+- tracked_topics: ["seasonality"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: purpose
@@ -664,6 +690,7 @@
 - question_id: seasonality-proficient-diagnostic-what-would-make-seasonality-fail-in-a-realistic-case
 - anchor_id: seasonality
 - anchor_label: seasonality
+- tracked_topics: ["seasonality"]
 - anchor_type: foundational_vocabulary
 - question_family: diagnostic
 - question_type: diagnostic
@@ -689,6 +716,7 @@
 - question_id: seasonality-proficient-transfer-how-would-my-use-of-seasonality-change-in-a-different-real-world-context
 - anchor_id: seasonality
 - anchor_label: seasonality
+- tracked_topics: ["seasonality"]
 - anchor_type: foundational_vocabulary
 - question_family: transfer
 - question_type: application
@@ -714,6 +742,7 @@
 - question_id: time-series-visualization-developing-procedural-what-should-i-look-for-in-a-time-series-plot-before-choosing-a-forecasti
 - anchor_id: time-series-visualization
 - anchor_label: time series visualization
+- tracked_topics: ["time-series-visualization"]
 - anchor_type: procedure
 - question_family: procedural
 - question_type: procedure
@@ -739,6 +768,7 @@
 - question_id: time-series-visualization-novice-orientation-why-is-plotting-a-time-series-the-first-step-in-analysis
 - anchor_id: time-series-visualization
 - anchor_label: time series visualization
+- tracked_topics: ["time-series-visualization"]
 - anchor_type: procedure
 - question_family: entry
 - question_type: purpose
@@ -764,6 +794,7 @@
 - question_id: time-series-visualization-proficient-diagnostic-how-do-i-know-when-a-time-series-plot-is-revealing-something-my-forecast
 - anchor_id: time-series-visualization
 - anchor_label: time series visualization
+- tracked_topics: ["time-series-visualization"]
 - anchor_type: procedure
 - question_family: friction
 - question_type: diagnostic
@@ -789,6 +820,7 @@
 - question_id: trend-developing-misconception-why-isn-t-trend-enough-on-its-own
 - anchor_id: trend
 - anchor_label: trend
+- tracked_topics: ["trend"]
 - anchor_type: foundational_vocabulary
 - question_family: friction
 - question_type: misconception
@@ -814,6 +846,7 @@
 - question_id: trend-developing-procedural-how-would-i-apply-trend-to-the-kind-of-data-used-here
 - anchor_id: trend
 - anchor_label: trend
+- tracked_topics: ["trend"]
 - anchor_type: foundational_vocabulary
 - question_family: procedural
 - question_type: procedure
@@ -839,6 +872,7 @@
 - question_id: trend-novice-definition-what-is-trend
 - anchor_id: trend
 - anchor_label: trend
+- tracked_topics: ["trend"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -864,6 +898,7 @@
 - question_id: trend-novice-orientation-why-does-trend-matter-in-this-course
 - anchor_id: trend
 - anchor_label: trend
+- tracked_topics: ["trend"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: purpose
@@ -889,6 +924,7 @@
 - question_id: trend-proficient-diagnostic-what-would-make-trend-fail-in-a-realistic-case
 - anchor_id: trend
 - anchor_label: trend
+- tracked_topics: ["trend"]
 - anchor_type: foundational_vocabulary
 - question_family: diagnostic
 - question_type: diagnostic
@@ -914,6 +950,7 @@
 - question_id: trend-proficient-transfer-when-would-i-need-to-adapt-trend-instead-of-applying-it-the-same-way-every-time
 - anchor_id: trend
 - anchor_label: trend
+- tracked_topics: ["trend"]
 - anchor_type: foundational_vocabulary
 - question_family: transfer
 - question_type: application
@@ -939,6 +976,7 @@
 - question_id: white-noise-developing-procedural-how-do-i-use-white-noise-to-check-whether-a-series-looks-random
 - anchor_id: white-noise
 - anchor_label: white noise
+- tracked_topics: ["white-noise"]
 - anchor_type: foundational_vocabulary
 - question_family: procedural
 - question_type: procedure
@@ -964,6 +1002,7 @@
 - question_id: white-noise-novice-definition-what-is-white-noise
 - anchor_id: white-noise
 - anchor_label: white noise
+- tracked_topics: ["white-noise"]
 - anchor_type: foundational_vocabulary
 - question_family: entry
 - question_type: definition
@@ -989,6 +1028,7 @@
 - question_id: white-noise-proficient-diagnostic-what-would-white-noise-tell-me-about-whether-i-should-keep-using-my-current-forecastin
 - anchor_id: white-noise
 - anchor_label: white noise
+- tracked_topics: ["white-noise"]
 - anchor_type: foundational_vocabulary
 - question_family: diagnostic
 - question_type: diagnostic
@@ -1118,6 +1158,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['arima', 'exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['bridge', 'comparison', 'foundational']
@@ -1130,6 +1171,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['arima']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1143,6 +1185,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['arima']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1155,6 +1198,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['arima', 'exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -1181,6 +1225,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['benchmark-methods']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['bridge', 'comparison', 'foundational']
@@ -1193,6 +1238,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['benchmark-methods']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1205,6 +1251,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['benchmark-methods']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -1231,6 +1278,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['foundational', 'friction', 'misconception']
@@ -1243,6 +1291,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1255,6 +1304,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -1281,6 +1331,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['forecast-accuracy']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1294,6 +1345,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['forecast-accuracy']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1306,6 +1358,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['forecast-accuracy']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -1332,6 +1385,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['ljung-box-test']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1345,6 +1399,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['ljung-box-test']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1357,6 +1412,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['ljung-box-test']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1384,6 +1440,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1397,6 +1454,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1410,6 +1468,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1422,6 +1481,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1435,6 +1495,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1448,6 +1509,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1475,6 +1537,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1488,6 +1551,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1501,6 +1565,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['seasonality']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1513,6 +1578,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1526,6 +1592,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1539,6 +1606,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1566,6 +1634,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['time-series-visualization']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1579,6 +1648,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['time-series-visualization']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1592,6 +1662,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['time-series-visualization']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'friction']
@@ -1618,6 +1689,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1631,6 +1703,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1644,6 +1717,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['trend']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1656,6 +1730,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1669,6 +1744,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1682,6 +1758,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -1709,6 +1786,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['white-noise']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -1722,6 +1800,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['white-noise']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -1734,6 +1813,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['white-noise']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']

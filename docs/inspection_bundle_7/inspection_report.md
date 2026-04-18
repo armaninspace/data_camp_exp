@@ -24,6 +24,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['arima', 'exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['bridge', 'comparison', 'foundational']
@@ -36,6 +37,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['arima']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -49,6 +51,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['arima']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -61,6 +64,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['arima', 'exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -87,6 +91,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['benchmark-methods']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['bridge', 'comparison', 'foundational']
@@ -99,6 +104,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['benchmark-methods']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -111,6 +117,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['benchmark-methods']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -137,6 +144,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['foundational', 'friction', 'misconception']
@@ -149,6 +157,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -161,6 +170,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['exponential-smoothing']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -187,6 +197,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['forecast-accuracy']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -200,6 +211,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['forecast-accuracy']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -212,6 +224,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['forecast-accuracy']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'foundational', 'friction']
@@ -238,6 +251,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['ljung-box-test']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -251,6 +265,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['ljung-box-test']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -263,6 +278,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['ljung-box-test']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -290,6 +306,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -303,6 +320,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -316,6 +334,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -328,6 +347,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -341,6 +361,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -354,6 +375,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['repeated-cycles']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -381,6 +403,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -394,6 +417,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -407,6 +431,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['seasonality']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -419,6 +444,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -432,6 +458,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -445,6 +472,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['seasonality']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -472,6 +500,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['time-series-visualization']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -485,6 +514,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['time-series-visualization']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -498,6 +528,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['time-series-visualization']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['diagnostic', 'friction']
@@ -524,6 +555,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -537,6 +569,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -550,6 +583,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['trend']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -562,6 +596,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -575,6 +610,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -588,6 +624,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['trend']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']
@@ -615,6 +652,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['white-noise']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_distinctiveness']
@@ -628,6 +666,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: true
+   - tracked_topics: ['white-noise']
    - delivery_class: curated_visible
    - visible: true
    - tags: ['definition', 'entry', 'foundational', 'protected']
@@ -640,6 +679,7 @@ hard_reject_count: 0
    - canonical: true
    - alias: false
    - required_entry: false
+   - tracked_topics: ['white-noise']
    - delivery_class: analysis_only
    - visible: false
    - non_visible_reasons: ['analysis_only_low_serviceability']

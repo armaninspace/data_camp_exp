@@ -13,6 +13,7 @@ It validates that beginner plain-definition questions are now:
 - preserved through V3 filtering
 - promoted to visible canonical questions in V6
 - enforced by strict anchor coverage
+- annotated with `tracked_topics` in the ledger and inspection docs
 
 ## Included files
 
@@ -24,7 +25,7 @@ It validates that beginner plain-definition questions are now:
 ## Source runs
 
 - V3 source run: `20260418T015324Z`
-- V6 ledger run: `20260418T015332Z`
+- V6 ledger run: `20260418T132851Z`
 
 Full artifacts live under
-[20260418T015332Z](/code/data/pipeline_runs/20260418T015332Z).
+[20260418T132851Z](/code/data/pipeline_runs/20260418T132851Z).

@@ -1,0 +1,67 @@
+version: v4.1
+
+invariants:
+  persist_validated_before_curation: true
+  curation_is_non_destructive: true
+  emit_anchor_coverage_warnings: true
+
+thresholds:
+  correctness_threshold: 0.85
+  groundedness_threshold: 0.85
+  cache_serviceability_threshold: 0.80
+  alias_similarity_threshold: 0.92
+
+delivery_classes:
+  - curated_visible
+  - cache_servable
+  - alias_only
+  - analysis_only
+  - hard_reject
+
+candidate_flags:
+  - is_foundational_anchor
+  - is_required_entry_candidate
+  - is_canonical
+  - is_alias
+  - visible
+
+non_visible_reason_codes:
+  - quota_displacement
+  - canonicalized_under_other_question
+  - kept_for_cache_not_visible
+  - alias_of_canonical
+  - analysis_only_low_distinctiveness
+  - analysis_only_low_serviceability
+  - analysis_only_low_pedagogical_value
+  - hidden_due_to_balance_rules
+
+coverage_audit:
+  enabled: true
+  strict_mode: true
+  required_for_foundational_anchors:
+    - canonical_definition_visible
+  strict_blocking_warning_types:
+    - missing_visible_canonical_entry
+    - only_hidden_correct_entry_exists
+    - only_alias_entry_exists
+    - definition_generation_failed
+  warning_types:
+    - missing_visible_canonical_entry
+    - only_hidden_correct_entry_exists
+    - only_alias_entry_exists
+    - definition_generation_failed
+
+inspection_bundle:
+  include_sections:
+    - validated_correct_all
+    - visible_curated
+    - hidden_correct
+    - alias_map
+    - coverage_warnings
+    - hard_reject_audit_summary
+
+logging:
+  persist_candidate_scores: true
+  persist_non_visible_reasons: true
+  persist_canonical_links: true
+  persist_source_refs: true

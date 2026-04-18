@@ -1,6 +1,6 @@
 from course_pipeline.questions.policy.models import CandidateRecord, PolicyScores
-from course_pipeline.question_ledger_v6.config import load_default_config
-from course_pipeline.question_ledger_v6.normalize import (
+from course_pipeline.questions.ledger.config import load_default_config
+from course_pipeline.questions.ledger.normalize import (
     ledger_tags,
     normalize_question_text,
     normalize_question_type,

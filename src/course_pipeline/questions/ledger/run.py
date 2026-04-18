@@ -8,7 +8,7 @@ from course_pipeline.questions.policy.run_policy import (
     load_v3_course_artifacts,
     run_question_gen_v4_1_policy,
 )
-from course_pipeline.question_ledger_v6.build_ledger import (
+from course_pipeline.questions.ledger.build import (
     build_anchor_summaries,
     build_inspection_report,
     build_ledger_rows,

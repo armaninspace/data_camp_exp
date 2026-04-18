@@ -1,7 +1,7 @@
 import json
 
-from course_pipeline.question_ledger_v6.models import AnchorSummary, LedgerRow, LedgerScores
-from course_pipeline.question_ledger_v6.run_v6 import build_v6_review_bundle, write_v6_run_report
+from course_pipeline.questions.ledger.models import AnchorSummary, LedgerRow, LedgerScores
+from course_pipeline.questions.ledger.run import build_v6_review_bundle, write_v6_run_report
 from course_pipeline.schemas import ChapterOut, NormalizedCourse
 
 

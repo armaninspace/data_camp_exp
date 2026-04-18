@@ -25,6 +25,7 @@ def run(
     overwrite_existing: bool = typer.Option(False),
     persist_to_db: bool = typer.Option(False),
     model_profile: str = typer.Option("default"),
+    plan_llm_metering: bool = typer.Option(True),
     tag: list[str] | None = typer.Option(None),
 ) -> None:
     config = RunConfig(
@@ -40,6 +41,7 @@ def run(
         overwrite_existing=overwrite_existing,
         persist_to_db=persist_to_db,
         model_profile=model_profile,
+        plan_llm_metering=plan_llm_metering,
         tags=tag or [],
     )
     result = question_generation_pipeline_flow(config)

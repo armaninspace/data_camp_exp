@@ -32,3 +32,7 @@ class RunConfig(BaseModel):
     model_profile: str = "default"
     tags: list[str] = Field(default_factory=list)
     concurrency_limit: int = 1
+    plan_llm_metering: bool = True
+    planned_llm_metering_stages: list[str] = Field(
+        default_factory=lambda: ["candidate_review_answers", "policy_review_answers"]
+    )

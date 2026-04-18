@@ -28,3 +28,5 @@ class RunContext(BaseModel):
     persist_to_db: bool
     model_profile: str
     tags: list[str]
+    plan_llm_metering: bool
+    planned_llm_metering_stages: list[str]

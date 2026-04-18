@@ -41,5 +41,7 @@ def create_run_context(config: RunConfig) -> RunContext:
         persist_to_db=config.persist_to_db,
         model_profile=config.model_profile,
         tags=list(config.tags),
+        plan_llm_metering=config.plan_llm_metering,
+        planned_llm_metering_stages=list(config.planned_llm_metering_stages),
     )
     return context

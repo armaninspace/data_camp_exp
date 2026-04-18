@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+import re
+
+from course_pipeline.foundational_entry_questions import anchor_entry_label
 from course_pipeline.question_gen_v4_1.policy_models import CandidateRecord
+from course_pipeline.utils import slugify
 
 
 QUESTION_TYPE_MAP = {
@@ -55,6 +59,33 @@ def normalize_question_text(question_text: str) -> str:
     if lowered.startswith("what is zoo used for in this course?"):
         return "What is zoo used for?"
     return text
+
+
+def normalize_topic_slug(topic_label: str) -> str:
+    return slugify(anchor_entry_label(" ".join(topic_label.split())))
+
+
+def normalized_topic_variants(topic_label: str, topic_id: str) -> list[str]:
+    variants = {
+        _normalize_text(topic_label),
+        _normalize_text(anchor_entry_label(topic_label)),
+        _normalize_text(topic_id.replace("-", " ")),
+    }
+    return sorted(variant for variant in variants if variant)
+
+
+def question_mentions_topic(question_text: str, variants: list[str]) -> bool:
+    normalized_question = f" {_normalize_text(question_text)} "
+    for variant in variants:
+        if f" {variant} " in normalized_question:
+            return True
+    return False
+
+
+def _normalize_text(text: str) -> str:
+    lowered = text.lower().strip()
+    lowered = re.sub(r"[^a-z0-9]+", " ", lowered)
+    return re.sub(r"\s+", " ", lowered).strip()
 
 
 def ledger_tags(record: CandidateRecord, family: str, question_type: str) -> list[str]:

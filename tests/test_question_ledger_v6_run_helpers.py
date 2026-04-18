@@ -12,6 +12,7 @@ def _row(**overrides) -> LedgerRow:
         answer_text="",
         anchor_id="seasonality",
         anchor_label="Seasonality",
+        tracked_topics=["seasonality"],
         anchor_type="foundational_vocabulary",
         question_family="entry",
         question_type="definition",
@@ -114,6 +115,7 @@ def test_build_v6_review_bundle_writes_course_file(tmp_path):
     assert "## All Questions" in text
     assert "### What is seasonality?" in text
     assert "- question_id: q1" in text
+    assert '- tracked_topics: ["seasonality"]' in text
     assert "- delivery_class: curated_visible" in text
     assert "## Course Content" in text
     assert "### Summary" in text

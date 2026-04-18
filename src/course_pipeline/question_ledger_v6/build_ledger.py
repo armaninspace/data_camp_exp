@@ -9,6 +9,9 @@ from course_pipeline.question_ledger_v6.normalize import (
     ledger_tags,
     normalize_question_text,
     normalize_question_type,
+    normalize_topic_slug,
+    normalized_topic_variants,
+    question_mentions_topic,
     select_question_family,
 )
 
@@ -37,10 +40,15 @@ def build_ledger_rows(
     hard_reject_records: list[CandidateRecord],
     topics_by_id: dict[str, TopicNode],
 ) -> list[LedgerRow]:
+    topic_variants_by_id = {
+        topic_id: normalized_topic_variants(topic.label, topic_id)
+        for topic_id, topic in topics_by_id.items()
+    }
     rows: list[LedgerRow] = []
     for record in validated_correct_all + hard_reject_records:
         anchor_id = record.topic_ids[0] if record.topic_ids else "unknown_anchor"
         topic = topics_by_id.get(anchor_id)
+        normalized_question = normalize_question_text(record.question)
         question_type = normalize_question_type(record.question_type)
         question_family = select_question_family(record.family_tags, record.question_type)
         delivery_class = record.delivery_class
@@ -49,10 +57,17 @@ def build_ledger_rows(
         rows.append(
             LedgerRow(
                 question_id=record.candidate_id,
-                question_text=normalize_question_text(record.question),
+                question_text=normalized_question,
                 answer_text=record.answer,
                 anchor_id=anchor_id,
                 anchor_label=topic.label if topic is not None else anchor_id,
+                tracked_topics=_tracked_topics(
+                    anchor_id=anchor_id,
+                    anchor_label=topic.label if topic is not None else anchor_id,
+                    question_text=normalized_question,
+                    topics_by_id=topics_by_id,
+                    topic_variants_by_id=topic_variants_by_id,
+                ),
                 anchor_type=_anchor_type(record, topic),
                 question_family=question_family,
                 question_type=question_type,
@@ -74,6 +89,26 @@ def build_ledger_rows(
             )
         )
     return sorted(rows, key=lambda row: (row.anchor_id, row.canonical_target or row.question_id, row.question_id))
+
+
+def _tracked_topics(
+    anchor_id: str,
+    anchor_label: str,
+    question_text: str,
+    topics_by_id: dict[str, TopicNode],
+    topic_variants_by_id: dict[str, list[str]],
+) -> list[str]:
+    primary_topic = normalize_topic_slug(anchor_label if anchor_label else anchor_id)
+    tracked = [primary_topic] if primary_topic else []
+    seen = set(tracked)
+    for topic_id, topic in topics_by_id.items():
+        candidate_slug = normalize_topic_slug(topic.label)
+        if not candidate_slug or candidate_slug in seen:
+            continue
+        if question_mentions_topic(question_text, topic_variants_by_id.get(topic_id, [])):
+            tracked.append(candidate_slug)
+            seen.add(candidate_slug)
+    return tracked
 
 
 def derive_views(rows: list[LedgerRow]) -> dict[str, list[LedgerRow]]:
@@ -157,6 +192,7 @@ def build_inspection_report(rows: list[LedgerRow], anchor_summaries: list[Anchor
             if row.canonical_target:
                 lines.append(f"   - canonical_target: {row.canonical_target}")
             lines.append(f"   - required_entry: {str(row.required_entry).lower()}")
+            lines.append(f"   - tracked_topics: {row.tracked_topics}")
             lines.append(f"   - delivery_class: {row.delivery_class}")
             lines.append(f"   - visible: {str(row.visible).lower()}")
             if row.non_visible_reasons:

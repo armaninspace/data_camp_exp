@@ -25,6 +25,7 @@ class LedgerRow(BaseModel):
     answer_text: str = ""
     anchor_id: str
     anchor_label: str
+    tracked_topics: list[str] = Field(default_factory=list)
     anchor_type: str = ""
     question_family: QuestionFamily
     question_type: QuestionType

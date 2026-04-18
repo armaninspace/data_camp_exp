@@ -139,6 +139,7 @@ def _render_ledger_row(row) -> list[str]:
         f"- question_id: {row.question_id}",
         f"- anchor_id: {row.anchor_id}",
         f"- anchor_label: {row.anchor_label}",
+        f"- tracked_topics: {json.dumps(row.tracked_topics, ensure_ascii=False)}",
         f"- anchor_type: {row.anchor_type}",
         f"- question_family: {row.question_family}",
         f"- question_type: {row.question_type}",

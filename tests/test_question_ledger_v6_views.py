@@ -119,6 +119,8 @@ def test_build_ledger_rows_preserves_all_candidates():
     assert {row.question_id for row in rows} == {"q1", "q2", "q3", "q4"}
     assert any(row.alias and row.canonical_target == "q1" for row in rows)
     assert any(row.delivery_class == "hard_reject" for row in rows)
+    assert next(row for row in rows if row.question_id == "q1").tracked_topics == ["seasonality"]
+    assert next(row for row in rows if row.question_id == "q3").tracked_topics == ["seasonality", "trend"]
 
 
 def test_derive_views_are_reconstructible_from_ledger():
@@ -199,3 +201,4 @@ def test_inspection_report_includes_hidden_reasons():
     report = build_inspection_report(rows, build_anchor_summaries(rows))
     assert "analysis_only_low_distinctiveness" in report
     assert "## Anchor: Seasonality" in report
+    assert "tracked_topics: ['seasonality']" in report

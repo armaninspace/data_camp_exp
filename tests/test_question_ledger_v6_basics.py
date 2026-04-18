@@ -5,6 +5,9 @@ from course_pipeline.question_ledger_v6.normalize import (
     ledger_tags,
     normalize_question_text,
     normalize_question_type,
+    normalize_topic_slug,
+    normalized_topic_variants,
+    question_mentions_topic,
     select_question_family,
 )
 
@@ -67,6 +70,16 @@ def test_select_question_family_prefers_explicit_tag():
 def test_normalize_question_text_fixes_known_awkward_forms():
     assert normalize_question_text("What is repeated cycles?") == "What are repeated cycles?"
     assert normalize_question_text("What is ljung-box test?") == "What is the Ljung-Box test?"
+
+
+def test_normalize_topic_slug_strips_simple_naming_variants():
+    assert normalize_topic_slug("ARIMA models") == "arima"
+    assert normalize_topic_slug("Exponential smoothing") == "exponential-smoothing"
+
+
+def test_question_mentions_topic_uses_normalized_variants():
+    variants = normalized_topic_variants("ARIMA models", "arima-models")
+    assert question_mentions_topic("How is ARIMA different from exponential smoothing?", variants) is True
 
 
 def test_ledger_tags_include_foundational_and_protected():

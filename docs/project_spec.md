@@ -227,6 +227,10 @@ Run artifacts live under:
 
 - [data/pipeline_runs](/code/data/pipeline_runs)
 
+Promoted reference data lives under:
+
+- [data/ref](/code/data/ref)
+
 ## CLI Surface
 
 The project is operated through the Typer CLI in
@@ -253,6 +257,8 @@ Operationally:
 - file artifacts are the main inspection surface
 - database tables support persistence and queryability
 - run directories are the main bounded-evaluation unit
+- `data/ref/current` is the accumulated promoted reference snapshot
+- only `prod` runs may update `data/ref/current`
 
 ## Inspection Bundle Conventions
 

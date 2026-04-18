@@ -428,6 +428,7 @@ def build_v4_1_review_bundle(
     per_course: dict[str, dict],
 ) -> dict[str, Path]:
     bundle_dir = ensure_dir(run_dir / "review_bundle")
+    metering_path = run_dir / "llm_metering.jsonl"
     answer_rows: list[dict] = []
     for course in courses:
         result = per_course[course.course_id]
@@ -482,4 +483,4 @@ def build_v4_1_review_bundle(
         (bundle_dir / f"{course.course_id}_{slugify(course.title)}.md").write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     answers_path = run_dir / "review_answers.jsonl"
     write_jsonl(answers_path, answer_rows)
-    return {"review_bundle": bundle_dir, "review_answers": answers_path}
+    return {"review_bundle": bundle_dir, "review_answers": answers_path, "llm_metering": metering_path}

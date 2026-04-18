@@ -9,7 +9,7 @@ from course_pipeline.questions.candidates.models import (
     QuestionCandidate,
     ScoredCandidate,
 )
-from course_pipeline.questions.candidates.pipeline import answer_selected_questions
+from course_pipeline.questions.candidates.pipeline import answer_selected_questions, build_review_bundle
 from course_pipeline.schemas import ChapterOut, NormalizedCourse
 
 
@@ -113,3 +113,21 @@ def test_answer_selected_questions_uses_metered_client(monkeypatch, tmp_path: Pa
     assert calls[0]["prompt_version"] == "candidate_review_answers_v1"
     assert calls[1]["kwargs"]["course_id"] == "24491"
     assert calls[1]["kwargs"]["entity_ids"] == ["q1"]
+
+
+def test_build_review_bundle_exposes_llm_metering_path(monkeypatch, tmp_path: Path) -> None:
+    def fake_answers(settings, run_dir, course, selected):
+        (run_dir / "llm_metering.jsonl").write_text('{"stage":"candidate_review_answers"}\n', encoding="utf-8")
+        return {"q1": "ARIMA is a forecasting model."}
+
+    monkeypatch.setattr("course_pipeline.questions.candidates.pipeline.answer_selected_questions", fake_answers)
+
+    outputs = build_review_bundle(
+        tmp_path,
+        _settings(),
+        [_course()],
+        {"24491": {"final_selected": _selected()}},
+    )
+
+    assert outputs["llm_metering"] == tmp_path / "llm_metering.jsonl"
+    assert outputs["llm_metering"].exists()

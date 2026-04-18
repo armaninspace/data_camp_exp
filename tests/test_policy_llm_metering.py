@@ -5,7 +5,7 @@ from pathlib import Path
 
 from course_pipeline.config import Settings
 from course_pipeline.questions.policy.models import CandidateRecord, PolicyScores
-from course_pipeline.questions.policy.run_policy import answer_policy_questions
+from course_pipeline.questions.policy.run_policy import answer_policy_questions, build_v4_1_review_bundle
 from course_pipeline.schemas import ChapterOut, NormalizedCourse
 
 
@@ -119,3 +119,30 @@ def test_answer_policy_questions_uses_metered_client(monkeypatch, tmp_path: Path
     assert calls[0]["prompt_version"] == "policy_review_answers_v1"
     assert calls[1]["kwargs"]["course_id"] == "24491"
     assert calls[1]["kwargs"]["entity_ids"] == ["q1"]
+
+
+def test_build_v4_1_review_bundle_exposes_llm_metering_path(monkeypatch, tmp_path: Path) -> None:
+    def fake_answers(settings, run_dir, course, candidate_rows):
+        (run_dir / "llm_metering.jsonl").write_text('{"stage":"policy_review_answers"}\n', encoding="utf-8")
+        return {"q1": "ARIMA is a forecasting model."}
+
+    monkeypatch.setattr("course_pipeline.questions.policy.run_policy.answer_policy_questions", fake_answers)
+
+    outputs = build_v4_1_review_bundle(
+        tmp_path,
+        _settings(),
+        [_course()],
+        {
+            "24491": {
+                "visible_curated": _rows(),
+                "hidden_correct": [],
+                "coverage_warnings": [],
+                "cache_entries": [],
+                "validated_correct_all": _rows(),
+                "hard_reject_audit_summary": {"hard_reject_count": 0},
+            }
+        },
+    )
+
+    assert outputs["llm_metering"] == tmp_path / "llm_metering.jsonl"
+    assert outputs["llm_metering"].exists()

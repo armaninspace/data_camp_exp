@@ -26,14 +26,10 @@ from course_pipeline.questions.policy import (
     CacheEntry,
     CandidateRecord,
     CoverageWarning,
-    PolicyDecision,
     build_cache_entries,
-    build_legacy_policy_review_bundle,
     build_policy_review_bundle,
     load_candidate_course_artifacts,
-    run_legacy_policy_stage,
     run_policy_stage,
-    write_legacy_policy_report,
     write_policy_report,
 )
 from course_pipeline.schemas import (
@@ -222,68 +218,12 @@ def run_question_generation_v4_policy(
     run_id: str,
     course_ids: list[str] | None = None,
 ) -> dict[str, Path]:
-    course_rows = [
-        NormalizedCourse.model_validate_json(line)
-        for line in (source_run_dir / "courses.jsonl").read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    ]
-    if course_ids:
-        allowed = {course_id.strip() for course_id in course_ids if course_id.strip()}
-        course_rows = [course for course in course_rows if course.course_id in allowed]
-    run_dir = ensure_dir(settings.output_root / run_id)
-    per_course: dict[str, dict] = {}
-    decision_rows: list[dict] = []
-    canonical_rows: list[dict] = []
-    retention_rows: list[dict] = []
-    cache_entry_rows: list[dict] = []
-    metrics_rows: list[dict] = []
-    error_rows: list[dict] = []
-    for course in course_rows:
-        try:
-            v3_payload = load_candidate_course_artifacts(source_run_dir, course.course_id)
-            result = run_legacy_policy_stage(v3_payload)
-            scored_by_id = {row.candidate.candidate_id: row for row in v3_payload["scored_candidates"]}
-            answers_by_candidate_id = {}
-            cache_entries = build_cache_entries(
-                candidates_by_id=scored_by_id,
-                decisions=result["policy_decisions"],
-                answers_by_candidate_id=answers_by_candidate_id,
-                alias_ids_by_canonical=result["alias_ids_by_canonical"],
-            )
-            result["cache_entries"] = cache_entries
-            result["scored_by_id"] = scored_by_id
-            per_course[course.course_id] = result
-            course_dir = ensure_dir(run_dir / "course_artifacts" / course.course_id)
-            write_jsonl(course_dir / "policy_decisions.jsonl", [item.model_dump(mode="json") for item in result["policy_decisions"]])
-            write_jsonl(course_dir / "canonical_groups.jsonl", [item.model_dump(mode="json") for item in result["canonical_groups"]])
-            write_jsonl(course_dir / "retention_records.jsonl", [item.model_dump(mode="json") for item in result["retention_records"]])
-            write_jsonl(course_dir / "cache_entries.jsonl", [item.model_dump(mode="json") for item in cache_entries])
-            (course_dir / "policy_metrics.json").write_text(json.dumps(result["metrics"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            decision_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["policy_decisions"])
-            canonical_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["canonical_groups"])
-            retention_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["retention_records"])
-            cache_entry_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in cache_entries)
-            metrics_rows.append({"course_id": course.course_id, **result["metrics"]})
-        except Exception as exc:  # noqa: BLE001
-            error_rows.append({"course_id": course.course_id, "error": str(exc)})
-    outputs = {
-        "policy_decisions": run_dir / "policy_decisions.jsonl",
-        "canonical_groups": run_dir / "canonical_groups.jsonl",
-        "retention_records": run_dir / "retention_records.jsonl",
-        "cache_entries": run_dir / "cache_entries.jsonl",
-        "policy_metrics": run_dir / "policy_metrics.jsonl",
-        "report": run_dir / "question_gen_v4_report.md",
-        "errors": run_dir / "question_gen_v4_errors.jsonl",
-    }
-    write_jsonl(outputs["policy_decisions"], decision_rows)
-    write_jsonl(outputs["canonical_groups"], canonical_rows)
-    write_jsonl(outputs["retention_records"], retention_rows)
-    write_jsonl(outputs["cache_entries"], cache_entry_rows)
-    write_jsonl(outputs["policy_metrics"], metrics_rows)
-    write_jsonl(outputs["errors"], error_rows)
-    write_legacy_policy_report(run_dir, per_course)
-    outputs["report"] = run_dir / "question_gen_v4_report.md"
-    return outputs
+    return run_question_generation_v4_1_policy(
+        source_run_dir=source_run_dir,
+        settings=settings,
+        run_id=run_id,
+        course_ids=course_ids,
+    )
 
 
 def build_question_generation_v4_review_bundle(
@@ -292,36 +232,12 @@ def build_question_generation_v4_review_bundle(
     settings: Settings,
     course_ids: list[str] | None = None,
 ) -> dict[str, Path]:
-    course_rows = [
-        NormalizedCourse.model_validate_json(line)
-        for line in (source_run_dir / "courses.jsonl").read_text(encoding="utf-8").splitlines()
-        if line.strip()
-    ]
-    if course_ids:
-        allowed = {course_id.strip() for course_id in course_ids if course_id.strip()}
-        course_rows = [course for course in course_rows if course.course_id in allowed]
-    per_course: dict[str, dict] = {}
-    for course in course_rows:
-        v3_payload = load_candidate_course_artifacts(source_run_dir, course.course_id)
-        scored_by_id = {row.candidate.candidate_id: row for row in v3_payload["scored_candidates"]}
-        decisions = [
-            PolicyDecision.model_validate_json(line)
-            for line in (run_dir / "course_artifacts" / course.course_id / "policy_decisions.jsonl").read_text(encoding="utf-8").splitlines()
-            if line.strip()
-        ]
-        cache_entries = [
-            CacheEntry.model_validate_json(line)
-            for line in (run_dir / "course_artifacts" / course.course_id / "cache_entries.jsonl").read_text(encoding="utf-8").splitlines()
-            if line.strip()
-        ]
-        metrics = json.loads((run_dir / "course_artifacts" / course.course_id / "policy_metrics.json").read_text(encoding="utf-8"))
-        per_course[course.course_id] = {
-            "policy_decisions": decisions,
-            "cache_entries": cache_entries,
-            "metrics": metrics,
-            "scored_by_id": scored_by_id,
-        }
-    return build_legacy_policy_review_bundle(run_dir, settings, course_rows, per_course)
+    return build_question_generation_v4_1_review_bundle(
+        run_dir=run_dir,
+        source_run_dir=source_run_dir,
+        settings=settings,
+        course_ids=course_ids,
+    )
 
 
 def run_question_generation_v4_1_policy(

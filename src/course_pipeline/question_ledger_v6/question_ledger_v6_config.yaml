@@ -1,0 +1,45 @@
+version: question_ledger_v6
+
+outputs:
+  authoritative_ledger: all_questions.jsonl
+  visible_curated: visible_curated.jsonl
+  cache_servable: cache_servable.jsonl
+  aliases: aliases.jsonl
+  anchors_summary: anchors_summary.json
+  inspection_report: inspection_report.md
+
+question_families:
+  - entry
+  - bridge
+  - procedural
+  - friction
+  - diagnostic
+  - transfer
+
+question_types:
+  - definition
+  - purpose
+  - comparison
+  - procedure
+  - misconception
+  - diagnostic
+  - application
+
+delivery_classes:
+  - curated_visible
+  - cache_servable
+  - alias_only
+  - analysis_only
+  - hard_reject
+
+policy:
+  preserve_all_generated_questions: true
+  persist_before_curation: true
+  non_destructive_curation: true
+  derive_views_from_ledger: true
+
+inspection:
+  group_by_anchor: true
+  include_hidden_correct: true
+  include_non_visible_reasons: true
+  include_alias_mapping: true

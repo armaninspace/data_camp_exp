@@ -131,6 +131,7 @@ Main artifacts:
 - `aliases.jsonl`
 - `anchors_summary.json`
 - `inspection_report.md`
+- `llm_metering.jsonl` for live LLM-backed review-answer stages
 
 Relevant code:
 
@@ -220,6 +221,7 @@ The main persisted data products are:
 - question-generation candidate runs
 - policy runs
 - ledger runs
+- LLM metering run artifacts
 - inspection bundles
 - packaged final deliverables
 

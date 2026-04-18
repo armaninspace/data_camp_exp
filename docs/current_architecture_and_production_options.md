@@ -157,6 +157,7 @@ Responsibilities:
 - normalize anchor metadata
 - preserve visibility and rejection reasons
 - derive inspection views from one source of truth
+- keep model-backed answer-generation metering adjacent to run artifacts
 
 Primary ledger artifact:
 
@@ -206,6 +207,7 @@ Examples:
 - run directories under [data/pipeline_runs](/code/data/pipeline_runs)
 - promoted reference data under [data/ref](/code/data/ref)
 - bundle docs under [docs](/code/docs)
+- `llm_metering.jsonl` for live LLM-backed review-answer calls
 
 The filesystem model now has two layers:
 
@@ -252,6 +254,7 @@ A reviewer can inspect:
 - generated questions
 - hidden reasons
 - coverage failures
+- LLM usage, latency, token counts, and estimated cost for live metered stages
 
 ### Non-destructive visibility
 

@@ -8,10 +8,17 @@ except Exception:  # noqa: BLE001
     create_markdown_artifact = None
 
 
+def normalize_artifact_key(value: str) -> str:
+    normalized = "".join(char.lower() if char.isalnum() else "-" for char in value)
+    while "--" in normalized:
+        normalized = normalized.replace("--", "-")
+    return normalized.strip("-")
+
+
 def publish_markdown(key: str, markdown: str) -> None:
     if create_markdown_artifact is None:
         return
-    create_markdown_artifact(key=key, markdown=markdown)
+    create_markdown_artifact(key=normalize_artifact_key(key), markdown=markdown)
 
 
 def build_artifact_index_entries(stage: str, paths: list[Path], run_root: Path) -> list[dict[str, str | int | None]]:

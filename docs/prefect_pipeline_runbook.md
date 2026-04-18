@@ -3,13 +3,17 @@
 ## Local run
 
 ```bash
-python scripts/run_prefect_pipeline.py run \
+PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS=120 \
+python scripts/run_prefect_pipeline.py \
   --input-root data/classcentral-datacamp-yaml \
   --output-root data/pipeline_runs \
   --strict-mode true \
   --max-courses 1 \
   --course-id 24491
 ```
+
+If Prefect's temporary local API server starts slowly in your environment, keep
+the `PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS=120` prefix.
 
 ## Phase 1 notes
 

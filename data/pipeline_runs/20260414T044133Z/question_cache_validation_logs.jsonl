@@ -1,8 +1,0 @@
-{"entity_type": "claim", "entity_id": "7630:LO1", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}
-{"entity_type": "claim", "entity_id": "7630:LO2", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}
-{"entity_type": "claim", "entity_id": "7630:LO3", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}
-{"entity_type": "claim", "entity_id": "7630:LO4", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}
-{"entity_type": "claim", "entity_id": "7630:LO5", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}
-{"entity_type": "claim", "entity_id": "7630:LO6", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}
-{"entity_type": "claim", "entity_id": "7630:LO7", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}
-{"entity_type": "claim", "entity_id": "7630:LO8", "validator_type": "coverage_audit", "decision": "PASS", "reason": "no_safe_atomic_groups", "model_version": "question-cache-validator-v1"}

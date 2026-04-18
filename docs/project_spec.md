@@ -91,15 +91,13 @@ Relevant code:
 
 This layer generates learner-question candidates from course content.
 
-Implementation is still split across version-labeled packages, but the live
-architectural responsibility is:
+The live architectural responsibility is:
 
 `normalized course -> topics / edges / pedagogy / frictions -> candidates`
 
 Relevant code:
 
-- [question_gen_v3](/code/src/course_pipeline/question_gen_v3)
-- [questions/candidates.py](/code/src/course_pipeline/questions/candidates.py)
+- [questions/candidates](/code/src/course_pipeline/questions/candidates)
 
 ### Layer 3: Policy And Coverage
 
@@ -108,9 +106,7 @@ enforces foundational-entry coverage.
 
 Relevant code:
 
-- [question_gen_v4](/code/src/course_pipeline/question_gen_v4)
-- [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
-- [questions/policy.py](/code/src/course_pipeline/questions/policy.py)
+- [questions/policy](/code/src/course_pipeline/questions/policy)
 
 ### Layer 4: Ledger and Inspection
 
@@ -138,8 +134,8 @@ Main artifacts:
 
 Relevant code:
 
+- [questions/ledger](/code/src/course_pipeline/questions/ledger)
 - [question_ledger_v6](/code/src/course_pipeline/question_ledger_v6)
-- [questions/ledger.py](/code/src/course_pipeline/questions/ledger.py)
 
 ### Layer 5: Human Inspection and Evaluation
 

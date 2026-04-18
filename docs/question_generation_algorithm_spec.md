@@ -24,11 +24,10 @@ Generate learner-question artifacts from course descriptions in a way that is:
 
 Implementation note:
 
-The source tree still uses historical package names such as `question_gen_v3`,
-`question_gen_v4`, `question_gen_v4_1`, and `question_ledger_v6`. In this
-document those are treated as implementation locations, not architectural stage
-names. The stable orchestration surface now lives under
-`course_pipeline.questions.*`.
+The live question pipeline now runs through the stable package surface under
+`course_pipeline.questions.*`. The remaining historical implementation label in
+the source tree is `question_ledger_v6`, which is treated as a compatibility
+name for the ledger stage rather than an architectural stage name.
 
 ## High-Level Pipeline
 

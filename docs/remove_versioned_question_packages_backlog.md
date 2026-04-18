@@ -8,7 +8,9 @@ Remove these legacy implementation packages from the live source tree:
 - `src/course_pipeline/question_gen_v4`
 - `src/course_pipeline/question_gen_v4_1`
 
-The desired end state is:
+Status: completed.
+
+End state reached:
 
 - the active pipeline runs entirely through `course_pipeline.questions.*`
 - tests target the stable package names
@@ -31,9 +33,8 @@ What is already true:
 
 What is still true:
 
-- `question_gen_v3`, `question_gen_v4`, and `question_gen_v4_1` still exist
-- several wrappers and compatibility imports still point at those packages
-- some non-active modules and tests may still reference the old package names
+- the removed package names still appear in some historical docs and reports
+- the CLI and some report filenames still retain historical version labels
 
 ## Removal Principles
 
@@ -43,9 +44,9 @@ What is still true:
 4. Prefer explicit temporary shims over silent breakage.
 5. Commit each removal slice independently.
 
-## Backlog
+## Executed Slices
 
-### Phase 1: Freeze Deletion Safety
+### Slice 1: Freeze Deletion Safety
 
 Objective:
 
@@ -70,7 +71,7 @@ Acceptance criteria:
 
 - the repo has an explicit red/green signal for whether deletion is safe
 
-### Phase 2: Remove Remaining Runtime Imports From `question_gen_v3`
+### Slice 2: Remove Remaining Runtime Imports From `question_gen_v3`
 
 Objective:
 
@@ -91,7 +92,7 @@ Acceptance criteria:
 
 - no active runtime file imports `course_pipeline.question_gen_v3`
 
-### Phase 3: Remove Remaining Runtime Imports From `question_gen_v4`
+### Slice 3: Remove Remaining Runtime Imports From `question_gen_v4`
 
 Objective:
 
@@ -114,7 +115,7 @@ Acceptance criteria:
 
 - no active runtime file imports `course_pipeline.question_gen_v4`
 
-### Phase 4: Remove Remaining Runtime Imports From `question_gen_v4_1`
+### Slice 4: Remove Remaining Runtime Imports From `question_gen_v4_1`
 
 Objective:
 
@@ -135,7 +136,7 @@ Acceptance criteria:
 
 - no active runtime file imports `course_pipeline.question_gen_v4_1`
 
-### Phase 5: Move Remaining Legacy Tests To Stable Imports
+### Slice 5: Move Remaining Legacy Tests To Stable Imports
 
 Objective:
 
@@ -152,7 +153,7 @@ Acceptance criteria:
 
 - active test suite does not import the versioned packages
 
-### Phase 6: Add Temporary Compatibility Shims Or Skip Them Explicitly
+### Slice 6: Compatibility Decision
 
 Objective:
 
@@ -182,7 +183,7 @@ Acceptance criteria:
 
 - there is an explicit repo decision for compatibility behavior
 
-### Phase 7: Delete `question_gen_v3`
+### Slice 7: Delete `question_gen_v3`
 
 Objective:
 
@@ -198,7 +199,7 @@ Acceptance criteria:
 
 - repo builds and tests pass without `question_gen_v3`
 
-### Phase 8: Delete `question_gen_v4`
+### Slice 8: Delete `question_gen_v4`
 
 Objective:
 
@@ -214,7 +215,7 @@ Acceptance criteria:
 
 - repo builds and tests pass without `question_gen_v4`
 
-### Phase 9: Delete `question_gen_v4_1`
+### Slice 9: Delete `question_gen_v4_1`
 
 Objective:
 
@@ -230,7 +231,7 @@ Acceptance criteria:
 
 - repo builds and tests pass without `question_gen_v4_1`
 
-### Phase 10: Clean Docs And Naming Residue
+### Slice 10: Clean Docs And Naming Residue
 
 Objective:
 

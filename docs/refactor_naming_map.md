@@ -5,15 +5,15 @@
 This document defines the stable domain vocabulary for the active question
 pipeline.
 
-The repo still contains historical package names such as `question_gen_v3`,
-`question_gen_v4`, `question_gen_v4_1`, and `question_ledger_v6`. Those names
-reflect implementation history, not the intended long-term architecture.
+The versioned question-generation packages have been removed. The remaining
+historical package name in this area is `question_ledger_v6`, which is a
+compatibility name rather than the intended architectural vocabulary.
 
 The stable package surface introduced for refactoring is:
 
-- [questions/candidates.py](/code/src/course_pipeline/questions/candidates.py)
-- [questions/policy.py](/code/src/course_pipeline/questions/policy.py)
-- [questions/ledger.py](/code/src/course_pipeline/questions/ledger.py)
+- [questions/candidates](/code/src/course_pipeline/questions/candidates)
+- [questions/policy](/code/src/course_pipeline/questions/policy)
+- [questions/ledger](/code/src/course_pipeline/questions/ledger)
 - [questions/inspection.py](/code/src/course_pipeline/questions/inspection.py)
 
 ## Naming Policy
@@ -38,58 +38,52 @@ Use these rules when naming active pipeline components:
 ### Topic, Edge, Pedagogy, And Friction Extraction
 
 - stable term: `candidate extraction`
-- implementation package today: [question_gen_v3](/code/src/course_pipeline/question_gen_v3)
-- stable wrapper: [questions/candidates.py](/code/src/course_pipeline/questions/candidates.py)
+- implementation package today: [questions/candidates](/code/src/course_pipeline/questions/candidates)
 
 ### Question Candidate Generation, Filtering, Scoring, Dedupe, Selection
 
 - stable term: `candidate generation`
-- implementation package today: [question_gen_v3](/code/src/course_pipeline/question_gen_v3)
-- stable wrapper: [questions/candidates.py](/code/src/course_pipeline/questions/candidates.py)
+- implementation package today: [questions/candidates](/code/src/course_pipeline/questions/candidates)
 
 ### Visibility, Serveability, Canonicalization, Retention
 
 - stable term: `policy classification`
-- implementation packages today:
-  - [question_gen_v4](/code/src/course_pipeline/question_gen_v4)
-  - [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
-- stable wrapper: [questions/policy.py](/code/src/course_pipeline/questions/policy.py)
+- implementation package today: [questions/policy](/code/src/course_pipeline/questions/policy)
 
 ### Foundational Anchor Detection And Entry Coverage
 
 - stable term: `coverage enforcement`
-- implementation package today: [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
-- stable wrapper: [questions/policy.py](/code/src/course_pipeline/questions/policy.py)
+- implementation package today: [questions/policy](/code/src/course_pipeline/questions/policy)
 
 ### Ledger Assembly And Derived Views
 
 - stable term: `question ledger`
-- implementation package today: [question_ledger_v6](/code/src/course_pipeline/question_ledger_v6)
-- stable wrapper: [questions/ledger.py](/code/src/course_pipeline/questions/ledger.py)
+- implementation package today: [questions/ledger](/code/src/course_pipeline/questions/ledger)
+- compatibility package: [question_ledger_v6](/code/src/course_pipeline/question_ledger_v6)
 
 ### Bundle And Report Rendering
 
 - stable term: `inspection publishing`
 - implementation packages today:
-  - [question_gen_v3](/code/src/course_pipeline/question_gen_v3)
-  - [question_gen_v4](/code/src/course_pipeline/question_gen_v4)
-  - [question_gen_v4_1](/code/src/course_pipeline/question_gen_v4_1)
+  - [questions/candidates](/code/src/course_pipeline/questions/candidates)
+  - [questions/policy](/code/src/course_pipeline/questions/policy)
+  - [questions/ledger](/code/src/course_pipeline/questions/ledger)
   - [question_ledger_v6](/code/src/course_pipeline/question_ledger_v6)
 - stable wrapper: [questions/inspection.py](/code/src/course_pipeline/questions/inspection.py)
 
 ## Current Migration Rule
 
-Until the internal moves are complete:
+Current rule:
 
-- versioned packages may continue to exist as implementation homes
 - orchestration code should import through `course_pipeline.questions.*`
 - docs should describe the stable domain names first
+- `question_ledger_v6` should be treated as compatibility residue, not as the
+  preferred implementation path
 
 ## End-State Goal
 
 The eventual end state is:
 
 - stable domain package names in both architecture and implementation
-- no runtime dependence on version-labeled package imports outside the wrapper
-  compatibility layer
-- version labels retained only in migration notes, if at all
+- no runtime dependence on version-labeled package imports
+- version labels retained only in bounded historical notes, if at all

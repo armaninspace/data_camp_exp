@@ -50,9 +50,12 @@ def test_prefect_flow_smoke_success(tmp_path: Path) -> None:
     result = question_generation_pipeline_flow(config)
     run_root = tmp_path / result.run_id
     assert result.status == "completed"
+    assert result.promoted_ref is False
     assert (run_root / "all_questions.jsonl").exists()
     assert (run_root / "inspection_bundle" / "24491_forecasting-in-r.md").exists()
     manifest = json.loads((run_root / "run_manifest.json").read_text(encoding="utf-8"))
+    assert manifest["run_mode"] == "dev"
+    assert manifest["promoted_ref"] is False
     stage_names = [stage["stage_name"] for stage in manifest["stage_summaries"]]
     assert "standardize_courses" in stage_names
     assert "build_ledger" in stage_names
@@ -68,6 +71,53 @@ def test_prefect_flow_smoke_success(tmp_path: Path) -> None:
         and row.get("non_visible_reasons") == ["analysis_only_low_distinctiveness"]
     ]
     assert hidden_required_entry == []
+
+
+def test_prefect_flow_prod_run_promotes_into_ref_current(tmp_path: Path) -> None:
+    os.environ.setdefault("PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS", "120")
+    config = RunConfig(
+        input_root=INPUT_ROOT,
+        output_root=tmp_path / "runs",
+        ref_root=tmp_path / "ref",
+        course_ids=["24491"],
+        max_courses=1,
+        strict_mode=True,
+        run_mode="prod",
+    )
+    result = question_generation_pipeline_flow(config)
+    assert result.status == "completed"
+    assert result.promoted_ref is True
+    ref_root = tmp_path / "ref" / "current"
+    assert (ref_root / "aggregate" / "all_questions.jsonl").exists()
+    assert (ref_root / "aggregate" / "inspection_bundle" / "24491_forecasting-in-r.md").exists()
+    assert (ref_root / "by_course" / "24491" / "course.json").exists()
+    assert (ref_root / "ref_state.json").exists()
+    promotion_manifest = tmp_path / "ref" / "promotions" / f"{result.run_id}.json"
+    assert promotion_manifest.exists()
+
+
+def test_prefect_flow_prod_promotions_accumulate_by_course_id(tmp_path: Path) -> None:
+    os.environ.setdefault("PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS", "120")
+    base_kwargs = {
+        "input_root": INPUT_ROOT,
+        "output_root": tmp_path / "runs",
+        "ref_root": tmp_path / "ref",
+        "strict_mode": False,
+        "run_mode": "prod",
+    }
+    first = question_generation_pipeline_flow(RunConfig(course_ids=["24491"], max_courses=1, **base_kwargs))
+    second = question_generation_pipeline_flow(RunConfig(course_ids=["24593"], max_courses=1, **base_kwargs))
+    assert first.status == "completed"
+    assert second.status == "completed"
+    ref_root = tmp_path / "ref" / "current"
+    course_rows = _read_jsonl(ref_root / "aggregate" / "courses.jsonl")
+    assert {row["course_id"] for row in course_rows} == {"24491", "24593"}
+    assert (ref_root / "by_course" / "24491" / "course.json").exists()
+    assert (ref_root / "by_course" / "24593" / "course.json").exists()
+
+    ref_state = json.loads((ref_root / "ref_state.json").read_text(encoding="utf-8"))
+    assert ref_state["course_count"] == 2
+    assert ref_state["last_promoted_run_id"] == second.run_id
 
 
 def test_prefect_flow_strict_mode_failure_records_manifest(tmp_path: Path, monkeypatch) -> None:

@@ -111,4 +111,16 @@ def test_build_v6_review_bundle_writes_course_file(tmp_path):
     assert len(files) == 1
     text = files[0].read_text()
     assert "Ledger Summary" in text
+    assert "## All Questions" in text
+    assert "### What is seasonality?" in text
+    assert "- question_id: q1" in text
+    assert "- delivery_class: curated_visible" in text
+    assert "## Course Content" in text
+    assert "### Summary" in text
+    assert "Summary" in text
+    assert "### Overview" in text
+    assert "Overview" in text
+    assert "### Syllabus" in text
+    assert "Chapter 1: Intro" in text
+    assert "summary: Intro summary" in text
     assert "# Report" in text

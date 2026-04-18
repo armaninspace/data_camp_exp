@@ -15,6 +15,13 @@ From that ledger, the pipeline derives:
 - anchor summary
 - inspection report
 
+Each course file now includes:
+
+- ledger summary
+- every question in the ledger with its attributes
+- scraped course content summary, overview, and syllabus
+- the inspection report for that course
+
 ## Included files
 
 - [question_ledger_v6_report.md](/code/docs/inspection_bundle_6/question_ledger_v6_report.md)

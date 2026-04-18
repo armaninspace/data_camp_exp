@@ -33,6 +33,7 @@ def create_run_context(config: RunConfig) -> RunContext:
         candidates_dir=ensure_dir(run_root / config.candidate_output_subdir),
         policy_dir=ensure_dir(run_root / config.policy_output_subdir),
         ledger_dir=ensure_dir(run_root / config.ledger_output_subdir),
+        answer_dir=ensure_dir(run_root / config.answer_output_subdir),
         bundle_dir=ensure_dir(run_root / config.bundle_output_subdir),
         logs_dir=ensure_dir(run_root / "logs"),
         manifest_path=run_root / "run_manifest.json",
@@ -41,6 +42,7 @@ def create_run_context(config: RunConfig) -> RunContext:
         persist_to_db=config.persist_to_db,
         model_profile=config.model_profile,
         tags=list(config.tags),
+        enable_answer_generation=config.enable_answer_generation,
         plan_llm_metering=config.plan_llm_metering,
         planned_llm_metering_stages=list(config.planned_llm_metering_stages),
     )

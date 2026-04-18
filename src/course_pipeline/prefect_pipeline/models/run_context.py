@@ -19,6 +19,7 @@ class RunContext(BaseModel):
     candidates_dir: Path
     policy_dir: Path
     ledger_dir: Path
+    answer_dir: Path
     bundle_dir: Path
     logs_dir: Path
     manifest_path: Path
@@ -28,5 +29,6 @@ class RunContext(BaseModel):
     persist_to_db: bool
     model_profile: str
     tags: list[str]
+    enable_answer_generation: bool
     plan_llm_metering: bool
     planned_llm_metering_stages: list[str]

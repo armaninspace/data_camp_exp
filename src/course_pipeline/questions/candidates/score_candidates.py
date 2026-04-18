@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from course_pipeline.questions.candidates.models import CandidateScore, FrictionPoint, QuestionCandidate, ScoredCandidate, TopicEdge, TopicNode
+from course_pipeline.semantic_schemas import AnchorCandidate
 
 
 def score_candidates(
@@ -9,8 +10,11 @@ def score_candidates(
     edges: list[TopicEdge],
     frictions: list[FrictionPoint],
     config: dict,
+    *,
+    anchor_candidates: list[AnchorCandidate] | None = None,
 ) -> list[ScoredCandidate]:
     topic_map = {topic.topic_id: topic for topic in topics}
+    anchor_map = {anchor.anchor_id: anchor for anchor in (anchor_candidates or [])}
     friction_map: dict[str, list[FrictionPoint]] = {}
     for friction in frictions:
         friction_map.setdefault(friction.topic_id, []).append(friction)
@@ -38,6 +42,11 @@ def score_candidates(
         ) else 0.45
         novelty = 0.85 if candidate.question_type not in {"definition", "orientation"} else 0.62
         groundedness = min(1.0, 0.55 + 0.1 * len(candidate.source_support) + 0.2 * topic.confidence)
+        if candidate.llm_grounding_confidence is not None:
+            groundedness = min(1.0, groundedness + 0.05 * candidate.llm_grounding_confidence)
+        semantic_confidence = anchor_map.get(candidate.topic_id).confidence if candidate.topic_id in anchor_map else topic.confidence
+        llm_repair_confidence = candidate.llm_repair_confidence or 0.0
+        llm_derivation_confidence = candidate.llm_derivation_confidence or 0.0
         total = (
             weights["friction_value"] * friction_value
             + weights["specificity"] * specificity
@@ -45,6 +54,13 @@ def score_candidates(
             + weights["mastery_fit"] * mastery_fit
             + weights["novelty"] * novelty
             + weights["groundedness"] * groundedness
+        )
+        total = min(
+            1.0,
+            total
+            + 0.03 * semantic_confidence
+            + 0.02 * llm_repair_confidence
+            + 0.02 * llm_derivation_confidence,
         )
         scored.append(
             ScoredCandidate(
@@ -56,6 +72,9 @@ def score_candidates(
                     mastery_fit=round(mastery_fit, 4),
                     novelty=round(novelty, 4),
                     groundedness=round(groundedness, 4),
+                    semantic_confidence=round(semantic_confidence, 4),
+                    llm_repair_confidence=round(llm_repair_confidence, 4),
+                    llm_derivation_confidence=round(llm_derivation_confidence, 4),
                     total=round(total, 4),
                 ),
             )

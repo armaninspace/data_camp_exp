@@ -19,6 +19,7 @@ dependencies = [
 
 [project.scripts]
 course-pipeline = "course_pipeline.cli:app"
+build-inspection-bundle = "course_pipeline.bundle_cli:app"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

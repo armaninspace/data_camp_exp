@@ -119,6 +119,14 @@ class QuestionCandidate(BaseModel):
     source_support: list[str] = Field(default_factory=list)
     linked_friction_ids: list[str] = Field(default_factory=list)
     section_ids: list[int] = Field(default_factory=list)
+    source_kind: Literal["original", "repaired", "derived"] = "original"
+    source_question_id: str | None = None
+    llm_stage: Literal["repair", "expand"] | None = None
+    provenance_note: str | None = None
+    derived_by_llm: bool = False
+    llm_grounding_confidence: float | None = None
+    llm_repair_confidence: float | None = None
+    llm_derivation_confidence: float | None = None
 
 
 class RejectedCandidate(BaseModel):
@@ -133,6 +141,9 @@ class CandidateScore(BaseModel):
     mastery_fit: float
     novelty: float
     groundedness: float
+    semantic_confidence: float = 0.0
+    llm_repair_confidence: float = 0.0
+    llm_derivation_confidence: float = 0.0
     total: float
 
 

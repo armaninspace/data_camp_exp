@@ -7,6 +7,9 @@ import yaml
 
 from course_pipeline.config import Settings
 from course_pipeline.normalize import iter_courses
+from course_pipeline.prefect_pipeline.flows import question_generation_pipeline_flow
+from course_pipeline.prefect_pipeline.models.run_config import RunConfig
+from course_pipeline.question_seed_generate import generate_seed_candidates
 from course_pipeline.questions.candidates import (
     ScoredCandidate,
     build_candidate_review_bundle,
@@ -14,6 +17,7 @@ from course_pipeline.questions.candidates import (
     write_candidate_course_artifacts,
     write_candidate_run_report,
 )
+from course_pipeline.questions.candidates.config import load_default_config
 from course_pipeline.questions.ledger import (
     AnchorSummary,
     LedgerRow,
@@ -34,6 +38,11 @@ from course_pipeline.questions.policy import (
 )
 from course_pipeline.schemas import (
     NormalizedCourse,
+)
+from course_pipeline.semantic_pipeline import (
+    run_semantic_stage_for_course,
+    write_semantic_course_yaml,
+    write_semantic_stage_artifacts,
 )
 from course_pipeline.storage import Storage
 from course_pipeline.utils import ensure_dir, write_jsonl
@@ -131,7 +140,7 @@ def run_question_generation_v3(
 
     for course in selected:
         try:
-            result = run_candidate_generation_for_course(course)
+            result = run_candidate_generation_for_course(course, settings=settings, run_dir=run_dir)
             per_course[course.course_id] = result
             write_candidate_course_artifacts(run_dir, course.course_id, result)
             topic_rows.extend(item.model_dump(mode="json") for item in result["topics"])
@@ -184,6 +193,257 @@ def run_question_generation_v3(
     write_jsonl(outputs["errors"], error_rows)
     write_candidate_run_report(run_dir, per_course)
     return outputs
+
+
+def _select_courses(
+    courses: list[NormalizedCourse],
+    *,
+    limit: int | None = None,
+    course_ids: list[str] | None = None,
+) -> list[NormalizedCourse]:
+    selected = courses
+    if course_ids:
+        allowed = {course_id.strip() for course_id in course_ids if course_id.strip()}
+        selected = [course for course in selected if course.course_id in allowed]
+    if limit:
+        selected = selected[:limit]
+    return selected
+
+
+def _write_courses_and_chapters(run_dir: Path, selected: list[NormalizedCourse]) -> tuple[Path, Path]:
+    courses_path = run_dir / "courses.jsonl"
+    chapters_path = run_dir / "chapters.jsonl"
+    write_jsonl(courses_path, [course.model_dump(mode="json") for course in selected])
+    write_jsonl(
+        chapters_path,
+        [
+            {
+                "course_id": course.course_id,
+                "course_title": course.title,
+                **chapter.model_dump(mode="json"),
+            }
+            for course in selected
+            for chapter in course.chapters
+        ],
+    )
+    return courses_path, chapters_path
+
+
+def run_semantic_extract_llm_stage(
+    input_dir: Path,
+    settings: Settings,
+    storage: Storage,
+    run_id: str,
+    *,
+    limit: int | None = None,
+    course_ids: list[str] | None = None,
+) -> dict[str, Path]:
+    courses, errors = ingest_all(input_dir, storage, run_id)
+    selected = _select_courses(courses, limit=limit, course_ids=course_ids)
+    run_dir = ensure_dir(settings.output_root / run_id)
+    courses_path, chapters_path = _write_courses_and_chapters(run_dir, selected)
+    per_course: dict[str, dict] = {}
+    semantic_topics: list[dict] = []
+    semantic_anchors: list[dict] = []
+    semantic_alias_groups: list[dict] = []
+    semantic_frictions: list[dict] = []
+    topics: list[dict] = []
+    edges: list[dict] = []
+    pedagogy: list[dict] = []
+    friction_points: list[dict] = []
+    validation_reports: list[dict] = []
+    for course in selected:
+        result = run_semantic_stage_for_course(raw_course=course, settings=settings, run_dir=run_dir)
+        per_course[course.course_id] = result
+        course_dir = run_dir / "course_artifacts" / course.course_id
+        write_semantic_stage_artifacts(run_dir, course.course_id, result, base_dir=course_dir)
+        write_semantic_course_yaml(run_dir, course.course_id, result, base_dir=course_dir)
+        semantic_topics.extend(item.model_dump(mode="json") for item in result["semantic_topic_records"])
+        semantic_anchors.extend(item.model_dump(mode="json") for item in result["semantic_anchor_candidates"])
+        semantic_alias_groups.extend(item.model_dump(mode="json") for item in result["semantic_alias_groups"])
+        semantic_frictions.extend(item.model_dump(mode="json") for item in result["semantic_friction_records"])
+        topics.extend(item.model_dump(mode="json") for item in result["topics"])
+        edges.extend(item.model_dump(mode="json") for item in result["edges"])
+        pedagogy.extend(item.model_dump(mode="json") for item in result["pedagogy"])
+        friction_points.extend(item.model_dump(mode="json") for item in result["frictions"])
+        validation_reports.append(result["semantic_validation_report"].model_dump(mode="json"))
+    outputs = {
+        "courses": courses_path,
+        "chapters": chapters_path,
+        "semantic_topics": run_dir / "semantic_topics.jsonl",
+        "semantic_anchors": run_dir / "semantic_anchors.jsonl",
+        "semantic_alias_groups": run_dir / "semantic_alias_groups.jsonl",
+        "semantic_frictions": run_dir / "semantic_frictions.jsonl",
+        "topics": run_dir / "topics.jsonl",
+        "edges": run_dir / "edges.jsonl",
+        "pedagogy": run_dir / "pedagogy.jsonl",
+        "friction_points": run_dir / "friction_points.jsonl",
+        "semantic_validation_reports": run_dir / "semantic_validation_reports.jsonl",
+        "errors": run_dir / "semantic_extract_errors.jsonl",
+        "report": run_dir / "semantic_run_report.md",
+    }
+    write_jsonl(outputs["semantic_topics"], semantic_topics)
+    write_jsonl(outputs["semantic_anchors"], semantic_anchors)
+    write_jsonl(outputs["semantic_alias_groups"], semantic_alias_groups)
+    write_jsonl(outputs["semantic_frictions"], semantic_frictions)
+    write_jsonl(outputs["topics"], topics)
+    write_jsonl(outputs["edges"], edges)
+    write_jsonl(outputs["pedagogy"], pedagogy)
+    write_jsonl(outputs["friction_points"], friction_points)
+    write_jsonl(outputs["semantic_validation_reports"], validation_reports)
+    write_jsonl(outputs["errors"], list(errors))
+    inspect_semantic_run(run_dir)
+    return outputs
+
+
+def run_question_seed_generation_stage(
+    input_dir: Path,
+    settings: Settings,
+    storage: Storage,
+    run_id: str,
+    *,
+    limit: int | None = None,
+    course_ids: list[str] | None = None,
+) -> dict[str, Path]:
+    courses, errors = ingest_all(input_dir, storage, run_id)
+    selected = _select_courses(courses, limit=limit, course_ids=course_ids)
+    run_dir = ensure_dir(settings.output_root / run_id)
+    courses_path, chapters_path = _write_courses_and_chapters(run_dir, selected)
+    seed_rows: list[dict] = []
+    for course in selected:
+        semantic_result = run_semantic_stage_for_course(raw_course=course, settings=settings, run_dir=run_dir)
+        course_dir = run_dir / "course_artifacts" / course.course_id
+        write_semantic_stage_artifacts(run_dir, course.course_id, semantic_result, base_dir=course_dir)
+        write_semantic_course_yaml(run_dir, course.course_id, semantic_result, base_dir=course_dir)
+        seeds = generate_seed_candidates(
+            semantic_result["normalized_document"],
+            semantic_result["topics"],
+            semantic_result["edges"],
+            semantic_result["pedagogy"],
+            semantic_result["frictions"],
+            load_default_config(),
+        )
+        write_jsonl(course_dir / "seed_candidates.jsonl", [item.model_dump(mode="json") for item in seeds])
+        seed_rows.extend(item.model_dump(mode="json") for item in seeds)
+    outputs = {
+        "courses": courses_path,
+        "chapters": chapters_path,
+        "seed_candidates": run_dir / "seed_candidates.jsonl",
+        "errors": run_dir / "question_seed_errors.jsonl",
+        "report": run_dir / "question_refine_report.md",
+    }
+    write_jsonl(outputs["seed_candidates"], seed_rows)
+    write_jsonl(outputs["errors"], list(errors))
+    inspect_question_refine_run(run_dir)
+    return outputs
+
+
+def run_question_repair_stage(
+    input_dir: Path,
+    settings: Settings,
+    storage: Storage,
+    run_id: str,
+    *,
+    limit: int | None = None,
+    course_ids: list[str] | None = None,
+) -> dict[str, Path]:
+    outputs = run_question_generation_v3(
+        input_dir=input_dir,
+        settings=settings,
+        storage=storage,
+        run_id=run_id,
+        limit=limit,
+        course_ids=course_ids,
+    )
+    inspect_question_refine_run(settings.output_root / run_id)
+    return outputs
+
+
+def run_question_expand_stage(
+    input_dir: Path,
+    settings: Settings,
+    storage: Storage,
+    run_id: str,
+    *,
+    limit: int | None = None,
+    course_ids: list[str] | None = None,
+) -> dict[str, Path]:
+    outputs = run_question_generation_v3(
+        input_dir=input_dir,
+        settings=settings,
+        storage=storage,
+        run_id=run_id,
+        limit=limit,
+        course_ids=course_ids,
+    )
+    inspect_question_refine_run(settings.output_root / run_id)
+    return outputs
+
+
+def inspect_semantic_run(run_dir: Path) -> Path:
+    reports_path = run_dir / "semantic_validation_reports.jsonl"
+    report_rows = [
+        json.loads(line)
+        for line in reports_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ] if reports_path.exists() else []
+    lines = ["# Semantic Run Report", ""]
+    lines.append(f"- courses: {len(report_rows)}")
+    lines.append(f"- semantic topics: {_jsonl_count(run_dir / 'semantic_topics.jsonl')}")
+    lines.append(f"- sanitized topics: {_jsonl_count(run_dir / 'topics.jsonl')}")
+    lines.append(f"- suspicious anchors: {sum(int(row.get('suspicious_anchor_count', 0)) for row in report_rows)}")
+    lines.append("")
+    for row in report_rows:
+        lines.append(f"## Course `{row.get('course_id')}`")
+        lines.append("")
+        lines.append(f"- kept: {row.get('kept_count', 0)}")
+        lines.append(f"- dropped: {row.get('dropped_count', 0)}")
+        lines.append(f"- merged: {row.get('merged_count', 0)}")
+        lines.append("")
+    path = run_dir / "semantic_run_report.md"
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path
+
+
+def inspect_question_refine_run(run_dir: Path) -> Path:
+    lines = ["# Question Refine Report", ""]
+    lines.append(f"- seed candidates: {_jsonl_count(run_dir / 'seed_candidates.jsonl')}")
+    lines.append(f"- candidate repairs: {_jsonl_count(run_dir / 'candidate_repairs.jsonl')}")
+    lines.append(f"- candidate expansions: {_jsonl_count(run_dir / 'candidate_expansions.jsonl')}")
+    lines.append(f"- merged candidates: {_jsonl_count(run_dir / 'merged_candidates.jsonl')}")
+    lines.append("")
+    path = run_dir / "question_refine_report.md"
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path
+
+
+def _jsonl_count(path: Path) -> int:
+    if not path.exists():
+        return 0
+    return sum(1 for line in path.read_text(encoding="utf-8").splitlines() if line.strip())
+
+
+def run_pipeline_refactor(
+    input_dir: Path,
+    settings: Settings,
+    run_id: str,
+    *,
+    limit: int | None = None,
+    course_ids: list[str] | None = None,
+    include_answers: bool = True,
+) -> Path:
+    config = RunConfig(
+        run_label=run_id,
+        input_root=input_dir,
+        output_root=settings.output_root,
+        course_ids=course_ids,
+        max_courses=limit,
+        strict_mode=True,
+        enable_answer_generation=include_answers,
+        overwrite_existing=True,
+    )
+    result = question_generation_pipeline_flow(config)
+    return settings.output_root / result.run_id
 
 
 def build_question_generation_v3_review_bundle(

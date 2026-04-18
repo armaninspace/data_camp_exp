@@ -5,24 +5,23 @@ from pathlib import Path
 
 from course_pipeline.config import Settings
 from course_pipeline.llm_metering import MeteredLLMJsonClient
+from course_pipeline.question_seed_generate import generate_seed_candidates
+from course_pipeline.question_expand_llm import expand_candidates_with_llm
+from course_pipeline.question_llm_merge import merge_llm_candidates
+from course_pipeline.question_refine_llm import repair_candidates_with_llm
 from course_pipeline.questions.candidates.config import load_default_config
 from course_pipeline.questions.candidates.dedupe import dedupe_candidates
-from course_pipeline.questions.candidates.extract_edges import extract_edges
-from course_pipeline.questions.candidates.extract_pedagogy import extract_pedagogy
-from course_pipeline.questions.candidates.extract_topics import extract_topics
 from course_pipeline.questions.candidates.filters import filter_candidates
-from course_pipeline.questions.candidates.generate_candidates import generate_candidates
-from course_pipeline.questions.candidates.mine_friction import mine_friction
 from course_pipeline.questions.candidates.models import (
-    CanonicalDocument,
     ReviewAnswer,
     ScoredCandidate,
     SelectionSummary,
 )
-from course_pipeline.questions.candidates.normalize import normalize_document
 from course_pipeline.questions.candidates.score_candidates import score_candidates
 from course_pipeline.questions.candidates.selection import select_final
+from course_pipeline.questions.policy.anchors import detect_foundational_anchors
 from course_pipeline.schemas import NormalizedCourse
+from course_pipeline.semantic_pipeline import run_semantic_stage_for_course
 from course_pipeline.utils import ensure_dir, slugify, write_jsonl, write_yaml
 
 
@@ -56,16 +55,78 @@ Rules:
 """
 
 
-def run_question_gen_v3_for_course(raw_doc: NormalizedCourse, config: dict | None = None) -> dict:
+def run_question_gen_v3_for_course(
+    raw_doc: NormalizedCourse,
+    config: dict | None = None,
+    *,
+    settings: Settings | None = None,
+    run_dir: Path | None = None,
+    semantic_result: dict | None = None,
+) -> dict:
     cfg = config or load_default_config()
-    doc = normalize_document(raw_doc)
-    topics = extract_topics(doc)
-    edges = extract_edges(doc, topics)
-    pedagogy = extract_pedagogy(doc, topics, edges)
-    frictions = mine_friction(topics, edges, pedagogy)
-    raw_candidates = generate_candidates(doc, topics, edges, pedagogy, frictions, cfg)
-    kept_candidates, rejected = filter_candidates(raw_candidates, topics, cfg)
-    scored = score_candidates(kept_candidates, topics, edges, frictions, cfg)
+    semantic_stage = semantic_result or run_semantic_stage_for_course(
+        raw_course=raw_doc,
+        settings=settings,
+        run_dir=run_dir,
+    )
+    doc = semantic_stage["normalized_document"]
+    topics = semantic_stage["topics"]
+    edges = semantic_stage["edges"]
+    pedagogy = semantic_stage["pedagogy"]
+    frictions = semantic_stage["frictions"]
+    seed_candidates = generate_seed_candidates(doc, topics, edges, pedagogy, frictions, cfg)
+    foundational_anchors = detect_foundational_anchors(topics)
+    foundational_anchor_labels = sorted(
+        {
+            topic.label
+            for topic in foundational_anchors.values()
+        }
+    )
+    candidate_repairs, repair_payload = repair_candidates_with_llm(
+        settings=settings,
+        run_dir=run_dir,
+        course=doc,
+        topics=topics,
+        edges=edges,
+        pedagogy=pedagogy,
+        frictions=frictions,
+        candidates=seed_candidates,
+        foundational_anchor_labels=foundational_anchor_labels,
+    )
+    repaired_candidates, _repair_merge_report = merge_llm_candidates(
+        course_id=raw_doc.course_id,
+        raw_candidates=seed_candidates,
+        repair_records=candidate_repairs,
+        derived_candidates=[],
+        topics=topics,
+    )
+    candidate_expansions, expand_payload = expand_candidates_with_llm(
+        settings=settings,
+        run_dir=run_dir,
+        course=doc,
+        topics=topics,
+        edges=edges,
+        pedagogy=pedagogy,
+        frictions=frictions,
+        repaired_candidates=repaired_candidates,
+        foundational_anchor_labels=foundational_anchor_labels,
+    )
+    merged_candidates, candidate_merge_report = merge_llm_candidates(
+        course_id=raw_doc.course_id,
+        raw_candidates=seed_candidates,
+        repair_records=candidate_repairs,
+        derived_candidates=candidate_expansions,
+        topics=topics,
+    )
+    kept_candidates, rejected = filter_candidates(merged_candidates, topics, cfg)
+    scored = score_candidates(
+        kept_candidates,
+        topics,
+        edges,
+        frictions,
+        cfg,
+        anchor_candidates=semantic_stage.get("sanitized_anchor_candidates", []),
+    )
     deduped, duplicate_clusters = dedupe_candidates(scored, cfg)
     target_n = cfg["generation"]["target_final_per_course"]
     final_selected, selection_summary = select_final(
@@ -77,11 +138,29 @@ def run_question_gen_v3_for_course(raw_doc: NormalizedCourse, config: dict | Non
     )
     return {
         "normalized_document": doc,
+        "semantic_payload": semantic_stage["semantic_payload"],
+        "semantic_extraction_mode": semantic_stage["semantic_extraction_mode"],
+        "semantic_topic_records": semantic_stage["semantic_topic_records"],
+        "semantic_anchor_candidates": semantic_stage["semantic_anchor_candidates"],
+        "semantic_alias_groups": semantic_stage["semantic_alias_groups"],
+        "semantic_friction_records": semantic_stage["semantic_friction_records"],
+        "sanitized_topic_records": semantic_stage["sanitized_topic_records"],
+        "sanitized_anchor_candidates": semantic_stage["sanitized_anchor_candidates"],
+        "sanitized_alias_groups": semantic_stage["sanitized_alias_groups"],
+        "sanitized_friction_records": semantic_stage["sanitized_friction_records"],
+        "semantic_validation_report": semantic_stage["semantic_validation_report"],
         "topics": topics,
         "edges": edges,
         "pedagogy": pedagogy,
         "frictions": frictions,
-        "raw_candidates": raw_candidates,
+        "seed_candidates": seed_candidates,
+        "raw_candidates": seed_candidates,
+        "candidate_repairs": candidate_repairs,
+        "candidate_expansions": candidate_expansions,
+        "candidate_merge_report": candidate_merge_report,
+        "repair_payload": repair_payload,
+        "expand_payload": expand_payload,
+        "merged_candidates": merged_candidates,
         "rejected_candidates": rejected,
         "scored_candidates": scored,
         "duplicate_clusters": duplicate_clusters,
@@ -93,15 +172,30 @@ def run_question_gen_v3_for_course(raw_doc: NormalizedCourse, config: dict | Non
 def write_course_artifacts(run_dir: Path, course_id: str, result: dict) -> None:
     artifact_dir = ensure_dir(run_dir / "course_artifacts" / course_id)
     write_yaml(artifact_dir / "normalized_document.yaml", result["normalized_document"].model_dump(mode="json"), width=100)
+    write_jsonl(artifact_dir / "semantic_topics.jsonl", [item.model_dump(mode="json") for item in result.get("semantic_topic_records", [])])
+    write_jsonl(artifact_dir / "semantic_anchors.jsonl", [item.model_dump(mode="json") for item in result.get("semantic_anchor_candidates", [])])
+    write_jsonl(artifact_dir / "semantic_alias_groups.jsonl", [item.model_dump(mode="json") for item in result.get("semantic_alias_groups", [])])
+    write_jsonl(artifact_dir / "semantic_frictions.jsonl", [item.model_dump(mode="json") for item in result.get("semantic_friction_records", [])])
+    (artifact_dir / "semantic_validation_report.json").write_text(
+        json.dumps(result.get("semantic_validation_report", {}).model_dump(mode="json") if hasattr(result.get("semantic_validation_report"), "model_dump") else result.get("semantic_validation_report", {}), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     write_jsonl(artifact_dir / "topics.jsonl", [item.model_dump(mode="json") for item in result["topics"]])
     write_jsonl(artifact_dir / "edges.jsonl", [item.model_dump(mode="json") for item in result["edges"]])
     write_jsonl(artifact_dir / "pedagogy.jsonl", [item.model_dump(mode="json") for item in result["pedagogy"]])
     write_jsonl(artifact_dir / "friction_points.jsonl", [item.model_dump(mode="json") for item in result["frictions"]])
+    write_jsonl(artifact_dir / "seed_candidates.jsonl", [item.model_dump(mode="json") for item in result.get("seed_candidates", result["raw_candidates"])])
     write_jsonl(artifact_dir / "raw_candidates.jsonl", [item.model_dump(mode="json") for item in result["raw_candidates"]])
+    write_jsonl(artifact_dir / "candidate_repairs.jsonl", [item.model_dump(mode="json") for item in result.get("candidate_repairs", [])])
+    write_jsonl(artifact_dir / "candidate_expansions.jsonl", [item.model_dump(mode="json") for item in result.get("candidate_expansions", [])])
+    write_jsonl(artifact_dir / "candidate_merge_report.jsonl", [item.model_dump(mode="json") for item in result.get("candidate_merge_report", [])])
+    write_jsonl(artifact_dir / "merged_candidates.jsonl", [item.model_dump(mode="json") for item in result.get("merged_candidates", [])])
     write_jsonl(artifact_dir / "rejected_candidates.jsonl", [item.model_dump(mode="json") for item in result["rejected_candidates"]])
     write_jsonl(artifact_dir / "scored_candidates.jsonl", [item.model_dump(mode="json") for item in result["scored_candidates"]])
     write_jsonl(artifact_dir / "duplicate_clusters.jsonl", [item.model_dump(mode="json") for item in result["duplicate_clusters"]])
     write_jsonl(artifact_dir / "final_selected.jsonl", [item.model_dump(mode="json") for item in result["final_selected"]])
+    write_yaml(artifact_dir / "question_refine.yaml", result.get("repair_payload", {}), width=100)
+    write_yaml(artifact_dir / "question_expand.yaml", result.get("expand_payload", {}), width=100)
     (artifact_dir / "selection_summary.json").write_text(
         json.dumps(result["selection_summary"].model_dump(mode="json"), ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -118,6 +212,9 @@ def write_run_report(run_dir: Path, per_course: dict[str, dict]) -> Path:
         lines.append(f"- edges: {len(result['edges'])}")
         lines.append(f"- friction points: {len(result['frictions'])}")
         lines.append(f"- raw candidates: {len(result['raw_candidates'])}")
+        lines.append(f"- candidate repairs: {len(result.get('candidate_repairs', []))}")
+        lines.append(f"- candidate expansions: {len(result.get('candidate_expansions', []))}")
+        lines.append(f"- merged candidates: {len(result.get('merged_candidates', []))}")
         lines.append(f"- rejected candidates: {len(result['rejected_candidates'])}")
         lines.append(f"- selected questions: {summary.selected_count}")
         lines.append(f"- type distribution: {json.dumps(summary.type_distribution, ensure_ascii=False)}")

@@ -19,8 +19,17 @@ def test_run_config_defaults(tmp_path: Path) -> None:
     assert config.standardized_output_subdir == "standardized"
     assert config.offset == 0
     assert config.skip_existing_ref_courses is False
+    assert config.enable_answer_generation is True
     assert config.plan_llm_metering is True
-    assert config.planned_llm_metering_stages == ["candidate_review_answers", "policy_review_answers"]
+    assert config.planned_llm_metering_stages == [
+        "semantic_extract",
+        "candidate_repair",
+        "candidate_expand",
+        "answer_generate",
+        "answer_validate",
+        "candidate_review_answers",
+        "policy_review_answers",
+    ]
 
 
 def test_create_run_context_creates_stage_directories(tmp_path: Path) -> None:
@@ -29,6 +38,7 @@ def test_create_run_context_creates_stage_directories(tmp_path: Path) -> None:
     assert context.run_root.exists()
     assert context.ref_root == tmp_path / "ref"
     assert context.standardized_dir.exists()
+    assert context.answer_dir.exists()
     assert context.bundle_dir.exists()
 
 
@@ -102,6 +112,11 @@ def test_build_run_result_summarizes_llm_metering_when_present(tmp_path: Path) -
     assert manifest["llm_metering"]["record_count"] == 2
     assert manifest["llm_metering"]["estimated_cost_usd"] == 0.015
     assert manifest["llm_metering"]["stages"] == [
+        {"stage": "semantic_extract", "record_count": 0, "estimated_cost_usd": 0.0},
+        {"stage": "candidate_repair", "record_count": 0, "estimated_cost_usd": 0.0},
+        {"stage": "candidate_expand", "record_count": 0, "estimated_cost_usd": 0.0},
+        {"stage": "answer_generate", "record_count": 0, "estimated_cost_usd": 0.0},
+        {"stage": "answer_validate", "record_count": 0, "estimated_cost_usd": 0.0},
         {"stage": "candidate_review_answers", "record_count": 0, "estimated_cost_usd": 0.0},
         {"stage": "policy_review_answers", "record_count": 2, "estimated_cost_usd": 0.015},
     ]

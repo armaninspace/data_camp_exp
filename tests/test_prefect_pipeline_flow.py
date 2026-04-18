@@ -200,3 +200,21 @@ def test_prefect_flow_skip_existing_ref_courses_filters_before_slice(tmp_path: P
     assert manifest["selected_course_ids"] == ordered_course_ids[1:3]
     assert manifest["selection_counts"]["skipped_existing_ref_courses"] == 1
     assert manifest["selection_counts"]["selected_courses"] == 2
+
+
+def test_prefect_flow_without_openai_key_keeps_planned_metering_not_run(tmp_path: Path, monkeypatch) -> None:
+    os.environ.setdefault("PREFECT_SERVER_EPHEMERAL_STARTUP_TIMEOUT_SECONDS", "120")
+    monkeypatch.setenv("OPENAI_API_KEY", "")
+    config = RunConfig(
+        input_root=INPUT_ROOT,
+        output_root=tmp_path,
+        course_ids=["24491"],
+        max_courses=1,
+        strict_mode=False,
+    )
+    result = question_generation_pipeline_flow(config)
+    run_root = tmp_path / result.run_id
+    manifest = json.loads((run_root / "run_manifest.json").read_text(encoding="utf-8"))
+    assert result.status == "completed"
+    assert manifest["llm_metering"]["status"] == "planned_not_run"
+    assert not (run_root / "llm_metering.jsonl").exists()

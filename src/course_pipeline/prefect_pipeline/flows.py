@@ -5,6 +5,7 @@ from course_pipeline.prefect_pipeline.artifacts import build_artifact_index_entr
 from course_pipeline.prefect_pipeline.models.run_config import RunConfig
 from course_pipeline.prefect_pipeline.models.stage_summary import StageSummary
 from course_pipeline.prefect_pipeline.states import StrictCoverageError
+from course_pipeline.prefect_pipeline.tasks.answers import run_answer_generation
 from course_pipeline.prefect_pipeline.tasks.bundles import render_bundle
 from course_pipeline.prefect_pipeline.tasks.candidates import run_candidate_generation
 from course_pipeline.prefect_pipeline.tasks.finalize import finalize_run_manifest
@@ -149,7 +150,23 @@ def question_generation_pipeline_flow(config: RunConfig):
         )
         artifact_index.extend(build_artifact_index_entries("derive_views", views_result["artifact_paths"], context.run_root))
 
-        bundle_result = render_bundle(context, standardized_result, ledger_result)
+        answer_result = run_answer_generation(context, standardized_result, policy_result)
+        stage_summaries.append(
+            StageSummary(
+                stage_name="generate_answers",
+                started_at=context.started_at,
+                finished_at=context.started_at,
+                duration_seconds=0.0,
+                status="completed" if answer_result["status"] == "completed" else "skipped",
+                input_count=len(standardized_result["courses"]),
+                output_count=answer_result["answer_count"],
+                warnings=[] if answer_result["status"] == "completed" else [answer_result["status"]],
+                artifact_paths=[str(path) for path in answer_result["artifact_paths"]],
+            )
+        )
+        artifact_index.extend(build_artifact_index_entries("generate_answers", answer_result["artifact_paths"], context.run_root))
+
+        bundle_result = render_bundle(context, standardized_result, ledger_result, policy_result)
         stage_summaries.append(
             StageSummary(
                 stage_name="render_inspection_bundle",

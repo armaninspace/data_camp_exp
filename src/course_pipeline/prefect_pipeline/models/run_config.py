@@ -18,7 +18,9 @@ class RunConfig(BaseModel):
     candidate_output_subdir: str = "candidates"
     policy_output_subdir: str = "policy"
     ledger_output_subdir: str = "ledger"
+    answer_output_subdir: str = "answers"
     bundle_output_subdir: str = "inspection_bundle"
+    enable_answer_generation: bool = True
     strict_mode: bool = True
     offset: int = 0
     max_courses: int | None = None
@@ -34,5 +36,13 @@ class RunConfig(BaseModel):
     concurrency_limit: int = 1
     plan_llm_metering: bool = True
     planned_llm_metering_stages: list[str] = Field(
-        default_factory=lambda: ["candidate_review_answers", "policy_review_answers"]
+        default_factory=lambda: [
+            "semantic_extract",
+            "candidate_repair",
+            "candidate_expand",
+            "answer_generate",
+            "answer_validate",
+            "candidate_review_answers",
+            "policy_review_answers",
+        ]
     )

@@ -40,6 +40,12 @@ from course_pipeline.question_gen_v4_1.run_v4_1_policy import (
     run_question_gen_v4_1_policy,
     write_v4_1_report,
 )
+from course_pipeline.question_ledger_v6.run_v6 import (
+    build_question_ledger_v6_for_course,
+    build_v6_review_bundle as build_question_ledger_v6_review_bundle_internal,
+    load_v3_course_artifacts as load_v3_course_artifacts_v6,
+    write_v6_run_report,
+)
 from course_pipeline.question_cache import (
     QuestionCacheGenerator,
     load_learning_outcome_run,
@@ -760,6 +766,120 @@ def build_question_generation_v4_1_review_bundle(
             "hard_reject_audit_summary": json.loads((artifact_dir / "hard_reject_audit_summary.json").read_text(encoding="utf-8")),
         }
     return build_question_gen_v4_1_review_bundle_internal(run_dir, settings, course_rows, per_course)
+
+
+def run_question_ledger_v6(
+    source_run_dir: Path,
+    settings: Settings,
+    run_id: str,
+    course_ids: list[str] | None = None,
+) -> dict[str, Path]:
+    course_rows = [
+        NormalizedCourse.model_validate_json(line)
+        for line in (source_run_dir / "courses.jsonl").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    if course_ids:
+        allowed = {course_id.strip() for course_id in course_ids if course_id.strip()}
+        course_rows = [course for course in course_rows if course.course_id in allowed]
+    run_dir = ensure_dir(settings.output_root / run_id)
+    per_course: dict[str, dict] = {}
+    all_rows: list[dict] = []
+    visible_rows: list[dict] = []
+    cache_rows: list[dict] = []
+    alias_rows: list[dict] = []
+    anchor_summary_rows: list[dict] = []
+    error_rows: list[dict] = []
+    inspection_sections: list[str] = []
+    for course in course_rows:
+        try:
+            v3_payload = load_v3_course_artifacts_v6(source_run_dir, course.course_id)
+            result = build_question_ledger_v6_for_course(v3_payload)
+            per_course[course.course_id] = result
+            course_dir = ensure_dir(run_dir / "course_artifacts" / course.course_id)
+            write_jsonl(course_dir / "all_questions.jsonl", [item.model_dump(mode="json") for item in result["all_questions"]])
+            write_jsonl(course_dir / "visible_curated.jsonl", [item.model_dump(mode="json") for item in result["visible_curated"]])
+            write_jsonl(course_dir / "cache_servable.jsonl", [item.model_dump(mode="json") for item in result["cache_servable"]])
+            write_jsonl(course_dir / "aliases.jsonl", [item.model_dump(mode="json") for item in result["aliases"]])
+            (course_dir / "anchors_summary.json").write_text(
+                json.dumps([item.model_dump(mode="json") for item in result["anchor_summaries"]], ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            (course_dir / "inspection_report.md").write_text(result["inspection_report"], encoding="utf-8")
+            all_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["all_questions"])
+            visible_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["visible_curated"])
+            cache_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["cache_servable"])
+            alias_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["aliases"])
+            anchor_summary_rows.extend(item.model_dump(mode="json") | {"course_id": course.course_id} for item in result["anchor_summaries"])
+            inspection_sections.append(f"# Course {course.course_id}\n\n{result['inspection_report'].strip()}\n")
+        except Exception as exc:  # noqa: BLE001
+            error_rows.append({"course_id": course.course_id, "error": str(exc)})
+    outputs = {
+        "all_questions": run_dir / "all_questions.jsonl",
+        "visible_curated": run_dir / "visible_curated.jsonl",
+        "cache_servable": run_dir / "cache_servable.jsonl",
+        "aliases": run_dir / "aliases.jsonl",
+        "anchors_summary": run_dir / "anchors_summary.json",
+        "inspection_report": run_dir / "inspection_report.md",
+        "report": run_dir / "question_ledger_v6_report.md",
+        "errors": run_dir / "question_ledger_v6_errors.jsonl",
+    }
+    write_jsonl(outputs["all_questions"], all_rows)
+    write_jsonl(outputs["visible_curated"], visible_rows)
+    write_jsonl(outputs["cache_servable"], cache_rows)
+    write_jsonl(outputs["aliases"], alias_rows)
+    outputs["anchors_summary"].write_text(json.dumps(anchor_summary_rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    outputs["inspection_report"].write_text("\n\n".join(section.strip() for section in inspection_sections).rstrip() + "\n", encoding="utf-8")
+    write_jsonl(outputs["errors"], error_rows)
+    write_v6_run_report(run_dir, per_course)
+    return outputs
+
+
+def build_question_ledger_v6_review_bundle(
+    run_dir: Path,
+    source_run_dir: Path,
+    settings: Settings,
+    course_ids: list[str] | None = None,
+) -> dict[str, Path]:
+    course_rows = [
+        NormalizedCourse.model_validate_json(line)
+        for line in (source_run_dir / "courses.jsonl").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    if course_ids:
+        allowed = {course_id.strip() for course_id in course_ids if course_id.strip()}
+        course_rows = [course for course in course_rows if course.course_id in allowed]
+    per_course: dict[str, dict] = {}
+    for course in course_rows:
+        artifact_dir = run_dir / "course_artifacts" / course.course_id
+        per_course[course.course_id] = {
+            "all_questions": [
+                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                for line in (artifact_dir / "all_questions.jsonl").read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ],
+            "visible_curated": [
+                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                for line in (artifact_dir / "visible_curated.jsonl").read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ],
+            "cache_servable": [
+                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                for line in (artifact_dir / "cache_servable.jsonl").read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ],
+            "aliases": [
+                __import__("course_pipeline.question_ledger_v6.models", fromlist=["LedgerRow"]).LedgerRow.model_validate_json(line)
+                for line in (artifact_dir / "aliases.jsonl").read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ],
+            "anchor_summaries": [
+                __import__("course_pipeline.question_ledger_v6.models", fromlist=["AnchorSummary"]).AnchorSummary.model_validate(item)
+                for item in json.loads((artifact_dir / "anchors_summary.json").read_text(encoding="utf-8"))
+            ],
+            "inspection_report": (artifact_dir / "inspection_report.md").read_text(encoding="utf-8"),
+        }
+    return build_question_ledger_v6_review_bundle_internal(run_dir, course_rows, per_course)
 
 
 def render_question_cache_yaml(run_dir: Path, width: int = 80) -> Path:

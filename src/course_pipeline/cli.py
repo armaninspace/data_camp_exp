@@ -12,11 +12,13 @@ from course_pipeline.pipeline import (
     build_question_generation_v3_review_bundle,
     build_question_generation_v4_review_bundle,
     build_question_generation_v4_1_review_bundle,
+    build_question_ledger_v6_review_bundle,
     build_question_cache,
     export_standardized,
     ingest_all,
     render_question_cache_yaml,
     render_learning_outcomes_yaml,
+    run_question_ledger_v6,
     run_question_generation_v2,
     run_question_generation_v3,
     run_question_generation_v4_policy,
@@ -319,6 +321,56 @@ def build_question_gen_v4_1_review_bundle_command(
         raise typer.BadParameter(f"source V3 run directory not found: {source_run_dir}")
     parsed_course_ids = [part.strip() for part in course_ids.split(",")] if course_ids else None
     outputs = build_question_generation_v4_1_review_bundle(
+        run_dir=run_dir,
+        source_run_dir=source_run_dir,
+        settings=settings,
+        course_ids=parsed_course_ids,
+    )
+    for name, path in outputs.items():
+        typer.echo(f"{name}: {path}")
+
+
+@app.command("run-question-ledger-v6")
+def run_question_ledger_v6_command(
+    v3_run_id: str,
+    course_ids: str | None = typer.Option(None, help="Optional comma-separated course IDs"),
+) -> None:
+    settings = get_settings()
+    source_run_dir = settings.output_root / v3_run_id
+    if not source_run_dir.exists():
+        raise typer.BadParameter(f"run directory not found: {source_run_dir}")
+    storage = Storage(settings)
+    parsed_course_ids = [part.strip() for part in course_ids.split(",")] if course_ids else None
+    run_id = storage.create_run(
+        str(source_run_dir),
+        notes={"mode": "question_ledger_v6", "source_run_id": v3_run_id, "course_ids": parsed_course_ids},
+    )
+    outputs = run_question_ledger_v6(
+        source_run_dir=source_run_dir,
+        settings=settings,
+        run_id=run_id,
+        course_ids=parsed_course_ids,
+    )
+    typer.echo(f"run_id={run_id}")
+    for name, path in outputs.items():
+        typer.echo(f"{name}: {path}")
+
+
+@app.command("build-question-ledger-v6-review-bundle")
+def build_question_ledger_v6_review_bundle_command(
+    run_id: str,
+    v3_run_id: str,
+    course_ids: str | None = typer.Option(None, help="Optional comma-separated course IDs"),
+) -> None:
+    settings = get_settings()
+    run_dir = settings.output_root / run_id
+    source_run_dir = settings.output_root / v3_run_id
+    if not run_dir.exists():
+        raise typer.BadParameter(f"run directory not found: {run_dir}")
+    if not source_run_dir.exists():
+        raise typer.BadParameter(f"source V3 run directory not found: {source_run_dir}")
+    parsed_course_ids = [part.strip() for part in course_ids.split(",")] if course_ids else None
+    outputs = build_question_ledger_v6_review_bundle(
         run_dir=run_dir,
         source_run_dir=source_run_dir,
         settings=settings,

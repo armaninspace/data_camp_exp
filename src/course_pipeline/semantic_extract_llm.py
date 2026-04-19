@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from course_pipeline.config import Settings
@@ -81,6 +82,8 @@ def extract_semantics_with_llm(
         parsed = _parse_semantic_extract_response(content, raw_course.course_id)
     except Exception:
         return _fallback_semantic_result(raw_course, course, payload, reason="llm_semantic_extract_parse_failed_fallback")
+    if not parsed["topic_records"] and not parsed["anchor_candidates"]:
+        return _fallback_semantic_result(raw_course, course, payload, reason="llm_semantic_extract_empty_fallback")
     return {
         "normalized_document": course,
         "payload": payload,
@@ -94,28 +97,129 @@ def extract_semantics_with_llm(
 
 def _parse_semantic_extract_response(content: str, course_id: str) -> dict:
     payload = json.loads(content)
-    topic_records = [
-        TopicRecord.model_validate(row | {"course_id": course_id})
-        for row in payload.get("topics", [])
-    ]
-    anchor_candidates = [
-        AnchorCandidate.model_validate(row | {"course_id": course_id})
-        for row in payload.get("anchors", [])
-    ]
-    alias_groups = [
-        AliasGroupRecord.model_validate(row | {"course_id": course_id})
-        for row in payload.get("alias_groups", [])
-    ]
-    friction_records = [
-        FrictionRecord.model_validate(row | {"course_id": course_id})
-        for row in payload.get("frictions", [])
-    ]
+    semantic_payload = payload.get("course_semantics")
+    if isinstance(semantic_payload, dict):
+        payload = semantic_payload
+    topic_rows = payload.get("topics", [])
+    anchor_rows = payload.get("anchors", [])
+    alias_rows = payload.get("alias_groups", [])
+    friction_rows = payload.get("frictions", [])
+
+    if topic_rows and not anchor_rows and isinstance(topic_rows[0], dict) and "topic" in topic_rows[0]:
+        coerced = _coerce_loose_semantic_payload(payload, course_id)
+        topic_rows = coerced["topics"]
+        anchor_rows = coerced["anchors"]
+        alias_rows = coerced["alias_groups"]
+        friction_rows = coerced["frictions"]
+
+    topic_records = [TopicRecord.model_validate(row | {"course_id": course_id}) for row in topic_rows]
+    anchor_candidates = [AnchorCandidate.model_validate(row | {"course_id": course_id}) for row in anchor_rows]
+    alias_groups = [AliasGroupRecord.model_validate(row | {"course_id": course_id}) for row in alias_rows]
+    friction_records = [FrictionRecord.model_validate(row | {"course_id": course_id}) for row in friction_rows]
     return {
         "topic_records": topic_records,
         "anchor_candidates": anchor_candidates,
         "alias_groups": alias_groups,
         "friction_records": friction_records,
     }
+
+
+def _coerce_loose_semantic_payload(payload: dict, course_id: str) -> dict:
+    topics: list[dict] = []
+    anchors: list[dict] = []
+    alias_groups: list[dict] = []
+    frictions: list[dict] = []
+    for row in payload.get("topics", []):
+        label = str(row.get("topic") or "").strip()
+        if not label:
+            continue
+        topic_id = slugify(label)
+        evidence_spans = _coerce_evidence_spans(row.get("source_fields", []), row.get("evidence_spans", []))
+        topic_type = _guess_topic_type_from_label(label)
+        confidence = float(row.get("confidence") or 0.72)
+        topic_payload = {
+            "topic_id": topic_id,
+            "label": label,
+            "aliases": row.get("aliases") or [],
+            "topic_type": topic_type,
+            "description": _coerce_description(row, label),
+            "source_fields": list(row.get("source_fields") or []),
+            "evidence_spans": evidence_spans,
+            "confidence": confidence,
+        }
+        topics.append(topic_payload)
+        foundational = topic_type in {"concept", "tool", "metric", "diagnostic", "comparison_axis", "decision_point"}
+        anchors.append(
+            {
+                "anchor_id": topic_id,
+                "label": label,
+                "normalized_label": slugify(label),
+                "anchor_type": _anchor_type_for_topic_type(topic_type),
+                "foundational_candidate": foundational,
+                "learner_facing": True,
+                "requires_entry_question": foundational,
+                "rationale": "Coerced from loose semantic extraction topic response.",
+                "source_fields": list(row.get("source_fields") or []),
+                "evidence_spans": evidence_spans,
+                "confidence": confidence,
+            }
+        )
+    return {
+        "topics": topics,
+        "anchors": anchors,
+        "alias_groups": alias_groups,
+        "frictions": frictions,
+    }
+
+
+def _coerce_evidence_spans(source_fields: list, evidence_spans: list) -> list[dict]:
+    if evidence_spans and isinstance(evidence_spans[0], dict):
+        return list(evidence_spans)
+    fields = [str(field) for field in source_fields] or ["overview"]
+    spans = [str(span) for span in evidence_spans if str(span).strip()]
+    if not spans:
+        spans = [""]
+    rows: list[dict] = []
+    for index, span in enumerate(spans):
+        rows.append({"field": fields[min(index, len(fields) - 1)], "excerpt": span})
+    return rows
+
+
+def _coerce_description(row: dict, label: str) -> str:
+    for key in ("description", "summary", "rationale"):
+        value = row.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+    evidence_spans = row.get("evidence_spans") or []
+    if evidence_spans:
+        first = evidence_spans[0]
+        if isinstance(first, dict):
+            return str(first.get("excerpt") or label)
+        return str(first)
+    return label
+
+
+def _guess_topic_type_from_label(label: str) -> str:
+    lower = label.lower()
+    if any(term in lower for term in ["compare", "comparison", "different", "difference", "versus", "benchmark"]):
+        return "comparison_axis"
+    if any(term in lower for term in ["matrix", "vector", "list", "frame", "console", "calculator", "create", "select", "assign", "order"]):
+        return "procedure"
+    if any(term in lower for term in ["factor", "metric", "accuracy", "rate", "score"]):
+        return "metric"
+    if any(term in lower for term in ["diagnostic", "test", "check", "validate"]):
+        return "diagnostic"
+    if re.fullmatch(r"[a-z]\b|r\b", lower):
+        return "tool"
+    return "concept"
+
+
+def _anchor_type_for_topic_type(topic_type: str) -> str:
+    if topic_type == "concept":
+        return "foundational_vocabulary"
+    if topic_type in {"procedure", "tool", "metric", "diagnostic", "comparison_axis", "failure_mode", "decision_point"}:
+        return topic_type
+    return "contextual_topic"
 
 
 def _fallback_semantic_result(

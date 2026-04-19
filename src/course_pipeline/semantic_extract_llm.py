@@ -19,6 +19,7 @@ from course_pipeline.semantic_schemas import (
     AnchorCandidate,
     EvidenceSpan,
     FrictionRecord,
+    SemanticExtractionReport,
     TopicRecord,
 )
 from course_pipeline.utils import slugify
@@ -60,7 +61,14 @@ def extract_semantics_with_llm(
     course = normalize_document(raw_course)
     payload = build_semantic_extract_payload(course)
     if not settings or not settings.openai_api_key or run_dir is None:
-        return _fallback_semantic_result(raw_course, course, payload, reason="llm_semantic_extract_bypassed_no_openai_key")
+        return _fallback_semantic_result(
+            raw_course,
+            course,
+            payload,
+            reason="llm_semantic_extract_bypassed_no_openai_key",
+            response_shape="llm_bypassed",
+            normalization_path="bypassed_no_openai_key",
+        )
 
     client = MeteredLLMJsonClient(
         settings,
@@ -77,13 +85,35 @@ def extract_semantics_with_llm(
             entity_ids=[raw_course.course_id],
         )
     except Exception:
-        return _fallback_semantic_result(raw_course, course, payload, reason="llm_semantic_extract_failed_fallback")
+        return _fallback_semantic_result(
+            raw_course,
+            course,
+            payload,
+            reason="llm_semantic_extract_failed_fallback",
+            response_shape="llm_invoke_failure",
+            normalization_path="heuristic_fallback",
+        )
     try:
         parsed = _parse_semantic_extract_response(content, raw_course.course_id)
     except Exception:
-        return _fallback_semantic_result(raw_course, course, payload, reason="llm_semantic_extract_parse_failed_fallback")
+        return _fallback_semantic_result(
+            raw_course,
+            course,
+            payload,
+            reason="llm_semantic_extract_parse_failed_fallback",
+            response_shape="json_parse_failure",
+            normalization_path="parse_failure_fallback",
+        )
     if not parsed["topic_records"] and not parsed["anchor_candidates"]:
-        return _fallback_semantic_result(raw_course, course, payload, reason="llm_semantic_extract_empty_fallback")
+        return _fallback_semantic_result(
+            raw_course,
+            course,
+            payload,
+            reason="llm_semantic_extract_empty_fallback",
+            response_shape=parsed["extraction_report"].response_shape,
+            normalization_path="empty_output_fallback",
+            warnings=parsed["extraction_report"].warnings,
+        )
     return {
         "normalized_document": course,
         "payload": payload,
@@ -92,35 +122,84 @@ def extract_semantics_with_llm(
         "alias_groups": parsed["alias_groups"],
         "friction_records": parsed["friction_records"],
         "extraction_mode": "llm",
+        "extraction_report": parsed["extraction_report"],
     }
 
 
 def _parse_semantic_extract_response(content: str, course_id: str) -> dict:
     payload = json.loads(content)
-    semantic_payload = payload.get("course_semantics")
-    if isinstance(semantic_payload, dict):
-        payload = semantic_payload
-    topic_rows = payload.get("topics", [])
-    anchor_rows = payload.get("anchors", [])
-    alias_rows = payload.get("alias_groups", [])
-    friction_rows = payload.get("frictions", [])
-
-    if topic_rows and not anchor_rows and isinstance(topic_rows[0], dict) and "topic" in topic_rows[0]:
-        coerced = _coerce_loose_semantic_payload(payload, course_id)
-        topic_rows = coerced["topics"]
-        anchor_rows = coerced["anchors"]
-        alias_rows = coerced["alias_groups"]
-        friction_rows = coerced["frictions"]
+    normalized = _normalize_semantic_payload(payload, course_id)
+    topic_rows = normalized["topics"]
+    anchor_rows = normalized["anchors"]
+    alias_rows = normalized["alias_groups"]
+    friction_rows = normalized["frictions"]
 
     topic_records = [TopicRecord.model_validate(row | {"course_id": course_id}) for row in topic_rows]
     anchor_candidates = [AnchorCandidate.model_validate(row | {"course_id": course_id}) for row in anchor_rows]
     alias_groups = [AliasGroupRecord.model_validate(row | {"course_id": course_id}) for row in alias_rows]
     friction_records = [FrictionRecord.model_validate(row | {"course_id": course_id}) for row in friction_rows]
+    extraction_report = SemanticExtractionReport(
+        course_id=course_id,
+        response_shape=normalized["response_shape"],
+        normalization_path=normalized["normalization_path"],
+        raw_topic_count=normalized["raw_topic_count"],
+        raw_anchor_count=normalized["raw_anchor_count"],
+        normalized_topic_count=len(topic_records),
+        normalized_anchor_count=len(anchor_candidates),
+        warnings=list(normalized["warnings"]),
+    )
     return {
         "topic_records": topic_records,
         "anchor_candidates": anchor_candidates,
         "alias_groups": alias_groups,
         "friction_records": friction_records,
+        "extraction_report": extraction_report,
+    }
+
+
+def _normalize_semantic_payload(payload: dict, course_id: str) -> dict:
+    semantic_payload = payload.get("course_semantics")
+    if isinstance(semantic_payload, dict):
+        payload = semantic_payload
+
+    raw_topic_rows = list(payload.get("topics", []) or [])
+    raw_anchor_rows = list(payload.get("anchors", []) or [])
+    topic_rows = raw_topic_rows
+    anchor_rows = raw_anchor_rows
+    alias_rows = list(payload.get("alias_groups", []) or [])
+    friction_rows = list(payload.get("frictions", []) or [])
+    response_shape = "strict_structured"
+    normalization_path = "llm"
+    warnings: list[str] = []
+
+    if topic_rows and isinstance(topic_rows[0], dict) and "topic" in topic_rows[0]:
+        coerced = _coerce_loose_semantic_payload(payload, course_id)
+        topic_rows = coerced["topics"]
+        anchor_rows = coerced["anchors"]
+        alias_rows = coerced["alias_groups"]
+        friction_rows = coerced["frictions"]
+        response_shape = "course_semantics_loose_topics"
+        normalization_path = "normalized_loose_shape"
+    elif not topic_rows and _looks_like_summary_style_payload(payload):
+        coerced = _coerce_summary_style_payload(payload, course_id)
+        topic_rows = coerced["topics"]
+        anchor_rows = coerced["anchors"]
+        alias_rows = coerced["alias_groups"]
+        friction_rows = coerced["frictions"]
+        response_shape = "course_semantics_summary_fields"
+        normalization_path = "normalized_loose_shape"
+        warnings.append("normalized summary-style semantic payload into canonical topics")
+
+    return {
+        "topics": topic_rows,
+        "anchors": anchor_rows,
+        "alias_groups": alias_rows,
+        "frictions": friction_rows,
+        "response_shape": response_shape,
+        "normalization_path": normalization_path,
+        "raw_topic_count": len(raw_topic_rows),
+        "raw_anchor_count": len(raw_anchor_rows),
+        "warnings": warnings,
     }
 
 
@@ -169,6 +248,57 @@ def _coerce_loose_semantic_payload(payload: dict, course_id: str) -> dict:
         "anchors": anchors,
         "alias_groups": alias_groups,
         "frictions": frictions,
+    }
+
+
+def _looks_like_summary_style_payload(payload: dict) -> bool:
+    return any(key in payload for key in ("skills", "learning_outcomes", "course_structure"))
+
+
+def _coerce_summary_style_payload(payload: dict, course_id: str) -> dict:
+    rows: list[dict] = []
+    for key in ("skills", "learning_outcomes"):
+        for item in payload.get(key, []) or []:
+            row = _topic_row_from_summary_item(item, default_field=key)
+            if row is not None:
+                rows.append(row)
+    structure = payload.get("course_structure") or {}
+    if isinstance(structure, dict):
+        for item in structure.get("sections", []) or []:
+            row = _topic_row_from_summary_item(item, default_field="course_structure")
+            if row is not None:
+                rows.append(row)
+    deduped: dict[str, dict] = {}
+    for row in rows:
+        dedupe_key = slugify(str(row.get("topic") or ""))
+        if dedupe_key and dedupe_key not in deduped:
+            deduped[dedupe_key] = row
+    return _coerce_loose_semantic_payload({"topics": list(deduped.values())}, course_id)
+
+
+def _topic_row_from_summary_item(item: object, *, default_field: str) -> dict | None:
+    if isinstance(item, str):
+        label = item.strip()
+        excerpt = label
+    elif isinstance(item, dict):
+        label = str(
+            item.get("topic")
+            or item.get("label")
+            or item.get("value")
+            or item.get("skill")
+            or item.get("outcome")
+            or item.get("title")
+            or ""
+        ).strip()
+        excerpt = str(item.get("description") or item.get("summary") or label).strip()
+    else:
+        return None
+    if not label:
+        return None
+    return {
+        "topic": label,
+        "source_fields": [default_field],
+        "evidence_spans": [excerpt],
     }
 
 
@@ -228,19 +358,35 @@ def _fallback_semantic_result(
     payload: dict,
     *,
     reason: str,
+    response_shape: str,
+    normalization_path: str,
+    warnings: list[str] | None = None,
 ) -> dict:
     topics = extract_topics(course)
     edges = extract_edges(course, topics)
     pedagogy = extract_pedagogy(course, topics, edges)
     frictions = mine_friction(topics, edges, pedagogy)
+    topic_records = [_topic_record_from_topic(raw_course, topic) for topic in topics]
+    anchor_candidates = _anchor_candidates_from_topics(raw_course, topics)
     return {
         "normalized_document": course,
         "payload": payload,
-        "topic_records": [_topic_record_from_topic(raw_course, topic) for topic in topics],
-        "anchor_candidates": _anchor_candidates_from_topics(raw_course, topics),
+        "topic_records": topic_records,
+        "anchor_candidates": anchor_candidates,
         "alias_groups": _alias_groups_from_topics(raw_course, topics),
         "friction_records": [_friction_record_from_point(raw_course, point, topics) for point in frictions],
         "extraction_mode": reason,
+        "extraction_report": SemanticExtractionReport(
+            course_id=raw_course.course_id,
+            response_shape=response_shape,
+            normalization_path=normalization_path,  # type: ignore[arg-type]
+            fallback_reason=reason,
+            raw_topic_count=0,
+            raw_anchor_count=0,
+            normalized_topic_count=len(topic_records),
+            normalized_anchor_count=len(anchor_candidates),
+            warnings=list(warnings or []),
+        ),
     }
 
 

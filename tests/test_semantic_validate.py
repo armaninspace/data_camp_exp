@@ -144,3 +144,44 @@ def test_validate_and_sanitize_semantics_merges_near_duplicate_anchors() -> None
     assert result["merged_anchor_count"] == 1
     assert result["report"].merged_count == 1
     assert any(decision.action == "merge" for decision in result["report"].decisions)
+
+
+def test_validate_and_sanitize_semantics_demotes_incidental_summary_only_required_entry() -> None:
+    result = validate_and_sanitize_semantics(
+        course_id="9900",
+        topic_records=[
+            TopicRecord(
+                course_id="9900",
+                topic_id="tourism",
+                label="Tourism",
+                aliases=[],
+                topic_type="concept",
+                description="Mentioned in course overview.",
+                source_fields=["overview"],
+                evidence_spans=_evidence(),
+                confidence=0.8,
+            )
+        ],
+        anchor_candidates=[
+            AnchorCandidate(
+                course_id="9900",
+                anchor_id="tourism",
+                label="Tourism",
+                normalized_label="tourism",
+                anchor_type="foundational_vocabulary",
+                foundational_candidate=True,
+                learner_facing=True,
+                requires_entry_question=True,
+                rationale="Mentioned once in overview.",
+                source_fields=["overview"],
+                evidence_spans=_evidence(),
+                confidence=0.8,
+            )
+        ],
+        alias_groups=[],
+    )
+
+    assert len(result["anchor_candidates"]) == 1
+    assert result["anchor_candidates"][0].requires_entry_question is False
+    assert result["report"].rewritten_count == 1
+    assert any(decision.reason == "entry_requirement_removed_incidental_summary_only_support" for decision in result["report"].decisions)

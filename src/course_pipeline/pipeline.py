@@ -258,15 +258,15 @@ def run_semantic_extract_llm_stage(
         course_dir = run_dir / "course_artifacts" / course.course_id
         write_semantic_stage_artifacts(run_dir, course.course_id, result, base_dir=course_dir)
         write_semantic_course_yaml(run_dir, course.course_id, result, base_dir=course_dir)
-        semantic_topics.extend(item.model_dump(mode="json") for item in result["semantic_topic_records"])
-        semantic_anchors.extend(item.model_dump(mode="json") for item in result["semantic_anchor_candidates"])
-        semantic_alias_groups.extend(item.model_dump(mode="json") for item in result["semantic_alias_groups"])
-        semantic_frictions.extend(item.model_dump(mode="json") for item in result["semantic_friction_records"])
-        topics.extend(item.model_dump(mode="json") for item in result["topics"])
-        edges.extend(item.model_dump(mode="json") for item in result["edges"])
-        pedagogy.extend(item.model_dump(mode="json") for item in result["pedagogy"])
-        friction_points.extend(item.model_dump(mode="json") for item in result["frictions"])
-        validation_reports.append(result["semantic_validation_report"].model_dump(mode="json"))
+        semantic_topics.extend(item.model_dump(mode="json") for item in result.semantic_topic_records)
+        semantic_anchors.extend(item.model_dump(mode="json") for item in result.semantic_anchor_candidates)
+        semantic_alias_groups.extend(item.model_dump(mode="json") for item in result.semantic_alias_groups)
+        semantic_frictions.extend(item.model_dump(mode="json") for item in result.semantic_friction_records)
+        topics.extend(item.model_dump(mode="json") for item in result.topics)
+        edges.extend(item.model_dump(mode="json") for item in result.edges)
+        pedagogy.extend(item.model_dump(mode="json") for item in result.pedagogy)
+        friction_points.extend(item.model_dump(mode="json") for item in result.frictions)
+        validation_reports.append(result.semantic_validation_report.model_dump(mode="json"))
     outputs = {
         "courses": courses_path,
         "chapters": chapters_path,
@@ -316,15 +316,20 @@ def run_question_seed_generation_stage(
         write_semantic_stage_artifacts(run_dir, course.course_id, semantic_result, base_dir=course_dir)
         write_semantic_course_yaml(run_dir, course.course_id, semantic_result, base_dir=course_dir)
         seeds = generate_seed_candidates(
-            semantic_result["normalized_document"],
-            semantic_result["topics"],
-            semantic_result["edges"],
-            semantic_result["pedagogy"],
-            semantic_result["frictions"],
+            semantic_result.normalized_document,
+            semantic_result.topics,
+            semantic_result.edges,
+            semantic_result.pedagogy,
+            semantic_result.frictions,
             load_default_config(),
+            anchors=semantic_result.sanitized_anchor_candidates,
         )
-        write_jsonl(course_dir / "seed_candidates.jsonl", [item.model_dump(mode="json") for item in seeds])
-        seed_rows.extend(item.model_dump(mode="json") for item in seeds)
+        write_jsonl(course_dir / "seed_candidates.jsonl", [item.model_dump(mode="json") for item in seeds["candidates"]])
+        (course_dir / "seed_invariant_report.json").write_text(
+            seeds["invariant_report"].model_dump_json(indent=2) + "\n",
+            encoding="utf-8",
+        )
+        seed_rows.extend(item.model_dump(mode="json") for item in seeds["candidates"])
     outputs = {
         "courses": courses_path,
         "chapters": chapters_path,

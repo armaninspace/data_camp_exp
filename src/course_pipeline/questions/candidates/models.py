@@ -172,6 +172,29 @@ class SelectionSummary(BaseModel):
     friction_linked_selection_rate: float = 0.0
 
 
+class SeedGenerationInvariantReport(BaseModel):
+    course_id: str
+    anchors_requiring_entry: list[str] = Field(default_factory=list)
+    protected_seeds_found: list[str] = Field(default_factory=list)
+    protected_seeds_synthesized: list[str] = Field(default_factory=list)
+    missing_protected_seeds: list[str] = Field(default_factory=list)
+    warnings: list[str] = Field(default_factory=list)
+
+
+class StageTransitionSummary(BaseModel):
+    course_id: str
+    semantic_extraction_mode: str | None = None
+    semantic_topic_count: int = 0
+    sanitized_anchor_count: int = 0
+    seed_candidate_count: int = 0
+    repaired_candidate_count: int = 0
+    derived_candidate_count: int = 0
+    merged_candidate_count: int = 0
+    validated_candidate_count: int = 0
+    visible_curated_count: int = 0
+    suspicious_transitions: list[str] = Field(default_factory=list)
+
+
 class ReviewAnswer(BaseModel):
     candidate_id: str
     answer_markdown: str

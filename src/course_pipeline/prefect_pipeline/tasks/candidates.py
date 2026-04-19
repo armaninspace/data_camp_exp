@@ -43,6 +43,10 @@ def run_candidate_generation(context, standardized_result, semantics_result):
         per_course[course.course_id] = result
         course_dir = ensure_dir(context.candidates_dir / "course_artifacts" / course.course_id)
         write_jsonl(course_dir / "seed_candidates.jsonl", [item.model_dump(mode="json") for item in result.get("seed_candidates", [])])
+        (course_dir / "seed_invariant_report.json").write_text(
+            result["seed_invariant_report"].model_dump_json(indent=2) + "\n",
+            encoding="utf-8",
+        )
         write_jsonl(course_dir / "raw_candidates.jsonl", [item.model_dump(mode="json") for item in result["raw_candidates"]])
         write_jsonl(course_dir / "candidate_repairs.jsonl", [item.model_dump(mode="json") for item in result.get("candidate_repairs", [])])
         write_jsonl(course_dir / "candidate_expansions.jsonl", [item.model_dump(mode="json") for item in result.get("candidate_expansions", [])])
@@ -68,6 +72,7 @@ def run_candidate_generation(context, standardized_result, semantics_result):
 
     outputs = {
         "seed_candidates": context.candidates_dir / "seed_candidates.jsonl",
+        "seed_invariant_reports": context.candidates_dir / "seed_invariant_reports.jsonl",
         "raw_candidates": context.candidates_dir / "raw_candidates.jsonl",
         "candidate_repairs": context.candidates_dir / "candidate_repairs.jsonl",
         "candidate_expansions": context.candidates_dir / "candidate_expansions.jsonl",
@@ -80,6 +85,7 @@ def run_candidate_generation(context, standardized_result, semantics_result):
         "selection_summaries": context.candidates_dir / "selection_summaries.jsonl",
     }
     write_jsonl(outputs["seed_candidates"], seed_rows)
+    write_jsonl(outputs["seed_invariant_reports"], [result["seed_invariant_report"].model_dump(mode="json") for result in per_course.values()])
     write_jsonl(outputs["raw_candidates"], raw_candidate_rows)
     write_jsonl(outputs["candidate_repairs"], repair_rows)
     write_jsonl(outputs["candidate_expansions"], expansion_rows)

@@ -41,6 +41,7 @@ def validate_and_sanitize_semantics(
 
     merged_anchor_count = 0
     suspicious_anchor_count = 0
+    rewritten_count = 0
 
     canonical_anchor_by_label: dict[str, AnchorCandidate] = {}
     dropped_topic_ids: set[str] = set()
@@ -122,6 +123,24 @@ def validate_and_sanitize_semantics(
         if existing is None:
             existing = canonical_anchor_by_label.get(dedupe_key)
         sanitized_anchor = anchor.model_copy(update={"normalized_label": normalized_label})
+        eligibility_reason = _entry_anchor_eligibility_reason(sanitized_anchor)
+        if sanitized_anchor.requires_entry_question and eligibility_reason is not None:
+            sanitized_anchor = sanitized_anchor.model_copy(update={"requires_entry_question": False})
+            rewritten_count += 1
+            warnings.append(f"demoted required-entry anchor `{sanitized_anchor.label}`: {eligibility_reason}")
+            decisions.append(
+                SemanticDecisionRecord(
+                    course_id=course_id,
+                    entity_type="anchor",
+                    entity_id=sanitized_anchor.anchor_id,
+                    action="rewrite",
+                    reason=eligibility_reason,
+                    provenance_note="Deterministic anchor eligibility rules demoted entry coverage requirement.",
+                    source_fields=list(sanitized_anchor.source_fields),
+                    evidence_spans=list(sanitized_anchor.evidence_spans),
+                    confidence=sanitized_anchor.confidence,
+                )
+            )
         if existing is None:
             canonical_anchor_by_label[normalized_label] = sanitized_anchor
             canonical_anchor_by_label[dedupe_key] = sanitized_anchor
@@ -232,7 +251,7 @@ def validate_and_sanitize_semantics(
         kept_count=sum(1 for decision in decisions if decision.action == "keep"),
         dropped_count=sum(1 for decision in decisions if decision.action == "drop"),
         merged_count=sum(1 for decision in decisions if decision.action == "merge"),
-        rewritten_count=0,
+        rewritten_count=rewritten_count,
         suspicious_anchor_count=suspicious_anchor_count,
         warnings=warnings,
         decisions=decisions,
@@ -265,3 +284,20 @@ def _dedupe_anchor_key(label: str) -> str:
     normalized = slugify(label)
     normalized = re.sub(r"-(models?|methods?|tests?)$", "", normalized)
     return normalized
+
+
+def _entry_anchor_eligibility_reason(anchor: AnchorCandidate) -> str | None:
+    if not anchor.requires_entry_question:
+        return None
+    if not anchor.foundational_candidate or not anchor.learner_facing:
+        return "entry_requirement_removed_non_foundational_or_non_learner_facing"
+    if anchor.confidence < 0.72:
+        return "entry_requirement_removed_low_confidence"
+    structural_fields = {"sections", "chapters", "section_title", "chapter_title", "course_structure"}
+    source_fields = {field.strip().lower() for field in anchor.source_fields}
+    has_structural_support = bool(source_fields & structural_fields)
+    repeated_support = len(source_fields) >= 2 or len({span.excerpt.strip() for span in anchor.evidence_spans if span.excerpt.strip()}) >= 2
+    summary_only = bool(source_fields) and source_fields <= {"summary", "overview", "learning_outcomes", "skills"}
+    if summary_only and not has_structural_support and not repeated_support and anchor.confidence < 0.9:
+        return "entry_requirement_removed_incidental_summary_only_support"
+    return None

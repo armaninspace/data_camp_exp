@@ -15,6 +15,7 @@ from course_pipeline.questions.candidates.filters import filter_candidates
 from course_pipeline.questions.candidates.models import (
     ReviewAnswer,
     ScoredCandidate,
+    SeedGenerationInvariantReport,
     SelectionSummary,
 )
 from course_pipeline.questions.candidates.score_candidates import score_candidates
@@ -22,6 +23,7 @@ from course_pipeline.questions.candidates.selection import select_final
 from course_pipeline.questions.policy.anchors import detect_foundational_anchors
 from course_pipeline.schemas import NormalizedCourse
 from course_pipeline.semantic_pipeline import run_semantic_stage_for_course
+from course_pipeline.semantic_schemas import SemanticStageResult
 from course_pipeline.utils import ensure_dir, slugify, write_jsonl, write_yaml
 
 
@@ -61,7 +63,7 @@ def run_question_gen_v3_for_course(
     *,
     settings: Settings | None = None,
     run_dir: Path | None = None,
-    semantic_result: dict | None = None,
+    semantic_result: SemanticStageResult | dict | None = None,
 ) -> dict:
     cfg = config or load_default_config()
     semantic_stage = semantic_result or run_semantic_stage_for_course(
@@ -69,12 +71,24 @@ def run_question_gen_v3_for_course(
         settings=settings,
         run_dir=run_dir,
     )
-    doc = semantic_stage["normalized_document"]
-    topics = semantic_stage["topics"]
-    edges = semantic_stage["edges"]
-    pedagogy = semantic_stage["pedagogy"]
-    frictions = semantic_stage["frictions"]
-    seed_candidates = generate_seed_candidates(doc, topics, edges, pedagogy, frictions, cfg)
+    if not isinstance(semantic_stage, SemanticStageResult):
+        semantic_stage = SemanticStageResult.model_validate(semantic_stage)
+    doc = semantic_stage.normalized_document
+    topics = semantic_stage.topics
+    edges = semantic_stage.edges
+    pedagogy = semantic_stage.pedagogy
+    frictions = semantic_stage.frictions
+    seed_result = generate_seed_candidates(
+        doc,
+        topics,
+        edges,
+        pedagogy,
+        frictions,
+        cfg,
+        anchors=semantic_stage.sanitized_anchor_candidates,
+    )
+    seed_candidates = seed_result["candidates"]
+    seed_invariant_report: SeedGenerationInvariantReport = seed_result["invariant_report"]
     foundational_anchors = detect_foundational_anchors(topics)
     foundational_anchor_labels = sorted(
         {
@@ -125,7 +139,7 @@ def run_question_gen_v3_for_course(
         edges,
         frictions,
         cfg,
-        anchor_candidates=semantic_stage.get("sanitized_anchor_candidates", []),
+        anchor_candidates=semantic_stage.sanitized_anchor_candidates,
     )
     deduped, duplicate_clusters = dedupe_candidates(scored, cfg)
     target_n = cfg["generation"]["target_final_per_course"]
@@ -138,22 +152,25 @@ def run_question_gen_v3_for_course(
     )
     return {
         "normalized_document": doc,
-        "semantic_payload": semantic_stage["semantic_payload"],
-        "semantic_extraction_mode": semantic_stage["semantic_extraction_mode"],
-        "semantic_topic_records": semantic_stage["semantic_topic_records"],
-        "semantic_anchor_candidates": semantic_stage["semantic_anchor_candidates"],
-        "semantic_alias_groups": semantic_stage["semantic_alias_groups"],
-        "semantic_friction_records": semantic_stage["semantic_friction_records"],
-        "sanitized_topic_records": semantic_stage["sanitized_topic_records"],
-        "sanitized_anchor_candidates": semantic_stage["sanitized_anchor_candidates"],
-        "sanitized_alias_groups": semantic_stage["sanitized_alias_groups"],
-        "sanitized_friction_records": semantic_stage["sanitized_friction_records"],
-        "semantic_validation_report": semantic_stage["semantic_validation_report"],
+        "semantic_payload": semantic_stage.semantic_payload,
+        "semantic_extraction_mode": semantic_stage.semantic_extraction_mode,
+        "semantic_extraction_report": semantic_stage.semantic_extraction_report,
+        "semantic_guard_report": semantic_stage.semantic_guard_report,
+        "semantic_topic_records": semantic_stage.semantic_topic_records,
+        "semantic_anchor_candidates": semantic_stage.semantic_anchor_candidates,
+        "semantic_alias_groups": semantic_stage.semantic_alias_groups,
+        "semantic_friction_records": semantic_stage.semantic_friction_records,
+        "sanitized_topic_records": semantic_stage.sanitized_topic_records,
+        "sanitized_anchor_candidates": semantic_stage.sanitized_anchor_candidates,
+        "sanitized_alias_groups": semantic_stage.sanitized_alias_groups,
+        "sanitized_friction_records": semantic_stage.sanitized_friction_records,
+        "semantic_validation_report": semantic_stage.semantic_validation_report,
         "topics": topics,
         "edges": edges,
         "pedagogy": pedagogy,
         "frictions": frictions,
         "seed_candidates": seed_candidates,
+        "seed_invariant_report": seed_invariant_report,
         "raw_candidates": seed_candidates,
         "candidate_repairs": candidate_repairs,
         "candidate_expansions": candidate_expansions,
@@ -176,6 +193,14 @@ def write_course_artifacts(run_dir: Path, course_id: str, result: dict) -> None:
     write_jsonl(artifact_dir / "semantic_anchors.jsonl", [item.model_dump(mode="json") for item in result.get("semantic_anchor_candidates", [])])
     write_jsonl(artifact_dir / "semantic_alias_groups.jsonl", [item.model_dump(mode="json") for item in result.get("semantic_alias_groups", [])])
     write_jsonl(artifact_dir / "semantic_frictions.jsonl", [item.model_dump(mode="json") for item in result.get("semantic_friction_records", [])])
+    (artifact_dir / "semantic_extraction_report.json").write_text(
+        json.dumps(result.get("semantic_extraction_report", {}).model_dump(mode="json") if hasattr(result.get("semantic_extraction_report"), "model_dump") else result.get("semantic_extraction_report", {}), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    (artifact_dir / "semantic_guard_report.json").write_text(
+        json.dumps(result.get("semantic_guard_report", {}).model_dump(mode="json") if hasattr(result.get("semantic_guard_report"), "model_dump") else result.get("semantic_guard_report", {}), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     (artifact_dir / "semantic_validation_report.json").write_text(
         json.dumps(result.get("semantic_validation_report", {}).model_dump(mode="json") if hasattr(result.get("semantic_validation_report"), "model_dump") else result.get("semantic_validation_report", {}), ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -185,6 +210,10 @@ def write_course_artifacts(run_dir: Path, course_id: str, result: dict) -> None:
     write_jsonl(artifact_dir / "pedagogy.jsonl", [item.model_dump(mode="json") for item in result["pedagogy"]])
     write_jsonl(artifact_dir / "friction_points.jsonl", [item.model_dump(mode="json") for item in result["frictions"]])
     write_jsonl(artifact_dir / "seed_candidates.jsonl", [item.model_dump(mode="json") for item in result.get("seed_candidates", result["raw_candidates"])])
+    (artifact_dir / "seed_invariant_report.json").write_text(
+        json.dumps(result.get("seed_invariant_report", {}).model_dump(mode="json") if hasattr(result.get("seed_invariant_report"), "model_dump") else result.get("seed_invariant_report", {}), ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
     write_jsonl(artifact_dir / "raw_candidates.jsonl", [item.model_dump(mode="json") for item in result["raw_candidates"]])
     write_jsonl(artifact_dir / "candidate_repairs.jsonl", [item.model_dump(mode="json") for item in result.get("candidate_repairs", [])])
     write_jsonl(artifact_dir / "candidate_expansions.jsonl", [item.model_dump(mode="json") for item in result.get("candidate_expansions", [])])

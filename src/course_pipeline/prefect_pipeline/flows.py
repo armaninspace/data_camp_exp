@@ -74,6 +74,8 @@ def question_generation_pipeline_flow(config: RunConfig):
         artifact_index.extend(build_artifact_index_entries("standardize_courses", standardized_result["artifact_paths"], context.run_root))
 
         semantics_result = run_semantics(context, standardized_result)
+        if context.strict_mode and semantics_result["blocking_failures"]:
+            raise StrictCoverageError("; ".join(semantics_result["blocking_failures"]))
         stage_summaries.append(
             StageSummary(
                 stage_name="extract_semantics",

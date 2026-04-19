@@ -218,9 +218,10 @@ def test_extract_semantics_with_llm_coerces_loose_nested_topic_shape(monkeypatch
     assert result["topic_records"][0].label == "Vectors in R"
     assert len(result["anchor_candidates"]) == 1
     assert result["anchor_candidates"][0].label == "Vectors in R"
+    assert result["extraction_report"].normalization_path == "normalized_loose_shape"
 
 
-def test_extract_semantics_with_llm_falls_back_when_llm_returns_unusable_shape(monkeypatch, tmp_path: Path) -> None:
+def test_extract_semantics_with_llm_normalizes_summary_style_payload(monkeypatch, tmp_path: Path) -> None:
     class FakeSettings:
         openai_api_key = "test-key"
         openai_model = "gpt-4.1"
@@ -238,6 +239,34 @@ def test_extract_semantics_with_llm_falls_back_when_llm_returns_unusable_shape(m
     monkeypatch.setattr("course_pipeline.semantic_extract_llm.MeteredLLMJsonClient", FakeClient)
 
     run_dir = tmp_path / "run125"
+    run_dir.mkdir()
+    result = extract_semantics_with_llm(raw_course=_course(), settings=FakeSettings(), run_dir=run_dir)
+
+    assert result["extraction_mode"] == "llm"
+    assert result["topic_records"]
+    assert result["anchor_candidates"]
+    assert result["topic_records"][0].label == "R programming basics"
+    assert result["extraction_report"].response_shape == "course_semantics_summary_fields"
+
+
+def test_extract_semantics_with_llm_falls_back_when_llm_returns_unusable_shape(monkeypatch, tmp_path: Path) -> None:
+    class FakeSettings:
+        openai_api_key = "test-key"
+        openai_model = "gpt-4.1"
+        openai_timeout = 30
+        openai_input_cost_per_million_tokens = 0.0
+        openai_output_cost_per_million_tokens = 0.0
+
+    class FakeClient:
+        def __init__(self, settings, *, run_id, run_dir, stage, prompt_version):
+            self.run_dir = run_dir
+
+        def invoke_json(self, system_prompt, user_prompt, **kwargs):
+            return json.dumps({"course_semantics": {"skills": [{"foo": "bar"}]}})
+
+    monkeypatch.setattr("course_pipeline.semantic_extract_llm.MeteredLLMJsonClient", FakeClient)
+
+    run_dir = tmp_path / "run126"
     run_dir.mkdir()
     result = extract_semantics_with_llm(raw_course=_course(), settings=FakeSettings(), run_dir=run_dir)
 

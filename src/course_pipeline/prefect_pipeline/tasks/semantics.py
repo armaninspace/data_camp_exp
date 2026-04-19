@@ -31,6 +31,7 @@ def run_semantics(context, standardized_result):
     pedagogy_rows: list[dict] = []
     friction_rows: list[dict] = []
     per_course: dict[str, dict] = {}
+    blocking_failures: list[str] = []
 
     for course in standardized_result["courses"]:
         result = run_semantic_stage_for_course(raw_course=course, settings=settings, run_dir=context.run_root)
@@ -38,25 +39,31 @@ def run_semantics(context, standardized_result):
         course_dir = ensure_dir(context.semantics_dir / "course_artifacts" / course.course_id)
         write_semantic_stage_artifacts(context.semantics_dir, course.course_id, result, base_dir=course_dir)
         write_semantic_course_yaml(context.semantics_dir, course.course_id, result, base_dir=course_dir)
-        semantic_topic_rows.extend(item.model_dump(mode="json") for item in result["semantic_topic_records"])
-        semantic_anchor_rows.extend(item.model_dump(mode="json") for item in result["semantic_anchor_candidates"])
-        semantic_alias_rows.extend(item.model_dump(mode="json") for item in result["semantic_alias_groups"])
-        semantic_friction_rows.extend(item.model_dump(mode="json") for item in result["semantic_friction_records"])
-        topic_rows.extend(item.model_dump(mode="json") for item in result["topics"])
-        edge_rows.extend(item.model_dump(mode="json") for item in result["edges"])
-        pedagogy_rows.extend(item.model_dump(mode="json") for item in result["pedagogy"])
-        friction_rows.extend(item.model_dump(mode="json") for item in result["frictions"])
+        if result.semantic_guard_report.status == "failed":
+            blocking_failures.append(f"{course.course_id}: {'; '.join(result.semantic_guard_report.warnings)}")
+        semantic_topic_rows.extend(item.model_dump(mode="json") for item in result.semantic_topic_records)
+        semantic_anchor_rows.extend(item.model_dump(mode="json") for item in result.semantic_anchor_candidates)
+        semantic_alias_rows.extend(item.model_dump(mode="json") for item in result.semantic_alias_groups)
+        semantic_friction_rows.extend(item.model_dump(mode="json") for item in result.semantic_friction_records)
+        topic_rows.extend(item.model_dump(mode="json") for item in result.topics)
+        edge_rows.extend(item.model_dump(mode="json") for item in result.edges)
+        pedagogy_rows.extend(item.model_dump(mode="json") for item in result.pedagogy)
+        friction_rows.extend(item.model_dump(mode="json") for item in result.frictions)
 
     outputs = {
         "semantic_topics": context.semantics_dir / "semantic_topics.jsonl",
         "semantic_anchors": context.semantics_dir / "semantic_anchors.jsonl",
         "semantic_alias_groups": context.semantics_dir / "semantic_alias_groups.jsonl",
         "semantic_frictions": context.semantics_dir / "semantic_frictions.jsonl",
+        "semantic_extraction_reports": context.semantics_dir / "semantic_extraction_reports.jsonl",
+        "semantic_guard_reports": context.semantics_dir / "semantic_guard_reports.jsonl",
         "topics": context.semantics_dir / "topics.jsonl",
         "edges": context.semantics_dir / "edges.jsonl",
         "pedagogy": context.semantics_dir / "pedagogy.jsonl",
         "friction_points": context.semantics_dir / "friction_points.jsonl",
     }
+    write_jsonl(outputs["semantic_extraction_reports"], [item.semantic_extraction_report.model_dump(mode="json") for item in per_course.values()])
+    write_jsonl(outputs["semantic_guard_reports"], [item.semantic_guard_report.model_dump(mode="json") for item in per_course.values()])
     write_jsonl(outputs["semantic_topics"], semantic_topic_rows)
     write_jsonl(outputs["semantic_anchors"], semantic_anchor_rows)
     write_jsonl(outputs["semantic_alias_groups"], semantic_alias_rows)
@@ -69,4 +76,5 @@ def run_semantics(context, standardized_result):
         "per_course": per_course,
         "artifact_paths": list(outputs.values()),
         "topic_count": len(topic_rows),
+        "blocking_failures": blocking_failures,
     }

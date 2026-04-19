@@ -1,0 +1,28 @@
+{
+  "bundle_name": "inspection_bundle_9_rebuilt",
+  "run_id": "20260418T212725Z",
+  "strict": false,
+  "course_ids": [
+    "7630",
+    "7631",
+    "24370",
+    "24372"
+  ],
+  "files": [
+    "run_manifest.json",
+    "validation_report.json",
+    "inspection_report.md",
+    "question_ledger_v6_report.md",
+    "final_deliverables/all_questions.jsonl",
+    "final_deliverables/visible_curated.jsonl",
+    "final_deliverables/cache_servable.jsonl",
+    "final_deliverables/aliases.jsonl",
+    "final_deliverables/anchors_summary.json",
+    "courses/7630_introduction-to-r.md",
+    "courses/7631_introduction-to-python.md",
+    "courses/24370_statistician-in-r.md",
+    "courses/24372_intermediate-python.md",
+    "review_answers.jsonl",
+    "llm_metering.jsonl"
+  ]
+}

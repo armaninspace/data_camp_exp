@@ -1,0 +1,112 @@
+{
+  "run_id": "20260418T212725Z",
+  "strict": false,
+  "declared_course_scope": [
+    "7630",
+    "7631",
+    "24370",
+    "24372"
+  ],
+  "actual_rendered_course_scope": [
+    "7630",
+    "7631",
+    "24370",
+    "24372"
+  ],
+  "required_files": {
+    "run_manifest.json": true,
+    "question_ledger_v6_report.md": true,
+    "all_questions.jsonl": true,
+    "visible_curated.jsonl": true,
+    "cache_servable.jsonl": true,
+    "aliases.jsonl": true,
+    "anchors_summary.json": true,
+    "courses.jsonl": true,
+    "review_bundle": true,
+    "review_answers.jsonl": true,
+    "llm_metering.jsonl": true
+  },
+  "missing_files": [],
+  "blocking_missing_files": [],
+  "scope_drift": [],
+  "suspicious_anchors": [],
+  "count_mismatches": [],
+  "coverage_failures": [
+    "24370:unemployment"
+  ],
+  "coverage_warnings": [
+    "7631:An Introduction to Python",
+    "7631:Discover the Python Basics",
+    "7631:Get Started with NumPy"
+  ],
+  "course_summaries": [
+    {
+      "course_id": "7630",
+      "title": "Introduction to R",
+      "slug": "introduction-to-r",
+      "all_questions": 30,
+      "visible_curated": 8,
+      "cache_servable": 0,
+      "aliases": 0,
+      "hidden_correct": 22,
+      "anchors_non_pass": 0,
+      "coverage_states": [
+        "PASS"
+      ],
+      "suspicious_anchor_count": 0,
+      "markdown_filename": "courses/7630_introduction-to-r.md"
+    },
+    {
+      "course_id": "7631",
+      "title": "Introduction to Python",
+      "slug": "introduction-to-python",
+      "all_questions": 30,
+      "visible_curated": 2,
+      "cache_servable": 0,
+      "aliases": 0,
+      "hidden_correct": 28,
+      "anchors_non_pass": 3,
+      "coverage_states": [
+        "PASS",
+        "WARN"
+      ],
+      "suspicious_anchor_count": 0,
+      "markdown_filename": "courses/7631_introduction-to-python.md"
+    },
+    {
+      "course_id": "24370",
+      "title": "Statistician in R",
+      "slug": "statistician-in-r",
+      "all_questions": 96,
+      "visible_curated": 18,
+      "cache_servable": 0,
+      "aliases": 0,
+      "hidden_correct": 78,
+      "anchors_non_pass": 1,
+      "coverage_states": [
+        "FAIL",
+        "PASS"
+      ],
+      "suspicious_anchor_count": 0,
+      "markdown_filename": "courses/24370_statistician-in-r.md"
+    },
+    {
+      "course_id": "24372",
+      "title": "Intermediate Python",
+      "slug": "intermediate-python",
+      "all_questions": 38,
+      "visible_curated": 12,
+      "cache_servable": 0,
+      "aliases": 0,
+      "hidden_correct": 26,
+      "anchors_non_pass": 0,
+      "coverage_states": [
+        "PASS"
+      ],
+      "suspicious_anchor_count": 0,
+      "markdown_filename": "courses/24372_intermediate-python.md"
+    }
+  ],
+  "status": "passed",
+  "errors": []
+}

@@ -1,0 +1,607 @@
+{
+  "run_id": "20260418T212725Z",
+  "status": "completed",
+  "started_at": "2026-04-18T21:27:25.135145+00:00",
+  "finished_at": "2026-04-18T21:44:15.612070+00:00",
+  "run_mode": "prod",
+  "strict_mode": false,
+  "input_root": "/code/data/classcentral-datacamp-yaml",
+  "output_root": "/code/data/pipeline_runs",
+  "ref_root": "/code/data/ref",
+  "promote_ref": true,
+  "promoted_ref": true,
+  "stage_summaries": [
+    {
+      "stage_name": "prepare_run_context",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": null,
+      "output_count": null,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/run_manifest.json"
+      ],
+      "metrics": {
+        "strict_mode": false
+      }
+    },
+    {
+      "stage_name": "standardize_courses",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": 53,
+      "output_count": 53,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/courses.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/chapters.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/standardized/standardized_courses",
+        "/code/data/pipeline_runs/20260418T212725Z/standardized/errors.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/standardized/courses.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/standardized/chapters.jsonl"
+      ],
+      "metrics": {}
+    },
+    {
+      "stage_name": "extract_semantics",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": 53,
+      "output_count": 223,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/semantics/topics.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/semantics/edges.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/semantics/pedagogy.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/semantics/friction_points.jsonl"
+      ],
+      "metrics": {}
+    },
+    {
+      "stage_name": "generate_candidates",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": 53,
+      "output_count": 1242,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/raw_candidates.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/candidate_repairs.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/candidate_expansions.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/candidate_merge_report.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/merged_candidates.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/rejected_candidates.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/scored_candidates.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/duplicate_clusters.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/final_selected.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/selection_summaries.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/candidates/question_gen_v3_report.md"
+      ],
+      "metrics": {}
+    },
+    {
+      "stage_name": "apply_policy",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": 53,
+      "output_count": 1,
+      "warnings": [
+        "Foundational anchor 'unemployment' has no generated definition candidate."
+      ],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/policy/validated_correct_all.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/policy/visible_curated.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/policy/hidden_correct.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/policy/coverage_warnings.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/policy/canonical_groups.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/policy/cache_entries.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/policy/hard_reject_records.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/policy/policy_metrics.jsonl"
+      ],
+      "metrics": {}
+    },
+    {
+      "stage_name": "build_ledger",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": 53,
+      "output_count": 1242,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/all_questions.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/ledger/all_questions.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/ledger/inspection_report.md"
+      ],
+      "metrics": {}
+    },
+    {
+      "stage_name": "derive_views",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": null,
+      "output_count": 243,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/visible_curated.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/cache_servable.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/aliases.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/anchors_summary.json",
+        "/code/data/pipeline_runs/20260418T212725Z/question_ledger_v6_report.md"
+      ],
+      "metrics": {}
+    },
+    {
+      "stage_name": "render_inspection_bundle",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": null,
+      "output_count": null,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/pipeline_runs/20260418T212725Z/review_bundle",
+        "/code/data/pipeline_runs/20260418T212725Z/inspection_bundle",
+        "/code/data/pipeline_runs/20260418T212725Z/review_answers.jsonl",
+        "/code/data/pipeline_runs/20260418T212725Z/llm_metering.jsonl"
+      ],
+      "metrics": {}
+    },
+    {
+      "stage_name": "promote_ref_data",
+      "started_at": "2026-04-18T21:27:25.135145Z",
+      "finished_at": "2026-04-18T21:27:25.135145Z",
+      "duration_seconds": 0.0,
+      "status": "completed",
+      "input_count": null,
+      "output_count": 159,
+      "warnings": [],
+      "artifact_paths": [
+        "/code/data/ref/current/aggregate/courses.jsonl",
+        "/code/data/ref/current/aggregate/chapters.jsonl",
+        "/code/data/ref/current/aggregate/all_questions.jsonl",
+        "/code/data/ref/current/aggregate/visible_curated.jsonl",
+        "/code/data/ref/current/aggregate/cache_servable.jsonl",
+        "/code/data/ref/current/aggregate/aliases.jsonl",
+        "/code/data/ref/current/aggregate/anchors_summary.json",
+        "/code/data/ref/current/final_deliverables/all_questions.jsonl",
+        "/code/data/ref/current/ref_state.json",
+        "/code/data/ref/promotions/20260418T212725Z.json",
+        "/code/data/ref/current/aggregate/inspection_bundle"
+      ],
+      "metrics": {
+        "promoted_ref": true,
+        "run_mode": "prod"
+      }
+    }
+  ],
+  "artifact_index": [
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "courses.jsonl",
+      "stage": "standardize_courses",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "chapters.jsonl",
+      "stage": "standardize_courses",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "directory",
+      "relative_path": "standardized/standardized_courses",
+      "stage": "standardize_courses",
+      "row_count": null,
+      "content_type": "directory"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "standardized/errors.jsonl",
+      "stage": "standardize_courses",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "standardized/courses.jsonl",
+      "stage": "standardize_courses",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "standardized/chapters.jsonl",
+      "stage": "standardize_courses",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "semantics/topics.jsonl",
+      "stage": "extract_semantics",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "semantics/edges.jsonl",
+      "stage": "extract_semantics",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "semantics/pedagogy.jsonl",
+      "stage": "extract_semantics",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "semantics/friction_points.jsonl",
+      "stage": "extract_semantics",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/raw_candidates.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/candidate_repairs.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/candidate_expansions.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/candidate_merge_report.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/merged_candidates.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/rejected_candidates.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/scored_candidates.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/duplicate_clusters.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/final_selected.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "candidates/selection_summaries.jsonl",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "md",
+      "relative_path": "candidates/question_gen_v3_report.md",
+      "stage": "generate_candidates",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/validated_correct_all.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/visible_curated.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/hidden_correct.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/coverage_warnings.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/canonical_groups.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/cache_entries.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/hard_reject_records.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "policy/policy_metrics.jsonl",
+      "stage": "apply_policy",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "all_questions.jsonl",
+      "stage": "build_ledger",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "ledger/all_questions.jsonl",
+      "stage": "build_ledger",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "md",
+      "relative_path": "ledger/inspection_report.md",
+      "stage": "build_ledger",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "visible_curated.jsonl",
+      "stage": "derive_views",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "cache_servable.jsonl",
+      "stage": "derive_views",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "aliases.jsonl",
+      "stage": "derive_views",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "json",
+      "relative_path": "anchors_summary.json",
+      "stage": "derive_views",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "md",
+      "relative_path": "question_ledger_v6_report.md",
+      "stage": "derive_views",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "directory",
+      "relative_path": "review_bundle",
+      "stage": "render_inspection_bundle",
+      "row_count": null,
+      "content_type": "directory"
+    },
+    {
+      "artifact_type": "directory",
+      "relative_path": "inspection_bundle",
+      "stage": "render_inspection_bundle",
+      "row_count": null,
+      "content_type": "directory"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "review_answers.jsonl",
+      "stage": "render_inspection_bundle",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "llm_metering.jsonl",
+      "stage": "render_inspection_bundle",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "/code/data/ref/current/aggregate/courses.jsonl",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "/code/data/ref/current/aggregate/chapters.jsonl",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "/code/data/ref/current/aggregate/all_questions.jsonl",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "/code/data/ref/current/aggregate/visible_curated.jsonl",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "/code/data/ref/current/aggregate/cache_servable.jsonl",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "/code/data/ref/current/aggregate/aliases.jsonl",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "json",
+      "relative_path": "/code/data/ref/current/aggregate/anchors_summary.json",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "jsonl",
+      "relative_path": "/code/data/ref/current/final_deliverables/all_questions.jsonl",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "json",
+      "relative_path": "/code/data/ref/current/ref_state.json",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "json",
+      "relative_path": "/code/data/ref/promotions/20260418T212725Z.json",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "file"
+    },
+    {
+      "artifact_type": "directory",
+      "relative_path": "/code/data/ref/current/aggregate/inspection_bundle",
+      "stage": "promote_ref_data",
+      "row_count": null,
+      "content_type": "directory"
+    }
+  ],
+  "warning_count": 1,
+  "blocking_failure": null,
+  "git_commit": "66ee92e7bd3491e8893fdbaf7254ddba3cc835f5",
+  "model_profile": "default",
+  "llm_metering": {
+    "enabled": true,
+    "status": "completed",
+    "expected_artifact": "llm_metering.jsonl",
+    "artifact_present": true,
+    "record_count": 144,
+    "estimated_cost_usd": 0.0,
+    "stages": [
+      {
+        "stage": "candidate_repair",
+        "record_count": 53,
+        "estimated_cost_usd": 0.0
+      },
+      {
+        "stage": "candidate_expand",
+        "record_count": 53,
+        "estimated_cost_usd": 0.0
+      },
+      {
+        "stage": "candidate_review_answers",
+        "record_count": 0,
+        "estimated_cost_usd": 0.0
+      },
+      {
+        "stage": "policy_review_answers",
+        "record_count": 38,
+        "estimated_cost_usd": 0.0
+      }
+    ]
+  },
+  "selected_course_ids": [
+    "7630",
+    "7631",
+    "24370",
+    "24372"
+  ],
+  "skipped_existing_course_ids": [],
+  "selection_counts": {
+    "available_courses": 537,
+    "after_course_id_filter": 537,
+    "skipped_existing_ref_courses": 0,
+    "offset": 0,
+    "selected_courses": 53
+  },
+  "bundle_name": "inspection_bundle_9_rebuilt"
+}

@@ -1,0 +1,21 @@
+{
+  "bundle_name": "inspection_bundle_8",
+  "prepared_at": "2026-04-18",
+  "course_ids": [
+    "7630",
+    "7631",
+    "24370",
+    "24372"
+  ],
+  "source_runs": {
+    "prefect_run_id": "20260418T200646Z"
+  },
+  "files": [
+    "7630_introduction-to-r.md",
+    "7631_introduction-to-python.md",
+    "24370_statistician-in-r.md",
+    "24372_intermediate-python.md",
+    "question_ledger_v6_report.md",
+    "final_deliverables/all_questions.jsonl"
+  ]
+}

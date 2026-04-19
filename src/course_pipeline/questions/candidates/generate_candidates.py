@@ -206,7 +206,8 @@ def generate_candidates(
         elif "gdp per capita" in lower or "unemployment" in lower:
             custom_emitted = True
             candidates.extend(
-                [
+                entry_candidates
+                + [
                     _candidate(topic, "developing_comparison", "developing", "comparison", "How could GDP per capita and unemployment affect tourism differently?", "Comparison question for economic indicators.", support, linked),
                     _candidate(topic, "proficient_diagnostic", "proficient", "diagnostic", "What would make me doubt a tourism explanation based on only one economic indicator?", "Diagnostic interpretation question.", support, linked),
                 ]
